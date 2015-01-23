@@ -1,0 +1,9 @@
+.modal .share-post-email .form-item .label {
+  font-size: 14px; }
+.modal .share-post-email .form-item textarea {
+  font-size: 14px;
+  height: 150px;
+  width: 450px; }
+.modal .share-post-email .form-item input[type=text] {
+  width: 450px;
+  height: 24px; }

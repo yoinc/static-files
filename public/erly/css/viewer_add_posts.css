@@ -1,0 +1,244 @@
+/* Mostly taken from http://nicolasgallagher.com/pure-css-speech-bubbles/demo/default.css */
+@-webkit-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-moz-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-o-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-webkit-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-o-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.viewer-add-posts-tease,
+.viewer-add-posts-unauthed,
+.viewer-add-posts-owner-only {
+  background: url(/erly/img/bg-black-50.png);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  height: 70px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  cursor: default;
+  width: 403px; }
+  .viewer-add-posts-tease img,
+  .viewer-add-posts-unauthed img,
+  .viewer-add-posts-owner-only img {
+    height: 70px;
+    width: 100px; }
+
+.viewer-add-posts-owner-only {
+  display: none;
+  margin: 0;
+  width: 323px;
+  font-size: 14px;
+  padding: 15px 40px 0; }
+
+.viewer-add-posts-unauthed {
+  cursor: pointer;
+  display: none;
+  margin: 0;
+  width: 243px;
+  font-size: 14px;
+  padding: 15px 80px 0; }
+  .viewer-add-posts-unauthed:hover {
+    background: rgba(0, 140, 199, 0.6); }
+
+.viewer-add-posts-expanded {
+  display: none;
+  padding-bottom: 15px;
+  position: absolute;
+  top: 0; }
+  .viewer-add-posts-expanded .add-post {
+    background: url(/erly/img/bg-black-50.png);
+    border-right: solid 1px #666;
+    margin: 0;
+    padding-bottom: 15px;
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4); }
+    .viewer-add-posts-expanded .add-post img {
+      display: block;
+      height: 70px;
+      width: 100px; }
+    .viewer-add-posts-expanded .add-post:hover {
+      background: rgba(0, 140, 199, 0.6); }
+    .viewer-add-posts-expanded .add-post.active {
+      transition-property: all;
+      transition-duration: 0.15s;
+      transition-timing-function: linear;
+      transition-delay: 0s;
+      -moz-transition-property: all;
+      -moz-transition-duration: 0.15s;
+      -moz-transition-timing-function: linear;
+      -moz-transition-delay: 0s;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      background: -webkit-gradient(linear, left top, left bottom, from(#2ec4f7), to(#0098cc));
+      background: -moz-linear-gradient(top, #2ec4f7, #0098cc);
+      filter: alpha(opacity=100);
+      background-color: #09b5f0;
+      text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0; }
+  .viewer-add-posts-expanded .add-photo {
+    border-top-left-radius: 7px; }
+  .viewer-add-posts-expanded .add-video {
+    border-top-right-radius: 7px;
+    border-right: none; }

@@ -1,0 +1,157 @@
+<script id="tmplFBInvite" type="text/x-jquery-tmpljavascript">
+  <div class="invite">
+    <div class="more">
+      <img src="${erly.PUB_URL}/img/scroll-down-animation.gif" />
+      More Invites Below
+      <img src="${erly.PUB_URL}/img/scroll-down-animation.gif" />
+    </div>
+    <div class="invite-message">
+      <a href="${erly.urlFor.gallery($data.requester)}">
+        {{tmpl({ident: $data.requester.ident}) '#tmplAvatarImage'}}
+        ${$data.requester.name}
+      </a>
+      invites you to
+      <a href="${erly.urlFor.collection($data.chronicle)}">
+        ${$data.chronicle.title}
+      </a>
+      on
+      ${erly.dateFormatters.formatDate($data.chronicle.startDate)}.
+    </div>
+    <div class="invite-container">
+      <a href="${erly.urlFor.collection($data.chronicle)}">
+        <div class="image-container">
+          <img src="${$data.chronicle.coverPhoto.url}" />
+          <div class="title">${$data.chronicle.title}</div>
+        </div>
+      </a>
+      <div class="details-container ${$data.rsvpState}">
+        <div class="metadata">
+          <div class="details-title">
+            ${$data.chronicle.title}
+          </div>
+          {{if $data.chronicle.description}}
+            <div class="description">
+              ${$data.chronicle.description}
+            </div>
+            <hr />
+          {{/if}}
+          ${ /* TODO: more consistent date and location formatting */ '' }
+          <div class="date">
+            ${erly.dateFormatters.formatDate($data.chronicle.startDate)}
+          </div>
+          {{if $data.chronicle.locationName}}
+            <div class="location">
+              ${$data.chronicle.locationName}
+              ${erly.getFormattedStreetAddress($data.chronicle, true)}
+            </div>
+          {{/if}}
+          <hr />
+          <div class="details">
+            <a href="${erly.urlFor.collection($data.chronicle)}">
+              View This Event on Erly
+            </a>
+          </div>
+        </div>
+        <div class="rsvp-actions">
+          <div class="header">RSVP:</div>
+          {{if $data.rsvpState && $data.rsvpState !== 'pending'}}
+            <div class="rsvp-state">
+            <div class="response">
+              You responded <span class="${$data.rsvpState}">${$data.rsvpState}</span>.
+            </div>
+            If this is not correct, you can
+            <a href="${erly.urlFor.collection($data.chronicle)}">change your response</a>
+            on Erly.
+            </div>
+          {{else}}
+            <div class="options">
+              <div class="fb-connect">
+                <div class="fb-connect-button">&nbsp;</div>
+                <div class="note">
+                  You must Facebook Connect to RSVP to this Erly Event.
+                </div>
+              </div>
+
+              <div class="rsvp-option">
+                <div class="rsvp-button yes" data-href="${erly.urlFor.collection($data.chronicle)}?emailAction=rsvpYes">
+                  <span class="swatch">&nbsp;</span>
+                  <span>
+                    Yes, I'm going
+                  </span>
+                </div>
+              </div>
+              <div class="rsvp-option">
+                <div class="rsvp-button maybe" data-href="${erly.urlFor.collection($data.chronicle)}?emailAction=rsvpMaybe">
+                  <span class="swatch">&nbsp;</span>
+                  <span>
+                    Maybe
+                  </span>
+                </div>
+              </div>
+              <div class="rsvp-option">
+                <div class="rsvp-button no" data-href="${erly.urlFor.collection($data.chronicle)}?emailAction=rsvpNo">
+                  <span class="swatch">&nbsp;</span>
+                  <span>
+                    No
+                  </span>
+                </div>
+              </div>
+            </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+    <div class="end">&nbsp;</div>
+  </div>
+</script>
+
+<script id="tmplFBAlbumPage" type="text/x-jquery-tmpljavascript">
+  <div class="page">
+    <div class="loader">
+      <img src="${erly.PUB_URL}/img/ajax-loader.gif" alt="spinner" />
+    </div>
+  </div>
+</script>
+
+<script id="tmplFBAlbumCreateModal" type="text/x-jquery-tmpljavascript">
+  {{wrap({modalClass: 'fb-album-create-dialog'})
+    "#tmplModal"}}
+    <div class="content">
+      <div class="loader">
+        <img src="${erly.PUB_URL}/img/spinner.gif" alt="spinner" />
+        Please wait while we create your album on Erly...
+      </div>
+    </div>
+  {{/wrap}}
+</script>
+
+<script id="tmplFBAlbumCreateSuccess" type="text/x-jquery-tmpljavascript">
+  <div class="congrats">
+    Congratulations!
+  </div>
+
+  <div class="message">
+    We have created your album.
+  </div>
+
+  <a target="_blank" href="${url}">
+    <div class="fbalbum">
+      <div class="art">
+        <img src="${cover_art}" alt="photo" />
+        {{if caption}}<span>${caption}</span>{{/if}}
+      </div>
+    </div>
+    <div>
+      View This Album On Erly
+    </div>
+  </a>
+</script>
+
+<script id="tmplFBAlbumCreateFailure" type="text/x-jquery-tmpljavascript">
+  <div class="congrats">
+    Sorry!
+  </div>
+  <div class="message">
+    Sorry, there was an error. Please try again later.
+  </div>
+</script>

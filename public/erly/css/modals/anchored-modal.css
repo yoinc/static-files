@@ -1,0 +1,285 @@
+/* Mostly taken from http://nicolasgallagher.com/pure-css-speech-bubbles/demo/default.css */
+@-webkit-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-moz-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-o-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-webkit-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-o-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.anchored-modal .anchored-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 99950; }
+.anchored-modal .modal {
+  position: relative; }
+.anchored-modal .vcard .bordered-triangle,
+.anchored-modal .tagging .bordered-triangle {
+  top: 25px; }
+.anchored-modal .modal.add-photo-top-triangle {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  position: relative; }
+  .anchored-modal .modal.add-photo-top-triangle:before, .anchored-modal .modal.add-photo-top-triangle:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    /* reduce the damage in FF3.0 */
+    display: block;
+    width: 0; }
+  .anchored-modal .modal.add-photo-top-triangle:before {
+    border-width: 0 15px 15px;
+    border-color: #bbbbbb transparent;
+    top: -16px;
+    right: 50%;
+    margin-right: 137px; }
+  .anchored-modal .modal.add-photo-top-triangle:after {
+    border-width: 0 15px 15px;
+    border-color: #fafafa transparent;
+    top: -15px;
+    right: 50%;
+    margin-right: 137px; }
+.anchored-modal .modal.add-note-top-triangle {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  position: relative; }
+  .anchored-modal .modal.add-note-top-triangle:before, .anchored-modal .modal.add-note-top-triangle:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    /* reduce the damage in FF3.0 */
+    display: block;
+    width: 0; }
+  .anchored-modal .modal.add-note-top-triangle:before {
+    border-width: 0 15px 15px;
+    border-color: #bbbbbb transparent;
+    top: -16px;
+    right: 324px;
+    margin-right: 0; }
+  .anchored-modal .modal.add-note-top-triangle:after {
+    border-width: 0 15px 15px;
+    border-color: #fafafa transparent;
+    top: -15px;
+    right: 324px;
+    margin-right: 0; }
+.anchored-modal .modal.add-link-top-triangle {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  position: relative; }
+  .anchored-modal .modal.add-link-top-triangle:before, .anchored-modal .modal.add-link-top-triangle:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    /* reduce the damage in FF3.0 */
+    display: block;
+    width: 0; }
+  .anchored-modal .modal.add-link-top-triangle:before {
+    border-width: 0 15px 15px;
+    border-color: #bbbbbb transparent;
+    top: -16px;
+    right: 245px;
+    margin-right: 0; }
+  .anchored-modal .modal.add-link-top-triangle:after {
+    border-width: 0 15px 15px;
+    border-color: #fafafa transparent;
+    top: -15px;
+    right: 245px;
+    margin-right: 0; }
+.anchored-modal .modal.add-video-top-triangle {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  position: relative; }
+  .anchored-modal .modal.add-video-top-triangle:before, .anchored-modal .modal.add-video-top-triangle:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    /* reduce the damage in FF3.0 */
+    display: block;
+    width: 0; }
+  .anchored-modal .modal.add-video-top-triangle:before {
+    border-width: 0 15px 15px;
+    border-color: #bbbbbb transparent;
+    top: -16px;
+    right: 142px;
+    margin-right: 0; }
+  .anchored-modal .modal.add-video-top-triangle:after {
+    border-width: 0 15px 15px;
+    border-color: #fafafa transparent;
+    top: -15px;
+    right: 142px;
+    margin-right: 0; }
+.anchored-modal .modal.add-video-top-triangle, .anchored-modal .modal.add-link-top-triangle, .anchored-modal .modal.add-photo-top-triangle, .anchored-modal .modal.add-note-top-triangle {
+  padding-top: 2px; }
+.anchored-modal .submit-loader {
+  display: none; }
+  .anchored-modal .submit-loader img {
+    margin-top: 2px;
+    margin-right: 3px; }

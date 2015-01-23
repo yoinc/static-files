@@ -1,0 +1,62 @@
+<script id="tmplModal" type="text/x-jquery-tmpljavascript">
+  <div id="modal" class="modal ${outerClass}">
+    {{tmpl "#tmplCloseModal"}}
+    <div class="${modalClass}">
+      {{if modalTitle}}
+      <div class="modal-title">
+        <h1>
+          <div class="icon" class="${modalTitleIcon}"></div>
+          {{if modalTitleImage}}
+            <img src="${modalTitleImage}" alt="photo" />
+          {{/if}}{{html modalTitle}}
+        </h1>
+      </div>
+      {{/if}}
+      <div class="content-container">
+        <div class="error-container"></div>
+        {{html $item.html}}
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="tmplCloseModal" type="text/x-jquery-tmpljavascript">
+  <div class="close-modal">
+    <span class="hidden">Close Modal</span>
+  </div>
+</script>
+
+<script id="tmplBaseConfirmModal" type="text/x-jquery-tmpljavascript">
+  <div class="confirm-modal{{if extraClasses}} ${extraClasses}{{/if}}">
+    <div class="confirm-title">
+      <span><div class="icon"></div>${title}</span>
+    </div>
+    <div class="question">
+      {{each $item.html('.content')}}{{html $value}}{{/each}}
+    </div>
+    <div class="button-bar">
+      {{each $item.html('.buttons')}}{{html $value}}{{/each}}
+    </div>
+    {{tmpl "#tmplCloseModal"}}
+  </div>
+</script>
+
+<script id="tmplConfirmationModal" type="text/x-jquery-tmpljavascript">
+  {{wrap({title: title, extraClasses:$data.extraClasses}) "#tmplBaseConfirmModal"}}
+  <div class="content">${question}</div>
+  <div class="buttons">
+    {{if !$data.hideCancel}}
+    <button class="cancel">{{if $data.cancelText}}${cancelText}{{else}}Cancel{{/if}}</button>
+    {{/if}}
+    <button class="confirm-button">${confirmText}</button>
+  {{/wrap}}
+</script>
+
+<script id="tmplAlertModal" type="text/x-jquery-tmpljavascript">
+  {{wrap({title: title, extraClasses: 'alert-modal'}) "#tmplBaseConfirmModal"}}
+  <div class="content">{{html alert}}</div>
+  <div class="buttons">
+    <button class="confirm-button cancel blue">OK</button>
+  </div>
+  {{/wrap}}
+</script>

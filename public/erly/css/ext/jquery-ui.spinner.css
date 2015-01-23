@@ -1,0 +1,15 @@
+.ui-spinner {
+  position: relative;
+  border: 0px solid white; }
+
+.ui-spinner-buttons {
+  position: absolute; }
+
+.ui-spinner-button {
+  overflow: hidden; }
+  .ui-spinner-button.ui-corner-tr {
+    border-top-right-radius: 3px; }
+    .ui-spinner-button.ui-corner-tr .ui-icon-triangle-1-n {
+      background-position: 1px -16px; }
+  .ui-spinner-button.ui-corner-br {
+    border-bottom-right-radius: 3px; }

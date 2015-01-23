@@ -1,0 +1,157 @@
+body {
+  font-family: Helvetica, Arial, Sans-Serif;
+}
+div {
+  box-sizing: border-box;
+}
+div.template {
+  display: none;
+}
+div#title {
+  background-color: #444;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  padding: 5px;
+}
+div#roomList {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  width: 250px;
+  bottom: 0;
+  border-right: solid 1px #eee;
+  overflow: auto;
+}
+div#roomList div.roomListRoom {
+  border-bottom: solid 1px #eee;
+  padding: 5px;
+  cursor: pointer;
+}
+div#roomList div.roomListRoom .lastText {
+  color: #666;
+  font-size: 12px;
+}
+div#roomList div.roomListRoom .lastTimestamp {
+  text-align: right;
+  font-size: 10px;
+  color: #888;
+}
+div#roomList div.roomListRoom.selected {
+  background-color: #ddd;
+}
+div#roomName {
+  position: fixed;
+  top: 30px;
+  left: 250px;
+  right: 350px;
+  font-size: 28px;
+  border-bottom: solid 1px #eee;
+  text-align: center;
+}
+div#roomHistory {
+  position: fixed;
+  top: 65px;
+  left: 250px;
+  right: 350px;
+  bottom: 50px;
+  padding: 10px;
+  overflow: auto;
+}
+div#roomHistory div.message {
+  position: static;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 30%;
+}
+div#roomHistory div.message div.timestamp {
+  color: #888;
+  font-size: 11px;
+}
+div#roomHistory div.message.fromSelf {
+  background-color: #ffeeee;
+}
+div#roomHistory div.message.fromOther {
+  background-color: #eeeeff;
+}
+div#roomHistory div.message.photo img {
+  width: 160px;
+  height: 160px;
+}
+div#roomHistory div.message img.videoThumbnail {
+  width: 160px;
+  height: 160px;
+  cursor: pointer;
+}
+div#roomHistory div.message.video > video {
+  display: none;
+}
+div#precannedMessageList {
+  display: none;
+  position: fixed;
+  border-left: solid 1px #eee;
+  right: 0;
+  top: 30px;
+  width: 350px;
+  bottom: 50px;
+  overflow: auto;
+}
+div#precannedMessageList div.title {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px;
+  border-bottom: solid 1px #eee;
+}
+div#precannedMessageList div#precannedMessages div.precannedMessage {
+  cursor: pointer;
+  padding: 5px;
+  border-bottom: solid 1px #eee;
+  font-size: 12px;
+}
+div#precannedMessageList div#precannedMessages div.precannedMessage div.name {
+  font-weight: bold;
+}
+div#precannedMessageList div.buttons {
+  padding: 5px;
+  border-top: solid 1px #eee;
+}
+div#precannedMessageList div.buttons div.title {
+  padding: 0;
+  font-size: 14px;
+  border-bottom: none;
+}
+div#precannedMessageList div.buttons div.label {
+  font-size: 12px;
+}
+div#precannedMessageList div.buttons textarea {
+  width: 300px;
+  height: 50px;
+}
+div#roomComposer {
+  position: fixed;
+  left: 250px;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  background-color: #ccc;
+  display: none;
+}
+div#roomComposer div#roomTextComposerContainer textarea {
+  position: fixed;
+  left: 250px;
+  right: 50px;
+  height: 30px;
+}
+div#roomComposer div#roomTextComposerContainer button {
+  position: fixed;
+  right: 0;
+  width: 50px;
+}
+div#roomComposer div#videoChatStatus {
+  position: fixed;
+  left: 250px;
+  bottom: 0;
+}

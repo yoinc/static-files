@@ -1,0 +1,737 @@
+/* Mostly taken from http://nicolasgallagher.com/pure-css-speech-bubbles/demo/default.css */
+@-webkit-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-moz-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-o-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-webkit-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-o-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+body.fbbody {
+  background: url(/erly/img/bg-gallery.jpg?v3);
+  background-repeat: repeat;
+  color: #000; }
+  body.fbbody .header {
+    z-index: 1000; }
+    body.fbbody .header .logo {
+      margin: 20px;
+      position: absolute;
+      left: -15px;
+      top: -15px; }
+      body.fbbody .header .logo img {
+        height: 32px; }
+    body.fbbody .header .navbar {
+      background: url(/erly/img/bg-header-fb.png);
+      padding-top: 4px;
+      text-align: center;
+      height: 46px; }
+      body.fbbody .header .navbar span {
+        border-radius: 20px;
+        color: #222;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 36px;
+        padding: 0 15px;
+        margin-right: 20px;
+        text-shadow: 0 1px 1px 255, 255, 255, 0.8;
+        text-transform: uppercase;
+        vertical-align: middle; }
+        body.fbbody .header .navbar span:hover {
+          background-color: rgba(0, 0, 0, 0.1); }
+        body.fbbody .header .navbar span.selected {
+          background-color: #aaa;
+          box-shadow: inset 0 1px 5px #3f3d39;
+          -moz-box-shadow: inset 0 1px 5px #3f3d39;
+          -webkit-box-shadow: inset 0 1px 5px #3f3d39;
+          color: white;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); }
+  body.fbbody .activity-wrapper {
+    padding-bottom: 20px; }
+  body.fbbody .activity-body {
+    margin: 10px auto;
+    float: none;
+    width: 680px; }
+  body.fbbody .activity-feed-items {
+    /* for now we have disabled infinite scroll, so don't display loader */ }
+    body.fbbody .activity-feed-items .loader {
+      display: none; }
+    body.fbbody .activity-feed-items div.activity-feed-item {
+      margin-right: 20px; }
+    body.fbbody .activity-feed-items div.see-more {
+      margin: 20px 20px 0 0;
+      text-align: right; }
+  body.fbbody div.more {
+    background: url(/erly/img/bg-black-50.png);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    display: none;
+    position: fixed;
+    padding: 5px;
+    line-height: 20px;
+    font-size: 16px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -116px; }
+    body.fbbody div.more img {
+      margin: 0 5px;
+      vertical-align: middle; }
+  body.fbbody div.invite {
+    margin: 0 auto;
+    text-align: center; }
+    body.fbbody div.invite div.invite-message {
+      font-size: 16px;
+      margin: 20px auto;
+      width: 720px; }
+      body.fbbody div.invite div.invite-message img {
+        height: auto;
+        margin-right: 5px;
+        height: 30px;
+        width: 30px;
+        vertical-align: middle; }
+    body.fbbody div.invite div.invite-container {
+      background-color: white;
+      margin: 0 auto;
+      text-align: left;
+      width: 720px;
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3); }
+      body.fbbody div.invite div.invite-container div.image-container {
+        overflow: hidden;
+        position: relative;
+        height: 360px;
+        width: 100%; }
+        body.fbbody div.invite div.invite-container div.image-container div.title {
+          position: absolute;
+          font-size: 28px;
+          line-height: 28px;
+          padding: 8px 12px;
+          text-transform: uppercase;
+          font-family: DIN_light; }
+          body.fbbody div.invite div.invite-container div.image-container div.title.white {
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); }
+          body.fbbody div.invite div.invite-container div.image-container div.title.black {
+            color: #000; }
+          body.fbbody div.invite div.invite-container div.image-container div.title.grey {
+            color: #333; }
+          body.fbbody div.invite div.invite-container div.image-container div.title.black-bg {
+            background: url(/erly/img/bg-black-70.png);
+            text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px; }
+          body.fbbody div.invite div.invite-container div.image-container div.title.white-bg {
+            background: url(/erly/img/bg-white-90.png);
+            text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.3);
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px; }
+      body.fbbody div.invite div.invite-container div.details-container {
+        background: no-repeat 102% -10px;
+        padding: 30px 10px; }
+        body.fbbody div.invite div.invite-container div.details-container.yes {
+          background-image: url(/erly/img/stamp-yes.png); }
+        body.fbbody div.invite div.invite-container div.details-container.maybe {
+          background-image: url(/erly/img/stamp-maybe.png); }
+        body.fbbody div.invite div.invite-container div.details-container.no {
+          background-image: url(/erly/img/stamp-no.png); }
+        body.fbbody div.invite div.invite-container div.details-container.pending {
+          background-image: url(/erly/img/stamp-pending.png); }
+        body.fbbody div.invite div.invite-container div.details-container div.metadata {
+          display: inline-block;
+          vertical-align: top;
+          width: 500px; }
+          body.fbbody div.invite div.invite-container div.details-container div.metadata hr {
+            border: none;
+            border-top: solid 1px #ccc;
+            margin: 10px 20px 10px 0px; }
+          body.fbbody div.invite div.invite-container div.details-container div.metadata div.details-title {
+            font-size: 32px;
+            padding-left: 5px;
+            color: #666;
+            text-transform: uppercase; }
+          body.fbbody div.invite div.invite-container div.details-container div.metadata div.date, body.fbbody div.invite div.invite-container div.details-container div.metadata div.location {
+            color: #444;
+            font-size: 16px;
+            line-height: 30px;
+            padding-left: 30px;
+            vertical-align: middle; }
+          body.fbbody div.invite div.invite-container div.details-container div.metadata div.date {
+            background: url(/erly/img/icon-ics.png) no-repeat; }
+          body.fbbody div.invite div.invite-container div.details-container div.metadata div.location {
+            background: url(/erly/img/icon-directions.png) no-repeat; }
+          body.fbbody div.invite div.invite-container div.details-container div.metadata div.description {
+            color: #666;
+            font-size: 14px;
+            font-weight: normal;
+            padding-left: 5px; }
+          body.fbbody div.invite div.invite-container div.details-container div.metadata div.details {
+            padding-right: 20px;
+            text-align: right; }
+            body.fbbody div.invite div.invite-container div.details-container div.metadata div.details a {
+              color: #0c9acb; }
+        body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions {
+          display: inline-block;
+          vertical-align: top;
+          width: 190px; }
+          body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.header {
+            color: #666;
+            font-size: 20px; }
+          body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.options {
+            background-color: #f2f2f2;
+            background-color: rgba(0, 0, 0, 0.05);
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+            padding: 10px; }
+            body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.options div.fb-connect {
+              padding: 20px 0;
+              text-align: center; }
+              body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.options div.fb-connect div.fb-connect-button {
+                background: url(/erly/img/button-facebook.png) no-repeat 50% 0;
+                height: 40px; }
+                body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.options div.fb-connect div.fb-connect-button:hover {
+                  background-position: 50% -40px; }
+                body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.options div.fb-connect div.fb-connect-button:active {
+                  background-position: 50% -80px; }
+              body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.options div.fb-connect div.note {
+                color: #888;
+                font-size: 12px;
+                line-height: 18px;
+                padding: 5px 20px; }
+            body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.options div.rsvp-option {
+              display: none;
+              padding: 5px 0; }
+            body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.options div.rsvp-button {
+              font-size: 14px;
+              border-radius: 5px;
+              -webkit-border-radius: 5px;
+              -moz-border-radius: 5px;
+              display: inline-block;
+              min-height: 20px;
+              cursor: pointer;
+              text-shadow: 0px 1px 0 white;
+              color: #444444;
+              border: 1px solid #c1c1c1;
+              background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+              background: -moz-linear-gradient(top, white, #eeeeee);
+              background-color: #f4f4f4;
+              box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+              -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+              -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+              transition-property: all;
+              transition-duration: 0.15s;
+              transition-timing-function: linear;
+              transition-delay: 0s;
+              -moz-transition-property: all;
+              -moz-transition-duration: 0.15s;
+              -moz-transition-timing-function: linear;
+              -moz-transition-delay: 0s;
+              -webkit-transition-property: all;
+              -webkit-transition-duration: 0.15s;
+              -webkit-transition-timing-function: linear;
+              -webkit-transition-delay: 0s;
+              line-height: 20px;
+              padding: 6px 10px 6px 10px;
+              width: 150px; }
+              body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.options div.rsvp-button:hover {
+                border: 1px solid #959595;
+                background-color: #fcfcfc;
+                color: #000; }
+              body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.options div.rsvp-button:active {
+                box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+                -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+                -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+                border: 1px solid #6e6e6e;
+                background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+                background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+                background-color: #d8d8d8; }
+              body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.options div.rsvp-button.disabled {
+                opacity: 0.6; }
+                body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.options div.rsvp-button.disabled:hover, body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.options div.rsvp-button.disabled:active {
+                  color: #444444;
+                  border: 1px solid #c1c1c1;
+                  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+                  background: -moz-linear-gradient(top, white, #eeeeee);
+                  background-color: #f4f4f4;
+                  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+                  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+                  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+                  cursor: default; }
+              body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.options div.rsvp-button .swatch {
+                display: inline-block;
+                border-radius: 4px;
+                box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.6);
+                height: 20px;
+                line-height: 20px;
+                margin-right: 5px;
+                width: 20px; }
+              body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.options div.rsvp-button.yes .swatch {
+                background-color: #92c94a; }
+              body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.options div.rsvp-button.maybe .swatch {
+                background-color: #f9b728; }
+              body.fbbody div.invite div.invite-container div.details-container div.rsvp-actions div.options div.rsvp-button.no .swatch {
+                background-color: #d05858; }
+        body.fbbody div.invite div.invite-container div.details-container div.rsvp-state {
+          background-color: #f2f2f2;
+          background-color: rgba(242, 242, 242, 0.6);
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+          padding: 10px; }
+          body.fbbody div.invite div.invite-container div.details-container div.rsvp-state div.response {
+            font-size: 16px;
+            margin-bottom: 10px; }
+            body.fbbody div.invite div.invite-container div.details-container div.rsvp-state div.response span {
+              font-weight: bold;
+              text-transform: uppercase; }
+              body.fbbody div.invite div.invite-container div.details-container div.rsvp-state div.response span.yes {
+                color: #92c94a; }
+              body.fbbody div.invite div.invite-container div.details-container div.rsvp-state div.response span.maybe {
+                color: #f9b728; }
+              body.fbbody div.invite div.invite-container div.details-container div.rsvp-state div.response span.no {
+                color: #d05858; }
+          body.fbbody div.invite div.invite-container div.details-container div.rsvp-state a {
+            color: #0c9acb; }
+    body.fbbody div.invite div.end {
+      height: 50px;
+      margin: 20px 0;
+      background: url(/erly/img/icon-end.png) 50% 50% no-repeat; }
+  body.fbbody div.no-invites {
+    color: #666;
+    font-size: 16px;
+    display: none;
+    padding: 30px;
+    text-align: center;
+    text-shadow: 0 1px 1px 255, 255, 255, 0.7; }
+  body.fbbody .choose-album {
+    text-align: center;
+    margin: 10px; }
+    body.fbbody .choose-album button {
+      font-size: 14px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      display: inline-block;
+      min-height: 20px;
+      cursor: pointer;
+      text-shadow: 0px 1px 0 white;
+      color: #444444;
+      border: 1px solid #c1c1c1;
+      background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+      background: -moz-linear-gradient(top, white, #eeeeee);
+      background-color: #f4f4f4;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      transition-property: all;
+      transition-duration: 0.15s;
+      transition-timing-function: linear;
+      transition-delay: 0s;
+      -moz-transition-property: all;
+      -moz-transition-duration: 0.15s;
+      -moz-transition-timing-function: linear;
+      -moz-transition-delay: 0s;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      transition-property: all;
+      transition-duration: 0.15s;
+      transition-timing-function: linear;
+      transition-delay: 0s;
+      -moz-transition-property: all;
+      -moz-transition-duration: 0.15s;
+      -moz-transition-timing-function: linear;
+      -moz-transition-delay: 0s;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      background: -webkit-gradient(linear, left top, left bottom, from(#2ec4f7), to(#0098cc));
+      background: -moz-linear-gradient(top, #2ec4f7, #0098cc);
+      background-color: #09b5f0;
+      border: 1px solid #0185b2;
+      color: #fff;
+      text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0; }
+      body.fbbody .choose-album button:hover {
+        border: 1px solid #959595;
+        background-color: #fcfcfc;
+        color: #000; }
+      body.fbbody .choose-album button:active {
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        border: 1px solid #6e6e6e;
+        background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+        background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+        background-color: #d8d8d8; }
+      body.fbbody .choose-album button.disabled {
+        opacity: 0.6; }
+        body.fbbody .choose-album button.disabled:hover, body.fbbody .choose-album button.disabled:active {
+          color: #444444;
+          border: 1px solid #c1c1c1;
+          background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+          background: -moz-linear-gradient(top, white, #eeeeee);
+          background-color: #f4f4f4;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          cursor: default; }
+      body.fbbody .choose-album button:hover {
+        background: -webkit-gradient(linear, left top, left bottom, from(#30d9ff), to(#049cd0));
+        background: -moz-linear-gradient(top, #30d9ff, #049cd0);
+        color: #fff;
+        background-color: #04bdfd;
+        border: 1px solid #0185b2; }
+      body.fbbody .choose-album button:active {
+        background: -webkit-gradient(linear, left top, left bottom, from(#068ebc), to(#24abd8));
+        background: -moz-linear-gradient(top, #068ebc, #24abd8);
+        background-color: #0089b8;
+        border: 1px solid #005b7c; }
+      body.fbbody .choose-album button.disabled:hover, body.fbbody .choose-album button.disabled:active {
+        background: -webkit-gradient(linear, left top, left bottom, from(#2ec4f7), to(#0098cc));
+        background: -moz-linear-gradient(top, #2ec4f7, #0098cc);
+        background-color: #09b5f0;
+        border: 1px solid #0185b2;
+        color: #fff; }
+  body.fbbody .fbalbum {
+    margin: 10px;
+    border: solid 5px white;
+    display: inline-block;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3); }
+    body.fbbody .fbalbum .art {
+      filter: alpha(opacity=100);
+      overflow: hidden;
+      background-color: #222;
+      position: relative; }
+    body.fbbody .fbalbum img {
+      opacity: 0.01; }
+    body.fbbody .fbalbum span {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: block;
+      background: url(/erly/img/bg-black-50.png);
+      width: 100%;
+      overflow: hidden;
+      color: white;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding: 4px 6px;
+      filter: alpha(opacity=100);
+      font-size: 13px; }
+  body.fbbody .facebook-album-selector {
+    display: none;
+    width: 680px;
+    position: relative;
+    margin: 0px auto 25px auto; }
+    body.fbbody .facebook-album-selector .button-left, body.fbbody .facebook-album-selector .button-right {
+      transition-property: all;
+      transition-duration: 0.15s;
+      transition-timing-function: linear;
+      transition-delay: 0s;
+      -moz-transition-property: all;
+      -moz-transition-duration: 0.15s;
+      -moz-transition-timing-function: linear;
+      -moz-transition-delay: 0s;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      position: absolute;
+      top: 50%;
+      margin-top: -30px;
+      width: 40px;
+      height: 60px;
+      z-index: 1; }
+      body.fbbody .facebook-album-selector .button-left:hover, body.fbbody .facebook-album-selector .button-right:hover {
+        background-position: 0 0; }
+    body.fbbody .facebook-album-selector .button-left {
+      background: url(/erly/img/icon-carousel-left-arrow-small.png) -5px 0 no-repeat;
+      left: 0; }
+    body.fbbody .facebook-album-selector .button-right {
+      background: url(/erly/img/icon-carousel-right-arrow-small.png) 5px 0 no-repeat;
+      right: 0; }
+    body.fbbody .facebook-album-selector .facebook-album-viewport {
+      box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.3);
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      overflow: hidden; }
+      body.fbbody .facebook-album-selector .facebook-album-viewport .facebook-album-container {
+        transition-property: all;
+        transition-duration: 0.15s;
+        transition-timing-function: linear;
+        transition-delay: 0s;
+        -moz-transition-property: all;
+        -moz-transition-duration: 0.15s;
+        -moz-transition-timing-function: linear;
+        -moz-transition-delay: 0s;
+        -webkit-transition-property: all;
+        -webkit-transition-duration: 0.15s;
+        -webkit-transition-timing-function: linear;
+        -webkit-transition-delay: 0s;
+        white-space: nowrap; }
+        body.fbbody .facebook-album-selector .facebook-album-viewport .facebook-album-container .page {
+          width: 660px;
+          vertical-align: top;
+          display: inline-block;
+          white-space: normal;
+          min-height: 300px;
+          position: relative; }
+          body.fbbody .facebook-album-selector .facebook-album-viewport .facebook-album-container .page .loader {
+            text-align: center;
+            height: 100%; }
+            body.fbbody .facebook-album-selector .facebook-album-viewport .facebook-album-container .page .loader img {
+              position: absolute;
+              top: 50%;
+              margin-top: -16px; }
+          body.fbbody .facebook-album-selector .facebook-album-viewport .facebook-album-container .page .error {
+            text-align: center;
+            font-size: 16px;
+            margin-top: 20px; }
+          body.fbbody .facebook-album-selector .facebook-album-viewport .facebook-album-container .page .fbalbum {
+            display: inline-block;
+            cursor: pointer;
+            margin: 10px; }
+            body.fbbody .facebook-album-selector .facebook-album-viewport .facebook-album-container .page .fbalbum .art {
+              width: 190px;
+              height: 120px; }
+  body.fbbody .fb-album-create-dialog {
+    text-align: center; }
+    body.fbbody .fb-album-create-dialog .congrats {
+      font-size: 24px;
+      margin-bottom: 10px; }
+    body.fbbody .fb-album-create-dialog .message {
+      color: #666; }
+    body.fbbody .fb-album-create-dialog .fbalbum {
+      margin: 10px; }
+      body.fbbody .fb-album-create-dialog .fbalbum .art {
+        width: 390px;
+        height: 250px; }
+    body.fbbody .fb-album-create-dialog a {
+      color: #0c9acb; }
+
+body.fbsplash {
+  padding-bottom: 40px; }
+  body.fbsplash .generic-body-wrapper {
+    width: 770px; }
+  body.fbsplash .header {
+    display: none; }
+  body.fbsplash .home .carousel-buttons {
+    display: none; }
+  body.fbsplash .home form#signup input[type="password"],
+  body.fbsplash .home form#signup input[type="text"] {
+    width: 220px; }
+  body.fbsplash .home .inner {
+    height: 545px;
+    width: 770px; }
+    body.fbsplash .home .inner .left-side .slide-container {
+      margin-top: 23px; }
+      body.fbsplash .home .inner .left-side .slide-container .slides .slide .headline {
+        bottom: 13px;
+        font-size: 14px;
+        width: 418px; }
+      body.fbsplash .home .inner .left-side .slide-container .slides .slide .content-wrapper {
+        height: 322px; }
+        body.fbsplash .home .inner .left-side .slide-container .slides .slide .content-wrapper img {
+          border-bottom-width: 35px;
+          height: auto;
+          width: 413px; }
+    body.fbsplash .home .inner .left-side .mini-slides {
+      margin-left: -165px; }
+      body.fbsplash .home .inner .left-side .mini-slides .mini-slide-container .mini-left-arrow {
+        left: 77px; }
+      body.fbsplash .home .inner .left-side .mini-slides .mini-slide-container .mini-right-arrow {
+        left: 362px; }
+    body.fbsplash .home .inner .right-wrapper {
+      right: -9px;
+      width: 351px; }
+      body.fbsplash .home .inner .right-wrapper .right-side {
+        width: 100%; }
+        body.fbsplash .home .inner .right-wrapper .right-side .intro-wrapper {
+          background-image: url(/erly/img/bg-home-right-bar-fb.png);
+          height: 450px; }
+          body.fbsplash .home .inner .right-wrapper .right-side .intro-wrapper .intro .product-name {
+            margin-left: -26px; }
+          body.fbsplash .home .inner .right-wrapper .right-side .intro-wrapper .intro .bottom {
+            margin-top: 26px;
+            padding-bottom: 20px; }
+  body.fbsplash .featured-outer .featured-container {
+    width: 770px; }
+    body.fbsplash .featured-outer .featured-container h2 {
+      background: transparent url(/erly/img/bg-section-top-fb.png) no-repeat center top; }
+  body.fbsplash .home-copy-outer {
+    width: 770px; }
+    body.fbsplash .home-copy-outer .home-copy-container {
+      width: 770px; }
+      body.fbsplash .home-copy-outer .home-copy-container div.home-copy-row img.home-create-event {
+        width: 431px;
+        height: 235px; }
+      body.fbsplash .home-copy-outer .home-copy-container div.home-copy-row img.home-plan {
+        width: 276px;
+        height: 242px; }
+      body.fbsplash .home-copy-outer .home-copy-container .sign-up-row img.home-album {
+        width: 770px;
+        height: 186px; }

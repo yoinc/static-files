@@ -1,0 +1,33 @@
+<script id="tmplCMSEventList" type="text/x-jquery-tmpljavascript">
+  <tr class="data-row"
+      data-type="${$data.isAlbum ? 'photo-album' : 'invitation'}"
+      data-id="${$data.id}">
+    <td>${$data.id}</td>
+    <td>${$data.ownerVanityName}</td>
+    <td>
+      <a href="/user/${$data.ownerVanityName}/${$data.vanityUrl}" target="_blank">
+        ${$data.title}
+      </a>
+    </td>
+
+    <td>
+      ${erly.dateFormatters.formatDate($data.createdAt)}
+    </td>
+
+    <td>
+      ${erly.dateFormatters.formatDate($data.startDate)}
+    </td>
+
+    <td>
+      {{if $data.isAlbum}}
+        YES
+      {{else}}
+        NO
+      {{/if}}
+    </td>
+
+    <td>
+      <a href="#" class="raw-record">raw</a>
+    </td>
+  </tr>
+</script>

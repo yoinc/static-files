@@ -1,0 +1,258 @@
+<script id="tmplSettings" type="text/x-jquery-tmpljavascript">
+  <div class="settings-wrapper">
+    {{tmpl "#tmplEmailAddresses"}}
+    {{tmpl "#tmplAddressBookServices"}}
+    {{tmpl "#tmplPhotoServices"}}
+    {{tmpl(user) "#tmplEmailSettings"}}
+    {{if erly.session.canDisconnectFacebook()}}
+    {{tmpl(user) "#tmplResetPassword"}}
+    {{/if}}
+    {{tmpl "#tmplDisplayName"}}
+    {{tmpl(user) "#tmplProfilePicture"}}
+
+    <p class="cancel">
+      Want to delete your Erly account?
+      <a class="remove-user" href="javascript:void(0)">Click here</a>.
+    </p>
+  </div>
+</script>
+
+<script id="tmplSettingGroup" type="text/x-jquery-tmpljavascript">
+  <div class="settings">
+    <h2 class="headline">
+      {{if customizedHeadline}}
+        {{html customizedHeadline}}
+      {{else}}
+        <span class="red-colorline-bottom">{{html headline}}</span>
+      {{/if}}
+    </h2>
+
+    <p class="left-col">
+      {{if extraLocals}}
+        {{tmpl(extraLocals) descriptionTemplate}}
+      {{else}}
+        {{tmpl descriptionTemplate}}
+      {{/if}}
+    </p>
+
+    <div class="right-col">
+      {{html $item.html}}
+    </div>
+  </div>
+</script>
+
+<script id="tmplDisplayName" type="text/x-jquery-tmpljavascript">
+  {{wrap({
+    headline: "Your Name",
+    descriptionTemplate: "#tmplDisplayNameDescription"
+  }) "#tmplSettingGroup"}}
+    <div>
+      <form class="display-name" action="javascript:void(0)" onsubmit="return false;">
+        <input type="text" name="name" value="${user.name}" />
+        <div class="buttons">
+          <input value="Save" type="submit" />
+          <div class="status"> </div>
+        </div>
+      </form>
+    </div>
+  {{/wrap}}
+</script>
+
+
+<script id="tmplEmailAddresses" type="text/x-jquery-tmpljavascript">
+  {{wrap({
+    headline: "Email Addresses",
+    descriptionTemplate: "#tmplEmailAddressesDescription"
+  }) "#tmplSettingGroup"}}
+    <div class="email-addresses">
+      <form action="javascript:void(0)" onsubmit="return false;">
+      <ul class="email-address">
+        <li class="email">${user.email} (Primary)</li>
+
+        {{each user.emails}}
+          <li class="email"><span class="data">${$value}</span>
+            [<a href="javascript:void(0)" class="make-primary">make primary</a>]
+            <a href="javascript:void(0)" class="remove">&nbsp;</a></li>
+        {{/each}}
+        {{each user.pendingEmails}}
+          <li class="email"><span class="data">${$value}</span>
+            [<a href="javascript:void(0)" class="resend">resend verification email</a>]
+            <a href="javascript:void(0)" class="remove-pending">&nbsp;</a>
+          </li>
+        {{/each}}
+        <li class="email">
+          <input type="text" name="email" value="" />
+          <input type="submit" name="commit" value="Add" />
+        </li>
+      </ul>
+      <div class="error"> </div>
+      </form>
+    </div>
+  {{/wrap}}
+</script>
+
+<script id="tmplAddressBookServices" type="text/x-jquery-tmpljavascript">
+  {{wrap({
+    headline: "Address Book",
+    descriptionTemplate: "#tmplAddressBookDescription"
+  }) "#tmplSettingGroup"}}
+    <div class="services-wrapper">
+      {{tmpl({user: user, services: services.addressBook}) "#tmplServices"}}
+    </div>
+  {{/wrap}}
+</script>
+
+<script id="tmplPhotoServices" type="text/x-jquery-tmpljavascript">
+  {{wrap({
+    headline: "Photos",
+    descriptionTemplate: "#tmplPhotoServiceDescription"
+  }) "#tmplSettingGroup"}}
+    <div class="services-wrapper">
+      {{tmpl({user: user, services: erly.services.getPhotoServices()}) "#tmplServices"}}
+    </div>
+  {{/wrap}}
+</script>
+
+<script id="tmplEmailSettings" type="text/x-jquery-tmpljavascript">
+  {{wrap({
+    customizedHeadline: "<span class='title red-colorline-bottom'>Email Settings</span><span class='settings-updated'>Your changes have been saved</span>",
+    descriptionTemplate: "#tmplEmailSettingsDescription",
+    extraLocals: { user: $data }
+  }) "#tmplSettingGroup"}}
+    {{tmpl "#tmplEmailSettingsForm"}}
+  {{/wrap}}
+</script>
+
+<!-- Setting Descriptions -->
+<script id="tmplDisplayNameDescription" type="text/x-jquery-tmpljavascript">
+  This is how your name will be displayed on Erly.
+</script>
+
+<script id="tmplEmailAddressesDescription" type="text/x-jquery-tmpljavascript">
+  These email addresses are associated with your Erly account. Your primary
+  email address is the one we'll send notifications and updates to.
+</script>
+
+<script id="tmplAddressBookDescription" type="text/x-jquery-tmpljavascript">
+  Connect your Google Contacts or Yahoo! address book to make it easier to
+  invite people to your Erly Events.
+</script>
+
+<script id="tmplPhotoServiceDescription" type="text/x-jquery-tmpljavascript">
+  Link up any photo services you use to make it easy to add photos to your Erly Events.
+</script>
+
+<script id="tmplEmailSettingsDescription" type="text/x-jquery-tmpljavascript">
+  Notifications will be sent to ${user.email}.
+</script>
+
+<script id="tmplVanityNameDescription" type="text/x-jquery-tmpljavascript">
+  This is your Erly.com shortcut.
+</script>
+
+<script id="tmplProfilePictureDescription" type="text/x-jquery-tmpljavascript">
+  This is your profile picture.
+</script>
+
+<script id="tmplResetPasswordDescription" type="text/x-jquery-tmpljavascript">
+  Reset password notification will be sent to ${user.email}.
+</script>
+
+<!-- Extra email settings templates -->
+<script id="tmplEmailSettingsForm" type="text/x-jquery-tmpljavascript">
+  <div class="email-settings">
+    <form method="post" action="/settings" class="settings-form">
+      <ul class="rows">
+        <li class="row">
+          <div>
+            <label for="">Notify me whenever someone</label>
+          </div>
+          <div class="indent">
+          {{tmpl({key: "notificationSettings[added]", value: notificationSettings.added}) "#tmplCheckbox"}}<label for="">invites me to an Event</label><br>
+          {{tmpl({key: "notificationSettings[comment_new]", value: notificationSettings.comment_new}) "#tmplCheckbox"}}<label for="">comments on any of my Events</label><br>
+          {{tmpl({key: "notificationSettings[like]", value: notificationSettings.like}) "#tmplCheckbox"}}<label for="">likes any of my Events</label><br>
+          {{tmpl({key: "notificationSettings[new_posts]", value: notificationSettings.new_posts}) "#tmplCheckbox"}}<label for="">adds posts to any of my Events</label>
+          </div>
+        </li>
+
+        <li class="row">
+          <div>
+            <input type="checkbox" class="chronicle-updates" /><label for="">Send me a digest email summarizing activity in my Events</label>
+          </div>
+
+          <div class="batch-updates">
+            <label for="">Digest email sent at most once</label>
+
+            <span class="duration first">
+              {{tmpl({
+                key: "notificationSettings[updates]",
+                value: 1,
+                currentValue: notificationSettings.updates
+              }) "#tmplRadioButton"}}
+              Daily
+            </span>
+
+            <span class="duration">
+              {{tmpl({
+                key: "notificationSettings[updates]",
+                value: 7,
+                currentValue: notificationSettings.updates
+              }) "#tmplRadioButton"}}
+              Weekly
+            </span>
+          </div>
+        </li>
+
+        <li class="row">
+          {{tmpl({key: "notificationSettings[news]", value: notificationSettings.news}) "#tmplCheckbox"}}<label for="">Send me important Erly news and updates</label>
+        </li>
+      </ul>
+
+      <input type="submit" class="standard" value="Save" />
+    </form>
+  </div>
+</script>
+
+<script id="tmplProfilePicture" type="text/x-jquery-tmpljavascript">
+  {{wrap({
+    headline: "Profile Picture",
+    descriptionTemplate: "#tmplProfilePictureDescription"
+  }) "#tmplSettingGroup"}}
+    <form class="profile-picture" onsubmit="return false;">
+      <input type="hidden" name="picture" value="" />
+
+      <div class="actions">
+        <a href="javascript:void(0)" class="upload-new">Upload a new picture</a>
+        <a {{if !$data.picture}}style="display:none"{{/if}} href="javascript:void(0)" class="remove-picture">
+          {{if erly.session.isFacebookConnected()}}
+            Revert to Facebook picture
+          {{else}}
+            Remove picture
+          {{/if}}</a>
+      </div>
+      {{tmpl($data) '#tmplUploadProfilePictureWidget'}}
+
+      <div class="buttons">
+        <input value="Save" type="submit" />
+        <div class="status error-container"> </div>
+      </div>
+    </form>
+  {{/wrap}}
+</script>
+
+<script id="tmplResetPassword" type="text/x-jquery-tmpljavascript">
+  {{wrap({
+    headline: "Reset Password",
+    descriptionTemplate: "#tmplResetPasswordDescription",
+    extraLocals: { user: $data }
+  }) "#tmplSettingGroup"}}
+    <div class="reset-password">
+      <div class="link">
+        <a href="javascript:void(0)" onclick="erly.settings.sendResetPasswordNotification(${JSON.stringify(email)}); return false;">Click here to reset your password</a>
+      </div>
+      <div class="status">
+        Your reset password notification has been sent
+      </div>
+    </div>
+  {{/wrap}}
+</script>

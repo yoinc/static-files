@@ -1,0 +1,294 @@
+<script id="tmplActivityFeed" type="text/x-jquery-tmpljavascript">
+  <div>
+    <div class="activity-feed-items">
+      <div class="loader">
+        <img src="${erly.PUB_URL}/img/ajax-loader.gif" alt="ajax loader" />
+      </div>
+      {{if erly.facebookCanvas}}
+      <div class="see-more">
+        <a target="_blank" href="${erly.urlFor.activity($data)}">See more activity on Erly</a>
+      </div>
+      {{/if}}
+    </div>
+    <div class="empty-line"></div>
+    <div class="empty-activities-pane">
+      <div class="text">
+        Events from Erly allow you to create, in just seconds, a beautiful
+        webpage for your event that brings together event information,
+        invitations, and a multimedia album.
+      </div>
+      <div class="start-button">&nbsp;</div>
+    </div>
+  </div>
+</script>
+
+<script id="tmplActivityFeedItem" type="text/x-jquery-tmpljavascript">
+  <div class="activity-feed-item {{if $data.lastLeftOff}}last-left-off{{/if}}">
+    {{if $data.lastLeftOff}}
+      <div class="last-left-off-text">${$data.lastLeftOff}</div>
+    {{/if}}
+    <div class="avatar-photo">
+      {{if !$data.isInvite}}
+        {{if erly.viewer.exported}}
+          {{tmpl({ident: $data.userIdent})
+            '#tmplAvatarImage'}}
+        {{else}}
+          <a ${$item.aTarget}href="${erly.BASE_URL}/timeline/${userIdent}">{{tmpl({ident: $data.userIdent})
+            '#tmplAvatarImage'}}
+          </a>
+        {{/if}}
+      {{else}}
+        {{tmpl({ident: $data.userIdent}) '#tmplAvatarImage'}}
+      {{/if}}
+    </div>
+    <div class="story">
+      <div class="text">
+        <span class="name">
+          {{if $data.users}}
+          {{each($i, $value) users}}
+            {{if !$value.isInvite}}
+              {{if erly.viewer.exported}}
+                ${$value.userName}
+              {{else}}
+                <a ${$item.aTarget}href="${erly.BASE_URL}/timeline/${$value.userIdent}">${$value.userName}</a>
+              {{/if}}
+            {{else}}
+              ${$value.userName}
+            {{/if}}
+            {{if $i < users.length - 1}}{{if users.length !== 2}},{{/if}} {{if $i === users.length - 2}}and {{/if}}{{/if}}
+          {{/each}}
+          {{else}}
+            {{if !$data.isInvite}}
+              {{if erly.viewer.exported}}
+                ${userName}
+              {{else}}
+                <a ${$item.aTarget}href="${erly.BASE_URL}/timeline/${userIdent}">${userName}</a>
+              {{/if}}
+            {{else}}
+            ${userName}
+            {{/if}}
+          {{/if}}
+        </span>
+        <span class="action">
+        {{if objectType === 'post'}}
+          added
+          {{if count}}
+            {{if count > 1}}
+              ${count} ${post.type}s{{if !$item.collectionFeed}} to{{/if}}
+            {{else}}
+              a <a ${$item.aTarget}href="${$item.linkToChronicle($data, post.id)}">${post.type}</a>{{if !$item.collectionFeed}} to{{/if}}
+            {{/if}}
+          {{/if}}
+        {{/if}}
+        {{if objectType === 'tag_multiple'}}
+           added ${count} people{{if !$item.collectionFeed}} to{{/if}}
+        {{/if}}
+        {{if objectType === 'tag'}}
+           was added to the guest list{{if !$item.collectionFeed}} for{{/if}}
+        {{/if}}
+        {{if objectType === 'chronicle'}}
+          created the Event
+        {{/if}}
+        {{if objectType === 'join'}}
+          joined Erly
+        {{/if}}
+        {{if objectType === 'comment'}}
+          commented on
+          {{if comment.postId}}
+            {{if !comment.post.caption}}
+             a <a ${$item.aTarget}href="${$item.linkToChronicle($data, comment.post.id, true)}">${comment.post.type}</a>
+            {{else}}
+              a ${comment.post.type} <a ${$item.aTarget}href="${$item.linkToChronicle($data, comment.post.id, true)}">${comment.post.caption}</a>
+            {{/if}}{{if !$item.collectionFeed}} in the Event{{/if}}
+          {{elif !$item.collectionFeed}}
+            the Event
+          {{/if}}
+        {{/if}}
+        {{if objectType === 'like'}}
+          like{{if !$data.users || $data.users.length === 1}}s{{/if}}
+          {{if like.postId}}
+            {{if !like.post.caption}}
+             a <a ${$item.aTarget}href="${$item.linkToChronicle($data, like.post.id)}">${like.post.type}</a>
+            {{else}}
+              a ${like.post.type} <a ${$item.aTarget}href="${$item.linkToChronicle($data, like.post.id)}">${like.post.caption}</a>
+            {{/if}}{{if !$item.collectionFeed}} in the Event{{/if}}
+          {{elif !$item.collectionFeed}}
+            the Event
+          {{/if}}
+        {{/if}}
+        {{if objectType === 'rsvpStateChanged'}}
+          {{if rsvpStateChanged.state === 'yes'}}
+            is attending
+          {{elif rsvpStateChanged.state === 'maybe'}}
+            is maybe attending
+          {{else}}
+            is not attending
+          {{/if}}
+        {{/if}}
+        {{if objectType === 'eventPageView'}}
+          viewed the Event for
+        {{/if}}
+        </span>
+
+        {{if chronicleIdent}}
+          <span class="chronicle">
+            <a ${$item.aTarget}href="${$item.linkToChronicle(chronicleIdent)}">${chronicleTitle}</a>
+          </span>
+        {{elif $item.collectionFeed && (!($data.like||{}).postId && objectType === 'like')}}
+          this Event
+        {{/if}}
+
+        {{if objectType === 'tag'}}
+           {{if !$data.tag.isInvite}}
+             by
+            {{if erly.viewer.exported}}
+              ${tag.name}
+            {{else}}
+              <a ${$item.aTarget}href="${erly.BASE_URL}/timeline/${tag.ident}">${tag.name}</a>
+            {{/if}}
+           {{else}}
+             by ${tag.name}
+           {{/if}}
+        {{/if}}
+      </div>
+
+      <div class="time-ago">
+        ${erly.dateFormatters.prettyDate(erly.normalizeDate(dateAddedAt), erly.normalizeDate($item.serverNow))}
+      </div>
+
+      {{if objectType === 'post' && post.type === 'photo' && !$item.collectionFeed}}
+        <div class="post-content">
+          {{each allphotos}}
+            <a ${$item.aTarget}href="${$item.linkToChronicle($data, $value.id)}">
+            {{if allphotos.length === 2}}
+              <div class="secondary activity-photo two-column">
+            {{elif $index === 0 && allphotos.length !== 3}}
+              <div class="primary activity-photo">
+            {{else}}
+              <div class="secondary activity-photo">
+            {{/if}}
+                <img src="${$value.picture}" />
+            </div>
+            </a>
+          {{/each}}
+          <div style="clear:both;"></div>
+        </div>
+      {{/if}}
+
+      {{if objectType === 'post' && post.type === 'note' && !$item.collectionFeed}}
+        <div class="post-content">
+          <div class="primary activity-comment {{if post.text.length > 400}}
+            small
+          {{elif post.text.length > 140}}
+            medium
+          {{/if}}">
+            <div>
+              {{html erly.linebreaks(post.text)}}
+            </div>
+          </div>
+          <div style="clear:both;"></div>
+        </div>
+      {{/if}}
+
+      {{if (objectType === 'like' && like.postId && like.post.type === 'photo') && !$item.collectionFeed}}
+        <div class="post-content">
+          <a ${$item.aTarget}href="${$item.linkToChronicle($data, like.post.id)}">
+          <div class="primary activity-photo">
+              <img src="${like.post.picture}" />
+          </div>
+          </a>
+          <div style="clear:both;"></div>
+        </div>
+      {{/if}}
+
+      {{if objectType == 'chronicle' && !$item.collectionFeed}}
+        {{if chronicle.coverPhoto && (chronicle.startDate > new Date().getTime() || chronicle.postCount)}}
+        <div class="post-content">
+          <a ${$item.aTarget}href="${$item.linkToChronicle($data)}">
+            <div class="collection-cover">
+              <img src="${chronicle.coverPhoto.url}"/>
+              <div class="title"
+              {{if chronicle.metadataStyles && chronicle.metadataStyles.backgroundColor}}
+              style="background:${erly.getRGBA(chronicle.metadataStyles.backgroundColor,chronicle.metadataStyles.opacity)}"
+              {{/if}}
+              ><span
+              {{if chronicle.metadataStyles && chronicle.metadataStyles.textColor}}
+                style="color:#${chronicle.metadataStyles.textColor};"
+              {{/if}}
+              >${chronicle.title}</span></div>
+            </div>
+          </a>
+        </div>
+        {{/if}}
+      {{/if}}
+
+      {{if objectType === 'comment' && !comment.postId && !$item.collectionFeed}}
+        <div class="chronicle-content comment">
+          <a ${$item.aTarget}href="${$item.linkToChronicle($data)}">
+            <div class="activity-comment {{if comment.text.length < 100}}
+              large
+            {{elif comment.text.length < 200}}
+              medium
+            {{else}}
+              small
+            {{/if}}">
+              <div>
+                {{html erly.linebreaks(comment.text)}}
+              </div>
+            </div>
+          </a>
+        </div>
+      {{/if}}
+
+      {{if (objectType === 'comment' && comment.postId && comment.post.type === 'photo') && !$item.collectionFeed}}
+        <div class="post-content comment">
+          <a ${$item.aTarget}href="${$item.linkToChronicle($data, comment.post.id)}">
+            <div class="activity-photo">
+              <img src="${comment.post.picture}" />
+            </div>
+            <div class="activity-comment {{if comment.text.length < 100}}
+              large
+            {{elif comment.text.length < 200}}
+              medium
+            {{else}}
+              small
+            {{/if}}">
+              <div>
+                {{html erly.linebreaks(comment.text)}}
+              </div>
+            </div>
+          </a>
+        </div>
+      {{/if}}
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+</script>
+
+<script id="tmplFriendCollection" type="text/x-jquery-tmpljavascript">
+  <div class="collection">
+    <div class="cover">
+      {{if $data.coverPhoto}}
+      <img src="${$data.coverPhoto.url}" />
+      {{else}}
+      <img src="/img/flagstone-backgrounds/1.jpg" />
+      {{/if}}
+      <div class="title">${title}</div>
+      <a href="${erly.urlFor.collection($data)}">
+        <div class="overlay">
+          <div class="button-container">
+            <div class="button">View Event &raquo;</div>
+          </div>
+          <div class="location">
+            {{if $data.postCount > 0}}
+              ${postCount} post{{if $data.postCount > 1}}s{{/if}}
+            {{/if}}
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="tagline">
+      {{tmpl '#tmplCollectionMetadata'}}
+    </div>
+  </div>
+</script>

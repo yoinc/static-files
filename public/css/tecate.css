@@ -1,0 +1,41 @@
+body {
+  font-family: Helvetica, Arial, Sans-Serif;
+}
+div {
+  box-sizing: border-box;
+}
+div.template {
+  display: none;
+}
+div#title {
+  font-size: 20px;
+}
+div#rooms div.room {
+  background-color: #eeeeee;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+div#rooms div.room div.title {
+  font-weight: bold;
+  cursor: pointer;
+}
+div#rooms div.room div.users {
+  display: none;
+}
+div#rooms div.room div.user {
+  padding: 5px;
+  border-bottom: solid 1px #888888;
+}
+div#rooms div.room div.user.offline {
+  color: #aaaaaa;
+}
+div#rooms div.room div.user.offline div.streamInfo {
+  display: none;
+}
+div#rooms div.room div.user div.subscribers div.header {
+  margin-top: 5px;
+  cursor: pointer;
+}
+div#rooms div.room div.user div.subscribers div.subscriberStats {
+  display: none;
+}

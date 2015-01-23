@@ -1,0 +1,366 @@
+/* Mostly taken from http://nicolasgallagher.com/pure-css-speech-bubbles/demo/default.css */
+@-webkit-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-moz-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-o-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-webkit-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-o-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+#commentBox {
+  background: white;
+  position: absolute;
+  display: none;
+  border: 1px solid DarkGray;
+  border-top: 3px solid #09B5F0;
+  min-width: 150px;
+  padding: 10px;
+  z-index: 2020;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+  #commentBox .remove {
+    background: white url(/img/icon-remove.png) no-repeat 50% 0;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    height: 20px;
+    width: 40px;
+    z-index: 200;
+    cursor: pointer;
+    background: white url(/img/icon-grey-x-sm.png) no-repeat 50% 0;
+    top: -6px;
+    right: 0px;
+    width: 8px;
+    height: 20px;
+    position: absolute;
+    z-index: 100; }
+    #commentBox .remove:hover {
+      background-position: 50% -20px; }
+  #commentBox .comments-header {
+    border-bottom: 2px solid #dedede;
+    font-family: DIN, sans-serif;
+    font-size: 16px;
+    padding-bottom: 8px;
+    position: relative;
+    text-transform: uppercase; }
+    #commentBox .comments-header img {
+      margin-right: 2px;
+      padding-bottom: 2px;
+      vertical-align: middle; }
+  #commentBox .comments-more {
+    border-bottom: dotted 1px #dedede;
+    text-align: center;
+    padding: 8px 0; }
+    #commentBox .comments-more a {
+      text-decoration: none; }
+  #commentBox .comments-rest {
+    display: none; }
+  #commentBox .comments-container {
+    margin-bottom: 8px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0; }
+  #commentBox .comments-input button {
+    margin: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-size: 14px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    display: inline-block;
+    min-height: 20px;
+    cursor: pointer;
+    text-shadow: 0px 1px 0 white;
+    color: #444444;
+    border: 1px solid #c1c1c1;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+    background: -moz-linear-gradient(top, white, #eeeeee);
+    background-color: #f4f4f4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.15s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.15s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2ec4f7), to(#0098cc));
+    background: -moz-linear-gradient(top, #2ec4f7, #0098cc);
+    background-color: #09b5f0;
+    border: 1px solid #0185b2;
+    color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;
+    padding: 2px 15px; }
+    #commentBox .comments-input button:hover {
+      border: 1px solid #959595;
+      background-color: #fcfcfc;
+      color: #000; }
+    #commentBox .comments-input button:active {
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      border: 1px solid #6e6e6e;
+      background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+      background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+      background-color: #d8d8d8; }
+    #commentBox .comments-input button.disabled {
+      opacity: 0.6; }
+      #commentBox .comments-input button.disabled:hover, #commentBox .comments-input button.disabled:active {
+        color: #444444;
+        border: 1px solid #c1c1c1;
+        background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+        background: -moz-linear-gradient(top, white, #eeeeee);
+        background-color: #f4f4f4;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        cursor: default; }
+    #commentBox .comments-input button:hover {
+      background: -webkit-gradient(linear, left top, left bottom, from(#30d9ff), to(#049cd0));
+      background: -moz-linear-gradient(top, #30d9ff, #049cd0);
+      color: #fff;
+      background-color: #04bdfd;
+      border: 1px solid #0185b2; }
+    #commentBox .comments-input button:active {
+      background: -webkit-gradient(linear, left top, left bottom, from(#068ebc), to(#24abd8));
+      background: -moz-linear-gradient(top, #068ebc, #24abd8);
+      background-color: #0089b8;
+      border: 1px solid #005b7c; }
+    #commentBox .comments-input button.disabled:hover, #commentBox .comments-input button.disabled:active {
+      background: -webkit-gradient(linear, left top, left bottom, from(#2ec4f7), to(#0098cc));
+      background: -moz-linear-gradient(top, #2ec4f7, #0098cc);
+      background-color: #09b5f0;
+      border: 1px solid #0185b2;
+      color: #fff; }
+  #commentBox .comments-input textarea {
+    line-height: 18px;
+    height: 16px;
+    margin: 0 0 8px 0;
+    overflow-y: hidden;
+    padding: 8px;
+    vertical-align: middle;
+    width: 292px;
+    font-family: DIN;
+    font-size: 14px; }
+  #commentBox .comments-input .comments-post {
+    display: none;
+    text-align: right; }
+  #commentBox .comments-input span {
+    color: #999;
+    cursor: default; }
+  #commentBox .comments-input.show-button .comments-post {
+    display: block; }
+  #commentBox .comments-input.show-button textarea {
+    height: 100px; }
+  #commentBox .single-comment {
+    border-bottom: dotted 1px #dedede;
+    padding: 15px 0;
+    position: relative; }
+    #commentBox .single-comment .delete {
+      background: white url(/img/icon-grey-x-sm.png) no-repeat 50% 0;
+      cursor: pointer;
+      display: none;
+      top: 4px;
+      right: 4px;
+      width: 8px;
+      height: 20px;
+      position: absolute; }
+      #commentBox .single-comment .delete:hover {
+        background-position: 50% -20px; }
+    #commentBox .single-comment:hover .delete {
+      display: block; }
+    #commentBox .single-comment > div {
+      display: inline-block;
+      vertical-align: top; }
+    #commentBox .single-comment .image img {
+      margin-right: 4px;
+      height: 30px;
+      width: 30px; }
+    #commentBox .single-comment .text {
+      line-height: 1.3;
+      width: 236px; }
+    #commentBox .single-comment .text .author {
+      font-weight: bold; }
+    #commentBox .single-comment .text .datetime {
+      color: #888;
+      margin-top: 2px;
+      font-family: DIN, sans-serif; }

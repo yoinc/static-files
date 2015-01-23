@@ -1,0 +1,73 @@
+<script id="tmplPasswordDialog" type="text/x-jquery-tmpljavascript">
+  {{wrap({modalClass: 'password-dialog'})
+          "#tmplModal"}}
+    <img src="/img/icon-lock-large.png" alt="Password Protected" />
+    <p>${$data.name} has set a password on this Event.
+    <br />Please enter the password below.</p>
+    <form action="javascript:void(0)" onsubmit="return false;">
+      <input type="text" name="password" />
+      <div class="submit-button"></div>
+      <div class="error"></div>
+    </form>
+    <div class="dialog-nav">
+      <a href="/">Home</a>
+      <span class="separator">|</span>
+      <a href="/about">About</a>
+    </div>
+  {{/wrap}}
+</script>
+
+<script id="tmplDeletedCollection" type="text/x-jquery-tmpljavascript">
+  {{wrap({modalClass: 'deleted-dialog',
+          modalTitle: 'This Event does not exist'})
+          "#tmplModal"}}
+    <p>This Event does not exist or has deleted by the owner.</p>
+    <div class="dialog-nav">
+      <a href="/">Home</a>
+      <span class="separator"></span>
+      <a href="/about">About</a>
+    </div>
+
+  {{/wrap}}
+</script>
+
+<script id="tmplDeletedCollectionItem" type="text/x-jquery-tmpljavascript">
+  {{wrap({modalClass: 'deleted-dialog',
+          modalTitle: 'This Event item has been deleted'})
+          "#tmplModal"}}
+    <p>
+      Oops! The item you are trying to view has been deleted from this
+      Collection.
+    </p>
+    <div class="dialog-nav">
+      <a href="/">Home</a>
+      <span class="separator"></span>
+      <a href="/about">About</a>
+    </div>
+  {{/wrap}}
+</script>
+
+<script id="tmplCalendarExportDialog" type="text/x-jquery-tmpljavascript">
+  {{wrap({modalClass: 'calendar-export',
+          modalTitle: 'Add to Calendar'})
+          "#tmplModal"}}
+    <div class="description">
+      Select the format you use for your personal calendar
+    </div>
+
+    <div class="options">
+      <a target="_blank" href="${erly.gcalLink(erly.viewer.collection)}">
+        <div class="gcal icon"> </div><br/>
+        Google Calendar
+      </a>
+      <a href="${erly.urlFor.collectionICS(erly.viewer.collection)}">
+        <div class="ical icon"> </div><br/>
+        iCal
+      </a>
+      <a href="${erly.urlFor.collectionICS(erly.viewer.collection)}">
+        <div class="outlook icon"> </div><br/>
+        Outlook Calendar
+      </a>
+    </div>
+  {{/wrap}}
+</script>

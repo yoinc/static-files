@@ -1,0 +1,38 @@
+<script id="tmplImportSource" type="text/x-jquery-tmpljavascript">
+  <div class="source" id="import_source_${name.toLowerCase()}">
+    <a class="import-source" href="javascript:void(0)">
+      <img class="icon" src="${erly.PUB_URL}${icon}" alt="photo" />
+      <span class="name">${name}</span>
+      <span class="status"></span>
+    </a>
+  </div>
+</script>
+
+<script id="tmplImportedContacts" type="text/x-jquery-tmpljavascript">
+  <div class="imported-contacts">
+    <img src="${erly.PUB_URL}/img/icon-check.png" alt="icon-check"></img>
+    Your ${erly.services.services[service].title} contacts are imported.
+  </div>
+</script>
+
+<script id="tmplImportingContacts" type="text/x-jquery-tmpljavascript">
+  <div class="importing-contacts">
+    <img src="${erly.PUB_URL}/img/spinner.gif" alt="spinner"></img>
+    Importing your ${erly.services.services[service].title} contacts.
+  </div>
+</script>
+
+<script id="tmplAutocompleteDropDown" type="text/x-jquery-tmpljavascript">
+  <ul>
+   {{each contacts}}
+    <a href="javascript:void(0)">
+      <li class="contact">
+        <div class="contact-info">
+          <span class="name">
+            ${$item.formatContactText($value)}
+          </span>
+        </div>
+      </li>
+    </a>
+  {{/each}}</ul>
+</script>

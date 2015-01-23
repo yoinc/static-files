@@ -1,0 +1,731 @@
+<script id="tmplViewerAddPostsTease" type="text/x-jquery-tmpljavascript">
+  <div class="viewer-add-posts-tease">
+    <img src="${erly.PUB_URL}/img/icon-flagstone-add-plus.png" />
+  </div>
+</script>
+
+<script id="tmplViewerAddPostsUnauthed" type="text/x-jquery-tmpljavascript">
+  <div class="viewer-add-posts-unauthed">
+    Log in or Sign up to add photos, stories, and more to this Event
+  </div>
+</script>
+
+<script id="tmplViewerAddPostsOwnerOnly" type="text/x-jquery-tmpljavascript">
+  <div class="viewer-add-posts-owner-only">
+    Only people already on the guest list can add photos, stories, and more to this Event
+  </div>
+</script>
+
+<script id="tmplViewerAddPostsExpanded" type="text/x-jquery-tmpljavascript">
+  <div class="viewer-add-posts-expanded">
+    <div id="add_photos" class="add-post add-photo">
+      <img src="${erly.PUB_URL}/img/icon-flagstone-add-photos.png" />
+    </div><div id="add_notes" class="add-post add-note">
+     <img src="${erly.PUB_URL}/img/icon-flagstone-add-notes.png" />
+    </div><div id="add_links" class="add-post add-link">
+      <img src="${erly.PUB_URL}/img/icon-flagstone-add-links.png" />
+    </div><div id="add_videos" class="add-post add-video">
+      <img src="${erly.PUB_URL}/img/icon-flagstone-add-videos.png" />
+    </div>
+  </div>
+</script>
+
+<!--
+*** Chronicle Creation
+-->
+<script id="tmplAddNoteModal" type="text/x-jquery-tmpljavascript">
+  {{wrap({modalClass: 'add-note',
+          modalTitle: 'ADD NOTE',
+          modalTitleImage: erly.PUB_URL + '/img/icon-plus-large.png'}) "#tmplModal"}}
+    <form method="post" action="${erly.urlFor.collection(erly.viewer.collection, 'posts')}">
+      <input type="hidden" name="type" value="note" />
+      <div class="note-info">Tell a story or quote for this Event</div>
+      <div class="textarea-container">
+        <textarea name="text"></textarea>
+      </div>
+
+      <div class="button-bar">
+        <span class="submit-loader">
+          <img src="${erly.PUB_URL}/img/ajax-loader.gif" />
+        </span>
+        <input type="button" class="cancel" value="CANCEL" />
+        <input type="submit" value="POST" />
+      </div>
+    </form>
+  {{/wrap}}
+</script>
+
+<script id="tmplAddLinkModal" type="text/x-jquery-tmpljavascript">
+  {{wrap({modalClass: 'add-link',
+          modalTitle: 'ADD LINK',
+          modalTitleImage: erly.PUB_URL + '/img/icon-plus-large.png'}) "#tmplModal"}}
+
+    <div class="specify-url">
+      <div class="note">
+        Enter the link/URL of a webpage or image to add it to this Event
+      </div>
+      <input type="text" placeholder="http://" /><button>SUBMIT</button>
+    </div>
+    <div class="error" style="display:none">
+    </div>
+    <div class="loader" style="display:none">
+      <img src="${erly.PUB_URL}/img/ajax-loader.gif" alt="ajax spinner" alt="photo" />
+    </div>
+    <div class="confirm" style="display:none">
+      <div class="preview">
+        <div class="image-container">
+          <div class="toolbar">
+            <div>
+              <div class="prev">&lt;</div>
+              <span class="current"></span> of <span class="total"></span> images
+              <div class="next">&gt;</div>
+              <div class="clear">&nbsp;</div>
+            </div>
+          </div>
+          <div class="image">
+          </div>
+        </div>
+        <div class="content">
+          <div class="title">Loading</div>
+          <input class="title" value="Loading..."/>
+          <textarea class="text">Loading...</textarea>
+        </div>
+      </div>
+
+      <form method="post" action="${erly.urlFor.collection(erly.viewer.collection, 'posts')}">
+        <div class="button-bar">
+          <span class="submit-loader">
+            <img src="${erly.PUB_URL}/img/ajax-loader.gif" />
+          </span>
+          <input type="button" class="cancel" value="CANCEL" />
+          <input type="submit" value="POST" />
+        </div>
+        <div id="postFields"></div>
+      </form>
+  {{/wrap}}
+</script>
+
+<script id="tmplAddVideoSearchResult" type="text/x-jquery-tmpljavascript">
+  <div class="video-search-result">
+    <div class="image select-result">
+      <img src="${$data.picture}" />
+    </div>
+    <div class="metadata">
+      <a href="javascript:void(0)" class="select-result">
+        <div class="title">${$data.title}</div>
+      </a>
+      <div class="duration">${$data.duration}</div>
+      <div class="description">${$data.description}</div>
+    </div>
+  </div>
+</script>
+
+<script id="tmplAddVideoModal" type="text/x-jquery-tmpljavascript">
+  {{wrap({modalClass: 'add-link',
+          modalTitle: 'ADD VIDEO',
+          modalTitleImage: erly.PUB_URL + '/img/icon-plus-large.png'}) "#tmplModal"}}
+
+    <div class="specify-url">
+      <div class="supported-services">
+        <span>Enter the URL of a
+        <img src="${erly.PUB_URL}/img/icon-youtube.png" alt="photo" /> or
+        <img src="${erly.PUB_URL}/img/icon-vimeo.png" alt="photo" /> video
+        or search for videos to add to this Event
+        </span>
+      </div>
+      <input type="text" placeholder="eg. http://youtu.be/bSuvOVH0aSQ or juggernaut" /><button>SUBMIT</button>
+    </div>
+    <div class="error" style="display:none">
+    </div>
+    <div class="loader" style="display:none">
+      <img src="${erly.PUB_URL}/img/ajax-loader.gif" alt="ajax loader" alt="photo" />
+    </div>
+    <div class="search-results" style="display:none">
+
+    </div>
+    <div class="confirm" style="display:none">
+      <div class="back-to-search">
+        <a href="javascript:void(0)">Back to search results</a>
+      </div>
+      <div class="preview">
+        <div class="image">
+        </div>
+        <div class="content">
+          <h4 class="title">Loading...</h4>
+          <div class="duration"></div>
+          <div class="description"></div>
+        </div>
+      </div>
+      <form method="post" action="${erly.urlFor.collection(erly.viewer.collection, 'posts')}">
+        <div class="button-bar">
+          <span class="submit-loader">
+            <img src="${erly.PUB_URL}/img/ajax-loader.gif" />
+          </span>
+          <input type="button" class="cancel" value="CANCEL" />
+          <input type="submit" value="POST" />
+        </div>
+        <div id="postFields"></div>
+      </form>
+    </div>
+  {{/wrap}}
+</script>
+
+<script id="tmplLinkFormFields" type="text/x-jquery-tmpljavascript">
+    <input type="hidden" name="type" value="${type}" />
+    <input type="hidden" name="chronicle_id" value="${erly.viewer.collection.id}" />
+    <input type="hidden" id="link" name="link" value="${link}" />
+    {{if type === "video" }}
+      <input type="hidden" id="image" name="image" value="${image}" />
+      <input type="hidden" id="title" name="title" value="${title}" />
+      <input type="hidden" id="description" name="description" value="${description}" />
+      <input type="hidden" id="embed" name="embed" value="${embed}" />
+      <input type="hidden" id="vwidth" name="videoDimensions[width]" value="${videoDimensions.width}" />
+      <input type="hidden" id="vheight" name="videoDimensions[height]" value="${videoDimensions.height}" />
+      <input type="hidden" id="iwidth" name="imageDimensions[width]" value="${imageDimensions.width}" />
+      <input type="hidden" id="iheight" name="imageDimensions[height]" value="${imageDimensions.height}" />
+    {{elif type === "photo" }}
+      <input type="hidden" id="image" name="picture" value="${image}" />
+      {{if dimensions}}
+        <input type="hidden" id="vwidth" name="dimensions[width]" value="${dimensions.width}" />
+        <input type="hidden" id="vheight" name="dimensions[height]" value="${dimensions.height}" />
+      {{/if}}
+      <input type="hidden" id="link_title" name="caption" value="${title}" />
+    {{elif type === "link" }}
+      <input type="hidden" id="linkedChronicleData" name="linkedChronicleData" value="" />
+      <input type="hidden" id="link_title" name="title" value="${title}" />
+      <input type="hidden" id="link_text" name="text" value="${text}" />
+      <input type="hidden" id="link_image" name="image" value="${image}" />
+      <input type="hidden" id="link_source" name="source" value="${$data.source}" />
+      <input type="hidden" id="link_author" name="author" value="${$data.author}" />
+    {{/if}}
+</script>
+
+<script id="tmplAddPhotoModal" type="text/x-jquery-tmpljavascript">
+  {{wrap({modalClass: 'add-photo' + ($data.isAlbumImport ? ' import-album' : ''),
+          modalTitle: $data.title || 'ADD PHOTOS',
+          modalTitleImage: ($data.isAlbumImport ? null : (erly.PUB_URL + '/img/icon-plus-large.png'))}) "#tmplModal"}}
+    {{tmpl "#tmplAddPhotoForm"}}
+  {{/wrap}}
+</script>
+
+<script id="tmplAddPhotoForm" type="text/x-jquery-tmpljavascript">
+  {{if $data.inline}}
+  <div class="content-container">
+  {{/if}}
+    <div class="source-type">
+      {{if $data.showPresetBackgrounds}}
+      <div class="source-type-button">
+        <div>
+          <img src="${erly.PUB_URL}/img/icon-preset-backgrounds.png" alt="photo" />
+        </div>
+        <div class="text">Themes</div>
+      </div>
+      {{/if}}
+      {{if !$data.isAlbumImport}}
+      <div class="source-type-button selected">
+        <div>
+          <img src="${erly.PUB_URL}/img/icon-upload.png" alt="photo" />
+        </div>
+        <div class="text">Computer</div>
+      </div>
+      {{/if}}
+      {{if $data.showImageSearch && $data.isEventForm}}
+      <div class="source-type-button" >
+        <div>
+          <img src="${erly.PUB_URL}/img/icon-bing.png" alt="photo" />
+        </div>
+        <div class="text">Image Search</div>
+      </div>
+      {{/if}}
+      {{if !$data.hideExternalServices}}
+      <div class="source-type-button ${$data.isAlbumImport ? 'selected' : ''}" >
+        <div>
+          <img src="${erly.PUB_URL}/img/icon-facebook.png" alt="photo" />
+        </div>
+        <div class="text">Facebook</div>
+      </div>
+      <div class="source-type-button" >
+        <div>
+          <img src="${erly.PUB_URL}/img/icon-services/flickr-lg.png" alt="photo" />
+        </div>
+        <div class="text">Flickr</div>
+      </div>
+      <div class="source-type-button" >
+        <div>
+          <img src="${erly.PUB_URL}/img/icon-services/picasa-lg.png" alt="photo" />
+        </div>
+        <div class="text">Picasa</div>
+      </div>
+      {{if !$data.isAlbumImport}}
+      <div class="source-type-button" >
+        <div>
+          <img src="${erly.PUB_URL}/img/icon-services/instagram-lg.png" alt="photo" />
+        </div>
+        <div class="text">Instagram</div>
+      </div>
+      {{/if}}
+      <div class="source-type-button" >
+        <div>
+          <img src="${erly.PUB_URL}/img/icon-services/smugmug-lg.png" alt="photo" />
+        </div>
+        <div class="text">SmugMug</div>
+      </div>
+      {{if !$data.showPresetBackgrounds}}
+      <div class="source-type-button" >
+        <div>
+          <img src="${erly.PUB_URL}/img/icon-services/dropbox-lg.png" alt="photo" />
+        </div>
+        <div class="text">Dropbox</div>
+      </div>
+      {{/if}}
+      {{/if}}
+      {{if $data.showImageSearch && !$data.isEventForm}}
+      <div class="source-type-button" >
+        <div>
+          <img src="${erly.PUB_URL}/img/icon-bing.png" alt="photo" />
+        </div>
+        <div class="text">Image Search</div>
+      </div>
+      {{/if}}
+    </div>
+    <div class="posting-loader">
+      <div class="vcenter">
+        <img src="${erly.PUB_URL}/img/ajax-loader.gif" alt="waiting" />
+        <div>Adding photos...</div>
+      </div>
+    </div>
+
+    {{if $data.showPresetBackgrounds}}
+    <div class="background-presets">
+      {{tmpl "#tmplPhotoService"}}
+    </div>
+    {{/if}}
+    {{if !$data.isAlbumImport}}
+    <div class="upload-container tab-page">
+      <div id='fileupload'>
+        <div class='fileupload-content'>
+          {{if erly.maintenanceMode}}
+          <div class='maintenance'>
+            Sorry, we are currently doing system maintenance and cannot accept
+            uploads.  Please check back later.
+          </div>
+          {{else}}
+
+          <div class="navigation">
+            <div class="photosGoBack">
+              <div class="button">Back</div>
+            </div>
+            {{if !$data.singleSelect}}
+            <div class="select-all">
+              <form action="#" method="post">
+                <input type="checkbox" name="select-all-checkbox" />Select All
+              </form>
+            </div>
+            {{/if}}
+            <div class="clear">&nbsp;</div>
+          </div>
+
+
+          {{if 0}}
+          <!--
+              4 sibling divs: we start by showing a waiting div, since we don't
+              know yet whether the user has a satchel.  Once we grab the satchel,
+              we show either "centerSelection" or "files" depending on whether
+              there is a satchel.  If the user has a satchel and they click on
+              the satchel we switch to a satchel div that shows the items.
+            -->
+          {{/if}}
+
+          <div class="waiting">
+            <div class="vcenter">
+              waiting...
+              <img src="${erly.PUB_URL}/img/ajax-loader.gif" alt="waiting" />
+            </div>
+          </div>
+
+          <div class="drop-outline">
+          <div id='centerSelection' style="display:none">
+            <div class="vcenter">
+              {{if erly.browserSupport.canDragUpload()}}
+              <div class="instructions">
+                {{if !$data.singleSelect}}
+                Drag photos here to add to your Event
+                {{else}}
+                Drag the photo here that you want to use as the cover for your Event
+                {{/if}}
+              </div>
+              <div class="or">
+               - or -
+              </div>
+              {{/if}}
+              <div id="selectFile" class='selectFiles' style="position:relative">
+                Choose from your Computer
+                <form id="uploadForm" action='/upload' method='POST' enctype='multipart/form-data'>
+                  <div>
+                    <input id='finput' type='file' name='uploads[]' multiple='multiple'>
+                    </input>
+                  </div>
+                </form>
+              </div>
+              {{if erly.browserSupport.canMultipleFileUpload() && !$data.singleSelect && erly.viewer.collection}}
+              <div class="tip">
+              Tip: You can also send photos directly to this Event by emailing photos+${erly.viewer.collection.ident}@erly.com
+              </div>
+              {{/if}}
+            </div>
+          </div>
+
+          <div class='files' style="display:none">
+            <div id="satchel_album" style="display:none">
+              <img src="${erly.PUB_URL}/img/icon-satchel.png" />
+              <div class="label">
+                <span class="count">?</span> saved item<span class="plural">s</span>
+              </div>
+            </div>
+            <div class="add-photo-helper">
+              <div>
+                {{if erly.browserSupport.canDragUpload()}}
+                <div class="drag">
+                  Drag photos here
+                </div>
+                <div class="or">
+                  - or -
+                </div>
+                {{/if}}
+                <div class="choose">
+                  Choose from Computer
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="satchel_view" style="display:none">
+          </div>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+    {{/if}}
+    {{if $data.showImageSearch && $data.isEventForm}}
+    {{tmpl "#tmplImageSearch"}}
+    {{/if}}
+    {{if !$data.hideExternalServices}}
+    <div class="facebook">
+      {{tmpl "#tmplPhotoService"}}
+    </div>
+    <div class="flickr">
+      {{tmpl "#tmplPhotoService"}}
+    </div>
+    <div class="picasa">
+      {{tmpl "#tmplPhotoService"}}
+    </div>
+    {{if !$data.isAlbumImport}}
+    <div class="instagram">
+      {{tmpl "#tmplPhotoService"}}
+    </div>
+    {{/if}}
+    <div class="smugmug">
+      {{tmpl "#tmplPhotoService"}}
+    </div>
+    {{if !$data.showPresetBackgrounds}}
+    <div class="dropbox">
+      {{tmpl "#tmplPhotoService"}}
+    </div>
+    {{/if}}
+    {{/if}}
+
+    {{if $data.showImageSearch && !$data.isEventForm}}
+    {{tmpl "#tmplImageSearch"}}
+    {{/if}}
+    {{if $data.isAlbumImport}}
+      {{tmpl '#tmplImportAlbumButtonBar'}}
+    {{elif $data.isBackgroundPicker}}
+      <!-- nothing -->
+    {{elif $data.inline}}
+      <!-- nothing -->
+    {{else}}
+      {{tmpl "#tmplPhotoModalButtonBar"}}
+    {{/if}}
+</script>
+
+<script id="tmplCustomizeEventFormBackgroundImage" type="text/x-jquery-tmpljavascript">
+  <div class="background-image preset-background">
+    <img src="${$data.thumb || $data.src}" data-src="${$data.src}" alt="background image" />
+    <div class="overlay"></div>
+  </div>
+</script>
+
+<script id="tmplImageSearch" type="text/x-jquery-tmpljavascript">
+  <div class="bing tab-page nav-visible">
+    <div class="photo-container">
+      <div class="search-container">
+        <div class="search-watermark">
+          <img src="${erly.PUB_URL}/img/icon-search-large.png" />
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Enter keywords to search..." />
+          <div class="search-icon">&nbsp;</div>
+        </div>
+      </div>
+      <form class="photoForm" action="javascript:void(0)" method="POST">
+        <div class="selectphoto">
+        </div>
+      </form>
+    </div>
+  </div>
+</script>
+
+<script id="tmplPhotoService"  type="text/x-jquery-tmpljavascript">
+  <div class="photo-container tab-page">
+    <div class="navigation">
+      {{if !$data.singleSelect}}
+      <div class="select-all">
+        <form action="#" method="post">
+          <input type="checkbox" name="select-all-checkbox" />Select All
+        </form>
+      </div>
+      {{/if}}
+      <div class="photosGoBack">
+        <div class="button">Back</div>
+      </div>
+      <div class="clear">&nbsp;</div>
+    </div>
+    <div class="albumUrl">
+      <div>
+      <span>Add an album by URL:</span>
+      <input type="text" name="albumUrl" class="empty-text"/>
+      <button type="button">Load</button>
+      <img class="loader" src="${erly.PUB_URL}/img/ajax-loader.gif" alt="waiting" />
+      </div>
+      <div class='error'></div>
+    </div>
+    <div class="friend-search">
+      <div>
+      <span>Search by name:</span>
+      <input type="text" name="friendSearch" class="empty-text" />
+      <div class="search-icon">&nbsp;</div>
+      <div class="clear-search-icon">&nbsp;</div>
+      <img class="loader" src="${erly.PUB_URL}/img/ajax-loader.gif" alt="waiting" />
+      </div>
+      <div class='error'></div>
+    </div>
+    <form class="photoForm" action="javascript:void(0)" method="POST">
+      <div class="selectphoto friends">
+        <div class="vcenter loader">
+          <img src="${erly.PUB_URL}/img/ajax-loader.gif" alt="waiting" />
+        </div>
+      </div>
+      <div class="selectphoto albums" style="display:none">
+        <div class="vcenter loader">
+          <img src="${erly.PUB_URL}/img/ajax-loader.gif" alt="waiting" />
+        </div>
+      </div>
+      <div class="selectphoto photos" style="display:none">
+        <div class="vcenter loader">
+          <img src="${erly.PUB_URL}/img/ajax-loader.gif" alt="waiting" />
+        </div>
+      </div>
+    </form>
+  </div>
+</script>
+
+<script id="tmplFacebookPhoto" type="text/x-jquery-tmpljavascript">
+  <div class="fbphoto">
+    <div class="art">
+      <img src="${art}" alt="photo" />
+      <input {{if selected}}checked="checked" {{/if}}type="checkbox" class="fbselect" name="photos" />
+      {{if caption}}<span>${caption}</span>{{/if}}
+      <div class="check"/>
+    </div>
+  </div>
+</script>
+
+<script id="tmplFacebookAlbum" type="text/x-jquery-tmpljavascript">
+  <div class="fbalbum">
+    <div class="art">
+      <img src="${cover_art}" alt="photo" />
+      {{if $item.hasAlbumCheckBoxes}}
+        <input type="checkbox" class="fbselect" name="albums" />
+      {{/if}}
+      {{if caption}}<span>${caption}</span>{{/if}}
+    </div>
+  </div>
+</script>
+
+<script id="tmplAuthLink" type="text/x-jquery-tmpljavascript">
+  <div class="photo-auth">
+    Please connect your <span>${service}</span> account to view and import
+    your photos hosted there{{if $data.albumByUrl}}
+    or import an album directly by entering URL above{{/if}}.
+
+    <br/><br/>
+    <input type="button" class="auth-service" value="Click here to authorize" />
+  </div>
+</script>
+
+<script id="tmplModalLoadingIndicator" type="text/x-jquery-tmpljavascript">
+  <div class="vcenter loader">
+    <img src="${erly.PUB_URL}/img/ajax-loader.gif" alt="photo" />
+    <br/>
+    ${caption}
+  </div>
+</script>
+
+<script id="tmplModalLoadingIndicatorWithClear" type="text/x-jquery-tmpljavascript">
+  <div class="modal-loading-wrapper loader">
+    <div class="clear"></div>
+    <div class="loader">
+      <img src="${erly.PUB_URL}/img/ajax-loader.gif" alt="photo" />
+      <br/>
+      ${caption}
+    </div>
+  </div>
+</script>
+
+<script id="tmplPhotoModalButtonBar" type="text/x-jquery-tmpljavascript">
+  <div class="button-bar">
+    <div class="text">
+      <span class="uploadCounter">0</span>/${erly.viewer.Uploads.MAX_PHOTOS} photos will be added. <span class="at-limit">Please post these photos to continue adding.</span>
+    </div>
+    <input type="button" class="cancel" value="CANCEL" />
+    <input type="submit" class="submit" value="POST" />
+
+    <div class="clear"></div>
+  </div>
+</script>
+
+<script id="tmplImportAlbumButtonBar" type="text/x-jquery-tmpljavascript">
+  <div class="button-bar">
+    <input type="button" class="cancel" value="CANCEL" />
+    <input type="button" class="continue" value="CONTINUE" />
+    <div class="clear"></div>
+  </div>
+</script>
+
+
+<script id="tmplRequestItemModal" type="text/x-jquery-tmpljavascript">
+  {{wrap({modalClass: 'add-request-item',
+          modalTitle: 'REQUEST AN ITEM',
+          modalTitleImage: erly.PUB_URL + '/img/icon-plus-large.png'}) "#tmplModal"}}
+
+    <div class="request-type">
+      <h4>Choose the type of content to request:</h4>
+      <div class="request-type-button selected" data-requestType="photo" cannedText="Hey everyone, can you upload photos from our event? Thanks!">
+        <img src="${erly.PUB_URL}/img/icon-add-photo.png" alt="photo" />
+        Photos
+      </div><div class="request-type-button" data-requestType="note" cannedText="Hey everyone, can you write a note about our event? Thanks!">
+        <img src="${erly.PUB_URL}/img/icon-add-note.png" alt="photo" />
+        Notes
+      </div><div class="request-type-button" data-requestType="link" cannedText="Hey everyone, can you add a link related to our event? Thanks!">
+        <img src="${erly.PUB_URL}/img/icon-add-link.png" alt="photo" />
+        Links
+      </div><div class="request-type-button" data-requestType="video" cannedText="Hey everyone, can you add a video from our event? Thanks!">
+        <img src="${erly.PUB_URL}/img/icon-add-video.png" alt="photo" />
+        Videos
+      </div>
+    </div>
+
+    <form method="post" action="${erly.urlFor.collection(erly.viewer.collection, 'posts')}">
+      <input type="hidden" name="type" value="request" />
+      <input type="hidden" id="request_type" name="requestType" value="photo" />
+      <textarea name="requestMessage" placeholder="Enter a personalized message..."></textarea>
+
+      <div class="button-bar">
+        <div class="request-info">Contributors in this Event will receive the requests in their daily or weekly batch updates </div>
+        <input type="submit" value="POST" />
+      </div>
+    </form>
+  {{/wrap}}
+</script>
+
+<script id="template-upload" type="text/x-jquery-tmpl">
+  <div class="template-upload{{if error}} ui-state-error{{/if}}">
+    <div class="metadata">
+      Uploading...
+      <div class="name">
+         <b>${name}</b>
+      </div>
+      <div class="size">
+          ${sizef}
+      </div>
+    </div>
+    <div class="progress-info">
+      {{if error}}
+        <div class="error">
+        Error:
+        {{if error == 'acceptFileTypes'}}
+          Sorry, we only support JPG, PNG, and GIF uploads.
+        {{elif error === 'maxNumberOfFiles'}}
+          You can only upload ${erly.viewer.Uploads.MAX_PHOTOS} files at
+          a time.
+        {{else}}
+          ${error}
+        {{/if}}
+        </div>
+      {{else}}
+        <div class="progress-text">
+        </div>
+        <div class="progress">
+          <div>
+          </div>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</script>
+
+<script id="template-download" type="text/x-jquery-tmpl">
+  <div class="template-download">
+    {{if error}}
+      <div class="upload-error">
+        <div>
+          ${error.message || "There was an error processing your upload.  Please check your file and try again."}
+        </div>
+      </div>
+    {{else}}
+      <div class="url" style="display:none;">
+          ${url}
+      </div>
+      {{tmpl "#tmplSatchelOrUploadedPhoto"}}
+   {{/if}}
+  </div>
+</script>
+
+<script id="tmplSatchelPhoto" type="text/x-jquery-tmpljavascript">
+  <div class="satchel-photo">
+    {{tmpl "#tmplSatchelOrUploadedPhoto"}}
+  </div>
+</script>
+
+<script id="tmplSatchelOrUploadedPhoto" type="text/x-jquery-tmpl">
+  <div class="satchel-or-uploaded{{if selected}} selected{{/if}}">
+    <div class="preview">
+      {{if previewUrl}}
+      <img src="${previewUrl}" alt="" />
+      <input {{if selected}}checked="checked" {{/if}}type="checkbox" class="siselect" />
+      {{if !$item.singleSelect && !($item.data || {}).singleSelect}}
+      <div class="rotate">&nbsp;</div>
+      {{/if}}
+      <div class="check"></div>
+      {{/if}}
+    </div>
+    {{if !$item.singleSelect && !($item.data || {}).singleSelect}}
+    <div class="title">
+      <input type="text" placeholder="Title (optional)" />
+    </div>
+    {{/if}}
+    <div class="remove">&nbsp;</div>
+  </div>
+</script>
+
+<script id="tmplBackgroundPickerOption" type="text/x-jquery-tmpljavascript">
+  <div class="background-option">
+    <div class="image-container">
+      <img class="lazy" data-src="${$data.src || $data.art || $data.thumbUrl || $data.previewUrl}" />
+    </div>
+    <div class="mask">&nbsp;</div>
+    <div class="check">&nbsp;</div>
+  </div>
+</script>
+

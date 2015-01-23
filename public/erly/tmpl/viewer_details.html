@@ -1,0 +1,587 @@
+<script id="tmplAlbumTitlePhotos" type="text/x-jquery-tmpljavascript">
+  {{if $data.showMore}}
+    {{if $data.count > 1}}
+      <div class="show-more-container">
+        <div class="show-more">
+          View all<br/><span>${count}</span><br/>photos
+        </div>
+      </div>
+    {{/if}}
+  {{else}}
+  <div class="photo">
+    <img class="lazy-load" data-lazy-src="
+    {{if $data.images && $data.images.length > 0}}
+      ${$data.images[0].path}
+    {{else}}
+      ${$data.picture}
+    {{/if}}
+    " src="${erly.PUB_URL}/img/bg-white-10.png" alt="photo" />
+  </div>
+  {{/if}}
+</script>
+
+<script id="tmplDetailsAlbumHeader" type="text/x-jquery-tmpljavascript">
+  <div class="details-album-header">
+    <div class="edit">
+      <a href="javascript:void(0)">
+      <div class="settings-icon"> </div>
+      Edit Details</a>
+    </div>
+
+    <div class="title-container">
+      <div class="title">
+        ${$data.title}
+      </div>
+
+      <div class="attribution">
+        By
+        <a href="${erly.urlFor.timeline($data.owner)}">${$data.owner.name}</a>
+        &nbsp;|&nbsp;&nbsp;${erly.viewer.formatDateRangeForEvent($data)}
+        {{if locationName}}
+        &nbsp;|&nbsp;&nbsp;${locationName}
+        {{/if}}
+      </div>
+      <div class="icon-details">
+        <span>
+          <div class="likes">
+            <div class="icon"> </div>
+            <span class="metadata-count" data-field="totalLikeCount"></span>
+            <span class="metadata-label plural">Likes</span>
+            <span class="metadata-label singular">Like</span>
+          </div>
+        </span>
+        {{if !erly.viewer.exported}}
+        <div class="like-button">Like</div>
+        {{/if}}
+      </div>
+    </div>
+
+    <div class="description">
+      {{html erly.linebreaks($data.description)}}
+    </div>
+
+    <div class="photos">
+    </div>
+  </div>
+</script>
+
+<script id="tmplDetailsTitleLocation" type="text/x-jquery-tmpljavascript">
+  <div class="edit">
+    <a href="javascript:void(0)">
+    <div class="settings-icon"> </div>
+    Edit Details</a>
+  </div>
+  <div class="corner-date">
+    <div class="day">${$data.displayStartDate.getDate()}</div>
+    <div class="month">${erly.dateFormatters.getShortMonth($data.displayStartDate)}</div>
+  </div>
+
+  <div class="title-container{{if $data.displayStartDate.getDate() > 9}} two-digits{{/if}}">
+  <div class="title">
+    ${$data.title}
+  </div>
+  <div class="datetime">
+    <div class="link-container">
+      {{if erly.viewer.exported}}
+        <div class="icon"> </div>
+        <span class="text">${erly.viewer.formatDateRangeForEvent($data)}</span>
+      {{else}}
+        <a href="javascript:erly.viewer.dialogs.showCalendarExportDialog()">
+          <div class="icon"> </div>
+          <span class="text">${erly.viewer.formatDateRangeForEvent($data)}</span>
+          <div class="tooltip-container">
+            <div class="tooltip">Add to calendar</div>
+          </div>
+        </a>
+      {{/if}}
+    </div>
+  </div>
+  {{if erly.canShowLocation($data)}}
+    {{if $data.locationName || erly.canShowAddress($data)}}
+      <div class="location{{if (!$data.streetAddress)}} no-hover{{/if}}">
+        {{if erly.canShowAddress($data)}}
+          <div class="link-container">
+            <a href="${erly.googleMapsLink(streetAddress)}" target="_blank">
+              <div class="icon"> </div>
+        {{else}}
+          <div class="icon"> </div>
+        {{/if}}
+          <span class="text">
+          ${$data.locationName}
+          {{if erly.canShowAddress($data)}}
+            ${erly.getFormattedStreetAddress($data, true)}
+          {{/if}}
+          </span>
+        {{if $data.streetAddress}}
+          <div class="tooltip-container">
+            <div class="tooltip">Show map</div>
+          </div>
+          </a></div>
+        {{/if}}
+      </div>
+    {{/if}}
+  {{/if}}
+  </div>
+</script>
+
+<script id="tmplDetailsLeftDate" type="text/x-jquery-tmpljavascript">
+  <div class="day">${$data.displayStartDate.getDate()}</div>
+  <div class="month">${erly.dateFormatters.getShortMonth($data.displayStartDate)}</div>
+  <div class="year">${$data.displayStartDate.getFullYear()}</div>
+</script>
+
+<script id="tmplDetailsRsvp" type="text/x-jquery-tmpljavascript">
+  {{if erly.userId !== $data.collection.owner.id}}
+    {{if $data.collection.userRole.member || !$data.collection.ownerOnly}}
+      <div class="stamp">
+        <img src="${erly.PUB_URL}/img/stamp-${$data.rsvpState || 'pending'}.png" />
+      </div>
+    {{/if}}
+  {{/if}}
+  {{if $data.collection.ownerOnly && !$data.collection.userRole.member}}
+  <div class="rsvp-closed">
+    This is a private event. Only people already on the guest list can
+    RSVP for this event.
+    {{if !erly.userId}}
+    If you are an invited guest, please log in to RSVP.
+    {{/if}}
+  </div>
+  {{elif erly.userId === $data.collection.owner.id}}
+  <div class="rsvp-container">
+    <div class="rsvp-buttons">
+      <div class="rsvp-button add-guests">
+        <div class="icon"> </div>
+        {{if $data.collection.pastEvent}}
+        Add Guests
+        {{else}}
+        Invite Guests
+        {{/if}}
+      </div>
+      <div class="rsvp-button email-guests">
+        <div class="icon"></div>
+        Email Guests
+      </div>
+    </div>
+  </div>
+  {{else}}
+  <h1>RSVP</h1>
+  <div class="rsvp-container {{if $data.rsvpState &&
+    $data.rsvpState !== 'pending'}}rsvpd{{/if}}">
+    <a class="not-you" href="javascript:void(0)">Not you?</a>
+    <div class="rsvp-state">
+      <div class="label">
+        <span class="response">
+        Your Response: <b class="${$data.rsvpState}">${$data.rsvpState}</b>
+        </span>
+        <div class="change">
+          <a href="javascript:void(0)">&nbsp;</a>
+        </div>
+        <div class="popup">
+          Your Response: <b class="${$data.rsvpState}">${$data.rsvpState}</b>
+          <div class="rsvp-button rsvp-option yes">
+            <div class="swatch">&nbsp;</div>
+            Yes, I'm going
+          </div>
+          <div class="rsvp-button rsvp-option maybe">
+            <div class="swatch">&nbsp;</div>
+            Maybe
+          </div>
+          <div class="rsvp-button rsvp-option no">
+            <div class="swatch">&nbsp;</div>
+            No
+          </div>
+        </div>
+      </div>
+      <div class="rsvp-actions">
+        {{if $data.rsvpState !== 'no'}}
+        {{if !erly.viewer.collection.ownerOnly}}
+        <div class="action guests">
+          Additional guests: <input type="text" name="guestCount"
+            value="${$data.guestCount || ($data.taggingInfo && $data.taggingInfo.guestCount) || 0}"/>
+        </div>
+        <div class="action invite-more">
+          <div class="icon">&nbsp;</div>
+          Send invite to others
+        </div>
+        {{/if}}
+        <div class="action add-calendar">
+          Add to calendar
+        </div>
+        {{if erly.viewer.collection.streetAddress}}
+        <div class="action directions">
+          Show map
+        </div>
+        {{/if}}
+        {{/if}}
+      </div>
+    </div>
+    <div class="rsvp-buttons">
+      <div class="rsvp-button rsvp-option yes">
+        <div class="swatch">&nbsp;</div>
+        Yes, I'm going
+      </div>
+      <div class="rsvp-button rsvp-option maybe">
+        <div class="swatch">&nbsp;</div>
+        Maybe
+      </div>
+      <div class="rsvp-button rsvp-option no">
+        <div class="swatch">&nbsp;</div>
+        No
+      </div>
+    </div>
+  </div>
+  {{/if}}
+</script>
+
+<script id="tmplDetailsAttendanceItem" type="text/x-jquery-tmpljavascript">
+  <div class="rsvp-item{{if !$data.isInvite && erly.userId === $data.id}} self{{/if}}">
+    {{if !$data.isInvite}}
+      <a href="${erly.urlFor.gallery($data)}">
+        {{tmpl($data) "#tmplAvatarImage"}}
+      </a>
+    {{else}}
+      {{tmpl($data) "#tmplAvatarImage"}}
+    {{/if}}
+    <div class="guest">
+      {{if !$data.isInvite}}
+      <a href="${erly.urlFor.gallery($data)}">${$data.name}</a>
+      {{else}}
+        <span class="invite-name">
+          ${$data.name}
+          {{if $data.email}}
+            <div class="email-tip-container">
+              <div class="email-tip">
+                ${$data.email}
+              </div>
+            </div>
+          {{/if}}
+        </span>
+      {{/if}}
+      {{if (
+        ($data.rsvpState === 'yes' || $data.rsvpState === 'maybe' ||
+          ($data.taggingInfo && $data.taggingInfo.rsvpState) === 'yes' ||
+          ($data.taggingInfo && $data.taggingInfo.rsvpState) === 'maybe'
+        ) &&
+        ($data.guestCount ||
+          ($data.taggingInfo && $data.taggingInfo.guestCount)
+        )
+        )}}
+        <span class="note">
+          + ${$data.guestCount || ($data.taggingInfo && $data.taggingInfo.guestCount)}
+        </span>
+      {{/if}}
+      {{if $data.isOwner}}
+        <span class="note">(owner)</span>
+      {{/if}}
+      {{if erly.userId === erly.viewer.collection.owner.id}}
+        <div class="last-view-time">
+          {{if $data.lastViewTime || ($data.taggingInfo && $data.taggingInfo.lastViewTime)}}
+            viewed
+            ${erly.dateFormatters.prettyDate(erly.normalizeDate($data.lastViewTime || ($data.taggingInfo && $data.taggingInfo.lastViewTime)),
+              erly.normalizeDate(erly.serverNow))}
+          {{/if}}
+        </div>
+      {{/if}}
+    </div>
+    {{if (erly.userId === erly.viewer.collection.owner.id && !$data.isOwner)}}
+    <div class="edit-rsvp">&nbsp;</div>
+    {{/if}}
+    {{if (erly.userId === erly.viewer.collection.owner.id) ||
+      (!$data.isInvite && (erly.userId === $data.id))}}
+    <div class="remove">&nbsp;</div>
+    {{/if}}
+  </div>
+</script>
+
+
+<script id="tmplDetailsAttendanceAlbum" type="text/x-jquery-tmpljavascript">
+  <div class="attendance">
+    <div class="guest-list-header">
+      <h1>Contributors</h1>
+    </div>
+
+    <div class="rsvp-list attending-list album-contributor-list">
+      {{each $data.tags}}
+        {{tmpl($value) "#tmplDetailsAttendanceItem"}}
+      {{/each}}
+    </div>
+    {{if erly.userId === erly.viewer.collection.owner.id}}
+      <div class="add-contributors-blurb">
+        These people can add content to this album.
+        <a href="javascript:void(0)" class="add-contributors">Invite more Contributors</a>
+      </div>
+    {{/if}}
+  </div>
+</script>
+
+
+<script id="tmplDetailsAttendanceEvent" type="text/x-jquery-tmpljavascript">
+  <div class="attendance{{if erly.viewer.collection.pastEvent}} past{{/if}}">
+    <div class="guest-list-header">
+      <h1>Guest list <span>(Hidden to Guests)</span></h1>
+    </div>
+    {{if erly.userId !== erly.viewer.collection.owner.id &&
+      erly.viewer.collection.guestListHidden}}
+      {{tmpl "#tmplDetailsAttendanceGuestListPrivate"}}
+    {{else}}
+      {{tmpl "#tmplDetailsAttendanceGuestListEvent"}}
+    {{/if}}
+  </div>
+</script>
+
+<script id="tmplDetailsAttendanceGuestListPrivate" type="text/x-jquery-tmpljavascript">
+  <div class="private-list">
+    The guest list for this event is private.
+  </div>
+</script>
+
+<script id="tmplDetailsAttendanceGuestListEvent" type="text/x-jquery-tmpljavascript">
+  {{if $data.yes.length > 0 || erly.viewer.collection.pastEvent}}
+    <div class="label yes-attending">
+      <span class="count">${$data.yesCount}</span>
+      <span>
+        {{if erly.viewer.collection.pastEvent}}
+        Attended
+        {{else}}
+        Attending
+        {{/if}}
+      </span>
+    </div>
+    <div class="rsvp-list attending-list">
+      {{each $data.yes}}
+        {{tmpl($value) "#tmplDetailsAttendanceItem"}}
+      {{/each}}
+    </div>
+  {{/if}}
+
+  {{if $data.maybe.length > 0}}
+    <div class="label maybe-attending">
+      <span class="count">${$data.maybeCount}</span>
+      {{if erly.viewer.collection.pastEvent}}
+      Maybe Attended
+      {{else}}
+      Maybe Attending
+      {{/if}}
+    </div>
+    <div class="rsvp-list maybe-list">
+      {{each $data.maybe}}
+        {{tmpl($value) "#tmplDetailsAttendanceItem"}}
+      {{/each}}
+    </div>
+  {{/if}}
+
+  {{if $data.no.length > 0}}
+    <div class="label no-attending">
+      <span class="count">${$data.no.length}</span>
+      {{if erly.viewer.collection.pastEvent}}
+      Did Not Attend
+      {{else}}
+      Not Attending
+      {{/if}}
+    </div>
+    <div class="rsvp-list not-list">
+      {{each $data.no}}
+        {{tmpl($value) "#tmplDetailsAttendanceItem"}}
+      {{/each}}
+    </div>
+  {{/if}}
+
+  {{if $data.pending.length > 0 &&
+    (!erly.viewer.collection.pastEvent ||
+    erly.viewer.collection.userRole.member)}}
+    <div class="label pending-attending">
+      <span class="count">${$data.pending.length}</span>
+      {{if erly.viewer.collection.pastEvent}}
+      Did Not RSVP
+      {{else}}
+      Awaiting Reply
+      {{/if}}
+    </div>
+    <div class="rsvp-list pending-list">
+      {{each $data.pending}}
+        {{tmpl($value) "#tmplDetailsAttendanceItem"}}
+      {{/each}}
+    </div>
+  {{/if}}
+
+  {{if erly.viewer.collection.pastEvent}}
+    {{if erly.viewer.collection.userRole.member &&
+      !erly.viewer.collection.userRole.owner}}
+      {{if $data.userTagRsvpState !== 'yes'}}
+        <div class="was-there">
+          <a href="javascript:void(0)">
+            <span>I Was There</span>
+          </a>
+        </div>
+      {{elif !erly.viewer.collection.ownerOnly}}
+        <div class="invite-more">
+          <a href="javascript:void(0)">
+            <img src="${erly.PUB_URL}/img/icon-invite-guests.png" />
+            <span>Add Guests</span>
+          </a>
+        </div>
+      {{/if}}
+    {{/if}}
+  {{/if}}
+</script>
+
+
+<script id="tmplDetailsEventInfo" type="text/x-jquery-tmpljavascript">
+  <h1>Event Info</h1>
+  <div class="description">
+    {{html erly.linebreaks($data.description)}}
+  </div>
+</script>
+
+<script id="tmplDetailsDiscussion" type="text/x-jquery-tmpljavascript">
+  <div class="comments-filter">
+    <form action="javascript:void(0)">
+      <input id="comments_only" value="1" name="comments_only" type="checkbox" />
+      <label for="comments_only">Discussion only</label>
+    </form>
+  </div>
+  <h1>Discussion and Activities</h1>
+  <textarea id="comment" class="empty-text" placeholder="Write a message to the group..."></textarea>
+  <div class="comments">
+  </div>
+  <div class="comments-empty-image">
+    <div class="placeholder">
+      <img src="${erly.PUB_URL}/img/placeholder-comments.png" />
+    </div>
+    <div class="placeholder-text">
+      Be the first to leave a message at this event
+    </div>
+  </div>
+</script>
+
+<script id="tmplRSVPExpandedResponse" type="text/x-jquery-tmpljavascript">
+  {{if $data === 'yes'}}
+    Attending
+  {{elif $data === 'maybe'}}
+    Maybe Attending
+  {{elif $data === 'no'}}
+    Not Attending
+  {{/if}}
+</script>
+
+<script id="tmplAnonymousRsvpConfirmation" type="text/x-jquery-tmpljavascript">
+  {{wrap({modalClass: 'anonymous-rsvp-modal'}) "#tmplModal"}}
+  <div class="erly-header">
+    <div class="icon"> </div>
+    <span>RSVP confirmation</span>
+  </div>
+  <div class="rsvp-container">
+    <p class="confirmation-message">
+      Thanks for your RSVP! You are confirmed as
+      <strong>{{tmpl(response) "#tmplRSVPExpandedResponse"}}</strong>
+      for ${erly.viewer.collection.title}.
+    </p>
+
+    <div class="fb-confirm-container">
+      <form id="facebook-confirm-form" action="javascript:void(0)" onsubmit="return false;">
+        <div class="fb-rsvp-label">
+          Confirm your RSVP with Facebook Connect
+        </div>
+        <span class="facebook-confirm"></span>
+        <div class="fb-no-post">We will not post to your Facebook Wall</div>
+        {{tmpl "#tmplFormErrorContainer"}}
+      </form>
+    </div>
+    <div class="or-container"><div>OR</div></div>
+    <div id="rsvp-name-form-container">
+      <form id="rsvp-name-form" action="javascript:void(0)" onsubmit="return false;">
+        <div class="rsvp-form-label">
+          Please tell us your name and email address so ${ownerName} knows who you are
+        </div>
+        <div>
+          <input type="text" name="name" value="" placeholder="Name" class="empty-text"/>
+        </div>
+        <div>
+          <input type="text" name="email" value="" placeholder="Email address" class="empty-text"/>
+        </div>
+        <div>
+          <input type="password" name="password" value="" placeholder="Password (optional)" optional="1"/>
+        </div>
+        <div class="password-prompt">Enter a password to create your own Erly account</div>
+        <button class="confirm">Confirm RSVP</button>
+        {{tmpl "#tmplFormErrorContainer"}}
+        <div class="login-label">
+          Already have an Erly account?
+          <a href="javascript:void(0)" class="login">Log in</a>
+        </div>
+      </form>
+    </div>
+    <div id="rsvp-login-form-container">
+      <form id="rsvp-login-form" action="javascript:void(0)" onsubmit="return false;">
+        <div class="rsvp-form-label">
+          Log in to your Erly account
+        </div>
+        <div>
+          <input type="text" name="email" value="" placeholder="Email address" class="empty-text"/>
+        </div>
+        <div>
+          <input type="password" name="password" value="" placeholder="Password" class="empty-text"/>
+        </div>
+        <div class="forgot-password-container">
+          <a href="/forgot_password">Forgot password?</a>
+        </div>
+        <div class="login-button-bar">
+          <button class="confirm">Log in</button>
+        </div>
+        {{tmpl "#tmplFormErrorContainer"}}
+        <div class="login-label">
+          Don't have an Erly account?
+          <a href="javascript:void(0)" class="login">RSVP here</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  {{/wrap}}
+</script>
+
+
+<script id="tmplEditRsvpDialog" type="text/x-jquery-tmpljavascript">
+  <div class="edit-rsvp-dialog">
+    <div class="title">
+      Edit RSVP
+    </div>
+    <div class="content">
+      <div class="label">
+        <span class="response">
+        ${$data.name}'s Response: <b class="${$data.taggingInfo.rsvpState}">${$data.taggingInfo.rsvpState}</b>
+        </span>
+        <div class="change">
+          <a href="javascript:void(0)">&nbsp;</a>
+        </div>
+        <div class="popup">
+          ${$data.name}'s Response: <b class="${$data.taggingInfo.rsvpState}">${$data.taggingInfo.rsvpState}</b>
+          <div class="rsvp-button rsvp-option yes">
+            <div class="swatch">&nbsp;</div>
+            Yes
+          </div>
+          <div class="rsvp-button rsvp-option maybe">
+            <div class="swatch">&nbsp;</div>
+            Maybe
+          </div>
+          <div class="rsvp-button rsvp-option no">
+            <div class="swatch">&nbsp;</div>
+            No
+          </div>
+        </div>
+      </div>
+      <div class="rsvp-actions">
+        {{if $data.rsvpState !== 'no'}}
+        <div class="action guests">
+          Additional guests: <input type="text" name="guestCount"
+            value="${$data.guestCount || ($data.taggingInfo && $data.taggingInfo.guestCount) || 0}"/>
+        </div>
+        {{/if}}
+      </div>
+      <div class="buttons">
+        <button class="cancel">Cancel</button>
+        <button class="submit">Submit</button>
+      </div>
+    </div>
+    <div class="close-modal">&nbsp;</div>
+  </div>
+</script>

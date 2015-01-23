@@ -1,0 +1,47 @@
+<script id="tmplViewerTease" type="text/x-jquery-tmpljavascript">
+  <div class="viewer-tease {{if erly.viewer.collection.pastEvent}}pulse-background{{/if}}">
+    <div class="viewer-inner-tease">
+    <div class="tease-arrow">
+      <img src="${erly.PUB_URL}/img/icon-arrow-left-small.png" />
+    </div>
+    <div class="content">
+      {{if items.length === 0}}
+        <div class="item">
+          <div class="stack">
+            <div class="image">
+              <img src="/img/icon-cover-image-add.png" />
+            </div>
+          </div>
+          <div class="type" style="width:110px">
+            Add photos, notes &amp; more
+          </div>
+        </div>
+      {{else}}
+        {{each items}}
+          <div class="item">
+            {{if $value.image}}
+            <div class="stack">
+              <div class="image">
+                <img src="${$value.image}" />
+              </div>
+            </div>
+            {{else}}
+            <div class="stack">
+              <div class="image">
+                <img src="/img/icon-cover-image-add.png" />
+              </div>
+            </div>
+            {{/if}}
+            <div class="count">
+              ${$value.count}
+            </div>
+            <div class="type">
+              ${$value.type}{{if $value.count > 1}}s{{/if}}
+            </div>
+          </div>
+        {{/each}}
+      {{/if}}
+    </div>
+    </div>
+  </div>
+</script>

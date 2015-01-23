@@ -1,0 +1,1204 @@
+/* Mostly taken from http://nicolasgallagher.com/pure-css-speech-bubbles/demo/default.css */
+@-webkit-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-moz-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-o-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-webkit-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-o-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.add-photo {
+  height: 100%; }
+  .add-photo .modal-title {
+    display: none; }
+  .add-photo .content-container {
+    position: absolute;
+    top: 17px;
+    left: 14px;
+    right: 14px;
+    bottom: 14px; }
+    .add-photo .content-container .tab-page {
+      position: absolute;
+      top: 85px;
+      left: 0;
+      right: 0;
+      bottom: 52px; }
+  .add-photo .button-bar {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0; }
+    .add-photo .button-bar .text {
+      color: #666;
+      font-size: 14px;
+      margin-right: 8px;
+      float: left;
+      vertical-align: bottom;
+      padding-top: 8px; }
+      .add-photo .button-bar .text .uploadCounter {
+        color: #000;
+        font-size: 24px;
+        line-height: 1.1; }
+      .add-photo .button-bar .text .at-limit {
+        font-size: 12px;
+        color: red;
+        display: none; }
+  .add-photo .preset-background-container {
+    border-bottom: 1px solid #bbb;
+    max-height: 278px;
+    overflow: auto; }
+  .add-photo .instagram .import-message {
+    display: none; }
+  .add-photo .maintenance {
+    font-size: 16px;
+    padding: 100px 60px;
+    text-align: center; }
+  .add-photo .source-type {
+    border-bottom: solid 1px #bbb;
+    margin-bottom: 8px;
+    text-align: center; }
+    .add-photo .source-type .source-type-button {
+      border-bottom: solid 4px transparent;
+      cursor: pointer;
+      display: inline-block;
+      padding: 12px 5px 6px 5px;
+      text-align: center;
+      width: 98px;
+      cursor: pointer;
+      transition-property: all;
+      transition-duration: 0.15s;
+      transition-timing-function: linear;
+      transition-delay: 0s;
+      -moz-transition-property: all;
+      -moz-transition-duration: 0.15s;
+      -moz-transition-timing-function: linear;
+      -moz-transition-delay: 0s;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      -webkit-transition-delay: 0s; }
+      .add-photo .source-type .source-type-button .text {
+        display: inline-block;
+        font-size: 13px;
+        line-height: 1.3;
+        vertical-align: middle; }
+      .add-photo .source-type .source-type-button img {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 6px;
+        vertical-align: middle; }
+      .add-photo .source-type .source-type-button.selected {
+        border-bottom-color: #f33;
+        background-color: #e9e9e9; }
+    .add-photo .source-type .source-type-button:hover {
+      background-color: #e9e9e9; }
+  .add-photo .vcenter {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    right: 0;
+    margin-top: -50px;
+    text-align: center; }
+  .add-photo #centerSelection .vcenter {
+    margin-top: -105px; }
+  .add-photo .selectphoto,
+  .add-photo #fileupload {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-bottom: solid 1px #bbb;
+    margin: 0; }
+  .add-photo .tab-page {
+    position: relative; }
+    .add-photo .tab-page.nav-visible .selectphoto {
+      top: 38px; }
+  .add-photo .fileupload-content {
+    overflow: hidden;
+    font-family: DIN, sans-serif; }
+  .add-photo .posting-loader {
+    display: none;
+    height: 300px; }
+
+.navigation {
+  display: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 1; }
+  .navigation .photosGoBack,
+  .navigation .select-all {
+    display: inline-block;
+    vertical-align: top; }
+  .navigation .photosGoBack .button {
+    background: url(/img/button-back.png) 0 -4px no-repeat;
+    height: 34px;
+    font-size: 0;
+    width: 82px;
+    cursor: pointer; }
+    .navigation .photosGoBack .button:hover {
+      background-position: 0 -44px; }
+    .navigation .photosGoBack .button:active {
+      background-position: 0 -84px; }
+  .navigation .select-all {
+    margin: 5px 28px 0 0;
+    float: right;
+    display: none;
+    cursor: pointer; }
+    .navigation .select-all input {
+      margin-right: 6px; }
+
+.add-photo .drop-outline {
+  padding: 5px;
+  border: dashed 3px #bbb;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 5px; }
+
+.upload-container.nav-visible .drop-outline {
+  border: none;
+  top: 40px; }
+
+.add-photo .upload-container {
+  /* Make this crazy huge so it covers the entire div it's contained in */ }
+  .add-photo .upload-container .files,
+  .add-photo .upload-container .fileupload-content,
+  .add-photo .upload-container #satchel_view {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .add-photo .upload-container .files {
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px; }
+  .add-photo .upload-container #satchel_album {
+    cursor: pointer;
+    position: relative; }
+    .add-photo .upload-container #satchel_album div.label {
+      position: absolute;
+      bottom: 0px;
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+      padding-bottom: 10px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+      width: 165px; }
+  .add-photo .upload-container #centerSelection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    .add-photo .upload-container #centerSelection .instructions {
+      color: #333;
+      font-size: 18px; }
+    .add-photo .upload-container #centerSelection .or {
+      color: #888;
+      font-family: DIN, sans-serif;
+      font-size: 14px;
+      font-style: italic;
+      margin-bottom: 20px;
+      margin-top: 15px; }
+    .add-photo .upload-container #centerSelection .tip {
+      color: #888;
+      font-family: DIN, sans-serif;
+      font-size: 12px;
+      margin: 0 auto;
+      margin-top: 40px;
+      width: 70%; }
+  .add-photo .upload-container .fileupload-content {
+    overflow: hidden; }
+    .add-photo .upload-container .fileupload-content .ui-progressbar {
+      height: 5px; }
+    .add-photo .upload-container .fileupload-content .error {
+      padding: 8px; }
+  .add-photo .upload-container #uploadForm {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 330px;
+    width: 330px; }
+    .add-photo .upload-container #uploadForm > div {
+      filter: alpha(opacity=0);
+      position: relative;
+      height: 330px;
+      width: 330px; }
+    .add-photo .upload-container #uploadForm input {
+      filter: alpha(opacity=0);
+      font-size: 330px;
+      height: 330px;
+      width: 330px;
+      position: absolute;
+      left: -82.5px;
+      top: -82.5px;
+      cursor: pointer; }
+  .add-photo .upload-container .files {
+    display: none;
+    margin: 4px;
+    overflow: auto; }
+    .add-photo .upload-container .files .add-photo-helper,
+    .add-photo .upload-container .files .template-upload {
+      overflow: hidden;
+      height: 165px;
+      width: 165px;
+      filter: alpha(opacity=100); }
+    .add-photo .upload-container .files .add-photo-helper {
+      background: #f0f0f0 url(/img/icon-plus-large.png) 5px 5px no-repeat;
+      cursor: pointer;
+      position: relative;
+      text-align: center;
+      text-shadow: none; }
+      .add-photo .upload-container .files .add-photo-helper > div {
+        padding: 32px 30px 30px 30px; }
+        .add-photo .upload-container .files .add-photo-helper > div img {
+          margin-bottom: 12px; }
+        .add-photo .upload-container .files .add-photo-helper > div .or {
+          color: #aaa;
+          padding: 4px; }
+        .add-photo .upload-container .files .add-photo-helper > div .choose {
+          padding: 5px 10px;
+          font-size: 14px;
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          display: inline-block;
+          min-height: 20px;
+          cursor: pointer;
+          text-shadow: 0px 1px 0 white;
+          color: #444444;
+          border: 1px solid #c1c1c1;
+          background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+          background: -moz-linear-gradient(top, white, #eeeeee);
+          background-color: #f4f4f4;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          transition-property: all;
+          transition-duration: 0.15s;
+          transition-timing-function: linear;
+          transition-delay: 0s;
+          -moz-transition-property: all;
+          -moz-transition-duration: 0.15s;
+          -moz-transition-timing-function: linear;
+          -moz-transition-delay: 0s;
+          -webkit-transition-property: all;
+          -webkit-transition-duration: 0.15s;
+          -webkit-transition-timing-function: linear;
+          -webkit-transition-delay: 0s; }
+          .add-photo .upload-container .files .add-photo-helper > div .choose:hover {
+            border: 1px solid #959595;
+            background-color: #fcfcfc;
+            color: #000; }
+          .add-photo .upload-container .files .add-photo-helper > div .choose:active {
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+            -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+            border: 1px solid #6e6e6e;
+            background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+            background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+            background-color: #d8d8d8; }
+          .add-photo .upload-container .files .add-photo-helper > div .choose.disabled {
+            opacity: 0.6; }
+            .add-photo .upload-container .files .add-photo-helper > div .choose.disabled:hover, .add-photo .upload-container .files .add-photo-helper > div .choose.disabled:active {
+              color: #444444;
+              border: 1px solid #c1c1c1;
+              background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+              background: -moz-linear-gradient(top, white, #eeeeee);
+              background-color: #f4f4f4;
+              box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+              -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+              -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+              cursor: default; }
+    .add-photo .upload-container .files .template-upload {
+      background: #f3f3f3;
+      height: 165px;
+      position: relative;
+      width: 165px; }
+      .add-photo .upload-container .files .template-upload .metadata {
+        font-family: DIN, sans-serif;
+        padding: 8px; }
+        .add-photo .upload-container .files .template-upload .metadata .size,
+        .add-photo .upload-container .files .template-upload .metadata .name {
+          padding: 0; }
+        .add-photo .upload-container .files .template-upload .metadata .size {
+          font-size: 10px; }
+      .add-photo .upload-container .files .template-upload .ui-progressbar {
+        width: 168px; }
+      .add-photo .upload-container .files .template-upload .progress-info {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        font-family: DIN, sans-serif; }
+        .add-photo .upload-container .files .template-upload .progress-info .progress-text {
+          padding: 0 8px;
+          font-size: 24px; }
+  .add-photo .upload-container #satchel_view {
+    display: none;
+    margin: 4px;
+    overflow: auto; }
+  .add-photo .upload-container #satchel_album {
+    display: none; }
+  .add-photo .upload-container #satchel_album,
+  .add-photo .upload-container .add-photo-helper,
+  .add-photo .upload-container .template-upload,
+  .add-photo .upload-container .template-download,
+  .add-photo .upload-container .satchel-photo {
+    display: inline-block;
+    /* float: right; */
+    margin-right: 12px;
+    position: relative;
+    vertical-align: top; }
+  .add-photo .upload-container .template-download .preview, .add-photo .upload-container .satchel-photo .preview {
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    width: 165px; }
+    .add-photo .upload-container .template-download .preview img, .add-photo .upload-container .satchel-photo .preview img {
+      height: 165px;
+      width: 165px; }
+    .add-photo .upload-container .template-download .preview .rotate, .add-photo .upload-container .satchel-photo .preview .rotate {
+      background: url(/img/icon-rotate.png) 0 0 no-repeat;
+      bottom: 0px;
+      cursor: pointer;
+      height: 40px;
+      right: 0px;
+      position: absolute;
+      width: 40px; }
+      .add-photo .upload-container .template-download .preview .rotate:hover, .add-photo .upload-container .satchel-photo .preview .rotate:hover {
+        background-position: 0 -40px; }
+  .add-photo .upload-container .template-download .upload-error, .add-photo .upload-container .satchel-photo .upload-error {
+    height: 165px;
+    position: relative;
+    width: 165px; }
+    .add-photo .upload-container .template-download .upload-error > div, .add-photo .upload-container .satchel-photo .upload-error > div {
+      border: solid 1px #dbdbdb;
+      position: absolute;
+      padding: 12px;
+      text-align: center;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; }
+  .add-photo .upload-container .template-download .remove, .add-photo .upload-container .satchel-photo .remove {
+    background: white url(/img/icon-black-x-sm.png) no-repeat 2px 2px;
+    cursor: pointer;
+    height: 12px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 12px;
+    z-index: 1; }
+  .add-photo .upload-container .template-download .title input, .add-photo .upload-container .satchel-photo .title input {
+    border-radius: 4px;
+    font-size: 14px;
+    height: 22px;
+    width: 155px;
+    font-family: DIN, sans-serif; }
+  .add-photo .upload-container .selectFiles {
+    font-size: 14px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    display: inline-block;
+    min-height: 20px;
+    cursor: pointer;
+    text-shadow: 0px 1px 0 white;
+    color: #444444;
+    border: 1px solid #c1c1c1;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+    background: -moz-linear-gradient(top, white, #eeeeee);
+    background-color: #f4f4f4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.15s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    filter: alpha(opacity=100);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    overflow: hidden;
+    padding: 6px 8px;
+    width: 230px;
+    text-shadow: none; }
+    .add-photo .upload-container .selectFiles:hover {
+      border: 1px solid #959595;
+      background-color: #fcfcfc;
+      color: #000; }
+    .add-photo .upload-container .selectFiles:active {
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      border: 1px solid #6e6e6e;
+      background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+      background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+      background-color: #d8d8d8; }
+    .add-photo .upload-container .selectFiles.disabled {
+      opacity: 0.6; }
+      .add-photo .upload-container .selectFiles.disabled:hover, .add-photo .upload-container .selectFiles.disabled:active {
+        color: #444444;
+        border: 1px solid #c1c1c1;
+        background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+        background: -moz-linear-gradient(top, white, #eeeeee);
+        background-color: #f4f4f4;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        cursor: default; }
+  .add-photo .upload-container .template-download input.siselect, .add-photo .upload-container .satchel-photo input.siselect {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    width: 20px;
+    height: auto; }
+
+.add-photo .photo-container {
+  display: none; }
+  .add-photo .photo-container .search-bar,
+  .add-photo .photo-container .friend-search,
+  .add-photo .photo-container .albumUrl {
+    text-align: center; }
+    .add-photo .photo-container .search-bar input,
+    .add-photo .photo-container .friend-search input,
+    .add-photo .photo-container .albumUrl input {
+      width: 400px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      padding: 4px 4px 3px;
+      margin: 2px 4px 2px 5px;
+      vertical-align: middle; }
+      .add-photo .photo-container .search-bar input.empty-text,
+      .add-photo .photo-container .friend-search input.empty-text,
+      .add-photo .photo-container .albumUrl input.empty-text {
+        color: #777 !important;
+        background-color: #F2FAFF !important; }
+      .add-photo .photo-container .search-bar input.normal-text,
+      .add-photo .photo-container .friend-search input.normal-text,
+      .add-photo .photo-container .albumUrl input.normal-text {
+        color: #000 !important;
+        background-color: #fff !important; }
+    .add-photo .photo-container .search-bar span,
+    .add-photo .photo-container .friend-search span,
+    .add-photo .photo-container .albumUrl span {
+      vertical-align: middle; }
+    .add-photo .photo-container .search-bar button,
+    .add-photo .photo-container .friend-search button,
+    .add-photo .photo-container .albumUrl button {
+      font-size: 14px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      display: inline-block;
+      min-height: 20px;
+      cursor: pointer;
+      text-shadow: 0px 1px 0 white;
+      color: #444444;
+      border: 1px solid #c1c1c1;
+      background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+      background: -moz-linear-gradient(top, white, #eeeeee);
+      background-color: #f4f4f4;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      transition-property: all;
+      transition-duration: 0.15s;
+      transition-timing-function: linear;
+      transition-delay: 0s;
+      -moz-transition-property: all;
+      -moz-transition-duration: 0.15s;
+      -moz-transition-timing-function: linear;
+      -moz-transition-delay: 0s;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      padding: 2px 15px;
+      vertical-align: middle; }
+      .add-photo .photo-container .search-bar button:hover,
+      .add-photo .photo-container .friend-search button:hover,
+      .add-photo .photo-container .albumUrl button:hover {
+        border: 1px solid #959595;
+        background-color: #fcfcfc;
+        color: #000; }
+      .add-photo .photo-container .search-bar button:active,
+      .add-photo .photo-container .friend-search button:active,
+      .add-photo .photo-container .albumUrl button:active {
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        border: 1px solid #6e6e6e;
+        background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+        background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+        background-color: #d8d8d8; }
+      .add-photo .photo-container .search-bar button.disabled,
+      .add-photo .photo-container .friend-search button.disabled,
+      .add-photo .photo-container .albumUrl button.disabled {
+        opacity: 0.6; }
+        .add-photo .photo-container .search-bar button.disabled:hover, .add-photo .photo-container .search-bar button.disabled:active,
+        .add-photo .photo-container .friend-search button.disabled:hover,
+        .add-photo .photo-container .friend-search button.disabled:active,
+        .add-photo .photo-container .albumUrl button.disabled:hover,
+        .add-photo .photo-container .albumUrl button.disabled:active {
+          color: #444444;
+          border: 1px solid #c1c1c1;
+          background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+          background: -moz-linear-gradient(top, white, #eeeeee);
+          background-color: #f4f4f4;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          cursor: default; }
+    .add-photo .photo-container .search-bar img.loader,
+    .add-photo .photo-container .friend-search img.loader,
+    .add-photo .photo-container .albumUrl img.loader {
+      display: none;
+      margin: 0;
+      padding: 0;
+      margin-left: 3px;
+      vertical-align: middle; }
+    .add-photo .photo-container .search-bar .error,
+    .add-photo .photo-container .friend-search .error,
+    .add-photo .photo-container .albumUrl .error {
+      color: red; }
+  .add-photo .photo-container .search-container {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.3s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    position: absolute;
+    margin-top: -110px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 1; }
+    .add-photo .photo-container .search-container.searching {
+      top: 0;
+      margin-top: 0; }
+      .add-photo .photo-container .search-container.searching .search-watermark {
+        opacity: 0;
+        height: 0;
+        margin-bottom: 3px; }
+        .add-photo .photo-container .search-container.searching .search-watermark img {
+          height: 0; }
+  .add-photo .photo-container .search-watermark {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.3s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    height: 120px;
+    margin-bottom: 30px;
+    text-align: center; }
+  .add-photo .photo-container .search-bar input,
+  .add-photo .photo-container .friend-search input {
+    border-radius: 20px;
+    padding: 1px 10px;
+    height: 25px; }
+  .add-photo .photo-container .search-bar .search-icon, .add-photo .photo-container .search-bar .clear-search-icon,
+  .add-photo .photo-container .friend-search .search-icon,
+  .add-photo .photo-container .friend-search .clear-search-icon {
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    left: -32px;
+    vertical-align: middle;
+    z-index: 1; }
+    .add-photo .photo-container .search-bar .search-icon:hover, .add-photo .photo-container .search-bar .clear-search-icon:hover,
+    .add-photo .photo-container .friend-search .search-icon:hover,
+    .add-photo .photo-container .friend-search .clear-search-icon:hover {
+      background-position: 0 -20px; }
+  .add-photo .photo-container .search-bar .search-icon,
+  .add-photo .photo-container .friend-search .search-icon {
+    background: url(/img/icon-submit-small.png) no-repeat 0 0; }
+  .add-photo .photo-container .search-bar .clear-search-icon,
+  .add-photo .photo-container .friend-search .clear-search-icon {
+    background: url(/img/icon-search-clear.png) no-repeat 0 0;
+    display: none; }
+  .add-photo .photo-container .selectphoto.photos {
+    display: none; }
+    .add-photo .photo-container .selectphoto.photos .empty {
+      margin: 30px auto;
+      text-align: center;
+      font-size: 16px; }
+  .add-photo .photo-container button {
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    display: inline-block;
+    min-height: 20px;
+    cursor: pointer;
+    text-shadow: 0px 1px 0 white;
+    color: #444444;
+    border: 1px solid #c1c1c1;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+    background: -moz-linear-gradient(top, white, #eeeeee);
+    background-color: #f4f4f4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.15s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s; }
+    .add-photo .photo-container button:hover {
+      border: 1px solid #959595;
+      background-color: #fcfcfc;
+      color: #000; }
+    .add-photo .photo-container button:active {
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      border: 1px solid #6e6e6e;
+      background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+      background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+      background-color: #d8d8d8; }
+    .add-photo .photo-container button.disabled {
+      opacity: 0.6; }
+      .add-photo .photo-container button.disabled:hover, .add-photo .photo-container button.disabled:active {
+        color: #444444;
+        border: 1px solid #c1c1c1;
+        background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+        background: -moz-linear-gradient(top, white, #eeeeee);
+        background-color: #f4f4f4;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        cursor: default; }
+  .add-photo .photo-container .selectphoto {
+    overflow-x: hidden;
+    overflow-y: auto; }
+    .add-photo .photo-container .selectphoto .photo-auth {
+      padding-top: 30px;
+      text-align: center;
+      font-size: 16px; }
+      .add-photo .photo-container .selectphoto .photo-auth span {
+        text-transform: uppercase;
+        font-weight: bold; }
+      .add-photo .photo-container .selectphoto .photo-auth input[type=button] {
+        padding: 0 12px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        display: inline-block;
+        min-height: 20px;
+        cursor: pointer;
+        text-shadow: 0px 1px 0 white;
+        color: #444444;
+        border: 1px solid #c1c1c1;
+        background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+        background: -moz-linear-gradient(top, white, #eeeeee);
+        background-color: #f4f4f4;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        transition-property: all;
+        transition-duration: 0.15s;
+        transition-timing-function: linear;
+        transition-delay: 0s;
+        -moz-transition-property: all;
+        -moz-transition-duration: 0.15s;
+        -moz-transition-timing-function: linear;
+        -moz-transition-delay: 0s;
+        -webkit-transition-property: all;
+        -webkit-transition-duration: 0.15s;
+        -webkit-transition-timing-function: linear;
+        -webkit-transition-delay: 0s;
+        font-size: 16px; }
+        .add-photo .photo-container .selectphoto .photo-auth input[type=button]:hover {
+          border: 1px solid #959595;
+          background-color: #fcfcfc;
+          color: #000; }
+        .add-photo .photo-container .selectphoto .photo-auth input[type=button]:active {
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+          -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+          -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+          border: 1px solid #6e6e6e;
+          background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+          background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+          background-color: #d8d8d8; }
+        .add-photo .photo-container .selectphoto .photo-auth input[type=button].disabled {
+          opacity: 0.6; }
+          .add-photo .photo-container .selectphoto .photo-auth input[type=button].disabled:hover, .add-photo .photo-container .selectphoto .photo-auth input[type=button].disabled:active {
+            color: #444444;
+            border: 1px solid #c1c1c1;
+            background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+            background: -moz-linear-gradient(top, white, #eeeeee);
+            background-color: #f4f4f4;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+            -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+            -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+            cursor: default; }
+    .add-photo .photo-container .selectphoto .fbphoto,
+    .add-photo .photo-container .selectphoto .fbalbum {
+      float: left;
+      margin: 5px;
+      cursor: pointer; }
+    .add-photo .photo-container .selectphoto .fbphoto .art,
+    .add-photo .photo-container .selectphoto .fbalbum .art {
+      height: 120px;
+      width: 165px;
+      filter: alpha(opacity=100);
+      overflow: hidden;
+      background-color: #222;
+      position: relative; }
+      .add-photo .photo-container .selectphoto .fbphoto .art img,
+      .add-photo .photo-container .selectphoto .fbalbum .art img {
+        opacity: 0.01; }
+    .add-photo .photo-container .selectphoto .fbphoto span,
+    .add-photo .photo-container .selectphoto .fbalbum span {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: block;
+      background: url(/img/bg-black-50.png);
+      width: 100%;
+      overflow: hidden;
+      color: white;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding: 4px 6px;
+      filter: alpha(opacity=100);
+      font-size: 13px; }
+    .add-photo .photo-container .selectphoto .fbphoto input.fbselect {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 12px;
+      width: 20px;
+      height: auto; }
+    .add-photo .photo-container .selectphoto .fbalbum input.fbselect {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 12px;
+      width: 20px;
+      height: auto; }
+
+.create-event-flow-container .add-photo {
+  min-height: 400px;
+  position: relative; }
+  .create-event-flow-container .add-photo .content-container {
+    top: 0px;
+    left: 17px;
+    right: 17px;
+    bottom: 0px; }
+    .create-event-flow-container .add-photo .content-container .tab-page {
+      left: -4px;
+      right: -5px;
+      bottom: 0px; }
+    .create-event-flow-container .add-photo .content-container .selectphoto, .create-event-flow-container .add-photo .content-container #fileupload {
+      border: none; }
+    .create-event-flow-container .add-photo .content-container .photo-container .selectphoto .fbphoto, .create-event-flow-container .add-photo .content-container .photo-container .selectphoto .fbalbum {
+      margin: 5px 4px 4px 5px; }
+      .create-event-flow-container .add-photo .content-container .photo-container .selectphoto .fbphoto .art, .create-event-flow-container .add-photo .content-container .photo-container .selectphoto .fbalbum .art {
+        width: 165px; }
+.create-event-flow-container .cover-picker .content-container .upload-container #fileupload,
+.create-event-flow-container .cover-picker .content-container .photo-container .selectphoto {
+  padding-left: 5px; }
+.create-event-flow-container .cover-picker .content-container .upload-container .satchel-or-uploaded,
+.create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbalbum,
+.create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbphoto {
+  margin: 8px 7px 18px 7px;
+  width: 277px;
+  height: 152px; }
+  .create-event-flow-container .cover-picker .content-container .upload-container .satchel-or-uploaded .preview, .create-event-flow-container .cover-picker .content-container .upload-container .satchel-or-uploaded .art,
+  .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbalbum .preview,
+  .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbalbum .art,
+  .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbphoto .preview,
+  .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbphoto .art {
+    width: 275px;
+    height: 150px;
+    border: 1px solid #666;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+    cursor: pointer; }
+    .create-event-flow-container .cover-picker .content-container .upload-container .satchel-or-uploaded .preview span, .create-event-flow-container .cover-picker .content-container .upload-container .satchel-or-uploaded .art span,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbalbum .preview span,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbalbum .art span,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbphoto .preview span,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbphoto .art span {
+      left: 5%;
+      top: 5%;
+      width: auto;
+      max-width: 250px;
+      bottom: auto;
+      padding: 6px 8px 4px 8px;
+      line-height: 18px;
+      font-size: 18px;
+      background: url(/img/bg-black-60.png);
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      text-transform: uppercase; }
+    .create-event-flow-container .cover-picker .content-container .upload-container .satchel-or-uploaded .preview input, .create-event-flow-container .cover-picker .content-container .upload-container .satchel-or-uploaded .art input,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbalbum .preview input,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbalbum .art input,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbphoto .preview input,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbphoto .art input {
+      display: none; }
+    .create-event-flow-container .cover-picker .content-container .upload-container .satchel-or-uploaded .preview .check, .create-event-flow-container .cover-picker .content-container .upload-container .satchel-or-uploaded .art .check,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbalbum .preview .check,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbalbum .art .check,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbphoto .preview .check,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbphoto .art .check {
+      display: none;
+      height: 40px;
+      width: 40px;
+      position: absolute;
+      bottom: 2px;
+      right: 6px;
+      background: url(/img/icon-checkbox-blue.png) no-repeat 0 -80px; }
+  .create-event-flow-container .cover-picker .content-container .upload-container .satchel-or-uploaded.selected .preview .check, .create-event-flow-container .cover-picker .content-container .upload-container .satchel-or-uploaded.selected .art .check,
+  .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbalbum.selected .preview .check,
+  .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbalbum.selected .art .check,
+  .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbphoto.selected .preview .check,
+  .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbphoto.selected .art .check {
+    display: block; }
+  .create-event-flow-container .cover-picker .content-container .upload-container .satchel-or-uploaded:hover, .create-event-flow-container .cover-picker .content-container .upload-container .satchel-or-uploaded.selected,
+  .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbalbum:hover,
+  .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbalbum.selected,
+  .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbphoto:hover,
+  .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbphoto.selected {
+    width: 283px;
+    height: 158px;
+    margin: 5px 4px 15px 4px; }
+    .create-event-flow-container .cover-picker .content-container .upload-container .satchel-or-uploaded:hover .preview, .create-event-flow-container .cover-picker .content-container .upload-container .satchel-or-uploaded:hover .art, .create-event-flow-container .cover-picker .content-container .upload-container .satchel-or-uploaded.selected .preview, .create-event-flow-container .cover-picker .content-container .upload-container .satchel-or-uploaded.selected .art,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbalbum:hover .preview,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbalbum:hover .art,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbalbum.selected .preview,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbalbum.selected .art,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbphoto:hover .preview,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbphoto:hover .art,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbphoto.selected .preview,
+    .create-event-flow-container .cover-picker .content-container .photo-container .selectphoto .fbphoto.selected .art {
+      border: 4px solid #0082BF;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      border-radius: 7px; }
+.create-event-flow-container .cover-picker .upload-container .remove {
+  background: white url(/img/icon-black-x-sm.png) no-repeat 2px 2px;
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 1; }
+.create-event-flow-container .choose-cover {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0px 12px; }
+  .create-event-flow-container .choose-cover .background-container {
+    width: 874px;
+    margin: 0 auto;
+    overflow: auto; }
+    .create-event-flow-container .choose-cover .background-container .background-option {
+      width: 277px;
+      height: 152px;
+      padding: 8px 7px 18px 7px;
+      overflow: hidden;
+      position: relative;
+      float: left; }
+      .create-event-flow-container .choose-cover .background-container .background-option .image-container {
+        width: 275px;
+        height: 150px;
+        overflow: hidden;
+        border: 1px solid #999;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4); }
+      .create-event-flow-container .choose-cover .background-container .background-option .mask {
+        background: url(/img/mask-flagstone-photo-l.png) no-repeat;
+        width: 275px;
+        height: 150px;
+        position: absolute;
+        top: 6px;
+        left: -1px; }
+      .create-event-flow-container .choose-cover .background-container .background-option .check {
+        display: none;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        bottom: 14px;
+        right: 6px;
+        background: url(/img/icon-checkbox-blue.png) no-repeat 0 -80px; }
+      .create-event-flow-container .choose-cover .background-container .background-option:hover, .create-event-flow-container .choose-cover .background-container .background-option.selected {
+        padding: 5px 4px 15px 4px;
+        width: 283px;
+        height: 158px; }
+        .create-event-flow-container .choose-cover .background-container .background-option:hover .image-container, .create-event-flow-container .choose-cover .background-container .background-option.selected .image-container {
+          border: 4px solid #0082BF;
+          border-radius: 7px; }
+      .create-event-flow-container .choose-cover .background-container .background-option.selected .check {
+        display: block; }
+  .create-event-flow-container .choose-cover .fbphoto {
+    float: none;
+    display: inline-block;
+    margin: 5px 1% 5px 1%;
+    cursor: pointer; }
+    .create-event-flow-container .choose-cover .fbphoto .art {
+      height: 120px;
+      width: 165px;
+      overflow: hidden;
+      background-color: #222;
+      position: relative; }
+      .create-event-flow-container .choose-cover .fbphoto .art img {
+        opacity: 0.01; }
+      .create-event-flow-container .choose-cover .fbphoto .art input, .create-event-flow-container .choose-cover .fbphoto .art span {
+        display: none; }
+
+.modal .import-album {
+  height: 100%;
+  padding: 15px;
+  width: 705px; }
+  .modal .import-album .modal-title {
+    display: block;
+    padding: 4px 20px; }
+  .modal .import-album .content-container {
+    position: absolute;
+    top: 90px;
+    left: 14px;
+    right: 14px;
+    bottom: 14px; }
+    .modal .import-album .content-container .tab-page {
+      position: absolute;
+      top: 85px;
+      left: 0;
+      right: 0;
+      bottom: 52px; }
+    .modal .import-album .content-container .button-bar input {
+      vertical-align: middle; }
+    .modal .import-album .content-container .button-bar .continue {
+      background: url("/img/button-continue.png") no-repeat scroll 0 0 transparent;
+      border: 0 none;
+      cursor: pointer;
+      font-size: 0;
+      height: 40px;
+      padding: 0;
+      width: 128px;
+      box-shadow: none;
+      transition: none;
+      -webkit-transition: none;
+      -moz-transition: none; }
+      .modal .import-album .content-container .button-bar .continue:hover {
+        background-position: 0 -40px; }
+      .modal .import-album .content-container .button-bar .continue:active {
+        background-position: 0 -80px; }

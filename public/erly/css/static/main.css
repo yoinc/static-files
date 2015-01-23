@@ -1,0 +1,333 @@
+/* Mostly taken from http://nicolasgallagher.com/pure-css-speech-bubbles/demo/default.css */
+@-webkit-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-moz-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-o-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-webkit-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-o-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.static {
+  margin-top: 20px; }
+  .static a {
+    color: #0b8ab6;
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.15s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s; }
+    .static a:hover {
+      color: #0c9acb; }
+  .static .heading {
+    font-size: 28px;
+    margin-top: 28px;
+    margin-bottom: 25px;
+    font-family: DIN;
+    color: #db4040;
+    text-shadow: 0 1px 1px white; }
+    .static .heading .sub-nav {
+      float: right;
+      margin-top: -3px; }
+      .static .heading .sub-nav a {
+        margin-left: 70px;
+        font-size: 16px;
+        font-weight: normal; }
+  .static .heading .sub-nav a, .static.product-tour .content-list li a {
+    color: #333; }
+  .static .heading .sub-nav a:hover, .static.product-tour .content-list li a:hover {
+    color: #0c9acb; }
+  .static .heading .sub-nav a.selected, .static.product-tour .content-list li a.selected {
+    border-bottom: 3px solid #f44; }
+  .static .body-contents {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 25px;
+    color: #444444;
+    background: #fff;
+    margin-bottom: 40px; }
+    .static .body-contents p {
+      line-height: 20px; }
+    .static .body-contents p.left-about {
+      width: 410px;
+      display: inline-block;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    .static .body-contents .important {
+      text-decoration: underline; }
+    .static .body-contents .about-video {
+      float: right;
+      cursor: pointer; }
+      .static .body-contents .about-video .about-video-button {
+        z-index: 11;
+        background: transparent url(/img/overlay-play.png) no-repeat;
+        border: none;
+        height: 80px;
+        right: 235px;
+        margin: 0;
+        padding: 0;
+        top: 95px;
+        width: 80px;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        position: absolute; }
+      .static .body-contents .about-video:hover .about-video-button {
+        opacity: 1;
+        filter: alpha(opacity=100); }
+    .static .body-contents .video-container {
+      width: 470px;
+      height: 246px;
+      position: relative;
+      margin-top: -10px;
+      margin-right: 10px;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4); }
+      .static .body-contents .video-container img {
+        width: 470px; }
+      .static .body-contents .video-container .about-video-button {
+        top: 75px;
+        right: 190px; }
+  .static .signup {
+    background: transparent url(/img/bg-section-top.png) no-repeat center top;
+    padding-top: 50px;
+    margin-left: -25px;
+    margin-right: -25px;
+    text-align: center;
+    padding-top: 25px;
+    margin-top: 20px; }
+    .static .signup p {
+      margin: 6px;
+      padding: 0; }
+    .static .signup .facebook {
+      display: block;
+      margin-left: -7px;
+      background: url(/img/icon-fb-connect-sprite.png) 0 0;
+      width: 312px;
+      height: 70px;
+      padding: 0;
+      cursor: pointer;
+      transition: none;
+      -webkit-transition: none;
+      -moz-transition: none;
+      transition-property: opacity;
+      transition-duration: 0.15s;
+      transition-timing-function: linear;
+      transition-delay: 0s;
+      -moz-transition-property: opacity;
+      -moz-transition-duration: 0.15s;
+      -moz-transition-timing-function: linear;
+      -moz-transition-delay: 0s;
+      -webkit-transition-property: opacity;
+      -webkit-transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      margin: 0 auto; }
+      .static .signup .facebook:hover {
+        background-position: 0 -70px; }
+      .static .signup .facebook:active {
+        background-position: 0 -140px; }
+      .static .signup .facebook.disabled {
+        opacity: 0.5; }
+        .static .signup .facebook.disabled:active {
+          background-position: 0 0; }
+      .static .signup .facebook .hidden {
+        text-align: left;
+        font-size: 0;
+        display: block; }
+  .static .faq h2 {
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #DB4040; }
+  .static .faq h3 {
+    margin-top: 8px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold; }
+  .static .faq ul {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: #DB4040; }
+    .static .faq ul a {
+      font-weight: normal; }
+  .static .faq hr {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc; }
+  .static .faq p {
+    margin-bottom: 14px; }
+  .static .faq-answer {
+    margin-bottom: 35px;
+    margin-left: 20px; }
+    .static .faq-answer li {
+      color: #444444;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 20px; }

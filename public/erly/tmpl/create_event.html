@@ -1,0 +1,318 @@
+<script id="tmplEventForm" type="text/x-jquery-tmpljavascript">
+  <div class="${$data.streetAddress ? 'has-street-address' : ''} event-form-wrapper">
+    <div class="create-event-wrapper">
+      <div class="content-form">
+        <form method="post" action="javascript:void(0)" onsubmit="return false">
+          <input name="timezone" type="hidden" value="${$data.timezone}"/>
+
+          {{if !$data.isEditForm}}
+            <div class="step-title">
+              <span>Create a new Event</span>
+            </div>
+            <div class="choices-container">
+              <div style="float: right;" class="choice">
+                <div class="huge-button invite">
+                  <h1>Upcoming Event</h1>
+                  <h2>Send an Invitation</h2>
+                  <img src="/img/icon-invite-page.png"/>
+                </div>
+                <div class="explanation">
+                  Plan your event in style with a beautiful event page, complete with an elegant custom invitation page,
+                  message board, and group photo album
+                </div>
+              </div>
+              <div style="float: left;" class="choice">
+                <div class="huge-button album">
+                  <h1>Past Event</h1>
+                  <h2>Create Group Photo Album</h2>
+                  <img src="/img/icon-album-page.png"/>
+                </div>
+                <div class="explanation">
+                  Celebrate important moments by collecting photos, stories, and videos in a beautiful online album
+                </div>
+              </div><br style="clear: both;"/>
+            </div>
+          {{/if}}
+
+          <div style="{{if $data.isEditForm}}display: block;{{/if}}" class="event-fields">
+            {{if $data.isEditForm}}
+              {{tmpl "#tmplEventFields"}}
+            {{/if}}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</script>
+
+
+<script id="tmplEventFields" type="text/x-jquery-tmpljavascript">
+  <div class="create-event-flow-container">
+    <div class="event-details">
+      <div class="row"><label for="title">Event Title</label>
+        <input id="title" type="text" name="title" value="{{if typeof $data.title === 'string'}}${$data.title}{{/if}}" placeholder="Enter the title of your event{{if $data.isAlbum}} or experience{{/if}}" class="title-input empty-text"/>
+      </div>
+
+      {{if $data.isAlbum}}
+        {{tmpl "#tmplDateTimePickers"}}
+        {{if !$data.locationName}}
+        <div id="show-location-row" class="row">
+          <a href="javascript:void(0)" class="show-location-link drill-down-link">Add location</a>
+        </div>
+        {{/if}}
+      {{/if}}
+
+      ${(shouldHideLocation = $data.isAlbum && !$data.locationName, "")}
+
+      <div style="{{if shouldHideLocation}}display:none;{{/if}}" class="location-name-row row">
+        <label for="locationName">Location</label>
+        <input id="locationName" type="text" name="locationName" value="${$data.locationName}" placeholder="e.g. Museum of Modern Art" class="location-name"/>
+        <a href="javascript:void(0)" style="{{if $data.isAlbum}}display:none;{{/if}}" class="show-street-address drill-down-link">Add street address</a>
+      </div>
+      <div class="street-address-row row">
+        <label for="streetAddress">Street address</label>
+        <input id="streetAddress" type="text" name="streetAddress" value="${$data.streetAddress}" placeholder="e.g. West 53rd St, New York, NY" class="street-address"/>
+      </div>
+
+      {{if !$data.isAlbum}}
+        {{tmpl "#tmplDateTimePickers"}}
+      {{else}}
+        {{if !$data.description}}
+        <div id="show-description-row" class="row"><a href="javascript:void(0)" class="show-description-link drill-down-link">Add description</a>
+        </div>
+        {{/if}}
+      {{/if}}
+
+      ${(shouldHideDescription = $data.isAlbum && !$data.description, "")}
+
+      <div id="description-row" style="{{if shouldHideDescription}}display:none;{{/if}}" class="row">
+        <label for="description">${$data.isAlbum ? 'Description' : 'Event Info'}</label>
+        <textarea id="description" name="description" placeholder="Share more detailed information about your ${$data.isAlbum ? 'event or experience' : 'upcoming event'}" rows="4" cols="40" class="description">${$data.description}</textarea>
+      </div>
+
+      {{if $data.isEditForm}}
+        <div class="row">
+          <label class="privacy-settings-toggle">Show Privacy Settings</label>
+          <div class="bottom hidden">
+            <label>Privacy Settings</label>
+            {{tmpl '#tmplExtraSettings'}}
+          </div>
+        </div>
+      {{else}}
+        <div class="row">
+          <div class="bottom">
+            <label>Privacy Settings</label>
+            {{tmpl '#tmplExtraSettings'}}
+          </div>
+        </div>
+      {{/if}}
+    </div>
+
+    <div style="display: none;" class="add-photo"></div>
+    <div style="display: none;" class="choose-cover"></div>
+  </div>
+
+  <div class="submit-bottom">
+    {{if $data.isEditForm}}
+      <input type="button" value="Delete this Event" class="delete-button"/>
+      <input type="button" value="Cancel" class="cancel-button"/>
+      <input type="submit" value="Save" class="save-button"/>
+    {{else}}
+      <input type="button" value="Cancel" class="cancel-button"/>
+      <input type="button" value=" " style="display: none;" class="back-button"/>
+      <input type="button" value=" " class="continue-button"/>
+      <input type="submit" value="Create ${$data.isAlbum ? 'album' : 'invitation'}" style="display: none;" class="save-button"/>
+    {{/if}}
+  </div>
+</script>
+
+
+<script id="tmplDateTimePickers" type="text/x-jquery-tmpljavascript">
+  <div class="row">
+    <label for="start_date">{{if !$data.isAlbum}}Start {{/if}}Date</label>
+    <div class="left">
+      <div class="date-wrapper">
+        <div class="date-picker"></div>
+        <input class="date" id="start_date" name="startDate" type="text" value="${erly.eventForm.getStartDateTextForForm($data)}" placeholder="${erly.eventForm.getStartDatePlaceholder($data)}" />
+      </div>
+    </div>
+    <div style="{{if $data.isAlbum}}display:none;{{/if}}" class="right">
+      <div class="time-wrapper">
+        <input class="time" id="start_time" name="startTime" type="text" value="{{if $data.hasTime && $data.displayStartDate}}${erly.dateFormatters.formatAlarmClock($data.displayStartDate)}{{/if}}" placeholder="12:00 pm" />
+        <input type="text" readonly="readonly" value="${$data.timezoneShortName}" class="timezone"/>
+      </div>
+      <div style="{{if $data.endDate}}display:none{{/if}}" class="add-end-date">
+        <a href="javascript:void(0)" class="open-end-date-wrapper drill-down-link">Add end date / time</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row timezonemaprow">
+    <label for="none">Choose a time zone</label>
+    <div class="timezonemap"></div>
+    <div class="timezoneclose">
+      <a href="javascript:void(0)">close</a>
+    </div>
+  </div>
+
+  <div id="end_date_row" style="{{if !$data.endDate}}display:none{{/if}}" class="row">
+    <label for="end_date">End Date</label>
+    <div class="left">
+      <div class="date-wrapper">
+        <div class="date-picker"></div>
+        <input id="end_date" name="endDate" type="text" value="{{if $data.endDate}}${erly.dateFormatters.formatDateShortDayShortMonth($data.displayEndDate)}{{/if}}" class="date"/>
+      </div>
+    </div>
+    <div class="right">
+      <div class="time-wrapper">
+        <input class="time" id="end_time" name="endTime" type="text" placeholder="12:00 pm" value="{{if $data.endDate && $data.hasTime}}${erly.dateFormatters.formatAlarmClock($data.displayEndDate)}{{/if}}" />
+      </div>
+    </div>
+  </div>
+</script>
+
+
+<script id="tmplTimeZonePickerModal" type="text/x-jquery-tmpljavascript">
+  <div class="timezone-picker">
+    <div class="header">
+      <span>Time Zone</span>
+    </div>
+    <div></div>
+    <form id="timezonePicker" method="post" action="javascript:void(0)" onsubmit="return false">
+      <select name="timezoneDropdown">
+        {{html rows}}
+      </select>
+      <div class="submit-bottom">
+        <input type="button" value="Cancel" class="cancel"/>
+        <input type="button" value="Done" class="submit"/>
+      </div>
+    </form>
+  </div>
+</script>
+
+
+<script id="tmplExtraSettingsDropDown" type="text/x-jquery-tmpljavascript">
+  <div id="modal" class="modal extra-settings-modal">
+    <div class="close-modal"></div>
+    <div class="header">
+      <div class="with-icon">
+        <div class="icon"></div>
+        <span>Privacy Settings</span>
+      </div>
+    </div>
+    <div class="extra-settings-drop-down">
+      <div class="event-form-wrapper">
+        <div class="content-form">
+          <form method="post" action="javascript:void(0)" onsubmit="return false">
+            {{tmpl '#tmplExtraSettings'}}
+            <div class="submit-bottom">
+              <input type="button" value="Cancel" class="cancel-button"/>
+              <input type="submit" value="Save"/>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+
+<script id="tmplExtraSettings" type="text/x-jquery-tmpljavascript">
+  <div class="extra-settings">
+    {{if !$data.isAlbum}}
+      <div>
+        <input type="checkbox" name="guestListHidden" id="guestListHidden" value="1" {{if $data.guestListHidden}} checked{{/if}}/>
+        <label for="guestListHidden">Hide the guest list</label>
+        <span class="hint-hover">(?)</span>
+        <div class="hint-below hide-guest-list">
+          The names of people on your guest list will only be visible to you.
+        </div>
+      </div>
+      <div>
+        <input type="checkbox" name="doNotAllowGuestsToInvite" id="doNotAllowGuestsToInvite" value="1" {{if $data.ownerOnly}} checked{{/if}}/>
+        <label for="doNotAllowGuestsToInvite">Don't allow guests to invite other guests</label>
+        <span class="hint-hover">(?)</span>
+        <div class="hint-below guests-can-invite">
+          If you check this box, only guests you invite can RSVP to your event.
+        </div>
+      </div>
+    {{/if}}
+
+    <div>
+      <input class="select-password" type="checkbox" id="private" name="private" value="1" {{if $data.private}} checked{{/if}}/>
+      <label for="private">Password-protect event details</label>
+      <span class="hint-hover">(?)</span>
+      <div class="hint-below password">
+        By default, only people with the link to the event can see event details.
+        For additional security, check this box and only people with the password can view the event details.
+      </div>
+      <input type="text" name="password" placeholder="Enter your password" value="${password}" style="{{if !$data.private}}display:none{{/if}}" class="pwd-field empty-text"/>
+    </div>
+
+    {{if !$data.isAlbum}}
+      <div id="public-event-separator"></div>
+    {{/if}}
+
+    <div>
+      <input type="checkbox" name="publicEvent" id="publicEvent" value="1" {{if $data.publicEvent}} checked{{/if}}/>
+      <label for="publicEvent">Allow anyone to add content to the event album</label>
+      <span class="hint-hover">(?)</span>
+      <div class="hint-below public-event">
+        By default, only explicitly invited guests can add to this Event album. Check this box to allow any Erly user to add content to the album for this Event.
+      </div>
+    </div>
+  </div>
+</script>
+
+
+<script id="tmplDedupeModal" type="text/x-jquery-tmpljavascript">
+  {{wrap({modalClass: 'dedupe-modal', modalTitle: 'Potential Duplicate Event'}) "#tmplModal"}}
+    <p class="message">
+      This event may already exist on Erly.  Are any of these the event you were trying to create?
+    </p>
+
+    {{each $data.dupes}}
+      <div class="dupe-cover">
+        {{if $value.coverPhoto}}
+          <img src="${$value.coverPhoto.url}"/>
+        {{else}}
+          <img/>
+          <src>/img/placeholders/placeholder-landscape-1.jpg</src>
+        {{/if}}
+      </div>
+
+      <a href="${erly.urlFor.collection($value)}">
+        <ul class="event-info">
+          <li class="title">${$value.title}</li>
+          <li>Created by ${$value.owner.name}</li>
+          <li>${erly.dateFormatters.formatDate($value.displayStartDate)}</li>
+          {{if $value.locationName}}<li>${$value.locationName}</li>{{/if}}
+          {{if $value.address}}<li>${$value.address}</li>{{/if}}
+        </ul>
+      </a>
+
+      <div class="clear">&nbsp;</div>
+    {{/each}}
+
+    <form method="post" action="javascript:void(0);">
+      <input id="cancel_dedupe" type="button" value="Cancel"/>
+      <input id="ignore_dedupe_event" type="button" value="No, Continue"/>
+    </form>
+  {{/wrap}}
+</script>
+
+
+<script id="tmplEditMetadataModal" type="text/x-jquery-tmpljavascript">
+  <div id="modal" class="modal update-metadata-container">
+    <div class="close-modal"></div>
+    <div class="header">
+      <div class="with-icon">
+        <div class="icon"></div>
+        <span>Edit Event Details</span>
+      </div>
+    </div>
+    <div class="update-metadata">
+      {{tmpl($.extend(this.data, {isEditForm: true})) "#tmplEventForm"}}
+    </div>
+  </div>
+</script>

@@ -1,0 +1,195 @@
+<script id="tmplFriend" type="text/x-jquery-tmpljavascript">
+  {{if erly.gallery.user && id === erly.gallery.user.id}}
+  <div class="friend highlighted">
+  {{else}}
+  <div class="friend">
+  {{/if}}
+    <div class="image">
+      {{tmpl "#tmplAvatarImage"}}
+    </div>
+    <div class="name">
+      ${name}
+      {{if id === erly.getUserData().id}}
+        (me)
+      {{elif typeof(ownerId) !== "undefined" && id === ownerId}}
+        (owner)
+      {{/if}}
+      {{if $data.taggingInfo && $data.taggingInfo.guestCount}}
+        <span class="guest-count">+ ${$data.taggingInfo.guestCount}</span>
+      {{/if}}
+    </div>
+    {{if chronicleCount}}
+    <div class="count">
+      ${chronicleCount}
+    </div>
+    {{/if}}
+  </div>
+</script>
+
+<script id="tmplCollection" type="text/x-jquery-tmpljavascript">
+  <div class="collection lazy-load ${cssClass}">
+
+    {{if !$data.excludeDate && $data.displayStartDate}}
+    <div class="date">
+      <div class="month">${erly.dateFormatters.getShortMonth($data.displayStartDate)}</div>
+      <div class="day">${$data.displayStartDate.getDate()}</div>
+      <div class="year">${$data.displayStartDate.getFullYear()}</div>
+    </div>
+    {{/if}}
+
+    {{if startDate > erly.now && erly.dateFormatters.countDaysInFuture(startDate, erly.now) > 0}}
+      <div class="future-countdown">
+        <div class="days-left">
+          ${erly.dateFormatters.countDaysInFuture(startDate, erly.now)}
+        </div>
+        <div class="days">
+          {{if erly.dateFormatters.countDaysInFuture(startDate, erly.now) === 1}}
+            Day
+          {{else}}
+            Days
+          {{/if}}
+        </div>
+      </div>
+    {{/if}}
+
+    <div class="image-overlay-container">
+      <div class="image-container">
+        {{if extendedTitle}}
+        {{tmpl($.extend($data, {excludeDescription: true}))
+          '#tmplMetadataAttributes'}}
+        {{else}}
+        <div class="small-title"
+           {{if $data.metadataStyles && $data.metadataStyles.backgroundColor}}
+           style="background:${erly.getRGBA($data.metadataStyles.backgroundColor,$data.metadataStyles.opacity)}"
+          {{/if}}
+        ><span
+           {{if $data.metadataStyles && $data.metadataStyles.textColor}}
+           style="color:#${$data.metadataStyles.textColor};"
+          {{/if}}
+
+        >${title}
+        </span>
+        </div>
+        {{/if}}
+      </div>
+
+      <a href="${erly.urlFor.collection($data)}">
+        <div class="overlay">
+          {{if erly.gallery.user && erly.gallery.user.id === erly.userId}}
+            <div class="remove">&nbsp;</div>
+          {{/if}}
+          <div class="button-container">
+            <div class="button">&nbsp;</div>
+          </div>
+          <div class="location">
+            {{if postCount > 0}}
+              ${postCount} post{{if postCount > 1}}s{{/if}}
+            {{/if}}
+          </div>
+
+          {{if private}}
+          <div class="private">
+            <span class="text">Password required</span>
+            <img src="${erly.PUB_URL}/img/icon-lock-white.png" />
+          </div>
+          {{/if}}
+        </div>
+      </a>
+      {{tmpl '#tmplCollectionMetadata'}}
+    </div>
+  </div>
+</script>
+
+<script id="tmplCardUpdateBanner" type="text/x-jquery-tmpljavascript">
+  <div class="banner">
+    <div class="left-banner-wrapper">
+      <div class="left-banner"></div>
+    </div>
+
+    <h2 class="date-formatted">${dateFormatted}</h2>
+  </div>
+</script>
+
+<script id="tmplUpdateLocation" type="text/x-jquery-tmpljavascript">
+  <div class="update-location-modal">
+    <div class="wrapper">
+      <form action="#" method='get'>
+        <div class="row location-title">
+          <label for="locationName">Enter a location for this Event:</label>
+        </div>
+
+        <div class="row">
+          <input type="text" name="locationName" class="location-name" value="${$data.locationName}" />
+        </div>
+
+        <div class="button-bar-container row">
+          <input type="submit" name="submit" class="submit" value="Done" />
+        </div>
+      </form>
+    </div>
+  </div>
+</script>
+
+<script id="tmplGalleryFooterContents" type="text/x-jquery-tmpljavascript">
+  <div class="gallery-footer-inner">
+    Loading ${count} more...
+    <div class="loading-animation">
+      <img src="/img/ajax-loader.gif" />
+    </div>
+  </div>
+</script>
+
+<script id="tmplStartPane" type="text/x-jquery-tmpljavascript">
+  <div class="start-pane">
+    <div class="text">
+      Events from Erly allow you to create, in just seconds, a beautiful
+      webpage for your event that brings together event information,
+      invitations, and a multimedia album.
+    </div>
+    <div class="start-button">&nbsp;</div>
+  </div>
+</script>
+
+<script id="tmplFeaturedPane" type="text/x-jquery-tmpljavascript">
+  <div>
+    <div class="featured-pane">
+      <div class="header">Check out some Featured Events from our users
+      <a href="/featured/gallery">
+        <span>&nbsp;</span>
+      </a>
+      </div>
+      <div class="featured-collections">
+        {{each $data.collections}}
+          <div class="collection">
+            <div class="image-container">
+              <div class="small-title"><span>${title}</span></div>
+              {{if $value.coverPhoto}}
+              <img src="${$value.coverPhoto.url}" />
+              {{else}}
+              <img src="/img/flagstone-backgrounds/1.jpg" />
+              {{/if}}
+            </div>
+            <a href="${erly.urlFor.collection($value)}">
+              <div class="overlay">
+                <div class="button-container">
+                  <div class="button">&nbsp;</div>
+                </div>
+                <div class="location">
+                  {{if $value.postCount > 0}}
+                    ${postCount} post{{if $value.postCount > 1}}s{{/if}}
+                  {{else}}
+                    Created on ${erly.dateFormatters.formatDate(createdAt)}
+                  {{/if}}
+                </div>
+              </div>
+            </a>
+          </div>
+        {{/each}}
+      </div>
+      <div class="remove">&nbsp;</div>
+    </div>
+    <div class="open-featured">
+      <div class="button">See Featured Events</div>
+    </div>
+  </div>
+</script>

@@ -1,0 +1,1212 @@
+/* Mostly taken from http://nicolasgallagher.com/pure-css-speech-bubbles/demo/default.css */
+@-webkit-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-moz-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-o-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-webkit-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-o-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+body.collection .header .logo {
+  left: 12px; }
+
+div.timeline-updated {
+  font-size: 14px; }
+  div.timeline-updated a {
+    color: #0c9acb; }
+  div.timeline-updated a:hover {
+    color: #666; }
+
+div#header_wrapper .create {
+  border: #b8b7b4;
+  position: relative;
+  text-align: center;
+  margin: 2px auto 0;
+  overflow: hidden;
+  width: 220px;
+  margin-left: 0px; }
+  div#header_wrapper .create .create-form {
+    position: relative; }
+    div#header_wrapper .create .create-form a {
+      margin: 0 auto;
+      display: block;
+      border: none;
+      height: 60px;
+      background: transparent url(/erly/img/button-create-collection.png?v3) no-repeat 0 0; }
+      div#header_wrapper .create .create-form a:hover {
+        background-position: 0 -60px; }
+      div#header_wrapper .create .create-form a:active {
+        background-position: 0 -120px; }
+
+.featured-outer, .new-gallery-wrapper {
+  margin: 0 auto 30px auto;
+  width: 100%; }
+  .featured-outer h2, .featured-outer h3, .featured-outer h4, .new-gallery-wrapper h2, .new-gallery-wrapper h3, .new-gallery-wrapper h4 {
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-family: DIN, sans-serif; }
+  .featured-outer h2, .new-gallery-wrapper h2 {
+    font-size: 20px;
+    padding: 7px 0 2px 10px; }
+  .featured-outer h3, .new-gallery-wrapper h3 {
+    font-size: 18px;
+    margin-bottom: 15px; }
+  .featured-outer h4, .new-gallery-wrapper h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 5px; }
+  .featured-outer .section-padding, .new-gallery-wrapper .section-padding {
+    padding: 12px;
+    padding-right: 0; }
+  .featured-outer .featured-wrapper, .featured-outer .gallery-wrapper, .new-gallery-wrapper .featured-wrapper, .new-gallery-wrapper .gallery-wrapper {
+    height: 100%;
+    width: 100%; }
+    .featured-outer .featured-wrapper .featured-container, .featured-outer .featured-wrapper .gallery-container, .featured-outer .gallery-wrapper .featured-container, .featured-outer .gallery-wrapper .gallery-container, .new-gallery-wrapper .featured-wrapper .featured-container, .new-gallery-wrapper .featured-wrapper .gallery-container, .new-gallery-wrapper .gallery-wrapper .featured-container, .new-gallery-wrapper .gallery-wrapper .gallery-container {
+      min-height: 600px;
+      position: relative;
+      margin-right: 0; }
+      .featured-outer .featured-wrapper .featured-container .section-padding, .featured-outer .featured-wrapper .gallery-container .section-padding, .featured-outer .gallery-wrapper .featured-container .section-padding, .featured-outer .gallery-wrapper .gallery-container .section-padding, .new-gallery-wrapper .featured-wrapper .featured-container .section-padding, .new-gallery-wrapper .featured-wrapper .gallery-container .section-padding, .new-gallery-wrapper .gallery-wrapper .featured-container .section-padding, .new-gallery-wrapper .gallery-wrapper .gallery-container .section-padding {
+        padding: 15px 7px 4px 16px; }
+  .featured-outer .gallery-header, .new-gallery-wrapper .gallery-header {
+    margin-bottom: 0;
+    height: 45px;
+    padding: 8px 0 8px 0;
+    position: relative;
+    width: 70%; }
+    .featured-outer .gallery-header h2, .new-gallery-wrapper .gallery-header h2 {
+      margin-left: 2px;
+      border: 0;
+      background: none;
+      padding: 2px 0 0 0; }
+      .featured-outer .gallery-header h2 span, .new-gallery-wrapper .gallery-header h2 span {
+        cursor: pointer;
+        text-shadow: 0px 1px 1px white;
+        vertical-align: middle;
+        text-transform: none;
+        font-size: 18px;
+        position: absolute;
+        left: 62px;
+        top: 18px; }
+        .featured-outer .gallery-header h2 span img, .new-gallery-wrapper .gallery-header h2 span img {
+          margin-left: 8px; }
+      .featured-outer .gallery-header h2 a.add-pic-link, .new-gallery-wrapper .gallery-header h2 a.add-pic-link {
+        display: none;
+        text-transform: none;
+        font-size: 12px;
+        color: #0c9acb;
+        position: absolute;
+        left: 62px;
+        top: 36px; }
+        .featured-outer .gallery-header h2 a.add-pic-link:hover, .new-gallery-wrapper .gallery-header h2 a.add-pic-link:hover {
+          color: #0082bf; }
+      .featured-outer .gallery-header h2.replaceable-avatar a.add-pic-link, .new-gallery-wrapper .gallery-header h2.replaceable-avatar a.add-pic-link {
+        display: block; }
+      .featured-outer .gallery-header h2.replaceable-avatar span, .new-gallery-wrapper .gallery-header h2.replaceable-avatar span {
+        top: 12px; }
+      .featured-outer .gallery-header h2 form.profile-picture .add-pic, .new-gallery-wrapper .gallery-header h2 form.profile-picture .add-pic {
+        margin-left: 3px;
+        overflow: hidden;
+        position: relative;
+        background-image: url(/erly/img/button-add-avatar.png);
+        border: none;
+        width: 50px;
+        height: 50px; }
+        .featured-outer .gallery-header h2 form.profile-picture .add-pic:hover, .new-gallery-wrapper .gallery-header h2 form.profile-picture .add-pic:hover {
+          background-position: 0 -50px; }
+        .featured-outer .gallery-header h2 form.profile-picture .add-pic .default, .new-gallery-wrapper .gallery-header h2 form.profile-picture .add-pic .default {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 50px;
+          height: 50px;
+          z-index: 0; }
+        .featured-outer .gallery-header h2 form.profile-picture .add-pic .picture, .new-gallery-wrapper .gallery-header h2 form.profile-picture .add-pic .picture {
+          position: absolute;
+          top: 4px;
+          left: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          z-index: 1; }
+      .featured-outer .gallery-header h2 .error-container, .new-gallery-wrapper .gallery-header h2 .error-container {
+        position: absolute;
+        top: 50px;
+        left: 70px;
+        text-transform: none;
+        font-size: 12px;
+        color: #c00; }
+      .featured-outer .gallery-header h2 img.face, .new-gallery-wrapper .gallery-header h2 img.face {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        height: 40px;
+        width: 40px;
+        margin-right: 12px;
+        margin-left: 5px;
+        vertical-align: middle;
+        border: 1px solid #888; }
+  .featured-outer .gallery-services-wrapper, .new-gallery-wrapper .gallery-services-wrapper {
+    position: relative;
+    border-bottom: 1px solid silver; }
+    .featured-outer .gallery-services-wrapper .gradient-top, .new-gallery-wrapper .gallery-services-wrapper .gradient-top {
+      background: transparent url(/erly/img/bg-section-top.png) no-repeat center top;
+      padding-top: 50px;
+      margin-left: -25px;
+      margin-right: -25px;
+      margin-top: -1px; }
+    .featured-outer .gallery-services-wrapper .content, .new-gallery-wrapper .gallery-services-wrapper .content {
+      margin-top: 20px; }
+      .featured-outer .gallery-services-wrapper .content .hide, .new-gallery-wrapper .gallery-services-wrapper .content .hide {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #8C8C8C;
+        font-size: 14px;
+        vertical-align: top; }
+        .featured-outer .gallery-services-wrapper .content .hide .icon, .new-gallery-wrapper .gallery-services-wrapper .content .hide .icon {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background: url(/erly/img/icon-grey-x-sm.png) 0 0 no-repeat; }
+      .featured-outer .gallery-services-wrapper .content .gallery-services, .new-gallery-wrapper .gallery-services-wrapper .content .gallery-services {
+        margin-top: -50px; }
+        .featured-outer .gallery-services-wrapper .content .gallery-services .header, .new-gallery-wrapper .gallery-services-wrapper .content .gallery-services .header {
+          text-transform: none;
+          text-align: center; }
+        .featured-outer .gallery-services-wrapper .content .gallery-services .services-wrapper, .new-gallery-wrapper .gallery-services-wrapper .content .gallery-services .services-wrapper {
+          margin-bottom: 10px;
+          margin-top: 10px; }
+          .featured-outer .gallery-services-wrapper .content .gallery-services .services-wrapper .services, .new-gallery-wrapper .gallery-services-wrapper .content .gallery-services .services-wrapper .services {
+            text-align: center; }
+            .featured-outer .gallery-services-wrapper .content .gallery-services .services-wrapper .services .service-wrapper, .new-gallery-wrapper .gallery-services-wrapper .content .gallery-services .services-wrapper .services .service-wrapper {
+              text-align: center;
+              display: inline-block; }
+              .featured-outer .gallery-services-wrapper .content .gallery-services .services-wrapper .services .service-wrapper .button-wrapper, .new-gallery-wrapper .gallery-services-wrapper .content .gallery-services .services-wrapper .services .service-wrapper .button-wrapper {
+                padding: 10px;
+                width: 140px;
+                height: 180px;
+                margin: 10px auto;
+                font-size: 14px; }
+          .featured-outer .gallery-services-wrapper .content .gallery-services .services-wrapper .service-toggle, .new-gallery-wrapper .gallery-services-wrapper .content .gallery-services .services-wrapper .service-toggle {
+            cursor: pointer; }
+            .featured-outer .gallery-services-wrapper .content .gallery-services .services-wrapper .service-toggle .checkbox, .new-gallery-wrapper .gallery-services-wrapper .content .gallery-services .services-wrapper .service-toggle .checkbox {
+              height: 40px;
+              width: 40px;
+              background: url("/erly/img/icon-checkbox.png") no-repeat center top;
+              margin: auto;
+              margin-top: 10px; }
+              .featured-outer .gallery-services-wrapper .content .gallery-services .services-wrapper .service-toggle .checkbox.connected, .new-gallery-wrapper .gallery-services-wrapper .content .gallery-services .services-wrapper .service-toggle .checkbox.connected {
+                background-position: 0 -80px; }
+            .featured-outer .gallery-services-wrapper .content .gallery-services .services-wrapper .service-toggle:hover .checkbox, .new-gallery-wrapper .gallery-services-wrapper .content .gallery-services .services-wrapper .service-toggle:hover .checkbox {
+              background-position: 0 -40px; }
+              .featured-outer .gallery-services-wrapper .content .gallery-services .services-wrapper .service-toggle:hover .checkbox.connected, .new-gallery-wrapper .gallery-services-wrapper .content .gallery-services .services-wrapper .service-toggle:hover .checkbox.connected {
+                background-position: 0 -80px; }
+  .featured-outer .gallery-footer, .new-gallery-wrapper .gallery-footer {
+    clear: both;
+    text-align: center;
+    margin: 0; }
+    .featured-outer .gallery-footer .gallery-footer-inner, .new-gallery-wrapper .gallery-footer .gallery-footer-inner {
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+      width: 140px;
+      background-color: white;
+      padding: 20px 20px 5px 20px;
+      font-size: 14px;
+      margin: 0 auto; }
+      .featured-outer .gallery-footer .gallery-footer-inner .loading-animation, .new-gallery-wrapper .gallery-footer .gallery-footer-inner .loading-animation {
+        display: block;
+        padding: 5px 20px; }
+        .featured-outer .gallery-footer .gallery-footer-inner .loading-animation img, .new-gallery-wrapper .gallery-footer .gallery-footer-inner .loading-animation img {
+          width: 24px;
+          height: 24px; }
+    .featured-outer .gallery-footer .summary, .new-gallery-wrapper .gallery-footer .summary {
+      margin: 5px 0;
+      text-transform: none;
+      font-size: 12px;
+      font-weight: normal;
+      color: #666; }
+
+.friends-timelines, .contributors {
+  display: none;
+  position: absolute;
+  top: 40px;
+  width: 282px;
+  z-index: 99;
+  filter: alpha(opacity=100); }
+  .friends-timelines .friends-wrapper, .contributors .friends-wrapper {
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    position: relative;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4); }
+    .friends-timelines .friends-wrapper:before, .friends-timelines .friends-wrapper:after, .contributors .friends-wrapper:before, .contributors .friends-wrapper:after {
+      content: "";
+      position: absolute;
+      border-style: solid;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      right: auto;
+      /* reduce the damage in FF3.0 */
+      display: block;
+      width: 0; }
+    .friends-timelines .friends-wrapper:before, .contributors .friends-wrapper:before {
+      border-width: 0 10px 10px;
+      border-color: #aaaaaa transparent;
+      top: -11px;
+      right: 131px;
+      margin-right: 0; }
+    .friends-timelines .friends-wrapper:after, .contributors .friends-wrapper:after {
+      border-width: 0 10px 10px;
+      border-color: white transparent;
+      top: -10px;
+      right: 131px;
+      margin-right: 0; }
+    .friends-timelines .friends-wrapper h3, .contributors .friends-wrapper h3 {
+      border-bottom: solid 1px #ccc;
+      padding: 0 0 10px 0;
+      margin-bottom: 8px;
+      text-align: center;
+      text-transform: none;
+      font-size: 16px; }
+    .friends-timelines .friends-wrapper .loader, .contributors .friends-wrapper .loader {
+      text-align: center;
+      margin: 0; }
+    .friends-timelines .friends-wrapper .friends .friend-scroll, .contributors .friends-wrapper .friends .friend-scroll {
+      max-height: 400px; }
+    .friends-timelines .friends-wrapper .friends .highlighted, .contributors .friends-wrapper .friends .highlighted {
+      background-color: #e0f4ff; }
+    .friends-timelines .friends-wrapper .friends .friend, .contributors .friends-wrapper .friends .friend {
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 4px;
+      font-size: 13px;
+      margin: 0px 0 4px 0;
+      width: 242px;
+      position: relative; }
+      .friends-timelines .friends-wrapper .friends .friend:hover, .contributors .friends-wrapper .friends .friend:hover {
+        background-color: #e0f4ff; }
+        .friends-timelines .friends-wrapper .friends .friend:hover .count, .contributors .friends-wrapper .friends .friend:hover .count {
+          background-color: #f33;
+          color: #fff; }
+      .friends-timelines .friends-wrapper .friends .friend a, .contributors .friends-wrapper .friends .friend a {
+        color: #000;
+        text-decoration: none; }
+      .friends-timelines .friends-wrapper .friends .friend .name, .contributors .friends-wrapper .friends .friend .name {
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 165px;
+        vertical-align: middle;
+        margin-right: 10px; }
+        .friends-timelines .friends-wrapper .friends .friend .name .guest-count, .contributors .friends-wrapper .friends .friend .name .guest-count {
+          color: #888; }
+      .friends-timelines .friends-wrapper .friends .friend .count, .contributors .friends-wrapper .friends .friend .count {
+        background-color: #535353;
+        color: #fff;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 4px 4px 1px 4px;
+        position: absolute;
+        right: 4px;
+        top: 5px;
+        text-align: center;
+        vertical-align: middle;
+        min-width: 15px;
+        margin-top: 4px;
+        margin-bottom: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px; }
+      .friends-timelines .friends-wrapper .friends .friend .image, .contributors .friends-wrapper .friends .friend .image {
+        display: inline-block;
+        height: 30px;
+        margin-right: 6px;
+        vertical-align: middle;
+        width: 30px;
+        border: 1px solid #AAA;
+        border-radius: 4px; }
+        .friends-timelines .friends-wrapper .friends .friend .image img, .contributors .friends-wrapper .friends .friend .image img {
+          height: 30px;
+          width: 30px; }
+    .friends-timelines .friends-wrapper .friends .jspScrollable .friend, .contributors .friends-wrapper .friends .jspScrollable .friend {
+      width: 232px; }
+      .friends-timelines .friends-wrapper .friends .jspScrollable .friend .name, .contributors .friends-wrapper .friends .jspScrollable .friend .name {
+        width: 155px; }
+
+.featured-container, .home-copy-outer, .gallery-container {
+  margin: 0 auto 20px auto;
+  width: 980px;
+  position: relative; }
+  .featured-container .line, .home-copy-outer .line, .gallery-container .line {
+    background-color: rgba(150, 150, 150, 0.3);
+    width: 2px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -2px;
+    top: 88px;
+    bottom: 0;
+    display: none;
+    z-index: -1; }
+
+.home-copy-container {
+  background: white;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 965px;
+  margin-right: 15px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4); }
+
+.featured-outer .home-copy-row div.copy, .home-copy-outer .home-copy-row div.copy, .gallery-container .home-copy-row div.copy {
+  padding: 9px 30px; }
+  .featured-outer .home-copy-row div.copy h2, .home-copy-outer .home-copy-row div.copy h2, .gallery-container .home-copy-row div.copy h2 {
+    font-size: 25px;
+    color: #db4040;
+    text-shadow: 0 1px 0px white;
+    margin-bottom: 7px; }
+  .featured-outer .home-copy-row div.copy p, .home-copy-outer .home-copy-row div.copy p, .gallery-container .home-copy-row div.copy p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 0px;
+    font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; }
+.featured-outer .home-copy-row br, .home-copy-outer .home-copy-row br, .gallery-container .home-copy-row br {
+  clear: both; }
+.featured-outer .sign-up-row, .home-copy-outer .sign-up-row, .gallery-container .sign-up-row {
+  background: url(/erly/img/bg-gray-10.png) repeat;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  text-align: center; }
+  .featured-outer .sign-up-row .sign-up-button, .home-copy-outer .sign-up-row .sign-up-button, .gallery-container .sign-up-row .sign-up-button {
+    font-size: 14px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    display: inline-block;
+    min-height: 20px;
+    cursor: pointer;
+    text-shadow: 0px 1px 0 white;
+    color: #444444;
+    border: 1px solid #c1c1c1;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+    background: -moz-linear-gradient(top, white, #eeeeee);
+    background-color: #f4f4f4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.15s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.15s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2ec4f7), to(#0098cc));
+    background: -moz-linear-gradient(top, #2ec4f7, #0098cc);
+    background-color: #09b5f0;
+    border: 1px solid #0185b2;
+    color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;
+    font-size: 26px;
+    min-height: 26px;
+    line-height: 26px;
+    padding: 10px 50px 13px;
+    margin-top: 15px; }
+    .featured-outer .sign-up-row .sign-up-button:hover, .home-copy-outer .sign-up-row .sign-up-button:hover, .gallery-container .sign-up-row .sign-up-button:hover {
+      border: 1px solid #959595;
+      background-color: #fcfcfc;
+      color: #000; }
+    .featured-outer .sign-up-row .sign-up-button:active, .home-copy-outer .sign-up-row .sign-up-button:active, .gallery-container .sign-up-row .sign-up-button:active {
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      border: 1px solid #6e6e6e;
+      background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+      background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+      background-color: #d8d8d8; }
+    .featured-outer .sign-up-row .sign-up-button.disabled, .home-copy-outer .sign-up-row .sign-up-button.disabled, .gallery-container .sign-up-row .sign-up-button.disabled {
+      opacity: 0.6; }
+      .featured-outer .sign-up-row .sign-up-button.disabled:hover, .featured-outer .sign-up-row .sign-up-button.disabled:active, .home-copy-outer .sign-up-row .sign-up-button.disabled:hover, .home-copy-outer .sign-up-row .sign-up-button.disabled:active, .gallery-container .sign-up-row .sign-up-button.disabled:hover, .gallery-container .sign-up-row .sign-up-button.disabled:active {
+        color: #444444;
+        border: 1px solid #c1c1c1;
+        background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+        background: -moz-linear-gradient(top, white, #eeeeee);
+        background-color: #f4f4f4;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        cursor: default; }
+    .featured-outer .sign-up-row .sign-up-button:hover, .home-copy-outer .sign-up-row .sign-up-button:hover, .gallery-container .sign-up-row .sign-up-button:hover {
+      background: -webkit-gradient(linear, left top, left bottom, from(#30d9ff), to(#049cd0));
+      background: -moz-linear-gradient(top, #30d9ff, #049cd0);
+      color: #fff;
+      background-color: #04bdfd;
+      border: 1px solid #0185b2; }
+    .featured-outer .sign-up-row .sign-up-button:active, .home-copy-outer .sign-up-row .sign-up-button:active, .gallery-container .sign-up-row .sign-up-button:active {
+      background: -webkit-gradient(linear, left top, left bottom, from(#068ebc), to(#24abd8));
+      background: -moz-linear-gradient(top, #068ebc, #24abd8);
+      background-color: #0089b8;
+      border: 1px solid #005b7c; }
+    .featured-outer .sign-up-row .sign-up-button.disabled:hover, .featured-outer .sign-up-row .sign-up-button.disabled:active, .home-copy-outer .sign-up-row .sign-up-button.disabled:hover, .home-copy-outer .sign-up-row .sign-up-button.disabled:active, .gallery-container .sign-up-row .sign-up-button.disabled:hover, .gallery-container .sign-up-row .sign-up-button.disabled:active {
+      background: -webkit-gradient(linear, left top, left bottom, from(#2ec4f7), to(#0098cc));
+      background: -moz-linear-gradient(top, #2ec4f7, #0098cc);
+      background-color: #09b5f0;
+      border: 1px solid #0185b2;
+      color: #fff; }
+  .featured-outer .sign-up-row span, .home-copy-outer .sign-up-row span, .gallery-container .sign-up-row span {
+    font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; }
+    .featured-outer .sign-up-row span a, .home-copy-outer .sign-up-row span a, .gallery-container .sign-up-row span a {
+      text-decoration: underline;
+      color: #0c9acb; }
+      .featured-outer .sign-up-row span a:hover, .home-copy-outer .sign-up-row span a:hover, .gallery-container .sign-up-row span a:hover {
+        color: #0082bf; }
+.featured-outer .loader, .home-copy-outer .loader, .gallery-container .loader {
+  margin: 0;
+  padding: 20px; }
+.featured-outer .gallery.recent, .home-copy-outer .gallery.recent, .gallery-container .gallery.recent {
+  padding-top: 10px; }
+.featured-outer .gallery.upcoming, .featured-outer .gallery.recent, .home-copy-outer .gallery.upcoming, .home-copy-outer .gallery.recent, .gallery-container .gallery.upcoming, .gallery-container .gallery.recent {
+  clear: both;
+  display: none; }
+  .featured-outer .gallery.upcoming h2, .featured-outer .gallery.recent h2, .home-copy-outer .gallery.upcoming h2, .home-copy-outer .gallery.recent h2, .gallery-container .gallery.upcoming h2, .gallery-container .gallery.recent h2 {
+    padding: 5px;
+    text-align: center;
+    background-color: #d8d3c6;
+    color: #222;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: none;
+    width: 180px;
+    margin-bottom: 10px; }
+    .featured-outer .gallery.upcoming h2 img, .featured-outer .gallery.recent h2 img, .home-copy-outer .gallery.upcoming h2 img, .home-copy-outer .gallery.recent h2 img, .gallery-container .gallery.upcoming h2 img, .gallery-container .gallery.recent h2 img {
+      vertical-align: middle;
+      margin-right: 5px; }
+.featured-outer .featured-masthead .masthead-scrollable, .featured-outer .featured-masthead .featured, .featured-outer .featured-masthead .gallery, .featured-outer .featured-wrapper .masthead-scrollable, .featured-outer .featured-wrapper .featured, .featured-outer .featured-wrapper .gallery, .featured-outer .gallery-wrapper .masthead-scrollable, .featured-outer .gallery-wrapper .featured, .featured-outer .gallery-wrapper .gallery, .home-copy-outer .featured-masthead .masthead-scrollable, .home-copy-outer .featured-masthead .featured, .home-copy-outer .featured-masthead .gallery, .home-copy-outer .featured-wrapper .masthead-scrollable, .home-copy-outer .featured-wrapper .featured, .home-copy-outer .featured-wrapper .gallery, .home-copy-outer .gallery-wrapper .masthead-scrollable, .home-copy-outer .gallery-wrapper .featured, .home-copy-outer .gallery-wrapper .gallery, .gallery-container .featured-masthead .masthead-scrollable, .gallery-container .featured-masthead .featured, .gallery-container .featured-masthead .gallery, .gallery-container .featured-wrapper .masthead-scrollable, .gallery-container .featured-wrapper .featured, .gallery-container .featured-wrapper .gallery, .gallery-container .gallery-wrapper .masthead-scrollable, .gallery-container .gallery-wrapper .featured, .gallery-container .gallery-wrapper .gallery {
+  position: relative; }
+  .featured-outer .featured-masthead .masthead-scrollable a:hover, .featured-outer .featured-masthead .featured a:hover, .featured-outer .featured-masthead .gallery a:hover, .featured-outer .featured-wrapper .masthead-scrollable a:hover, .featured-outer .featured-wrapper .featured a:hover, .featured-outer .featured-wrapper .gallery a:hover, .featured-outer .gallery-wrapper .masthead-scrollable a:hover, .featured-outer .gallery-wrapper .featured a:hover, .featured-outer .gallery-wrapper .gallery a:hover, .home-copy-outer .featured-masthead .masthead-scrollable a:hover, .home-copy-outer .featured-masthead .featured a:hover, .home-copy-outer .featured-masthead .gallery a:hover, .home-copy-outer .featured-wrapper .masthead-scrollable a:hover, .home-copy-outer .featured-wrapper .featured a:hover, .home-copy-outer .featured-wrapper .gallery a:hover, .home-copy-outer .gallery-wrapper .masthead-scrollable a:hover, .home-copy-outer .gallery-wrapper .featured a:hover, .home-copy-outer .gallery-wrapper .gallery a:hover, .gallery-container .featured-masthead .masthead-scrollable a:hover, .gallery-container .featured-masthead .featured a:hover, .gallery-container .featured-masthead .gallery a:hover, .gallery-container .featured-wrapper .masthead-scrollable a:hover, .gallery-container .featured-wrapper .featured a:hover, .gallery-container .featured-wrapper .gallery a:hover, .gallery-container .gallery-wrapper .masthead-scrollable a:hover, .gallery-container .gallery-wrapper .featured a:hover, .gallery-container .gallery-wrapper .gallery a:hover {
+    color: #000; }
+  .featured-outer .featured-masthead .masthead-scrollable .collection, .featured-outer .featured-masthead .featured .collection, .featured-outer .featured-masthead .gallery .collection, .featured-outer .featured-wrapper .masthead-scrollable .collection, .featured-outer .featured-wrapper .featured .collection, .featured-outer .featured-wrapper .gallery .collection, .featured-outer .gallery-wrapper .masthead-scrollable .collection, .featured-outer .gallery-wrapper .featured .collection, .featured-outer .gallery-wrapper .gallery .collection, .home-copy-outer .featured-masthead .masthead-scrollable .collection, .home-copy-outer .featured-masthead .featured .collection, .home-copy-outer .featured-masthead .gallery .collection, .home-copy-outer .featured-wrapper .masthead-scrollable .collection, .home-copy-outer .featured-wrapper .featured .collection, .home-copy-outer .featured-wrapper .gallery .collection, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection, .home-copy-outer .gallery-wrapper .featured .collection, .home-copy-outer .gallery-wrapper .gallery .collection, .gallery-container .featured-masthead .masthead-scrollable .collection, .gallery-container .featured-masthead .featured .collection, .gallery-container .featured-masthead .gallery .collection, .gallery-container .featured-wrapper .masthead-scrollable .collection, .gallery-container .featured-wrapper .featured .collection, .gallery-container .featured-wrapper .gallery .collection, .gallery-container .gallery-wrapper .masthead-scrollable .collection, .gallery-container .gallery-wrapper .featured .collection, .gallery-container .gallery-wrapper .gallery .collection {
+    background: white url(/erly/img/bg-gallery-white.png);
+    border-bottom-width: 5px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    position: relative;
+    cursor: pointer;
+    width: 465px;
+    height: 225px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.15s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    float: left;
+    margin: 10px; }
+    .featured-outer .featured-masthead .masthead-scrollable .collection .image-overlay-container, .featured-outer .featured-masthead .featured .collection .image-overlay-container, .featured-outer .featured-masthead .gallery .collection .image-overlay-container, .featured-outer .featured-wrapper .masthead-scrollable .collection .image-overlay-container, .featured-outer .featured-wrapper .featured .collection .image-overlay-container, .featured-outer .featured-wrapper .gallery .collection .image-overlay-container, .featured-outer .gallery-wrapper .masthead-scrollable .collection .image-overlay-container, .featured-outer .gallery-wrapper .featured .collection .image-overlay-container, .featured-outer .gallery-wrapper .gallery .collection .image-overlay-container, .home-copy-outer .featured-masthead .masthead-scrollable .collection .image-overlay-container, .home-copy-outer .featured-masthead .featured .collection .image-overlay-container, .home-copy-outer .featured-masthead .gallery .collection .image-overlay-container, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .image-overlay-container, .home-copy-outer .featured-wrapper .featured .collection .image-overlay-container, .home-copy-outer .featured-wrapper .gallery .collection .image-overlay-container, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .image-overlay-container, .home-copy-outer .gallery-wrapper .featured .collection .image-overlay-container, .home-copy-outer .gallery-wrapper .gallery .collection .image-overlay-container, .gallery-container .featured-masthead .masthead-scrollable .collection .image-overlay-container, .gallery-container .featured-masthead .featured .collection .image-overlay-container, .gallery-container .featured-masthead .gallery .collection .image-overlay-container, .gallery-container .featured-wrapper .masthead-scrollable .collection .image-overlay-container, .gallery-container .featured-wrapper .featured .collection .image-overlay-container, .gallery-container .featured-wrapper .gallery .collection .image-overlay-container, .gallery-container .gallery-wrapper .masthead-scrollable .collection .image-overlay-container, .gallery-container .gallery-wrapper .featured .collection .image-overlay-container, .gallery-container .gallery-wrapper .gallery .collection .image-overlay-container {
+      margin-top: 11px; }
+    .featured-outer .featured-masthead .masthead-scrollable .collection.shadow-wide, .featured-outer .featured-masthead .featured .collection.shadow-wide, .featured-outer .featured-masthead .gallery .collection.shadow-wide, .featured-outer .featured-wrapper .masthead-scrollable .collection.shadow-wide, .featured-outer .featured-wrapper .featured .collection.shadow-wide, .featured-outer .featured-wrapper .gallery .collection.shadow-wide, .featured-outer .gallery-wrapper .masthead-scrollable .collection.shadow-wide, .featured-outer .gallery-wrapper .featured .collection.shadow-wide, .featured-outer .gallery-wrapper .gallery .collection.shadow-wide, .home-copy-outer .featured-masthead .masthead-scrollable .collection.shadow-wide, .home-copy-outer .featured-masthead .featured .collection.shadow-wide, .home-copy-outer .featured-masthead .gallery .collection.shadow-wide, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.shadow-wide, .home-copy-outer .featured-wrapper .featured .collection.shadow-wide, .home-copy-outer .featured-wrapper .gallery .collection.shadow-wide, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.shadow-wide, .home-copy-outer .gallery-wrapper .featured .collection.shadow-wide, .home-copy-outer .gallery-wrapper .gallery .collection.shadow-wide, .gallery-container .featured-masthead .masthead-scrollable .collection.shadow-wide, .gallery-container .featured-masthead .featured .collection.shadow-wide, .gallery-container .featured-masthead .gallery .collection.shadow-wide, .gallery-container .featured-wrapper .masthead-scrollable .collection.shadow-wide, .gallery-container .featured-wrapper .featured .collection.shadow-wide, .gallery-container .featured-wrapper .gallery .collection.shadow-wide, .gallery-container .gallery-wrapper .masthead-scrollable .collection.shadow-wide, .gallery-container .gallery-wrapper .featured .collection.shadow-wide, .gallery-container .gallery-wrapper .gallery .collection.shadow-wide {
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4); }
+    .featured-outer .featured-masthead .masthead-scrollable .collection.center .image-overlay-container, .featured-outer .featured-masthead .featured .collection.center .image-overlay-container, .featured-outer .featured-masthead .gallery .collection.center .image-overlay-container, .featured-outer .featured-wrapper .masthead-scrollable .collection.center .image-overlay-container, .featured-outer .featured-wrapper .featured .collection.center .image-overlay-container, .featured-outer .featured-wrapper .gallery .collection.center .image-overlay-container, .featured-outer .gallery-wrapper .masthead-scrollable .collection.center .image-overlay-container, .featured-outer .gallery-wrapper .featured .collection.center .image-overlay-container, .featured-outer .gallery-wrapper .gallery .collection.center .image-overlay-container, .home-copy-outer .featured-masthead .masthead-scrollable .collection.center .image-overlay-container, .home-copy-outer .featured-masthead .featured .collection.center .image-overlay-container, .home-copy-outer .featured-masthead .gallery .collection.center .image-overlay-container, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.center .image-overlay-container, .home-copy-outer .featured-wrapper .featured .collection.center .image-overlay-container, .home-copy-outer .featured-wrapper .gallery .collection.center .image-overlay-container, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.center .image-overlay-container, .home-copy-outer .gallery-wrapper .featured .collection.center .image-overlay-container, .home-copy-outer .gallery-wrapper .gallery .collection.center .image-overlay-container, .gallery-container .featured-masthead .masthead-scrollable .collection.center .image-overlay-container, .gallery-container .featured-masthead .featured .collection.center .image-overlay-container, .gallery-container .featured-masthead .gallery .collection.center .image-overlay-container, .gallery-container .featured-wrapper .masthead-scrollable .collection.center .image-overlay-container, .gallery-container .featured-wrapper .featured .collection.center .image-overlay-container, .gallery-container .featured-wrapper .gallery .collection.center .image-overlay-container, .gallery-container .gallery-wrapper .masthead-scrollable .collection.center .image-overlay-container, .gallery-container .gallery-wrapper .featured .collection.center .image-overlay-container, .gallery-container .gallery-wrapper .gallery .collection.center .image-overlay-container {
+      margin-left: 10px; }
+    .featured-outer .featured-masthead .masthead-scrollable .collection.center .bottom .meta-icons, .featured-outer .featured-masthead .featured .collection.center .bottom .meta-icons, .featured-outer .featured-masthead .gallery .collection.center .bottom .meta-icons, .featured-outer .featured-wrapper .masthead-scrollable .collection.center .bottom .meta-icons, .featured-outer .featured-wrapper .featured .collection.center .bottom .meta-icons, .featured-outer .featured-wrapper .gallery .collection.center .bottom .meta-icons, .featured-outer .gallery-wrapper .masthead-scrollable .collection.center .bottom .meta-icons, .featured-outer .gallery-wrapper .featured .collection.center .bottom .meta-icons, .featured-outer .gallery-wrapper .gallery .collection.center .bottom .meta-icons, .home-copy-outer .featured-masthead .masthead-scrollable .collection.center .bottom .meta-icons, .home-copy-outer .featured-masthead .featured .collection.center .bottom .meta-icons, .home-copy-outer .featured-masthead .gallery .collection.center .bottom .meta-icons, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.center .bottom .meta-icons, .home-copy-outer .featured-wrapper .featured .collection.center .bottom .meta-icons, .home-copy-outer .featured-wrapper .gallery .collection.center .bottom .meta-icons, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.center .bottom .meta-icons, .home-copy-outer .gallery-wrapper .featured .collection.center .bottom .meta-icons, .home-copy-outer .gallery-wrapper .gallery .collection.center .bottom .meta-icons, .gallery-container .featured-masthead .masthead-scrollable .collection.center .bottom .meta-icons, .gallery-container .featured-masthead .featured .collection.center .bottom .meta-icons, .gallery-container .featured-masthead .gallery .collection.center .bottom .meta-icons, .gallery-container .featured-wrapper .masthead-scrollable .collection.center .bottom .meta-icons, .gallery-container .featured-wrapper .featured .collection.center .bottom .meta-icons, .gallery-container .featured-wrapper .gallery .collection.center .bottom .meta-icons, .gallery-container .gallery-wrapper .masthead-scrollable .collection.center .bottom .meta-icons, .gallery-container .gallery-wrapper .featured .collection.center .bottom .meta-icons, .gallery-container .gallery-wrapper .gallery .collection.center .bottom .meta-icons {
+      right: 11px; }
+    .featured-outer .featured-masthead .masthead-scrollable .collection.left, .featured-outer .featured-masthead .featured .collection.left, .featured-outer .featured-masthead .gallery .collection.left, .featured-outer .featured-wrapper .masthead-scrollable .collection.left, .featured-outer .featured-wrapper .featured .collection.left, .featured-outer .featured-wrapper .gallery .collection.left, .featured-outer .gallery-wrapper .masthead-scrollable .collection.left, .featured-outer .gallery-wrapper .featured .collection.left, .featured-outer .gallery-wrapper .gallery .collection.left, .home-copy-outer .featured-masthead .masthead-scrollable .collection.left, .home-copy-outer .featured-masthead .featured .collection.left, .home-copy-outer .featured-masthead .gallery .collection.left, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.left, .home-copy-outer .featured-wrapper .featured .collection.left, .home-copy-outer .featured-wrapper .gallery .collection.left, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.left, .home-copy-outer .gallery-wrapper .featured .collection.left, .home-copy-outer .gallery-wrapper .gallery .collection.left, .gallery-container .featured-masthead .masthead-scrollable .collection.left, .gallery-container .featured-masthead .featured .collection.left, .gallery-container .featured-masthead .gallery .collection.left, .gallery-container .featured-wrapper .masthead-scrollable .collection.left, .gallery-container .featured-wrapper .featured .collection.left, .gallery-container .featured-wrapper .gallery .collection.left, .gallery-container .gallery-wrapper .masthead-scrollable .collection.left, .gallery-container .gallery-wrapper .featured .collection.left, .gallery-container .gallery-wrapper .gallery .collection.left {
+      margin-left: 0px;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      position: relative; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection.left:before, .featured-outer .featured-masthead .masthead-scrollable .collection.left:after, .featured-outer .featured-masthead .featured .collection.left:before, .featured-outer .featured-masthead .featured .collection.left:after, .featured-outer .featured-masthead .gallery .collection.left:before, .featured-outer .featured-masthead .gallery .collection.left:after, .featured-outer .featured-wrapper .masthead-scrollable .collection.left:before, .featured-outer .featured-wrapper .masthead-scrollable .collection.left:after, .featured-outer .featured-wrapper .featured .collection.left:before, .featured-outer .featured-wrapper .featured .collection.left:after, .featured-outer .featured-wrapper .gallery .collection.left:before, .featured-outer .featured-wrapper .gallery .collection.left:after, .featured-outer .gallery-wrapper .masthead-scrollable .collection.left:before, .featured-outer .gallery-wrapper .masthead-scrollable .collection.left:after, .featured-outer .gallery-wrapper .featured .collection.left:before, .featured-outer .gallery-wrapper .featured .collection.left:after, .featured-outer .gallery-wrapper .gallery .collection.left:before, .featured-outer .gallery-wrapper .gallery .collection.left:after, .home-copy-outer .featured-masthead .masthead-scrollable .collection.left:before, .home-copy-outer .featured-masthead .masthead-scrollable .collection.left:after, .home-copy-outer .featured-masthead .featured .collection.left:before, .home-copy-outer .featured-masthead .featured .collection.left:after, .home-copy-outer .featured-masthead .gallery .collection.left:before, .home-copy-outer .featured-masthead .gallery .collection.left:after, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.left:before, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.left:after, .home-copy-outer .featured-wrapper .featured .collection.left:before, .home-copy-outer .featured-wrapper .featured .collection.left:after, .home-copy-outer .featured-wrapper .gallery .collection.left:before, .home-copy-outer .featured-wrapper .gallery .collection.left:after, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.left:before, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.left:after, .home-copy-outer .gallery-wrapper .featured .collection.left:before, .home-copy-outer .gallery-wrapper .featured .collection.left:after, .home-copy-outer .gallery-wrapper .gallery .collection.left:before, .home-copy-outer .gallery-wrapper .gallery .collection.left:after, .gallery-container .featured-masthead .masthead-scrollable .collection.left:before, .gallery-container .featured-masthead .masthead-scrollable .collection.left:after, .gallery-container .featured-masthead .featured .collection.left:before, .gallery-container .featured-masthead .featured .collection.left:after, .gallery-container .featured-masthead .gallery .collection.left:before, .gallery-container .featured-masthead .gallery .collection.left:after, .gallery-container .featured-wrapper .masthead-scrollable .collection.left:before, .gallery-container .featured-wrapper .masthead-scrollable .collection.left:after, .gallery-container .featured-wrapper .featured .collection.left:before, .gallery-container .featured-wrapper .featured .collection.left:after, .gallery-container .featured-wrapper .gallery .collection.left:before, .gallery-container .featured-wrapper .gallery .collection.left:after, .gallery-container .gallery-wrapper .masthead-scrollable .collection.left:before, .gallery-container .gallery-wrapper .masthead-scrollable .collection.left:after, .gallery-container .gallery-wrapper .featured .collection.left:before, .gallery-container .gallery-wrapper .featured .collection.left:after, .gallery-container .gallery-wrapper .gallery .collection.left:before, .gallery-container .gallery-wrapper .gallery .collection.left:after {
+        content: "";
+        position: absolute;
+        border-style: solid;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        /* reduce the damage in FF3.0 */
+        display: block;
+        width: 0; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection.left:before, .featured-outer .featured-masthead .featured .collection.left:before, .featured-outer .featured-masthead .gallery .collection.left:before, .featured-outer .featured-wrapper .masthead-scrollable .collection.left:before, .featured-outer .featured-wrapper .featured .collection.left:before, .featured-outer .featured-wrapper .gallery .collection.left:before, .featured-outer .gallery-wrapper .masthead-scrollable .collection.left:before, .featured-outer .gallery-wrapper .featured .collection.left:before, .featured-outer .gallery-wrapper .gallery .collection.left:before, .home-copy-outer .featured-masthead .masthead-scrollable .collection.left:before, .home-copy-outer .featured-masthead .featured .collection.left:before, .home-copy-outer .featured-masthead .gallery .collection.left:before, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.left:before, .home-copy-outer .featured-wrapper .featured .collection.left:before, .home-copy-outer .featured-wrapper .gallery .collection.left:before, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.left:before, .home-copy-outer .gallery-wrapper .featured .collection.left:before, .home-copy-outer .gallery-wrapper .gallery .collection.left:before, .gallery-container .featured-masthead .masthead-scrollable .collection.left:before, .gallery-container .featured-masthead .featured .collection.left:before, .gallery-container .featured-masthead .gallery .collection.left:before, .gallery-container .featured-wrapper .masthead-scrollable .collection.left:before, .gallery-container .featured-wrapper .featured .collection.left:before, .gallery-container .featured-wrapper .gallery .collection.left:before, .gallery-container .gallery-wrapper .masthead-scrollable .collection.left:before, .gallery-container .gallery-wrapper .featured .collection.left:before, .gallery-container .gallery-wrapper .gallery .collection.left:before {
+        border-width: 15px;
+        border-color: transparent transparent transparent #aaaaaa;
+        top: 25px;
+        right: -30px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection.left:after, .featured-outer .featured-masthead .featured .collection.left:after, .featured-outer .featured-masthead .gallery .collection.left:after, .featured-outer .featured-wrapper .masthead-scrollable .collection.left:after, .featured-outer .featured-wrapper .featured .collection.left:after, .featured-outer .featured-wrapper .gallery .collection.left:after, .featured-outer .gallery-wrapper .masthead-scrollable .collection.left:after, .featured-outer .gallery-wrapper .featured .collection.left:after, .featured-outer .gallery-wrapper .gallery .collection.left:after, .home-copy-outer .featured-masthead .masthead-scrollable .collection.left:after, .home-copy-outer .featured-masthead .featured .collection.left:after, .home-copy-outer .featured-masthead .gallery .collection.left:after, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.left:after, .home-copy-outer .featured-wrapper .featured .collection.left:after, .home-copy-outer .featured-wrapper .gallery .collection.left:after, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.left:after, .home-copy-outer .gallery-wrapper .featured .collection.left:after, .home-copy-outer .gallery-wrapper .gallery .collection.left:after, .gallery-container .featured-masthead .masthead-scrollable .collection.left:after, .gallery-container .featured-masthead .featured .collection.left:after, .gallery-container .featured-masthead .gallery .collection.left:after, .gallery-container .featured-wrapper .masthead-scrollable .collection.left:after, .gallery-container .featured-wrapper .featured .collection.left:after, .gallery-container .featured-wrapper .gallery .collection.left:after, .gallery-container .gallery-wrapper .masthead-scrollable .collection.left:after, .gallery-container .gallery-wrapper .featured .collection.left:after, .gallery-container .gallery-wrapper .gallery .collection.left:after {
+        border-width: 14px;
+        border-color: transparent transparent transparent #fdfdfd;
+        top: 26px;
+        right: -28px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection.left .date, .featured-outer .featured-masthead .featured .collection.left .date, .featured-outer .featured-masthead .gallery .collection.left .date, .featured-outer .featured-wrapper .masthead-scrollable .collection.left .date, .featured-outer .featured-wrapper .featured .collection.left .date, .featured-outer .featured-wrapper .gallery .collection.left .date, .featured-outer .gallery-wrapper .masthead-scrollable .collection.left .date, .featured-outer .gallery-wrapper .featured .collection.left .date, .featured-outer .gallery-wrapper .gallery .collection.left .date, .home-copy-outer .featured-masthead .masthead-scrollable .collection.left .date, .home-copy-outer .featured-masthead .featured .collection.left .date, .home-copy-outer .featured-masthead .gallery .collection.left .date, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.left .date, .home-copy-outer .featured-wrapper .featured .collection.left .date, .home-copy-outer .featured-wrapper .gallery .collection.left .date, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.left .date, .home-copy-outer .gallery-wrapper .featured .collection.left .date, .home-copy-outer .gallery-wrapper .gallery .collection.left .date, .gallery-container .featured-masthead .masthead-scrollable .collection.left .date, .gallery-container .featured-masthead .featured .collection.left .date, .gallery-container .featured-masthead .gallery .collection.left .date, .gallery-container .featured-wrapper .masthead-scrollable .collection.left .date, .gallery-container .featured-wrapper .featured .collection.left .date, .gallery-container .featured-wrapper .gallery .collection.left .date, .gallery-container .gallery-wrapper .masthead-scrollable .collection.left .date, .gallery-container .gallery-wrapper .featured .collection.left .date, .gallery-container .gallery-wrapper .gallery .collection.left .date {
+        top: 20px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection.left .image-overlay-container, .featured-outer .featured-masthead .featured .collection.left .image-overlay-container, .featured-outer .featured-masthead .gallery .collection.left .image-overlay-container, .featured-outer .featured-wrapper .masthead-scrollable .collection.left .image-overlay-container, .featured-outer .featured-wrapper .featured .collection.left .image-overlay-container, .featured-outer .featured-wrapper .gallery .collection.left .image-overlay-container, .featured-outer .gallery-wrapper .masthead-scrollable .collection.left .image-overlay-container, .featured-outer .gallery-wrapper .featured .collection.left .image-overlay-container, .featured-outer .gallery-wrapper .gallery .collection.left .image-overlay-container, .home-copy-outer .featured-masthead .masthead-scrollable .collection.left .image-overlay-container, .home-copy-outer .featured-masthead .featured .collection.left .image-overlay-container, .home-copy-outer .featured-masthead .gallery .collection.left .image-overlay-container, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.left .image-overlay-container, .home-copy-outer .featured-wrapper .featured .collection.left .image-overlay-container, .home-copy-outer .featured-wrapper .gallery .collection.left .image-overlay-container, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.left .image-overlay-container, .home-copy-outer .gallery-wrapper .featured .collection.left .image-overlay-container, .home-copy-outer .gallery-wrapper .gallery .collection.left .image-overlay-container, .gallery-container .featured-masthead .masthead-scrollable .collection.left .image-overlay-container, .gallery-container .featured-masthead .featured .collection.left .image-overlay-container, .gallery-container .featured-masthead .gallery .collection.left .image-overlay-container, .gallery-container .featured-wrapper .masthead-scrollable .collection.left .image-overlay-container, .gallery-container .featured-wrapper .featured .collection.left .image-overlay-container, .gallery-container .featured-wrapper .gallery .collection.left .image-overlay-container, .gallery-container .gallery-wrapper .masthead-scrollable .collection.left .image-overlay-container, .gallery-container .gallery-wrapper .featured .collection.left .image-overlay-container, .gallery-container .gallery-wrapper .gallery .collection.left .image-overlay-container {
+        margin-left: 11px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection.left .bottom .meta-icons, .featured-outer .featured-masthead .featured .collection.left .bottom .meta-icons, .featured-outer .featured-masthead .gallery .collection.left .bottom .meta-icons, .featured-outer .featured-wrapper .masthead-scrollable .collection.left .bottom .meta-icons, .featured-outer .featured-wrapper .featured .collection.left .bottom .meta-icons, .featured-outer .featured-wrapper .gallery .collection.left .bottom .meta-icons, .featured-outer .gallery-wrapper .masthead-scrollable .collection.left .bottom .meta-icons, .featured-outer .gallery-wrapper .featured .collection.left .bottom .meta-icons, .featured-outer .gallery-wrapper .gallery .collection.left .bottom .meta-icons, .home-copy-outer .featured-masthead .masthead-scrollable .collection.left .bottom .meta-icons, .home-copy-outer .featured-masthead .featured .collection.left .bottom .meta-icons, .home-copy-outer .featured-masthead .gallery .collection.left .bottom .meta-icons, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.left .bottom .meta-icons, .home-copy-outer .featured-wrapper .featured .collection.left .bottom .meta-icons, .home-copy-outer .featured-wrapper .gallery .collection.left .bottom .meta-icons, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.left .bottom .meta-icons, .home-copy-outer .gallery-wrapper .featured .collection.left .bottom .meta-icons, .home-copy-outer .gallery-wrapper .gallery .collection.left .bottom .meta-icons, .gallery-container .featured-masthead .masthead-scrollable .collection.left .bottom .meta-icons, .gallery-container .featured-masthead .featured .collection.left .bottom .meta-icons, .gallery-container .featured-masthead .gallery .collection.left .bottom .meta-icons, .gallery-container .featured-wrapper .masthead-scrollable .collection.left .bottom .meta-icons, .gallery-container .featured-wrapper .featured .collection.left .bottom .meta-icons, .gallery-container .featured-wrapper .gallery .collection.left .bottom .meta-icons, .gallery-container .gallery-wrapper .masthead-scrollable .collection.left .bottom .meta-icons, .gallery-container .gallery-wrapper .featured .collection.left .bottom .meta-icons, .gallery-container .gallery-wrapper .gallery .collection.left .bottom .meta-icons {
+        right: 55px; }
+    .featured-outer .featured-masthead .masthead-scrollable .collection.right, .featured-outer .featured-masthead .featured .collection.right, .featured-outer .featured-masthead .gallery .collection.right, .featured-outer .featured-wrapper .masthead-scrollable .collection.right, .featured-outer .featured-wrapper .featured .collection.right, .featured-outer .featured-wrapper .gallery .collection.right, .featured-outer .gallery-wrapper .masthead-scrollable .collection.right, .featured-outer .gallery-wrapper .featured .collection.right, .featured-outer .gallery-wrapper .gallery .collection.right, .home-copy-outer .featured-masthead .masthead-scrollable .collection.right, .home-copy-outer .featured-masthead .featured .collection.right, .home-copy-outer .featured-masthead .gallery .collection.right, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.right, .home-copy-outer .featured-wrapper .featured .collection.right, .home-copy-outer .featured-wrapper .gallery .collection.right, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.right, .home-copy-outer .gallery-wrapper .featured .collection.right, .home-copy-outer .gallery-wrapper .gallery .collection.right, .gallery-container .featured-masthead .masthead-scrollable .collection.right, .gallery-container .featured-masthead .featured .collection.right, .gallery-container .featured-masthead .gallery .collection.right, .gallery-container .featured-wrapper .masthead-scrollable .collection.right, .gallery-container .featured-wrapper .featured .collection.right, .gallery-container .featured-wrapper .gallery .collection.right, .gallery-container .gallery-wrapper .masthead-scrollable .collection.right, .gallery-container .gallery-wrapper .featured .collection.right, .gallery-container .gallery-wrapper .gallery .collection.right {
+      margin-left: 35px;
+      margin-right: 0px;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      position: relative; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection.right:before, .featured-outer .featured-masthead .masthead-scrollable .collection.right:after, .featured-outer .featured-masthead .featured .collection.right:before, .featured-outer .featured-masthead .featured .collection.right:after, .featured-outer .featured-masthead .gallery .collection.right:before, .featured-outer .featured-masthead .gallery .collection.right:after, .featured-outer .featured-wrapper .masthead-scrollable .collection.right:before, .featured-outer .featured-wrapper .masthead-scrollable .collection.right:after, .featured-outer .featured-wrapper .featured .collection.right:before, .featured-outer .featured-wrapper .featured .collection.right:after, .featured-outer .featured-wrapper .gallery .collection.right:before, .featured-outer .featured-wrapper .gallery .collection.right:after, .featured-outer .gallery-wrapper .masthead-scrollable .collection.right:before, .featured-outer .gallery-wrapper .masthead-scrollable .collection.right:after, .featured-outer .gallery-wrapper .featured .collection.right:before, .featured-outer .gallery-wrapper .featured .collection.right:after, .featured-outer .gallery-wrapper .gallery .collection.right:before, .featured-outer .gallery-wrapper .gallery .collection.right:after, .home-copy-outer .featured-masthead .masthead-scrollable .collection.right:before, .home-copy-outer .featured-masthead .masthead-scrollable .collection.right:after, .home-copy-outer .featured-masthead .featured .collection.right:before, .home-copy-outer .featured-masthead .featured .collection.right:after, .home-copy-outer .featured-masthead .gallery .collection.right:before, .home-copy-outer .featured-masthead .gallery .collection.right:after, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.right:before, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.right:after, .home-copy-outer .featured-wrapper .featured .collection.right:before, .home-copy-outer .featured-wrapper .featured .collection.right:after, .home-copy-outer .featured-wrapper .gallery .collection.right:before, .home-copy-outer .featured-wrapper .gallery .collection.right:after, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.right:before, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.right:after, .home-copy-outer .gallery-wrapper .featured .collection.right:before, .home-copy-outer .gallery-wrapper .featured .collection.right:after, .home-copy-outer .gallery-wrapper .gallery .collection.right:before, .home-copy-outer .gallery-wrapper .gallery .collection.right:after, .gallery-container .featured-masthead .masthead-scrollable .collection.right:before, .gallery-container .featured-masthead .masthead-scrollable .collection.right:after, .gallery-container .featured-masthead .featured .collection.right:before, .gallery-container .featured-masthead .featured .collection.right:after, .gallery-container .featured-masthead .gallery .collection.right:before, .gallery-container .featured-masthead .gallery .collection.right:after, .gallery-container .featured-wrapper .masthead-scrollable .collection.right:before, .gallery-container .featured-wrapper .masthead-scrollable .collection.right:after, .gallery-container .featured-wrapper .featured .collection.right:before, .gallery-container .featured-wrapper .featured .collection.right:after, .gallery-container .featured-wrapper .gallery .collection.right:before, .gallery-container .featured-wrapper .gallery .collection.right:after, .gallery-container .gallery-wrapper .masthead-scrollable .collection.right:before, .gallery-container .gallery-wrapper .masthead-scrollable .collection.right:after, .gallery-container .gallery-wrapper .featured .collection.right:before, .gallery-container .gallery-wrapper .featured .collection.right:after, .gallery-container .gallery-wrapper .gallery .collection.right:before, .gallery-container .gallery-wrapper .gallery .collection.right:after {
+        content: "";
+        position: absolute;
+        border-style: solid;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        /* reduce the damage in FF3.0 */
+        display: block;
+        width: 0; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection.right:before, .featured-outer .featured-masthead .featured .collection.right:before, .featured-outer .featured-masthead .gallery .collection.right:before, .featured-outer .featured-wrapper .masthead-scrollable .collection.right:before, .featured-outer .featured-wrapper .featured .collection.right:before, .featured-outer .featured-wrapper .gallery .collection.right:before, .featured-outer .gallery-wrapper .masthead-scrollable .collection.right:before, .featured-outer .gallery-wrapper .featured .collection.right:before, .featured-outer .gallery-wrapper .gallery .collection.right:before, .home-copy-outer .featured-masthead .masthead-scrollable .collection.right:before, .home-copy-outer .featured-masthead .featured .collection.right:before, .home-copy-outer .featured-masthead .gallery .collection.right:before, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.right:before, .home-copy-outer .featured-wrapper .featured .collection.right:before, .home-copy-outer .featured-wrapper .gallery .collection.right:before, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.right:before, .home-copy-outer .gallery-wrapper .featured .collection.right:before, .home-copy-outer .gallery-wrapper .gallery .collection.right:before, .gallery-container .featured-masthead .masthead-scrollable .collection.right:before, .gallery-container .featured-masthead .featured .collection.right:before, .gallery-container .featured-masthead .gallery .collection.right:before, .gallery-container .featured-wrapper .masthead-scrollable .collection.right:before, .gallery-container .featured-wrapper .featured .collection.right:before, .gallery-container .featured-wrapper .gallery .collection.right:before, .gallery-container .gallery-wrapper .masthead-scrollable .collection.right:before, .gallery-container .gallery-wrapper .featured .collection.right:before, .gallery-container .gallery-wrapper .gallery .collection.right:before {
+        border-width: 15px;
+        border-color: transparent #aaaaaa transparent transparent;
+        top: 100px;
+        left: -30px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection.right:after, .featured-outer .featured-masthead .featured .collection.right:after, .featured-outer .featured-masthead .gallery .collection.right:after, .featured-outer .featured-wrapper .masthead-scrollable .collection.right:after, .featured-outer .featured-wrapper .featured .collection.right:after, .featured-outer .featured-wrapper .gallery .collection.right:after, .featured-outer .gallery-wrapper .masthead-scrollable .collection.right:after, .featured-outer .gallery-wrapper .featured .collection.right:after, .featured-outer .gallery-wrapper .gallery .collection.right:after, .home-copy-outer .featured-masthead .masthead-scrollable .collection.right:after, .home-copy-outer .featured-masthead .featured .collection.right:after, .home-copy-outer .featured-masthead .gallery .collection.right:after, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.right:after, .home-copy-outer .featured-wrapper .featured .collection.right:after, .home-copy-outer .featured-wrapper .gallery .collection.right:after, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.right:after, .home-copy-outer .gallery-wrapper .featured .collection.right:after, .home-copy-outer .gallery-wrapper .gallery .collection.right:after, .gallery-container .featured-masthead .masthead-scrollable .collection.right:after, .gallery-container .featured-masthead .featured .collection.right:after, .gallery-container .featured-masthead .gallery .collection.right:after, .gallery-container .featured-wrapper .masthead-scrollable .collection.right:after, .gallery-container .featured-wrapper .featured .collection.right:after, .gallery-container .featured-wrapper .gallery .collection.right:after, .gallery-container .gallery-wrapper .masthead-scrollable .collection.right:after, .gallery-container .gallery-wrapper .featured .collection.right:after, .gallery-container .gallery-wrapper .gallery .collection.right:after {
+        border-width: 14px;
+        border-color: transparent #fdfdfd transparent transparent;
+        top: 101px;
+        left: -28px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection.right .date, .featured-outer .featured-masthead .featured .collection.right .date, .featured-outer .featured-masthead .gallery .collection.right .date, .featured-outer .featured-wrapper .masthead-scrollable .collection.right .date, .featured-outer .featured-wrapper .featured .collection.right .date, .featured-outer .featured-wrapper .gallery .collection.right .date, .featured-outer .gallery-wrapper .masthead-scrollable .collection.right .date, .featured-outer .gallery-wrapper .featured .collection.right .date, .featured-outer .gallery-wrapper .gallery .collection.right .date, .home-copy-outer .featured-masthead .masthead-scrollable .collection.right .date, .home-copy-outer .featured-masthead .featured .collection.right .date, .home-copy-outer .featured-masthead .gallery .collection.right .date, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.right .date, .home-copy-outer .featured-wrapper .featured .collection.right .date, .home-copy-outer .featured-wrapper .gallery .collection.right .date, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.right .date, .home-copy-outer .gallery-wrapper .featured .collection.right .date, .home-copy-outer .gallery-wrapper .gallery .collection.right .date, .gallery-container .featured-masthead .masthead-scrollable .collection.right .date, .gallery-container .featured-masthead .featured .collection.right .date, .gallery-container .featured-masthead .gallery .collection.right .date, .gallery-container .featured-wrapper .masthead-scrollable .collection.right .date, .gallery-container .featured-wrapper .featured .collection.right .date, .gallery-container .featured-wrapper .gallery .collection.right .date, .gallery-container .gallery-wrapper .masthead-scrollable .collection.right .date, .gallery-container .gallery-wrapper .featured .collection.right .date, .gallery-container .gallery-wrapper .gallery .collection.right .date {
+        left: 5px;
+        top: 95px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection.right .future-countdown, .featured-outer .featured-masthead .featured .collection.right .future-countdown, .featured-outer .featured-masthead .gallery .collection.right .future-countdown, .featured-outer .featured-wrapper .masthead-scrollable .collection.right .future-countdown, .featured-outer .featured-wrapper .featured .collection.right .future-countdown, .featured-outer .featured-wrapper .gallery .collection.right .future-countdown, .featured-outer .gallery-wrapper .masthead-scrollable .collection.right .future-countdown, .featured-outer .gallery-wrapper .featured .collection.right .future-countdown, .featured-outer .gallery-wrapper .gallery .collection.right .future-countdown, .home-copy-outer .featured-masthead .masthead-scrollable .collection.right .future-countdown, .home-copy-outer .featured-masthead .featured .collection.right .future-countdown, .home-copy-outer .featured-masthead .gallery .collection.right .future-countdown, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.right .future-countdown, .home-copy-outer .featured-wrapper .featured .collection.right .future-countdown, .home-copy-outer .featured-wrapper .gallery .collection.right .future-countdown, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.right .future-countdown, .home-copy-outer .gallery-wrapper .featured .collection.right .future-countdown, .home-copy-outer .gallery-wrapper .gallery .collection.right .future-countdown, .gallery-container .featured-masthead .masthead-scrollable .collection.right .future-countdown, .gallery-container .featured-masthead .featured .collection.right .future-countdown, .gallery-container .featured-masthead .gallery .collection.right .future-countdown, .gallery-container .featured-wrapper .masthead-scrollable .collection.right .future-countdown, .gallery-container .featured-wrapper .featured .collection.right .future-countdown, .gallery-container .featured-wrapper .gallery .collection.right .future-countdown, .gallery-container .gallery-wrapper .masthead-scrollable .collection.right .future-countdown, .gallery-container .gallery-wrapper .featured .collection.right .future-countdown, .gallery-container .gallery-wrapper .gallery .collection.right .future-countdown {
+        bottom: auto;
+        left: 10px;
+        right: auto;
+        top: 9px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection.right .image-overlay-container, .featured-outer .featured-masthead .featured .collection.right .image-overlay-container, .featured-outer .featured-masthead .gallery .collection.right .image-overlay-container, .featured-outer .featured-wrapper .masthead-scrollable .collection.right .image-overlay-container, .featured-outer .featured-wrapper .featured .collection.right .image-overlay-container, .featured-outer .featured-wrapper .gallery .collection.right .image-overlay-container, .featured-outer .gallery-wrapper .masthead-scrollable .collection.right .image-overlay-container, .featured-outer .gallery-wrapper .featured .collection.right .image-overlay-container, .featured-outer .gallery-wrapper .gallery .collection.right .image-overlay-container, .home-copy-outer .featured-masthead .masthead-scrollable .collection.right .image-overlay-container, .home-copy-outer .featured-masthead .featured .collection.right .image-overlay-container, .home-copy-outer .featured-masthead .gallery .collection.right .image-overlay-container, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.right .image-overlay-container, .home-copy-outer .featured-wrapper .featured .collection.right .image-overlay-container, .home-copy-outer .featured-wrapper .gallery .collection.right .image-overlay-container, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.right .image-overlay-container, .home-copy-outer .gallery-wrapper .featured .collection.right .image-overlay-container, .home-copy-outer .gallery-wrapper .gallery .collection.right .image-overlay-container, .gallery-container .featured-masthead .masthead-scrollable .collection.right .image-overlay-container, .gallery-container .featured-masthead .featured .collection.right .image-overlay-container, .gallery-container .featured-masthead .gallery .collection.right .image-overlay-container, .gallery-container .featured-wrapper .masthead-scrollable .collection.right .image-overlay-container, .gallery-container .featured-wrapper .featured .collection.right .image-overlay-container, .gallery-container .featured-wrapper .gallery .collection.right .image-overlay-container, .gallery-container .gallery-wrapper .masthead-scrollable .collection.right .image-overlay-container, .gallery-container .gallery-wrapper .featured .collection.right .image-overlay-container, .gallery-container .gallery-wrapper .gallery .collection.right .image-overlay-container {
+        margin-left: 63px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection.right .bottom .meta-icons, .featured-outer .featured-masthead .featured .collection.right .bottom .meta-icons, .featured-outer .featured-masthead .gallery .collection.right .bottom .meta-icons, .featured-outer .featured-wrapper .masthead-scrollable .collection.right .bottom .meta-icons, .featured-outer .featured-wrapper .featured .collection.right .bottom .meta-icons, .featured-outer .featured-wrapper .gallery .collection.right .bottom .meta-icons, .featured-outer .gallery-wrapper .masthead-scrollable .collection.right .bottom .meta-icons, .featured-outer .gallery-wrapper .featured .collection.right .bottom .meta-icons, .featured-outer .gallery-wrapper .gallery .collection.right .bottom .meta-icons, .home-copy-outer .featured-masthead .masthead-scrollable .collection.right .bottom .meta-icons, .home-copy-outer .featured-masthead .featured .collection.right .bottom .meta-icons, .home-copy-outer .featured-masthead .gallery .collection.right .bottom .meta-icons, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.right .bottom .meta-icons, .home-copy-outer .featured-wrapper .featured .collection.right .bottom .meta-icons, .home-copy-outer .featured-wrapper .gallery .collection.right .bottom .meta-icons, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.right .bottom .meta-icons, .home-copy-outer .gallery-wrapper .featured .collection.right .bottom .meta-icons, .home-copy-outer .gallery-wrapper .gallery .collection.right .bottom .meta-icons, .gallery-container .featured-masthead .masthead-scrollable .collection.right .bottom .meta-icons, .gallery-container .featured-masthead .featured .collection.right .bottom .meta-icons, .gallery-container .featured-masthead .gallery .collection.right .bottom .meta-icons, .gallery-container .featured-wrapper .masthead-scrollable .collection.right .bottom .meta-icons, .gallery-container .featured-wrapper .featured .collection.right .bottom .meta-icons, .gallery-container .featured-wrapper .gallery .collection.right .bottom .meta-icons, .gallery-container .gallery-wrapper .masthead-scrollable .collection.right .bottom .meta-icons, .gallery-container .gallery-wrapper .featured .collection.right .bottom .meta-icons, .gallery-container .gallery-wrapper .gallery .collection.right .bottom .meta-icons {
+        right: 8px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection.right .overlay, .featured-outer .featured-masthead .featured .collection.right .overlay, .featured-outer .featured-masthead .gallery .collection.right .overlay, .featured-outer .featured-wrapper .masthead-scrollable .collection.right .overlay, .featured-outer .featured-wrapper .featured .collection.right .overlay, .featured-outer .featured-wrapper .gallery .collection.right .overlay, .featured-outer .gallery-wrapper .masthead-scrollable .collection.right .overlay, .featured-outer .gallery-wrapper .featured .collection.right .overlay, .featured-outer .gallery-wrapper .gallery .collection.right .overlay, .home-copy-outer .featured-masthead .masthead-scrollable .collection.right .overlay, .home-copy-outer .featured-masthead .featured .collection.right .overlay, .home-copy-outer .featured-masthead .gallery .collection.right .overlay, .home-copy-outer .featured-wrapper .masthead-scrollable .collection.right .overlay, .home-copy-outer .featured-wrapper .featured .collection.right .overlay, .home-copy-outer .featured-wrapper .gallery .collection.right .overlay, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection.right .overlay, .home-copy-outer .gallery-wrapper .featured .collection.right .overlay, .home-copy-outer .gallery-wrapper .gallery .collection.right .overlay, .gallery-container .featured-masthead .masthead-scrollable .collection.right .overlay, .gallery-container .featured-masthead .featured .collection.right .overlay, .gallery-container .featured-masthead .gallery .collection.right .overlay, .gallery-container .featured-wrapper .masthead-scrollable .collection.right .overlay, .gallery-container .featured-wrapper .featured .collection.right .overlay, .gallery-container .featured-wrapper .gallery .collection.right .overlay, .gallery-container .gallery-wrapper .masthead-scrollable .collection.right .overlay, .gallery-container .gallery-wrapper .featured .collection.right .overlay, .gallery-container .gallery-wrapper .gallery .collection.right .overlay {
+        left: 63px; }
+    .featured-outer .featured-masthead .masthead-scrollable .collection .future-countdown, .featured-outer .featured-masthead .featured .collection .future-countdown, .featured-outer .featured-masthead .gallery .collection .future-countdown, .featured-outer .featured-wrapper .masthead-scrollable .collection .future-countdown, .featured-outer .featured-wrapper .featured .collection .future-countdown, .featured-outer .featured-wrapper .gallery .collection .future-countdown, .featured-outer .gallery-wrapper .masthead-scrollable .collection .future-countdown, .featured-outer .gallery-wrapper .featured .collection .future-countdown, .featured-outer .gallery-wrapper .gallery .collection .future-countdown, .home-copy-outer .featured-masthead .masthead-scrollable .collection .future-countdown, .home-copy-outer .featured-masthead .featured .collection .future-countdown, .home-copy-outer .featured-masthead .gallery .collection .future-countdown, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .future-countdown, .home-copy-outer .featured-wrapper .featured .collection .future-countdown, .home-copy-outer .featured-wrapper .gallery .collection .future-countdown, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .future-countdown, .home-copy-outer .gallery-wrapper .featured .collection .future-countdown, .home-copy-outer .gallery-wrapper .gallery .collection .future-countdown, .gallery-container .featured-masthead .masthead-scrollable .collection .future-countdown, .gallery-container .featured-masthead .featured .collection .future-countdown, .gallery-container .featured-masthead .gallery .collection .future-countdown, .gallery-container .featured-wrapper .masthead-scrollable .collection .future-countdown, .gallery-container .featured-wrapper .featured .collection .future-countdown, .gallery-container .featured-wrapper .gallery .collection .future-countdown, .gallery-container .gallery-wrapper .masthead-scrollable .collection .future-countdown, .gallery-container .gallery-wrapper .featured .collection .future-countdown, .gallery-container .gallery-wrapper .gallery .collection .future-countdown {
+      position: absolute;
+      bottom: 39px;
+      right: 10px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection .future-countdown .days-left, .featured-outer .featured-masthead .featured .collection .future-countdown .days-left, .featured-outer .featured-masthead .gallery .collection .future-countdown .days-left, .featured-outer .featured-wrapper .masthead-scrollable .collection .future-countdown .days-left, .featured-outer .featured-wrapper .featured .collection .future-countdown .days-left, .featured-outer .featured-wrapper .gallery .collection .future-countdown .days-left, .featured-outer .gallery-wrapper .masthead-scrollable .collection .future-countdown .days-left, .featured-outer .gallery-wrapper .featured .collection .future-countdown .days-left, .featured-outer .gallery-wrapper .gallery .collection .future-countdown .days-left, .home-copy-outer .featured-masthead .masthead-scrollable .collection .future-countdown .days-left, .home-copy-outer .featured-masthead .featured .collection .future-countdown .days-left, .home-copy-outer .featured-masthead .gallery .collection .future-countdown .days-left, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .future-countdown .days-left, .home-copy-outer .featured-wrapper .featured .collection .future-countdown .days-left, .home-copy-outer .featured-wrapper .gallery .collection .future-countdown .days-left, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .future-countdown .days-left, .home-copy-outer .gallery-wrapper .featured .collection .future-countdown .days-left, .home-copy-outer .gallery-wrapper .gallery .collection .future-countdown .days-left, .gallery-container .featured-masthead .masthead-scrollable .collection .future-countdown .days-left, .gallery-container .featured-masthead .featured .collection .future-countdown .days-left, .gallery-container .featured-masthead .gallery .collection .future-countdown .days-left, .gallery-container .featured-wrapper .masthead-scrollable .collection .future-countdown .days-left, .gallery-container .featured-wrapper .featured .collection .future-countdown .days-left, .gallery-container .featured-wrapper .gallery .collection .future-countdown .days-left, .gallery-container .gallery-wrapper .masthead-scrollable .collection .future-countdown .days-left, .gallery-container .gallery-wrapper .featured .collection .future-countdown .days-left, .gallery-container .gallery-wrapper .gallery .collection .future-countdown .days-left {
+        background: url(/erly/img/bg-countdown.png) 0 0 no-repeat;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        color: white;
+        line-height: 40px;
+        font-size: 18px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection .future-countdown .days, .featured-outer .featured-masthead .featured .collection .future-countdown .days, .featured-outer .featured-masthead .gallery .collection .future-countdown .days, .featured-outer .featured-wrapper .masthead-scrollable .collection .future-countdown .days, .featured-outer .featured-wrapper .featured .collection .future-countdown .days, .featured-outer .featured-wrapper .gallery .collection .future-countdown .days, .featured-outer .gallery-wrapper .masthead-scrollable .collection .future-countdown .days, .featured-outer .gallery-wrapper .featured .collection .future-countdown .days, .featured-outer .gallery-wrapper .gallery .collection .future-countdown .days, .home-copy-outer .featured-masthead .masthead-scrollable .collection .future-countdown .days, .home-copy-outer .featured-masthead .featured .collection .future-countdown .days, .home-copy-outer .featured-masthead .gallery .collection .future-countdown .days, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .future-countdown .days, .home-copy-outer .featured-wrapper .featured .collection .future-countdown .days, .home-copy-outer .featured-wrapper .gallery .collection .future-countdown .days, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .future-countdown .days, .home-copy-outer .gallery-wrapper .featured .collection .future-countdown .days, .home-copy-outer .gallery-wrapper .gallery .collection .future-countdown .days, .gallery-container .featured-masthead .masthead-scrollable .collection .future-countdown .days, .gallery-container .featured-masthead .featured .collection .future-countdown .days, .gallery-container .featured-masthead .gallery .collection .future-countdown .days, .gallery-container .featured-wrapper .masthead-scrollable .collection .future-countdown .days, .gallery-container .featured-wrapper .featured .collection .future-countdown .days, .gallery-container .featured-wrapper .gallery .collection .future-countdown .days, .gallery-container .gallery-wrapper .masthead-scrollable .collection .future-countdown .days, .gallery-container .gallery-wrapper .featured .collection .future-countdown .days, .gallery-container .gallery-wrapper .gallery .collection .future-countdown .days {
+        text-transform: uppercase;
+        color: #444;
+        text-align: center;
+        font-weight: bold;
+        font-size: 10px;
+        text-align: center;
+        margin: 0 4px; }
+    .featured-outer .featured-masthead .masthead-scrollable .collection .image-container, .featured-outer .featured-masthead .featured .collection .image-container, .featured-outer .featured-masthead .gallery .collection .image-container, .featured-outer .featured-wrapper .masthead-scrollable .collection .image-container, .featured-outer .featured-wrapper .featured .collection .image-container, .featured-outer .featured-wrapper .gallery .collection .image-container, .featured-outer .gallery-wrapper .masthead-scrollable .collection .image-container, .featured-outer .gallery-wrapper .featured .collection .image-container, .featured-outer .gallery-wrapper .gallery .collection .image-container, .home-copy-outer .featured-masthead .masthead-scrollable .collection .image-container, .home-copy-outer .featured-masthead .featured .collection .image-container, .home-copy-outer .featured-masthead .gallery .collection .image-container, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .image-container, .home-copy-outer .featured-wrapper .featured .collection .image-container, .home-copy-outer .featured-wrapper .gallery .collection .image-container, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .image-container, .home-copy-outer .gallery-wrapper .featured .collection .image-container, .home-copy-outer .gallery-wrapper .gallery .collection .image-container, .gallery-container .featured-masthead .masthead-scrollable .collection .image-container, .gallery-container .featured-masthead .featured .collection .image-container, .gallery-container .featured-masthead .gallery .collection .image-container, .gallery-container .featured-wrapper .masthead-scrollable .collection .image-container, .gallery-container .featured-wrapper .featured .collection .image-container, .gallery-container .featured-wrapper .gallery .collection .image-container, .gallery-container .gallery-wrapper .masthead-scrollable .collection .image-container, .gallery-container .gallery-wrapper .featured .collection .image-container, .gallery-container .gallery-wrapper .gallery .collection .image-container {
+      margin-bottom: 5px;
+      background-color: #eee;
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      height: 169px;
+      width: 390px;
+      border: 1px solid #ccc;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) inset;
+      -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) inset;
+      -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) inset;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection .image-container .small-title, .featured-outer .featured-masthead .featured .collection .image-container .small-title, .featured-outer .featured-masthead .gallery .collection .image-container .small-title, .featured-outer .featured-wrapper .masthead-scrollable .collection .image-container .small-title, .featured-outer .featured-wrapper .featured .collection .image-container .small-title, .featured-outer .featured-wrapper .gallery .collection .image-container .small-title, .featured-outer .gallery-wrapper .masthead-scrollable .collection .image-container .small-title, .featured-outer .gallery-wrapper .featured .collection .image-container .small-title, .featured-outer .gallery-wrapper .gallery .collection .image-container .small-title, .home-copy-outer .featured-masthead .masthead-scrollable .collection .image-container .small-title, .home-copy-outer .featured-masthead .featured .collection .image-container .small-title, .home-copy-outer .featured-masthead .gallery .collection .image-container .small-title, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .image-container .small-title, .home-copy-outer .featured-wrapper .featured .collection .image-container .small-title, .home-copy-outer .featured-wrapper .gallery .collection .image-container .small-title, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .image-container .small-title, .home-copy-outer .gallery-wrapper .featured .collection .image-container .small-title, .home-copy-outer .gallery-wrapper .gallery .collection .image-container .small-title, .gallery-container .featured-masthead .masthead-scrollable .collection .image-container .small-title, .gallery-container .featured-masthead .featured .collection .image-container .small-title, .gallery-container .featured-masthead .gallery .collection .image-container .small-title, .gallery-container .featured-wrapper .masthead-scrollable .collection .image-container .small-title, .gallery-container .featured-wrapper .featured .collection .image-container .small-title, .gallery-container .featured-wrapper .gallery .collection .image-container .small-title, .gallery-container .gallery-wrapper .masthead-scrollable .collection .image-container .small-title, .gallery-container .gallery-wrapper .featured .collection .image-container .small-title, .gallery-container .gallery-wrapper .gallery .collection .image-container .small-title {
+        max-width: 250px;
+        line-height: 18px;
+        font-size: 18px;
+        padding: 6px 8px 4px 8px;
+        position: absolute;
+        color: white;
+        text-transform: uppercase; }
+        .featured-outer .featured-masthead .masthead-scrollable .collection .image-container .small-title span, .featured-outer .featured-masthead .featured .collection .image-container .small-title span, .featured-outer .featured-masthead .gallery .collection .image-container .small-title span, .featured-outer .featured-wrapper .masthead-scrollable .collection .image-container .small-title span, .featured-outer .featured-wrapper .featured .collection .image-container .small-title span, .featured-outer .featured-wrapper .gallery .collection .image-container .small-title span, .featured-outer .gallery-wrapper .masthead-scrollable .collection .image-container .small-title span, .featured-outer .gallery-wrapper .featured .collection .image-container .small-title span, .featured-outer .gallery-wrapper .gallery .collection .image-container .small-title span, .home-copy-outer .featured-masthead .masthead-scrollable .collection .image-container .small-title span, .home-copy-outer .featured-masthead .featured .collection .image-container .small-title span, .home-copy-outer .featured-masthead .gallery .collection .image-container .small-title span, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .image-container .small-title span, .home-copy-outer .featured-wrapper .featured .collection .image-container .small-title span, .home-copy-outer .featured-wrapper .gallery .collection .image-container .small-title span, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .image-container .small-title span, .home-copy-outer .gallery-wrapper .featured .collection .image-container .small-title span, .home-copy-outer .gallery-wrapper .gallery .collection .image-container .small-title span, .gallery-container .featured-masthead .masthead-scrollable .collection .image-container .small-title span, .gallery-container .featured-masthead .featured .collection .image-container .small-title span, .gallery-container .featured-masthead .gallery .collection .image-container .small-title span, .gallery-container .featured-wrapper .masthead-scrollable .collection .image-container .small-title span, .gallery-container .featured-wrapper .featured .collection .image-container .small-title span, .gallery-container .featured-wrapper .gallery .collection .image-container .small-title span, .gallery-container .gallery-wrapper .masthead-scrollable .collection .image-container .small-title span, .gallery-container .gallery-wrapper .featured .collection .image-container .small-title span, .gallery-container .gallery-wrapper .gallery .collection .image-container .small-title span {
+          display: block;
+          font-size: 18px; }
+        .featured-outer .featured-masthead .masthead-scrollable .collection .image-container .small-title.white, .featured-outer .featured-masthead .featured .collection .image-container .small-title.white, .featured-outer .featured-masthead .gallery .collection .image-container .small-title.white, .featured-outer .featured-wrapper .masthead-scrollable .collection .image-container .small-title.white, .featured-outer .featured-wrapper .featured .collection .image-container .small-title.white, .featured-outer .featured-wrapper .gallery .collection .image-container .small-title.white, .featured-outer .gallery-wrapper .masthead-scrollable .collection .image-container .small-title.white, .featured-outer .gallery-wrapper .featured .collection .image-container .small-title.white, .featured-outer .gallery-wrapper .gallery .collection .image-container .small-title.white, .home-copy-outer .featured-masthead .masthead-scrollable .collection .image-container .small-title.white, .home-copy-outer .featured-masthead .featured .collection .image-container .small-title.white, .home-copy-outer .featured-masthead .gallery .collection .image-container .small-title.white, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .image-container .small-title.white, .home-copy-outer .featured-wrapper .featured .collection .image-container .small-title.white, .home-copy-outer .featured-wrapper .gallery .collection .image-container .small-title.white, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .image-container .small-title.white, .home-copy-outer .gallery-wrapper .featured .collection .image-container .small-title.white, .home-copy-outer .gallery-wrapper .gallery .collection .image-container .small-title.white, .gallery-container .featured-masthead .masthead-scrollable .collection .image-container .small-title.white, .gallery-container .featured-masthead .featured .collection .image-container .small-title.white, .gallery-container .featured-masthead .gallery .collection .image-container .small-title.white, .gallery-container .featured-wrapper .masthead-scrollable .collection .image-container .small-title.white, .gallery-container .featured-wrapper .featured .collection .image-container .small-title.white, .gallery-container .featured-wrapper .gallery .collection .image-container .small-title.white, .gallery-container .gallery-wrapper .masthead-scrollable .collection .image-container .small-title.white, .gallery-container .gallery-wrapper .featured .collection .image-container .small-title.white, .gallery-container .gallery-wrapper .gallery .collection .image-container .small-title.white {
+          color: #fff;
+          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); }
+        .featured-outer .featured-masthead .masthead-scrollable .collection .image-container .small-title.black, .featured-outer .featured-masthead .featured .collection .image-container .small-title.black, .featured-outer .featured-masthead .gallery .collection .image-container .small-title.black, .featured-outer .featured-wrapper .masthead-scrollable .collection .image-container .small-title.black, .featured-outer .featured-wrapper .featured .collection .image-container .small-title.black, .featured-outer .featured-wrapper .gallery .collection .image-container .small-title.black, .featured-outer .gallery-wrapper .masthead-scrollable .collection .image-container .small-title.black, .featured-outer .gallery-wrapper .featured .collection .image-container .small-title.black, .featured-outer .gallery-wrapper .gallery .collection .image-container .small-title.black, .home-copy-outer .featured-masthead .masthead-scrollable .collection .image-container .small-title.black, .home-copy-outer .featured-masthead .featured .collection .image-container .small-title.black, .home-copy-outer .featured-masthead .gallery .collection .image-container .small-title.black, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .image-container .small-title.black, .home-copy-outer .featured-wrapper .featured .collection .image-container .small-title.black, .home-copy-outer .featured-wrapper .gallery .collection .image-container .small-title.black, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .image-container .small-title.black, .home-copy-outer .gallery-wrapper .featured .collection .image-container .small-title.black, .home-copy-outer .gallery-wrapper .gallery .collection .image-container .small-title.black, .gallery-container .featured-masthead .masthead-scrollable .collection .image-container .small-title.black, .gallery-container .featured-masthead .featured .collection .image-container .small-title.black, .gallery-container .featured-masthead .gallery .collection .image-container .small-title.black, .gallery-container .featured-wrapper .masthead-scrollable .collection .image-container .small-title.black, .gallery-container .featured-wrapper .featured .collection .image-container .small-title.black, .gallery-container .featured-wrapper .gallery .collection .image-container .small-title.black, .gallery-container .gallery-wrapper .masthead-scrollable .collection .image-container .small-title.black, .gallery-container .gallery-wrapper .featured .collection .image-container .small-title.black, .gallery-container .gallery-wrapper .gallery .collection .image-container .small-title.black {
+          color: #000; }
+        .featured-outer .featured-masthead .masthead-scrollable .collection .image-container .small-title.grey, .featured-outer .featured-masthead .featured .collection .image-container .small-title.grey, .featured-outer .featured-masthead .gallery .collection .image-container .small-title.grey, .featured-outer .featured-wrapper .masthead-scrollable .collection .image-container .small-title.grey, .featured-outer .featured-wrapper .featured .collection .image-container .small-title.grey, .featured-outer .featured-wrapper .gallery .collection .image-container .small-title.grey, .featured-outer .gallery-wrapper .masthead-scrollable .collection .image-container .small-title.grey, .featured-outer .gallery-wrapper .featured .collection .image-container .small-title.grey, .featured-outer .gallery-wrapper .gallery .collection .image-container .small-title.grey, .home-copy-outer .featured-masthead .masthead-scrollable .collection .image-container .small-title.grey, .home-copy-outer .featured-masthead .featured .collection .image-container .small-title.grey, .home-copy-outer .featured-masthead .gallery .collection .image-container .small-title.grey, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .image-container .small-title.grey, .home-copy-outer .featured-wrapper .featured .collection .image-container .small-title.grey, .home-copy-outer .featured-wrapper .gallery .collection .image-container .small-title.grey, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .image-container .small-title.grey, .home-copy-outer .gallery-wrapper .featured .collection .image-container .small-title.grey, .home-copy-outer .gallery-wrapper .gallery .collection .image-container .small-title.grey, .gallery-container .featured-masthead .masthead-scrollable .collection .image-container .small-title.grey, .gallery-container .featured-masthead .featured .collection .image-container .small-title.grey, .gallery-container .featured-masthead .gallery .collection .image-container .small-title.grey, .gallery-container .featured-wrapper .masthead-scrollable .collection .image-container .small-title.grey, .gallery-container .featured-wrapper .featured .collection .image-container .small-title.grey, .gallery-container .featured-wrapper .gallery .collection .image-container .small-title.grey, .gallery-container .gallery-wrapper .masthead-scrollable .collection .image-container .small-title.grey, .gallery-container .gallery-wrapper .featured .collection .image-container .small-title.grey, .gallery-container .gallery-wrapper .gallery .collection .image-container .small-title.grey {
+          color: #333; }
+        .featured-outer .featured-masthead .masthead-scrollable .collection .image-container .small-title.black-bg, .featured-outer .featured-masthead .featured .collection .image-container .small-title.black-bg, .featured-outer .featured-masthead .gallery .collection .image-container .small-title.black-bg, .featured-outer .featured-wrapper .masthead-scrollable .collection .image-container .small-title.black-bg, .featured-outer .featured-wrapper .featured .collection .image-container .small-title.black-bg, .featured-outer .featured-wrapper .gallery .collection .image-container .small-title.black-bg, .featured-outer .gallery-wrapper .masthead-scrollable .collection .image-container .small-title.black-bg, .featured-outer .gallery-wrapper .featured .collection .image-container .small-title.black-bg, .featured-outer .gallery-wrapper .gallery .collection .image-container .small-title.black-bg, .home-copy-outer .featured-masthead .masthead-scrollable .collection .image-container .small-title.black-bg, .home-copy-outer .featured-masthead .featured .collection .image-container .small-title.black-bg, .home-copy-outer .featured-masthead .gallery .collection .image-container .small-title.black-bg, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .image-container .small-title.black-bg, .home-copy-outer .featured-wrapper .featured .collection .image-container .small-title.black-bg, .home-copy-outer .featured-wrapper .gallery .collection .image-container .small-title.black-bg, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .image-container .small-title.black-bg, .home-copy-outer .gallery-wrapper .featured .collection .image-container .small-title.black-bg, .home-copy-outer .gallery-wrapper .gallery .collection .image-container .small-title.black-bg, .gallery-container .featured-masthead .masthead-scrollable .collection .image-container .small-title.black-bg, .gallery-container .featured-masthead .featured .collection .image-container .small-title.black-bg, .gallery-container .featured-masthead .gallery .collection .image-container .small-title.black-bg, .gallery-container .featured-wrapper .masthead-scrollable .collection .image-container .small-title.black-bg, .gallery-container .featured-wrapper .featured .collection .image-container .small-title.black-bg, .gallery-container .featured-wrapper .gallery .collection .image-container .small-title.black-bg, .gallery-container .gallery-wrapper .masthead-scrollable .collection .image-container .small-title.black-bg, .gallery-container .gallery-wrapper .featured .collection .image-container .small-title.black-bg, .gallery-container .gallery-wrapper .gallery .collection .image-container .small-title.black-bg {
+          background: url(/erly/img/bg-black-60.png);
+          text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+          border-radius: 3px; }
+        .featured-outer .featured-masthead .masthead-scrollable .collection .image-container .small-title.white-bg, .featured-outer .featured-masthead .featured .collection .image-container .small-title.white-bg, .featured-outer .featured-masthead .gallery .collection .image-container .small-title.white-bg, .featured-outer .featured-wrapper .masthead-scrollable .collection .image-container .small-title.white-bg, .featured-outer .featured-wrapper .featured .collection .image-container .small-title.white-bg, .featured-outer .featured-wrapper .gallery .collection .image-container .small-title.white-bg, .featured-outer .gallery-wrapper .masthead-scrollable .collection .image-container .small-title.white-bg, .featured-outer .gallery-wrapper .featured .collection .image-container .small-title.white-bg, .featured-outer .gallery-wrapper .gallery .collection .image-container .small-title.white-bg, .home-copy-outer .featured-masthead .masthead-scrollable .collection .image-container .small-title.white-bg, .home-copy-outer .featured-masthead .featured .collection .image-container .small-title.white-bg, .home-copy-outer .featured-masthead .gallery .collection .image-container .small-title.white-bg, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .image-container .small-title.white-bg, .home-copy-outer .featured-wrapper .featured .collection .image-container .small-title.white-bg, .home-copy-outer .featured-wrapper .gallery .collection .image-container .small-title.white-bg, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .image-container .small-title.white-bg, .home-copy-outer .gallery-wrapper .featured .collection .image-container .small-title.white-bg, .home-copy-outer .gallery-wrapper .gallery .collection .image-container .small-title.white-bg, .gallery-container .featured-masthead .masthead-scrollable .collection .image-container .small-title.white-bg, .gallery-container .featured-masthead .featured .collection .image-container .small-title.white-bg, .gallery-container .featured-masthead .gallery .collection .image-container .small-title.white-bg, .gallery-container .featured-wrapper .masthead-scrollable .collection .image-container .small-title.white-bg, .gallery-container .featured-wrapper .featured .collection .image-container .small-title.white-bg, .gallery-container .featured-wrapper .gallery .collection .image-container .small-title.white-bg, .gallery-container .gallery-wrapper .masthead-scrollable .collection .image-container .small-title.white-bg, .gallery-container .gallery-wrapper .featured .collection .image-container .small-title.white-bg, .gallery-container .gallery-wrapper .gallery .collection .image-container .small-title.white-bg {
+          background: url(/erly/img/bg-white-90.png);
+          text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.3);
+          border-radius: 3px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection .image-container img, .featured-outer .featured-masthead .masthead-scrollable .collection .image-container canvas, .featured-outer .featured-masthead .featured .collection .image-container img, .featured-outer .featured-masthead .featured .collection .image-container canvas, .featured-outer .featured-masthead .gallery .collection .image-container img, .featured-outer .featured-masthead .gallery .collection .image-container canvas, .featured-outer .featured-wrapper .masthead-scrollable .collection .image-container img, .featured-outer .featured-wrapper .masthead-scrollable .collection .image-container canvas, .featured-outer .featured-wrapper .featured .collection .image-container img, .featured-outer .featured-wrapper .featured .collection .image-container canvas, .featured-outer .featured-wrapper .gallery .collection .image-container img, .featured-outer .featured-wrapper .gallery .collection .image-container canvas, .featured-outer .gallery-wrapper .masthead-scrollable .collection .image-container img, .featured-outer .gallery-wrapper .masthead-scrollable .collection .image-container canvas, .featured-outer .gallery-wrapper .featured .collection .image-container img, .featured-outer .gallery-wrapper .featured .collection .image-container canvas, .featured-outer .gallery-wrapper .gallery .collection .image-container img, .featured-outer .gallery-wrapper .gallery .collection .image-container canvas, .home-copy-outer .featured-masthead .masthead-scrollable .collection .image-container img, .home-copy-outer .featured-masthead .masthead-scrollable .collection .image-container canvas, .home-copy-outer .featured-masthead .featured .collection .image-container img, .home-copy-outer .featured-masthead .featured .collection .image-container canvas, .home-copy-outer .featured-masthead .gallery .collection .image-container img, .home-copy-outer .featured-masthead .gallery .collection .image-container canvas, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .image-container img, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .image-container canvas, .home-copy-outer .featured-wrapper .featured .collection .image-container img, .home-copy-outer .featured-wrapper .featured .collection .image-container canvas, .home-copy-outer .featured-wrapper .gallery .collection .image-container img, .home-copy-outer .featured-wrapper .gallery .collection .image-container canvas, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .image-container img, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .image-container canvas, .home-copy-outer .gallery-wrapper .featured .collection .image-container img, .home-copy-outer .gallery-wrapper .featured .collection .image-container canvas, .home-copy-outer .gallery-wrapper .gallery .collection .image-container img, .home-copy-outer .gallery-wrapper .gallery .collection .image-container canvas, .gallery-container .featured-masthead .masthead-scrollable .collection .image-container img, .gallery-container .featured-masthead .masthead-scrollable .collection .image-container canvas, .gallery-container .featured-masthead .featured .collection .image-container img, .gallery-container .featured-masthead .featured .collection .image-container canvas, .gallery-container .featured-masthead .gallery .collection .image-container img, .gallery-container .featured-masthead .gallery .collection .image-container canvas, .gallery-container .featured-wrapper .masthead-scrollable .collection .image-container img, .gallery-container .featured-wrapper .masthead-scrollable .collection .image-container canvas, .gallery-container .featured-wrapper .featured .collection .image-container img, .gallery-container .featured-wrapper .featured .collection .image-container canvas, .gallery-container .featured-wrapper .gallery .collection .image-container img, .gallery-container .featured-wrapper .gallery .collection .image-container canvas, .gallery-container .gallery-wrapper .masthead-scrollable .collection .image-container img, .gallery-container .gallery-wrapper .masthead-scrollable .collection .image-container canvas, .gallery-container .gallery-wrapper .featured .collection .image-container img, .gallery-container .gallery-wrapper .featured .collection .image-container canvas, .gallery-container .gallery-wrapper .gallery .collection .image-container img, .gallery-container .gallery-wrapper .gallery .collection .image-container canvas {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px; }
+    .featured-outer .featured-masthead .masthead-scrollable .collection:hover, .featured-outer .featured-masthead .featured .collection:hover, .featured-outer .featured-masthead .gallery .collection:hover, .featured-outer .featured-wrapper .masthead-scrollable .collection:hover, .featured-outer .featured-wrapper .featured .collection:hover, .featured-outer .featured-wrapper .gallery .collection:hover, .featured-outer .gallery-wrapper .masthead-scrollable .collection:hover, .featured-outer .gallery-wrapper .featured .collection:hover, .featured-outer .gallery-wrapper .gallery .collection:hover, .home-copy-outer .featured-masthead .masthead-scrollable .collection:hover, .home-copy-outer .featured-masthead .featured .collection:hover, .home-copy-outer .featured-masthead .gallery .collection:hover, .home-copy-outer .featured-wrapper .masthead-scrollable .collection:hover, .home-copy-outer .featured-wrapper .featured .collection:hover, .home-copy-outer .featured-wrapper .gallery .collection:hover, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection:hover, .home-copy-outer .gallery-wrapper .featured .collection:hover, .home-copy-outer .gallery-wrapper .gallery .collection:hover, .gallery-container .featured-masthead .masthead-scrollable .collection:hover, .gallery-container .featured-masthead .featured .collection:hover, .gallery-container .featured-masthead .gallery .collection:hover, .gallery-container .featured-wrapper .masthead-scrollable .collection:hover, .gallery-container .featured-wrapper .featured .collection:hover, .gallery-container .featured-wrapper .gallery .collection:hover, .gallery-container .gallery-wrapper .masthead-scrollable .collection:hover, .gallery-container .gallery-wrapper .featured .collection:hover, .gallery-container .gallery-wrapper .gallery .collection:hover {
+      z-index: 5; }
+    .featured-outer .featured-masthead .masthead-scrollable .collection .date, .featured-outer .featured-masthead .featured .collection .date, .featured-outer .featured-masthead .gallery .collection .date, .featured-outer .featured-wrapper .masthead-scrollable .collection .date, .featured-outer .featured-wrapper .featured .collection .date, .featured-outer .featured-wrapper .gallery .collection .date, .featured-outer .gallery-wrapper .masthead-scrollable .collection .date, .featured-outer .gallery-wrapper .featured .collection .date, .featured-outer .gallery-wrapper .gallery .collection .date, .home-copy-outer .featured-masthead .masthead-scrollable .collection .date, .home-copy-outer .featured-masthead .featured .collection .date, .home-copy-outer .featured-masthead .gallery .collection .date, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .date, .home-copy-outer .featured-wrapper .featured .collection .date, .home-copy-outer .featured-wrapper .gallery .collection .date, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .date, .home-copy-outer .gallery-wrapper .featured .collection .date, .home-copy-outer .gallery-wrapper .gallery .collection .date, .gallery-container .featured-masthead .masthead-scrollable .collection .date, .gallery-container .featured-masthead .featured .collection .date, .gallery-container .featured-masthead .gallery .collection .date, .gallery-container .featured-wrapper .masthead-scrollable .collection .date, .gallery-container .featured-wrapper .featured .collection .date, .gallery-container .featured-wrapper .gallery .collection .date, .gallery-container .gallery-wrapper .masthead-scrollable .collection .date, .gallery-container .gallery-wrapper .featured .collection .date, .gallery-container .gallery-wrapper .gallery .collection .date {
+      position: absolute;
+      top: 60px;
+      right: 6px;
+      width: 50px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection .date .month, .featured-outer .featured-masthead .featured .collection .date .month, .featured-outer .featured-masthead .gallery .collection .date .month, .featured-outer .featured-wrapper .masthead-scrollable .collection .date .month, .featured-outer .featured-wrapper .featured .collection .date .month, .featured-outer .featured-wrapper .gallery .collection .date .month, .featured-outer .gallery-wrapper .masthead-scrollable .collection .date .month, .featured-outer .gallery-wrapper .featured .collection .date .month, .featured-outer .gallery-wrapper .gallery .collection .date .month, .home-copy-outer .featured-masthead .masthead-scrollable .collection .date .month, .home-copy-outer .featured-masthead .featured .collection .date .month, .home-copy-outer .featured-masthead .gallery .collection .date .month, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .date .month, .home-copy-outer .featured-wrapper .featured .collection .date .month, .home-copy-outer .featured-wrapper .gallery .collection .date .month, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .date .month, .home-copy-outer .gallery-wrapper .featured .collection .date .month, .home-copy-outer .gallery-wrapper .gallery .collection .date .month, .gallery-container .featured-masthead .masthead-scrollable .collection .date .month, .gallery-container .featured-masthead .featured .collection .date .month, .gallery-container .featured-masthead .gallery .collection .date .month, .gallery-container .featured-wrapper .masthead-scrollable .collection .date .month, .gallery-container .featured-wrapper .featured .collection .date .month, .gallery-container .featured-wrapper .gallery .collection .date .month, .gallery-container .gallery-wrapper .masthead-scrollable .collection .date .month, .gallery-container .gallery-wrapper .featured .collection .date .month, .gallery-container .gallery-wrapper .gallery .collection .date .month {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 17px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection .date .day, .featured-outer .featured-masthead .featured .collection .date .day, .featured-outer .featured-masthead .gallery .collection .date .day, .featured-outer .featured-wrapper .masthead-scrollable .collection .date .day, .featured-outer .featured-wrapper .featured .collection .date .day, .featured-outer .featured-wrapper .gallery .collection .date .day, .featured-outer .gallery-wrapper .masthead-scrollable .collection .date .day, .featured-outer .gallery-wrapper .featured .collection .date .day, .featured-outer .gallery-wrapper .gallery .collection .date .day, .home-copy-outer .featured-masthead .masthead-scrollable .collection .date .day, .home-copy-outer .featured-masthead .featured .collection .date .day, .home-copy-outer .featured-masthead .gallery .collection .date .day, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .date .day, .home-copy-outer .featured-wrapper .featured .collection .date .day, .home-copy-outer .featured-wrapper .gallery .collection .date .day, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .date .day, .home-copy-outer .gallery-wrapper .featured .collection .date .day, .home-copy-outer .gallery-wrapper .gallery .collection .date .day, .gallery-container .featured-masthead .masthead-scrollable .collection .date .day, .gallery-container .featured-masthead .featured .collection .date .day, .gallery-container .featured-masthead .gallery .collection .date .day, .gallery-container .featured-wrapper .masthead-scrollable .collection .date .day, .gallery-container .featured-wrapper .featured .collection .date .day, .gallery-container .featured-wrapper .gallery .collection .date .day, .gallery-container .gallery-wrapper .masthead-scrollable .collection .date .day, .gallery-container .gallery-wrapper .featured .collection .date .day, .gallery-container .gallery-wrapper .gallery .collection .date .day {
+        margin: -9px 0 0 0;
+        padding: 0;
+        text-align: center;
+        font-size: 30px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection .date .year, .featured-outer .featured-masthead .featured .collection .date .year, .featured-outer .featured-masthead .gallery .collection .date .year, .featured-outer .featured-wrapper .masthead-scrollable .collection .date .year, .featured-outer .featured-wrapper .featured .collection .date .year, .featured-outer .featured-wrapper .gallery .collection .date .year, .featured-outer .gallery-wrapper .masthead-scrollable .collection .date .year, .featured-outer .gallery-wrapper .featured .collection .date .year, .featured-outer .gallery-wrapper .gallery .collection .date .year, .home-copy-outer .featured-masthead .masthead-scrollable .collection .date .year, .home-copy-outer .featured-masthead .featured .collection .date .year, .home-copy-outer .featured-masthead .gallery .collection .date .year, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .date .year, .home-copy-outer .featured-wrapper .featured .collection .date .year, .home-copy-outer .featured-wrapper .gallery .collection .date .year, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .date .year, .home-copy-outer .gallery-wrapper .featured .collection .date .year, .home-copy-outer .gallery-wrapper .gallery .collection .date .year, .gallery-container .featured-masthead .masthead-scrollable .collection .date .year, .gallery-container .featured-masthead .featured .collection .date .year, .gallery-container .featured-masthead .gallery .collection .date .year, .gallery-container .featured-wrapper .masthead-scrollable .collection .date .year, .gallery-container .featured-wrapper .featured .collection .date .year, .gallery-container .featured-wrapper .gallery .collection .date .year, .gallery-container .gallery-wrapper .masthead-scrollable .collection .date .year, .gallery-container .gallery-wrapper .featured .collection .date .year, .gallery-container .gallery-wrapper .gallery .collection .date .year {
+        margin: -9px 0 0 0;
+        padding: 0;
+        text-align: center;
+        font-size: 14px; }
+    .featured-outer .featured-masthead .masthead-scrollable .collection .overlay, .featured-outer .featured-masthead .featured .collection .overlay, .featured-outer .featured-masthead .gallery .collection .overlay, .featured-outer .featured-wrapper .masthead-scrollable .collection .overlay, .featured-outer .featured-wrapper .featured .collection .overlay, .featured-outer .featured-wrapper .gallery .collection .overlay, .featured-outer .gallery-wrapper .masthead-scrollable .collection .overlay, .featured-outer .gallery-wrapper .featured .collection .overlay, .featured-outer .gallery-wrapper .gallery .collection .overlay, .home-copy-outer .featured-masthead .masthead-scrollable .collection .overlay, .home-copy-outer .featured-masthead .featured .collection .overlay, .home-copy-outer .featured-masthead .gallery .collection .overlay, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .overlay, .home-copy-outer .featured-wrapper .featured .collection .overlay, .home-copy-outer .featured-wrapper .gallery .collection .overlay, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .overlay, .home-copy-outer .gallery-wrapper .featured .collection .overlay, .home-copy-outer .gallery-wrapper .gallery .collection .overlay, .gallery-container .featured-masthead .masthead-scrollable .collection .overlay, .gallery-container .featured-masthead .featured .collection .overlay, .gallery-container .featured-masthead .gallery .collection .overlay, .gallery-container .featured-wrapper .masthead-scrollable .collection .overlay, .gallery-container .featured-wrapper .featured .collection .overlay, .gallery-container .featured-wrapper .gallery .collection .overlay, .gallery-container .gallery-wrapper .masthead-scrollable .collection .overlay, .gallery-container .gallery-wrapper .featured .collection .overlay, .gallery-container .gallery-wrapper .gallery .collection .overlay {
+      display: none;
+      background: url(/erly/img/bg-black-50.png);
+      display: none;
+      position: absolute;
+      text-align: center;
+      top: 11px;
+      left: 11px;
+      height: 171px;
+      width: 392px;
+      font-size: 13px;
+      z-index: 10;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection .overlay .reason, .featured-outer .featured-masthead .featured .collection .overlay .reason, .featured-outer .featured-masthead .gallery .collection .overlay .reason, .featured-outer .featured-wrapper .masthead-scrollable .collection .overlay .reason, .featured-outer .featured-wrapper .featured .collection .overlay .reason, .featured-outer .featured-wrapper .gallery .collection .overlay .reason, .featured-outer .gallery-wrapper .masthead-scrollable .collection .overlay .reason, .featured-outer .gallery-wrapper .featured .collection .overlay .reason, .featured-outer .gallery-wrapper .gallery .collection .overlay .reason, .home-copy-outer .featured-masthead .masthead-scrollable .collection .overlay .reason, .home-copy-outer .featured-masthead .featured .collection .overlay .reason, .home-copy-outer .featured-masthead .gallery .collection .overlay .reason, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .overlay .reason, .home-copy-outer .featured-wrapper .featured .collection .overlay .reason, .home-copy-outer .featured-wrapper .gallery .collection .overlay .reason, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .overlay .reason, .home-copy-outer .gallery-wrapper .featured .collection .overlay .reason, .home-copy-outer .gallery-wrapper .gallery .collection .overlay .reason, .gallery-container .featured-masthead .masthead-scrollable .collection .overlay .reason, .gallery-container .featured-masthead .featured .collection .overlay .reason, .gallery-container .featured-masthead .gallery .collection .overlay .reason, .gallery-container .featured-wrapper .masthead-scrollable .collection .overlay .reason, .gallery-container .featured-wrapper .featured .collection .overlay .reason, .gallery-container .featured-wrapper .gallery .collection .overlay .reason, .gallery-container .gallery-wrapper .masthead-scrollable .collection .overlay .reason, .gallery-container .gallery-wrapper .featured .collection .overlay .reason, .gallery-container .gallery-wrapper .gallery .collection .overlay .reason {
+        padding: 16px 20px;
+        color: #fff; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection .overlay .location, .featured-outer .featured-masthead .featured .collection .overlay .location, .featured-outer .featured-masthead .gallery .collection .overlay .location, .featured-outer .featured-wrapper .masthead-scrollable .collection .overlay .location, .featured-outer .featured-wrapper .featured .collection .overlay .location, .featured-outer .featured-wrapper .gallery .collection .overlay .location, .featured-outer .gallery-wrapper .masthead-scrollable .collection .overlay .location, .featured-outer .gallery-wrapper .featured .collection .overlay .location, .featured-outer .gallery-wrapper .gallery .collection .overlay .location, .home-copy-outer .featured-masthead .masthead-scrollable .collection .overlay .location, .home-copy-outer .featured-masthead .featured .collection .overlay .location, .home-copy-outer .featured-masthead .gallery .collection .overlay .location, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .overlay .location, .home-copy-outer .featured-wrapper .featured .collection .overlay .location, .home-copy-outer .featured-wrapper .gallery .collection .overlay .location, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .overlay .location, .home-copy-outer .gallery-wrapper .featured .collection .overlay .location, .home-copy-outer .gallery-wrapper .gallery .collection .overlay .location, .gallery-container .featured-masthead .masthead-scrollable .collection .overlay .location, .gallery-container .featured-masthead .featured .collection .overlay .location, .gallery-container .featured-masthead .gallery .collection .overlay .location, .gallery-container .featured-wrapper .masthead-scrollable .collection .overlay .location, .gallery-container .featured-wrapper .featured .collection .overlay .location, .gallery-container .featured-wrapper .gallery .collection .overlay .location, .gallery-container .gallery-wrapper .masthead-scrollable .collection .overlay .location, .gallery-container .gallery-wrapper .featured .collection .overlay .location, .gallery-container .gallery-wrapper .gallery .collection .overlay .location {
+        color: #fff; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection .overlay .button-container, .featured-outer .featured-masthead .featured .collection .overlay .button-container, .featured-outer .featured-masthead .gallery .collection .overlay .button-container, .featured-outer .featured-wrapper .masthead-scrollable .collection .overlay .button-container, .featured-outer .featured-wrapper .featured .collection .overlay .button-container, .featured-outer .featured-wrapper .gallery .collection .overlay .button-container, .featured-outer .gallery-wrapper .masthead-scrollable .collection .overlay .button-container, .featured-outer .gallery-wrapper .featured .collection .overlay .button-container, .featured-outer .gallery-wrapper .gallery .collection .overlay .button-container, .home-copy-outer .featured-masthead .masthead-scrollable .collection .overlay .button-container, .home-copy-outer .featured-masthead .featured .collection .overlay .button-container, .home-copy-outer .featured-masthead .gallery .collection .overlay .button-container, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .overlay .button-container, .home-copy-outer .featured-wrapper .featured .collection .overlay .button-container, .home-copy-outer .featured-wrapper .gallery .collection .overlay .button-container, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .overlay .button-container, .home-copy-outer .gallery-wrapper .featured .collection .overlay .button-container, .home-copy-outer .gallery-wrapper .gallery .collection .overlay .button-container, .gallery-container .featured-masthead .masthead-scrollable .collection .overlay .button-container, .gallery-container .featured-masthead .featured .collection .overlay .button-container, .gallery-container .featured-masthead .gallery .collection .overlay .button-container, .gallery-container .featured-wrapper .masthead-scrollable .collection .overlay .button-container, .gallery-container .featured-wrapper .featured .collection .overlay .button-container, .gallery-container .featured-wrapper .gallery .collection .overlay .button-container, .gallery-container .gallery-wrapper .masthead-scrollable .collection .overlay .button-container, .gallery-container .gallery-wrapper .featured .collection .overlay .button-container, .gallery-container .gallery-wrapper .gallery .collection .overlay .button-container {
+        text-align: center;
+        margin-top: 50px; }
+        .featured-outer .featured-masthead .masthead-scrollable .collection .overlay .button-container .button, .featured-outer .featured-masthead .featured .collection .overlay .button-container .button, .featured-outer .featured-masthead .gallery .collection .overlay .button-container .button, .featured-outer .featured-wrapper .masthead-scrollable .collection .overlay .button-container .button, .featured-outer .featured-wrapper .featured .collection .overlay .button-container .button, .featured-outer .featured-wrapper .gallery .collection .overlay .button-container .button, .featured-outer .gallery-wrapper .masthead-scrollable .collection .overlay .button-container .button, .featured-outer .gallery-wrapper .featured .collection .overlay .button-container .button, .featured-outer .gallery-wrapper .gallery .collection .overlay .button-container .button, .home-copy-outer .featured-masthead .masthead-scrollable .collection .overlay .button-container .button, .home-copy-outer .featured-masthead .featured .collection .overlay .button-container .button, .home-copy-outer .featured-masthead .gallery .collection .overlay .button-container .button, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .overlay .button-container .button, .home-copy-outer .featured-wrapper .featured .collection .overlay .button-container .button, .home-copy-outer .featured-wrapper .gallery .collection .overlay .button-container .button, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .overlay .button-container .button, .home-copy-outer .gallery-wrapper .featured .collection .overlay .button-container .button, .home-copy-outer .gallery-wrapper .gallery .collection .overlay .button-container .button, .gallery-container .featured-masthead .masthead-scrollable .collection .overlay .button-container .button, .gallery-container .featured-masthead .featured .collection .overlay .button-container .button, .gallery-container .featured-masthead .gallery .collection .overlay .button-container .button, .gallery-container .featured-wrapper .masthead-scrollable .collection .overlay .button-container .button, .gallery-container .featured-wrapper .featured .collection .overlay .button-container .button, .gallery-container .featured-wrapper .gallery .collection .overlay .button-container .button, .gallery-container .gallery-wrapper .masthead-scrollable .collection .overlay .button-container .button, .gallery-container .gallery-wrapper .featured .collection .overlay .button-container .button, .gallery-container .gallery-wrapper .gallery .collection .overlay .button-container .button {
+          background: transparent url(/erly/img/button-view-event.png) no-repeat 0 0;
+          width: 200px;
+          height: 60px;
+          display: inline-block; }
+          .featured-outer .featured-masthead .masthead-scrollable .collection .overlay .button-container .button:hover, .featured-outer .featured-masthead .featured .collection .overlay .button-container .button:hover, .featured-outer .featured-masthead .gallery .collection .overlay .button-container .button:hover, .featured-outer .featured-wrapper .masthead-scrollable .collection .overlay .button-container .button:hover, .featured-outer .featured-wrapper .featured .collection .overlay .button-container .button:hover, .featured-outer .featured-wrapper .gallery .collection .overlay .button-container .button:hover, .featured-outer .gallery-wrapper .masthead-scrollable .collection .overlay .button-container .button:hover, .featured-outer .gallery-wrapper .featured .collection .overlay .button-container .button:hover, .featured-outer .gallery-wrapper .gallery .collection .overlay .button-container .button:hover, .home-copy-outer .featured-masthead .masthead-scrollable .collection .overlay .button-container .button:hover, .home-copy-outer .featured-masthead .featured .collection .overlay .button-container .button:hover, .home-copy-outer .featured-masthead .gallery .collection .overlay .button-container .button:hover, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .overlay .button-container .button:hover, .home-copy-outer .featured-wrapper .featured .collection .overlay .button-container .button:hover, .home-copy-outer .featured-wrapper .gallery .collection .overlay .button-container .button:hover, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .overlay .button-container .button:hover, .home-copy-outer .gallery-wrapper .featured .collection .overlay .button-container .button:hover, .home-copy-outer .gallery-wrapper .gallery .collection .overlay .button-container .button:hover, .gallery-container .featured-masthead .masthead-scrollable .collection .overlay .button-container .button:hover, .gallery-container .featured-masthead .featured .collection .overlay .button-container .button:hover, .gallery-container .featured-masthead .gallery .collection .overlay .button-container .button:hover, .gallery-container .featured-wrapper .masthead-scrollable .collection .overlay .button-container .button:hover, .gallery-container .featured-wrapper .featured .collection .overlay .button-container .button:hover, .gallery-container .featured-wrapper .gallery .collection .overlay .button-container .button:hover, .gallery-container .gallery-wrapper .masthead-scrollable .collection .overlay .button-container .button:hover, .gallery-container .gallery-wrapper .featured .collection .overlay .button-container .button:hover, .gallery-container .gallery-wrapper .gallery .collection .overlay .button-container .button:hover {
+            background-position: 0 -60px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection .overlay .remove, .featured-outer .featured-masthead .featured .collection .overlay .remove, .featured-outer .featured-masthead .gallery .collection .overlay .remove, .featured-outer .featured-wrapper .masthead-scrollable .collection .overlay .remove, .featured-outer .featured-wrapper .featured .collection .overlay .remove, .featured-outer .featured-wrapper .gallery .collection .overlay .remove, .featured-outer .gallery-wrapper .masthead-scrollable .collection .overlay .remove, .featured-outer .gallery-wrapper .featured .collection .overlay .remove, .featured-outer .gallery-wrapper .gallery .collection .overlay .remove, .home-copy-outer .featured-masthead .masthead-scrollable .collection .overlay .remove, .home-copy-outer .featured-masthead .featured .collection .overlay .remove, .home-copy-outer .featured-masthead .gallery .collection .overlay .remove, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .overlay .remove, .home-copy-outer .featured-wrapper .featured .collection .overlay .remove, .home-copy-outer .featured-wrapper .gallery .collection .overlay .remove, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .overlay .remove, .home-copy-outer .gallery-wrapper .featured .collection .overlay .remove, .home-copy-outer .gallery-wrapper .gallery .collection .overlay .remove, .gallery-container .featured-masthead .masthead-scrollable .collection .overlay .remove, .gallery-container .featured-masthead .featured .collection .overlay .remove, .gallery-container .featured-masthead .gallery .collection .overlay .remove, .gallery-container .featured-wrapper .masthead-scrollable .collection .overlay .remove, .gallery-container .featured-wrapper .featured .collection .overlay .remove, .gallery-container .featured-wrapper .gallery .collection .overlay .remove, .gallery-container .gallery-wrapper .masthead-scrollable .collection .overlay .remove, .gallery-container .gallery-wrapper .featured .collection .overlay .remove, .gallery-container .gallery-wrapper .gallery .collection .overlay .remove {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background: transparent url(/erly/img/icon-white-x-sm.png) no-repeat 0 0;
+        overflow: hidden;
+        top: 0;
+        cursor: pointer;
+        right: 0; }
+        .featured-outer .featured-masthead .masthead-scrollable .collection .overlay .remove:hover, .featured-outer .featured-masthead .featured .collection .overlay .remove:hover, .featured-outer .featured-masthead .gallery .collection .overlay .remove:hover, .featured-outer .featured-wrapper .masthead-scrollable .collection .overlay .remove:hover, .featured-outer .featured-wrapper .featured .collection .overlay .remove:hover, .featured-outer .featured-wrapper .gallery .collection .overlay .remove:hover, .featured-outer .gallery-wrapper .masthead-scrollable .collection .overlay .remove:hover, .featured-outer .gallery-wrapper .featured .collection .overlay .remove:hover, .featured-outer .gallery-wrapper .gallery .collection .overlay .remove:hover, .home-copy-outer .featured-masthead .masthead-scrollable .collection .overlay .remove:hover, .home-copy-outer .featured-masthead .featured .collection .overlay .remove:hover, .home-copy-outer .featured-masthead .gallery .collection .overlay .remove:hover, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .overlay .remove:hover, .home-copy-outer .featured-wrapper .featured .collection .overlay .remove:hover, .home-copy-outer .featured-wrapper .gallery .collection .overlay .remove:hover, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .overlay .remove:hover, .home-copy-outer .gallery-wrapper .featured .collection .overlay .remove:hover, .home-copy-outer .gallery-wrapper .gallery .collection .overlay .remove:hover, .gallery-container .featured-masthead .masthead-scrollable .collection .overlay .remove:hover, .gallery-container .featured-masthead .featured .collection .overlay .remove:hover, .gallery-container .featured-masthead .gallery .collection .overlay .remove:hover, .gallery-container .featured-wrapper .masthead-scrollable .collection .overlay .remove:hover, .gallery-container .featured-wrapper .featured .collection .overlay .remove:hover, .gallery-container .featured-wrapper .gallery .collection .overlay .remove:hover, .gallery-container .gallery-wrapper .masthead-scrollable .collection .overlay .remove:hover, .gallery-container .gallery-wrapper .featured .collection .overlay .remove:hover, .gallery-container .gallery-wrapper .gallery .collection .overlay .remove:hover {
+          background-position: 0 -20px; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection .overlay .private, .featured-outer .featured-masthead .featured .collection .overlay .private, .featured-outer .featured-masthead .gallery .collection .overlay .private, .featured-outer .featured-wrapper .masthead-scrollable .collection .overlay .private, .featured-outer .featured-wrapper .featured .collection .overlay .private, .featured-outer .featured-wrapper .gallery .collection .overlay .private, .featured-outer .gallery-wrapper .masthead-scrollable .collection .overlay .private, .featured-outer .gallery-wrapper .featured .collection .overlay .private, .featured-outer .gallery-wrapper .gallery .collection .overlay .private, .home-copy-outer .featured-masthead .masthead-scrollable .collection .overlay .private, .home-copy-outer .featured-masthead .featured .collection .overlay .private, .home-copy-outer .featured-masthead .gallery .collection .overlay .private, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .overlay .private, .home-copy-outer .featured-wrapper .featured .collection .overlay .private, .home-copy-outer .featured-wrapper .gallery .collection .overlay .private, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .overlay .private, .home-copy-outer .gallery-wrapper .featured .collection .overlay .private, .home-copy-outer .gallery-wrapper .gallery .collection .overlay .private, .gallery-container .featured-masthead .masthead-scrollable .collection .overlay .private, .gallery-container .featured-masthead .featured .collection .overlay .private, .gallery-container .featured-masthead .gallery .collection .overlay .private, .gallery-container .featured-wrapper .masthead-scrollable .collection .overlay .private, .gallery-container .featured-wrapper .featured .collection .overlay .private, .gallery-container .featured-wrapper .gallery .collection .overlay .private, .gallery-container .gallery-wrapper .masthead-scrollable .collection .overlay .private, .gallery-container .gallery-wrapper .featured .collection .overlay .private, .gallery-container .gallery-wrapper .gallery .collection .overlay .private {
+        background: url(/erly/img/bg-black-50.png);
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        color: white;
+        position: absolute;
+        bottom: 4px;
+        right: 4px;
+        height: 20px;
+        padding: 0 2px 1px;
+        text-align: right; }
+        .featured-outer .featured-masthead .masthead-scrollable .collection .overlay .private img, .featured-outer .featured-masthead .featured .collection .overlay .private img, .featured-outer .featured-masthead .gallery .collection .overlay .private img, .featured-outer .featured-wrapper .masthead-scrollable .collection .overlay .private img, .featured-outer .featured-wrapper .featured .collection .overlay .private img, .featured-outer .featured-wrapper .gallery .collection .overlay .private img, .featured-outer .gallery-wrapper .masthead-scrollable .collection .overlay .private img, .featured-outer .gallery-wrapper .featured .collection .overlay .private img, .featured-outer .gallery-wrapper .gallery .collection .overlay .private img, .home-copy-outer .featured-masthead .masthead-scrollable .collection .overlay .private img, .home-copy-outer .featured-masthead .featured .collection .overlay .private img, .home-copy-outer .featured-masthead .gallery .collection .overlay .private img, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .overlay .private img, .home-copy-outer .featured-wrapper .featured .collection .overlay .private img, .home-copy-outer .featured-wrapper .gallery .collection .overlay .private img, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .overlay .private img, .home-copy-outer .gallery-wrapper .featured .collection .overlay .private img, .home-copy-outer .gallery-wrapper .gallery .collection .overlay .private img, .gallery-container .featured-masthead .masthead-scrollable .collection .overlay .private img, .gallery-container .featured-masthead .featured .collection .overlay .private img, .gallery-container .featured-masthead .gallery .collection .overlay .private img, .gallery-container .featured-wrapper .masthead-scrollable .collection .overlay .private img, .gallery-container .featured-wrapper .featured .collection .overlay .private img, .gallery-container .featured-wrapper .gallery .collection .overlay .private img, .gallery-container .gallery-wrapper .masthead-scrollable .collection .overlay .private img, .gallery-container .gallery-wrapper .featured .collection .overlay .private img, .gallery-container .gallery-wrapper .gallery .collection .overlay .private img {
+          vertical-align: middle; }
+        .featured-outer .featured-masthead .masthead-scrollable .collection .overlay .private .text, .featured-outer .featured-masthead .featured .collection .overlay .private .text, .featured-outer .featured-masthead .gallery .collection .overlay .private .text, .featured-outer .featured-wrapper .masthead-scrollable .collection .overlay .private .text, .featured-outer .featured-wrapper .featured .collection .overlay .private .text, .featured-outer .featured-wrapper .gallery .collection .overlay .private .text, .featured-outer .gallery-wrapper .masthead-scrollable .collection .overlay .private .text, .featured-outer .gallery-wrapper .featured .collection .overlay .private .text, .featured-outer .gallery-wrapper .gallery .collection .overlay .private .text, .home-copy-outer .featured-masthead .masthead-scrollable .collection .overlay .private .text, .home-copy-outer .featured-masthead .featured .collection .overlay .private .text, .home-copy-outer .featured-masthead .gallery .collection .overlay .private .text, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .overlay .private .text, .home-copy-outer .featured-wrapper .featured .collection .overlay .private .text, .home-copy-outer .featured-wrapper .gallery .collection .overlay .private .text, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .overlay .private .text, .home-copy-outer .gallery-wrapper .featured .collection .overlay .private .text, .home-copy-outer .gallery-wrapper .gallery .collection .overlay .private .text, .gallery-container .featured-masthead .masthead-scrollable .collection .overlay .private .text, .gallery-container .featured-masthead .featured .collection .overlay .private .text, .gallery-container .featured-masthead .gallery .collection .overlay .private .text, .gallery-container .featured-wrapper .masthead-scrollable .collection .overlay .private .text, .gallery-container .featured-wrapper .featured .collection .overlay .private .text, .gallery-container .featured-wrapper .gallery .collection .overlay .private .text, .gallery-container .gallery-wrapper .masthead-scrollable .collection .overlay .private .text, .gallery-container .gallery-wrapper .featured .collection .overlay .private .text, .gallery-container .gallery-wrapper .gallery .collection .overlay .private .text {
+          display: none;
+          vertical-align: middle; }
+        .featured-outer .featured-masthead .masthead-scrollable .collection .overlay .private:hover, .featured-outer .featured-masthead .featured .collection .overlay .private:hover, .featured-outer .featured-masthead .gallery .collection .overlay .private:hover, .featured-outer .featured-wrapper .masthead-scrollable .collection .overlay .private:hover, .featured-outer .featured-wrapper .featured .collection .overlay .private:hover, .featured-outer .featured-wrapper .gallery .collection .overlay .private:hover, .featured-outer .gallery-wrapper .masthead-scrollable .collection .overlay .private:hover, .featured-outer .gallery-wrapper .featured .collection .overlay .private:hover, .featured-outer .gallery-wrapper .gallery .collection .overlay .private:hover, .home-copy-outer .featured-masthead .masthead-scrollable .collection .overlay .private:hover, .home-copy-outer .featured-masthead .featured .collection .overlay .private:hover, .home-copy-outer .featured-masthead .gallery .collection .overlay .private:hover, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .overlay .private:hover, .home-copy-outer .featured-wrapper .featured .collection .overlay .private:hover, .home-copy-outer .featured-wrapper .gallery .collection .overlay .private:hover, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .overlay .private:hover, .home-copy-outer .gallery-wrapper .featured .collection .overlay .private:hover, .home-copy-outer .gallery-wrapper .gallery .collection .overlay .private:hover, .gallery-container .featured-masthead .masthead-scrollable .collection .overlay .private:hover, .gallery-container .featured-masthead .featured .collection .overlay .private:hover, .gallery-container .featured-masthead .gallery .collection .overlay .private:hover, .gallery-container .featured-wrapper .masthead-scrollable .collection .overlay .private:hover, .gallery-container .featured-wrapper .featured .collection .overlay .private:hover, .gallery-container .featured-wrapper .gallery .collection .overlay .private:hover, .gallery-container .gallery-wrapper .masthead-scrollable .collection .overlay .private:hover, .gallery-container .gallery-wrapper .featured .collection .overlay .private:hover, .gallery-container .gallery-wrapper .gallery .collection .overlay .private:hover {
+          padding-left: 5px; }
+          .featured-outer .featured-masthead .masthead-scrollable .collection .overlay .private:hover .text, .featured-outer .featured-masthead .featured .collection .overlay .private:hover .text, .featured-outer .featured-masthead .gallery .collection .overlay .private:hover .text, .featured-outer .featured-wrapper .masthead-scrollable .collection .overlay .private:hover .text, .featured-outer .featured-wrapper .featured .collection .overlay .private:hover .text, .featured-outer .featured-wrapper .gallery .collection .overlay .private:hover .text, .featured-outer .gallery-wrapper .masthead-scrollable .collection .overlay .private:hover .text, .featured-outer .gallery-wrapper .featured .collection .overlay .private:hover .text, .featured-outer .gallery-wrapper .gallery .collection .overlay .private:hover .text, .home-copy-outer .featured-masthead .masthead-scrollable .collection .overlay .private:hover .text, .home-copy-outer .featured-masthead .featured .collection .overlay .private:hover .text, .home-copy-outer .featured-masthead .gallery .collection .overlay .private:hover .text, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .overlay .private:hover .text, .home-copy-outer .featured-wrapper .featured .collection .overlay .private:hover .text, .home-copy-outer .featured-wrapper .gallery .collection .overlay .private:hover .text, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .overlay .private:hover .text, .home-copy-outer .gallery-wrapper .featured .collection .overlay .private:hover .text, .home-copy-outer .gallery-wrapper .gallery .collection .overlay .private:hover .text, .gallery-container .featured-masthead .masthead-scrollable .collection .overlay .private:hover .text, .gallery-container .featured-masthead .featured .collection .overlay .private:hover .text, .gallery-container .featured-masthead .gallery .collection .overlay .private:hover .text, .gallery-container .featured-wrapper .masthead-scrollable .collection .overlay .private:hover .text, .gallery-container .featured-wrapper .featured .collection .overlay .private:hover .text, .gallery-container .featured-wrapper .gallery .collection .overlay .private:hover .text, .gallery-container .gallery-wrapper .masthead-scrollable .collection .overlay .private:hover .text, .gallery-container .gallery-wrapper .featured .collection .overlay .private:hover .text, .gallery-container .gallery-wrapper .gallery .collection .overlay .private:hover .text {
+            display: inline; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection .overlay:active .button-container .button, .featured-outer .featured-masthead .featured .collection .overlay:active .button-container .button, .featured-outer .featured-masthead .gallery .collection .overlay:active .button-container .button, .featured-outer .featured-wrapper .masthead-scrollable .collection .overlay:active .button-container .button, .featured-outer .featured-wrapper .featured .collection .overlay:active .button-container .button, .featured-outer .featured-wrapper .gallery .collection .overlay:active .button-container .button, .featured-outer .gallery-wrapper .masthead-scrollable .collection .overlay:active .button-container .button, .featured-outer .gallery-wrapper .featured .collection .overlay:active .button-container .button, .featured-outer .gallery-wrapper .gallery .collection .overlay:active .button-container .button, .home-copy-outer .featured-masthead .masthead-scrollable .collection .overlay:active .button-container .button, .home-copy-outer .featured-masthead .featured .collection .overlay:active .button-container .button, .home-copy-outer .featured-masthead .gallery .collection .overlay:active .button-container .button, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .overlay:active .button-container .button, .home-copy-outer .featured-wrapper .featured .collection .overlay:active .button-container .button, .home-copy-outer .featured-wrapper .gallery .collection .overlay:active .button-container .button, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .overlay:active .button-container .button, .home-copy-outer .gallery-wrapper .featured .collection .overlay:active .button-container .button, .home-copy-outer .gallery-wrapper .gallery .collection .overlay:active .button-container .button, .gallery-container .featured-masthead .masthead-scrollable .collection .overlay:active .button-container .button, .gallery-container .featured-masthead .featured .collection .overlay:active .button-container .button, .gallery-container .featured-masthead .gallery .collection .overlay:active .button-container .button, .gallery-container .featured-wrapper .masthead-scrollable .collection .overlay:active .button-container .button, .gallery-container .featured-wrapper .featured .collection .overlay:active .button-container .button, .gallery-container .featured-wrapper .gallery .collection .overlay:active .button-container .button, .gallery-container .gallery-wrapper .masthead-scrollable .collection .overlay:active .button-container .button, .gallery-container .gallery-wrapper .featured .collection .overlay:active .button-container .button, .gallery-container .gallery-wrapper .gallery .collection .overlay:active .button-container .button {
+        background-position: 0 -60px; }
+    .featured-outer .featured-masthead .masthead-scrollable .collection .bottom, .featured-outer .featured-masthead .featured .collection .bottom, .featured-outer .featured-masthead .gallery .collection .bottom, .featured-outer .featured-wrapper .masthead-scrollable .collection .bottom, .featured-outer .featured-wrapper .featured .collection .bottom, .featured-outer .featured-wrapper .gallery .collection .bottom, .featured-outer .gallery-wrapper .masthead-scrollable .collection .bottom, .featured-outer .gallery-wrapper .featured .collection .bottom, .featured-outer .gallery-wrapper .gallery .collection .bottom, .home-copy-outer .featured-masthead .masthead-scrollable .collection .bottom, .home-copy-outer .featured-masthead .featured .collection .bottom, .home-copy-outer .featured-masthead .gallery .collection .bottom, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .bottom, .home-copy-outer .featured-wrapper .featured .collection .bottom, .home-copy-outer .featured-wrapper .gallery .collection .bottom, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .bottom, .home-copy-outer .gallery-wrapper .featured .collection .bottom, .home-copy-outer .gallery-wrapper .gallery .collection .bottom, .gallery-container .featured-masthead .masthead-scrollable .collection .bottom, .gallery-container .featured-masthead .featured .collection .bottom, .gallery-container .featured-masthead .gallery .collection .bottom, .gallery-container .featured-wrapper .masthead-scrollable .collection .bottom, .gallery-container .featured-wrapper .featured .collection .bottom, .gallery-container .featured-wrapper .gallery .collection .bottom, .gallery-container .gallery-wrapper .masthead-scrollable .collection .bottom, .gallery-container .gallery-wrapper .featured .collection .bottom, .gallery-container .gallery-wrapper .gallery .collection .bottom {
+      padding-top: 5px;
+      height: 20px;
+      color: #333;
+      margin-top: 1px;
+      font-size: 13px;
+      position: relative; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection .bottom .meta-icons, .featured-outer .featured-masthead .featured .collection .bottom .meta-icons, .featured-outer .featured-masthead .gallery .collection .bottom .meta-icons, .featured-outer .featured-wrapper .masthead-scrollable .collection .bottom .meta-icons, .featured-outer .featured-wrapper .featured .collection .bottom .meta-icons, .featured-outer .featured-wrapper .gallery .collection .bottom .meta-icons, .featured-outer .gallery-wrapper .masthead-scrollable .collection .bottom .meta-icons, .featured-outer .gallery-wrapper .featured .collection .bottom .meta-icons, .featured-outer .gallery-wrapper .gallery .collection .bottom .meta-icons, .home-copy-outer .featured-masthead .masthead-scrollable .collection .bottom .meta-icons, .home-copy-outer .featured-masthead .featured .collection .bottom .meta-icons, .home-copy-outer .featured-masthead .gallery .collection .bottom .meta-icons, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .bottom .meta-icons, .home-copy-outer .featured-wrapper .featured .collection .bottom .meta-icons, .home-copy-outer .featured-wrapper .gallery .collection .bottom .meta-icons, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .bottom .meta-icons, .home-copy-outer .gallery-wrapper .featured .collection .bottom .meta-icons, .home-copy-outer .gallery-wrapper .gallery .collection .bottom .meta-icons, .gallery-container .featured-masthead .masthead-scrollable .collection .bottom .meta-icons, .gallery-container .featured-masthead .featured .collection .bottom .meta-icons, .gallery-container .featured-masthead .gallery .collection .bottom .meta-icons, .gallery-container .featured-wrapper .masthead-scrollable .collection .bottom .meta-icons, .gallery-container .featured-wrapper .featured .collection .bottom .meta-icons, .gallery-container .featured-wrapper .gallery .collection .bottom .meta-icons, .gallery-container .gallery-wrapper .masthead-scrollable .collection .bottom .meta-icons, .gallery-container .gallery-wrapper .featured .collection .bottom .meta-icons, .gallery-container .gallery-wrapper .gallery .collection .bottom .meta-icons {
+        position: absolute;
+        top: 1px;
+        right: 0; }
+        .featured-outer .featured-masthead .masthead-scrollable .collection .bottom .meta-icons .meta-icon, .featured-outer .featured-masthead .featured .collection .bottom .meta-icons .meta-icon, .featured-outer .featured-masthead .gallery .collection .bottom .meta-icons .meta-icon, .featured-outer .featured-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon, .featured-outer .featured-wrapper .featured .collection .bottom .meta-icons .meta-icon, .featured-outer .featured-wrapper .gallery .collection .bottom .meta-icons .meta-icon, .featured-outer .gallery-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon, .featured-outer .gallery-wrapper .featured .collection .bottom .meta-icons .meta-icon, .featured-outer .gallery-wrapper .gallery .collection .bottom .meta-icons .meta-icon, .home-copy-outer .featured-masthead .masthead-scrollable .collection .bottom .meta-icons .meta-icon, .home-copy-outer .featured-masthead .featured .collection .bottom .meta-icons .meta-icon, .home-copy-outer .featured-masthead .gallery .collection .bottom .meta-icons .meta-icon, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon, .home-copy-outer .featured-wrapper .featured .collection .bottom .meta-icons .meta-icon, .home-copy-outer .featured-wrapper .gallery .collection .bottom .meta-icons .meta-icon, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon, .home-copy-outer .gallery-wrapper .featured .collection .bottom .meta-icons .meta-icon, .home-copy-outer .gallery-wrapper .gallery .collection .bottom .meta-icons .meta-icon, .gallery-container .featured-masthead .masthead-scrollable .collection .bottom .meta-icons .meta-icon, .gallery-container .featured-masthead .featured .collection .bottom .meta-icons .meta-icon, .gallery-container .featured-masthead .gallery .collection .bottom .meta-icons .meta-icon, .gallery-container .featured-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon, .gallery-container .featured-wrapper .featured .collection .bottom .meta-icons .meta-icon, .gallery-container .featured-wrapper .gallery .collection .bottom .meta-icons .meta-icon, .gallery-container .gallery-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon, .gallery-container .gallery-wrapper .featured .collection .bottom .meta-icons .meta-icon, .gallery-container .gallery-wrapper .gallery .collection .bottom .meta-icons .meta-icon {
+          margin: 4px 5px 0 0;
+          display: inline-block;
+          height: 24px; }
+          .featured-outer .featured-masthead .masthead-scrollable .collection .bottom .meta-icons .meta-icon span, .featured-outer .featured-masthead .masthead-scrollable .collection .bottom .meta-icons .meta-icon img, .featured-outer .featured-masthead .featured .collection .bottom .meta-icons .meta-icon span, .featured-outer .featured-masthead .featured .collection .bottom .meta-icons .meta-icon img, .featured-outer .featured-masthead .gallery .collection .bottom .meta-icons .meta-icon span, .featured-outer .featured-masthead .gallery .collection .bottom .meta-icons .meta-icon img, .featured-outer .featured-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon span, .featured-outer .featured-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon img, .featured-outer .featured-wrapper .featured .collection .bottom .meta-icons .meta-icon span, .featured-outer .featured-wrapper .featured .collection .bottom .meta-icons .meta-icon img, .featured-outer .featured-wrapper .gallery .collection .bottom .meta-icons .meta-icon span, .featured-outer .featured-wrapper .gallery .collection .bottom .meta-icons .meta-icon img, .featured-outer .gallery-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon span, .featured-outer .gallery-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon img, .featured-outer .gallery-wrapper .featured .collection .bottom .meta-icons .meta-icon span, .featured-outer .gallery-wrapper .featured .collection .bottom .meta-icons .meta-icon img, .featured-outer .gallery-wrapper .gallery .collection .bottom .meta-icons .meta-icon span, .featured-outer .gallery-wrapper .gallery .collection .bottom .meta-icons .meta-icon img, .home-copy-outer .featured-masthead .masthead-scrollable .collection .bottom .meta-icons .meta-icon span, .home-copy-outer .featured-masthead .masthead-scrollable .collection .bottom .meta-icons .meta-icon img, .home-copy-outer .featured-masthead .featured .collection .bottom .meta-icons .meta-icon span, .home-copy-outer .featured-masthead .featured .collection .bottom .meta-icons .meta-icon img, .home-copy-outer .featured-masthead .gallery .collection .bottom .meta-icons .meta-icon span, .home-copy-outer .featured-masthead .gallery .collection .bottom .meta-icons .meta-icon img, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon span, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon img, .home-copy-outer .featured-wrapper .featured .collection .bottom .meta-icons .meta-icon span, .home-copy-outer .featured-wrapper .featured .collection .bottom .meta-icons .meta-icon img, .home-copy-outer .featured-wrapper .gallery .collection .bottom .meta-icons .meta-icon span, .home-copy-outer .featured-wrapper .gallery .collection .bottom .meta-icons .meta-icon img, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon span, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon img, .home-copy-outer .gallery-wrapper .featured .collection .bottom .meta-icons .meta-icon span, .home-copy-outer .gallery-wrapper .featured .collection .bottom .meta-icons .meta-icon img, .home-copy-outer .gallery-wrapper .gallery .collection .bottom .meta-icons .meta-icon span, .home-copy-outer .gallery-wrapper .gallery .collection .bottom .meta-icons .meta-icon img, .gallery-container .featured-masthead .masthead-scrollable .collection .bottom .meta-icons .meta-icon span, .gallery-container .featured-masthead .masthead-scrollable .collection .bottom .meta-icons .meta-icon img, .gallery-container .featured-masthead .featured .collection .bottom .meta-icons .meta-icon span, .gallery-container .featured-masthead .featured .collection .bottom .meta-icons .meta-icon img, .gallery-container .featured-masthead .gallery .collection .bottom .meta-icons .meta-icon span, .gallery-container .featured-masthead .gallery .collection .bottom .meta-icons .meta-icon img, .gallery-container .featured-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon span, .gallery-container .featured-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon img, .gallery-container .featured-wrapper .featured .collection .bottom .meta-icons .meta-icon span, .gallery-container .featured-wrapper .featured .collection .bottom .meta-icons .meta-icon img, .gallery-container .featured-wrapper .gallery .collection .bottom .meta-icons .meta-icon span, .gallery-container .featured-wrapper .gallery .collection .bottom .meta-icons .meta-icon img, .gallery-container .gallery-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon span, .gallery-container .gallery-wrapper .masthead-scrollable .collection .bottom .meta-icons .meta-icon img, .gallery-container .gallery-wrapper .featured .collection .bottom .meta-icons .meta-icon span, .gallery-container .gallery-wrapper .featured .collection .bottom .meta-icons .meta-icon img, .gallery-container .gallery-wrapper .gallery .collection .bottom .meta-icons .meta-icon span, .gallery-container .gallery-wrapper .gallery .collection .bottom .meta-icons .meta-icon img {
+            vertical-align: middle; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection .bottom .user, .featured-outer .featured-masthead .featured .collection .bottom .user, .featured-outer .featured-masthead .gallery .collection .bottom .user, .featured-outer .featured-wrapper .masthead-scrollable .collection .bottom .user, .featured-outer .featured-wrapper .featured .collection .bottom .user, .featured-outer .featured-wrapper .gallery .collection .bottom .user, .featured-outer .gallery-wrapper .masthead-scrollable .collection .bottom .user, .featured-outer .gallery-wrapper .featured .collection .bottom .user, .featured-outer .gallery-wrapper .gallery .collection .bottom .user, .home-copy-outer .featured-masthead .masthead-scrollable .collection .bottom .user, .home-copy-outer .featured-masthead .featured .collection .bottom .user, .home-copy-outer .featured-masthead .gallery .collection .bottom .user, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .bottom .user, .home-copy-outer .featured-wrapper .featured .collection .bottom .user, .home-copy-outer .featured-wrapper .gallery .collection .bottom .user, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .bottom .user, .home-copy-outer .gallery-wrapper .featured .collection .bottom .user, .home-copy-outer .gallery-wrapper .gallery .collection .bottom .user, .gallery-container .featured-masthead .masthead-scrollable .collection .bottom .user, .gallery-container .featured-masthead .featured .collection .bottom .user, .gallery-container .featured-masthead .gallery .collection .bottom .user, .gallery-container .featured-wrapper .masthead-scrollable .collection .bottom .user, .gallery-container .featured-wrapper .featured .collection .bottom .user, .gallery-container .featured-wrapper .gallery .collection .bottom .user, .gallery-container .gallery-wrapper .masthead-scrollable .collection .bottom .user, .gallery-container .gallery-wrapper .featured .collection .bottom .user, .gallery-container .gallery-wrapper .gallery .collection .bottom .user {
+        display: inline-block; }
+      .featured-outer .featured-masthead .masthead-scrollable .collection .bottom .user, .featured-outer .featured-masthead .featured .collection .bottom .user, .featured-outer .featured-masthead .gallery .collection .bottom .user, .featured-outer .featured-wrapper .masthead-scrollable .collection .bottom .user, .featured-outer .featured-wrapper .featured .collection .bottom .user, .featured-outer .featured-wrapper .gallery .collection .bottom .user, .featured-outer .gallery-wrapper .masthead-scrollable .collection .bottom .user, .featured-outer .gallery-wrapper .featured .collection .bottom .user, .featured-outer .gallery-wrapper .gallery .collection .bottom .user, .home-copy-outer .featured-masthead .masthead-scrollable .collection .bottom .user, .home-copy-outer .featured-masthead .featured .collection .bottom .user, .home-copy-outer .featured-masthead .gallery .collection .bottom .user, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .bottom .user, .home-copy-outer .featured-wrapper .featured .collection .bottom .user, .home-copy-outer .featured-wrapper .gallery .collection .bottom .user, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .bottom .user, .home-copy-outer .gallery-wrapper .featured .collection .bottom .user, .home-copy-outer .gallery-wrapper .gallery .collection .bottom .user, .gallery-container .featured-masthead .masthead-scrollable .collection .bottom .user, .gallery-container .featured-masthead .featured .collection .bottom .user, .gallery-container .featured-masthead .gallery .collection .bottom .user, .gallery-container .featured-wrapper .masthead-scrollable .collection .bottom .user, .gallery-container .featured-wrapper .featured .collection .bottom .user, .gallery-container .featured-wrapper .gallery .collection .bottom .user, .gallery-container .gallery-wrapper .masthead-scrollable .collection .bottom .user, .gallery-container .gallery-wrapper .featured .collection .bottom .user, .gallery-container .gallery-wrapper .gallery .collection .bottom .user {
+        position: relative;
+        color: #222; }
+        .featured-outer .featured-masthead .masthead-scrollable .collection .bottom .user img.avatar, .featured-outer .featured-masthead .featured .collection .bottom .user img.avatar, .featured-outer .featured-masthead .gallery .collection .bottom .user img.avatar, .featured-outer .featured-wrapper .masthead-scrollable .collection .bottom .user img.avatar, .featured-outer .featured-wrapper .featured .collection .bottom .user img.avatar, .featured-outer .featured-wrapper .gallery .collection .bottom .user img.avatar, .featured-outer .gallery-wrapper .masthead-scrollable .collection .bottom .user img.avatar, .featured-outer .gallery-wrapper .featured .collection .bottom .user img.avatar, .featured-outer .gallery-wrapper .gallery .collection .bottom .user img.avatar, .home-copy-outer .featured-masthead .masthead-scrollable .collection .bottom .user img.avatar, .home-copy-outer .featured-masthead .featured .collection .bottom .user img.avatar, .home-copy-outer .featured-masthead .gallery .collection .bottom .user img.avatar, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .bottom .user img.avatar, .home-copy-outer .featured-wrapper .featured .collection .bottom .user img.avatar, .home-copy-outer .featured-wrapper .gallery .collection .bottom .user img.avatar, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .bottom .user img.avatar, .home-copy-outer .gallery-wrapper .featured .collection .bottom .user img.avatar, .home-copy-outer .gallery-wrapper .gallery .collection .bottom .user img.avatar, .gallery-container .featured-masthead .masthead-scrollable .collection .bottom .user img.avatar, .gallery-container .featured-masthead .featured .collection .bottom .user img.avatar, .gallery-container .featured-masthead .gallery .collection .bottom .user img.avatar, .gallery-container .featured-wrapper .masthead-scrollable .collection .bottom .user img.avatar, .gallery-container .featured-wrapper .featured .collection .bottom .user img.avatar, .gallery-container .featured-wrapper .gallery .collection .bottom .user img.avatar, .gallery-container .gallery-wrapper .masthead-scrollable .collection .bottom .user img.avatar, .gallery-container .gallery-wrapper .featured .collection .bottom .user img.avatar, .gallery-container .gallery-wrapper .gallery .collection .bottom .user img.avatar {
+          display: inline-block;
+          height: 25px;
+          width: 25px;
+          vertical-align: middle;
+          margin-right: 5px;
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+          -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+          -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px; }
+        .featured-outer .featured-masthead .masthead-scrollable .collection .bottom .user > span, .featured-outer .featured-masthead .featured .collection .bottom .user > span, .featured-outer .featured-masthead .gallery .collection .bottom .user > span, .featured-outer .featured-wrapper .masthead-scrollable .collection .bottom .user > span, .featured-outer .featured-wrapper .featured .collection .bottom .user > span, .featured-outer .featured-wrapper .gallery .collection .bottom .user > span, .featured-outer .gallery-wrapper .masthead-scrollable .collection .bottom .user > span, .featured-outer .gallery-wrapper .featured .collection .bottom .user > span, .featured-outer .gallery-wrapper .gallery .collection .bottom .user > span, .home-copy-outer .featured-masthead .masthead-scrollable .collection .bottom .user > span, .home-copy-outer .featured-masthead .featured .collection .bottom .user > span, .home-copy-outer .featured-masthead .gallery .collection .bottom .user > span, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .bottom .user > span, .home-copy-outer .featured-wrapper .featured .collection .bottom .user > span, .home-copy-outer .featured-wrapper .gallery .collection .bottom .user > span, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .bottom .user > span, .home-copy-outer .gallery-wrapper .featured .collection .bottom .user > span, .home-copy-outer .gallery-wrapper .gallery .collection .bottom .user > span, .gallery-container .featured-masthead .masthead-scrollable .collection .bottom .user > span, .gallery-container .featured-masthead .featured .collection .bottom .user > span, .gallery-container .featured-masthead .gallery .collection .bottom .user > span, .gallery-container .featured-wrapper .masthead-scrollable .collection .bottom .user > span, .gallery-container .featured-wrapper .featured .collection .bottom .user > span, .gallery-container .featured-wrapper .gallery .collection .bottom .user > span, .gallery-container .gallery-wrapper .masthead-scrollable .collection .bottom .user > span, .gallery-container .gallery-wrapper .featured .collection .bottom .user > span, .gallery-container .gallery-wrapper .gallery .collection .bottom .user > span {
+          display: inline-block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          vertical-align: middle;
+          white-space: nowrap;
+          max-width: 250px; }
+          .featured-outer .featured-masthead .masthead-scrollable .collection .bottom .user > span:hover, .featured-outer .featured-masthead .featured .collection .bottom .user > span:hover, .featured-outer .featured-masthead .gallery .collection .bottom .user > span:hover, .featured-outer .featured-wrapper .masthead-scrollable .collection .bottom .user > span:hover, .featured-outer .featured-wrapper .featured .collection .bottom .user > span:hover, .featured-outer .featured-wrapper .gallery .collection .bottom .user > span:hover, .featured-outer .gallery-wrapper .masthead-scrollable .collection .bottom .user > span:hover, .featured-outer .gallery-wrapper .featured .collection .bottom .user > span:hover, .featured-outer .gallery-wrapper .gallery .collection .bottom .user > span:hover, .home-copy-outer .featured-masthead .masthead-scrollable .collection .bottom .user > span:hover, .home-copy-outer .featured-masthead .featured .collection .bottom .user > span:hover, .home-copy-outer .featured-masthead .gallery .collection .bottom .user > span:hover, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .bottom .user > span:hover, .home-copy-outer .featured-wrapper .featured .collection .bottom .user > span:hover, .home-copy-outer .featured-wrapper .gallery .collection .bottom .user > span:hover, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .bottom .user > span:hover, .home-copy-outer .gallery-wrapper .featured .collection .bottom .user > span:hover, .home-copy-outer .gallery-wrapper .gallery .collection .bottom .user > span:hover, .gallery-container .featured-masthead .masthead-scrollable .collection .bottom .user > span:hover, .gallery-container .featured-masthead .featured .collection .bottom .user > span:hover, .gallery-container .featured-masthead .gallery .collection .bottom .user > span:hover, .gallery-container .featured-wrapper .masthead-scrollable .collection .bottom .user > span:hover, .gallery-container .featured-wrapper .featured .collection .bottom .user > span:hover, .gallery-container .featured-wrapper .gallery .collection .bottom .user > span:hover, .gallery-container .gallery-wrapper .masthead-scrollable .collection .bottom .user > span:hover, .gallery-container .gallery-wrapper .featured .collection .bottom .user > span:hover, .gallery-container .gallery-wrapper .gallery .collection .bottom .user > span:hover {
+            color: #0c9acb; }
+        .featured-outer .featured-masthead .masthead-scrollable .collection .bottom .user .contributors, .featured-outer .featured-masthead .featured .collection .bottom .user .contributors, .featured-outer .featured-masthead .gallery .collection .bottom .user .contributors, .featured-outer .featured-wrapper .masthead-scrollable .collection .bottom .user .contributors, .featured-outer .featured-wrapper .featured .collection .bottom .user .contributors, .featured-outer .featured-wrapper .gallery .collection .bottom .user .contributors, .featured-outer .gallery-wrapper .masthead-scrollable .collection .bottom .user .contributors, .featured-outer .gallery-wrapper .featured .collection .bottom .user .contributors, .featured-outer .gallery-wrapper .gallery .collection .bottom .user .contributors, .home-copy-outer .featured-masthead .masthead-scrollable .collection .bottom .user .contributors, .home-copy-outer .featured-masthead .featured .collection .bottom .user .contributors, .home-copy-outer .featured-masthead .gallery .collection .bottom .user .contributors, .home-copy-outer .featured-wrapper .masthead-scrollable .collection .bottom .user .contributors, .home-copy-outer .featured-wrapper .featured .collection .bottom .user .contributors, .home-copy-outer .featured-wrapper .gallery .collection .bottom .user .contributors, .home-copy-outer .gallery-wrapper .masthead-scrollable .collection .bottom .user .contributors, .home-copy-outer .gallery-wrapper .featured .collection .bottom .user .contributors, .home-copy-outer .gallery-wrapper .gallery .collection .bottom .user .contributors, .gallery-container .featured-masthead .masthead-scrollable .collection .bottom .user .contributors, .gallery-container .featured-masthead .featured .collection .bottom .user .contributors, .gallery-container .featured-masthead .gallery .collection .bottom .user .contributors, .gallery-container .featured-wrapper .masthead-scrollable .collection .bottom .user .contributors, .gallery-container .featured-wrapper .featured .collection .bottom .user .contributors, .gallery-container .featured-wrapper .gallery .collection .bottom .user .contributors, .gallery-container .gallery-wrapper .masthead-scrollable .collection .bottom .user .contributors, .gallery-container .gallery-wrapper .featured .collection .bottom .user .contributors, .gallery-container .gallery-wrapper .gallery .collection .bottom .user .contributors {
+          top: 32px; }
+
+div.featured-pane {
+  background: url(/erly/img/bg-gray.png);
+  display: none;
+  margin-top: 15px;
+  padding-top: 10px;
+  position: relative;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2); }
+  div.featured-pane .header {
+    font-size: 18px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #DDD;
+    color: #333;
+    text-align: center;
+    text-shadow: 0 1px 1px 255, 255, 255, 0.3; }
+    div.featured-pane .header a {
+      background: url("/erly/img/button-view-more.png") no-repeat scroll 0 0 transparent;
+      height: 40px;
+      overflow: hidden;
+      margin-left: 10px;
+      width: 115px;
+      display: inline-block;
+      vertical-align: middle; }
+      div.featured-pane .header a:hover {
+        background-position: 0 -40px; }
+      div.featured-pane .header a:active {
+        background-position: 0 -80px; }
+  div.featured-pane .remove {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: transparent url(/erly/img/icon-remove.png) no-repeat 0 0;
+    overflow: hidden;
+    top: 12px;
+    right: 9px;
+    cursor: pointer; }
+    div.featured-pane .remove:hover {
+      background-position: 0 -20px; }
+  div.featured-pane .featured-collections {
+    clear: both;
+    background: #fff;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding-bottom: 20px;
+    text-align: center; }
+    div.featured-pane .featured-collections .collection {
+      display: inline-block;
+      margin: 20px 10px 0 10px;
+      position: relative; }
+      div.featured-pane .featured-collections .collection .image-container {
+        height: 180px;
+        overflow: hidden;
+        position: relative;
+        width: 300px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px; }
+        div.featured-pane .featured-collections .collection .image-container canvas {
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          border-radius: 8px; }
+        div.featured-pane .featured-collections .collection .image-container div.small-title {
+          color: white;
+          font-size: 16px;
+          line-height: 18px;
+          text-align: left;
+          text-transform: uppercase;
+          max-width: 200px;
+          position: absolute;
+          padding: 6px 8px 4px 8px; }
+          div.featured-pane .featured-collections .collection .image-container div.small-title span {
+            display: block; }
+          div.featured-pane .featured-collections .collection .image-container div.small-title:white {
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); }
+          div.featured-pane .featured-collections .collection .image-container div.small-title.black {
+            color: #000; }
+          div.featured-pane .featured-collections .collection .image-container div.small-title.grey {
+            color: #333; }
+          div.featured-pane .featured-collections .collection .image-container div.small-title.black-bg {
+            background: url(/erly/img/bg-black-70.png);
+            text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+            border-radius: 3px; }
+          div.featured-pane .featured-collections .collection .image-container div.small-title.white-bg {
+            background: url(/erly/img/bg-white-90.png);
+            text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.3);
+            border-radius: 3px; }
+      div.featured-pane .featured-collections .collection .overlay {
+        background: url(/erly/img/bg-black-50.png);
+        display: none;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        font-size: 13px;
+        z-index: 10;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px; }
+        div.featured-pane .featured-collections .collection .overlay .location {
+          color: #fff; }
+        div.featured-pane .featured-collections .collection .overlay .button-container {
+          text-align: center;
+          margin-top: 50px; }
+          div.featured-pane .featured-collections .collection .overlay .button-container .button {
+            background: transparent url(/erly/img/button-view-event.png) no-repeat 0 0;
+            width: 200px;
+            height: 60px;
+            display: inline-block; }
+            div.featured-pane .featured-collections .collection .overlay .button-container .button:hover {
+              background-position: 0 -60px; }
+        div.featured-pane .featured-collections .collection .overlay:active .button-container .button {
+          background-position: 0 -60px; }
+
+div.open-featured {
+  display: none;
+  margin-top: 15px;
+  text-align: center; }
+  div.open-featured .button {
+    padding: 4px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    display: inline-block;
+    min-height: 20px;
+    cursor: pointer;
+    text-shadow: 0px 1px 0 white;
+    color: #444444;
+    border: 1px solid #c1c1c1;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+    background: -moz-linear-gradient(top, white, #eeeeee);
+    background-color: #f4f4f4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.15s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s; }
+    div.open-featured .button:hover {
+      border: 1px solid #959595;
+      background-color: #fcfcfc;
+      color: #000; }
+    div.open-featured .button:active {
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      border: 1px solid #6e6e6e;
+      background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+      background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+      background-color: #d8d8d8; }
+    div.open-featured .button.disabled {
+      opacity: 0.6; }
+      div.open-featured .button.disabled:hover, div.open-featured .button.disabled:active {
+        color: #444444;
+        border: 1px solid #c1c1c1;
+        background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+        background: -moz-linear-gradient(top, white, #eeeeee);
+        background-color: #f4f4f4;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        cursor: default; }
+
+div.empty-gallery {
+  display: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  width: 500px;
+  background: url("/erly/img/bg-gray.png") repeat;
+  color: #444;
+  padding: 40px;
+  text-align: center;
+  font-size: 16px;
+  margin: 0 auto 20px; }
+
+div.start-pane {
+  background: url(/erly/img/gallery-first-use-tray.png) no-repeat 50% 0;
+  display: none;
+  margin-bottom: 10px;
+  position: relative;
+  height: 300px;
+  text-align: center; }
+  div.start-pane .text {
+    color: #555;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 135px 160px 15px;
+    text-shadow: 0 1px 1px 255, 255, 255, 0.3; }
+  div.start-pane .or {
+    width: 280px;
+    margin: 10px auto 0;
+    padding: 10px 0 0;
+    border-top: 1px solid #aaa;
+    font-size: 16px; }
+    div.start-pane .or span {
+      display: block;
+      background: #eee;
+      width: 40px;
+      margin: -20px auto 0; }
+  div.start-pane .start-button {
+    background: url(/erly/img/button-start-collection.png) no-repeat 0 0;
+    display: inline-block;
+    height: 70px;
+    width: 335px;
+    cursor: pointer; }
+    div.start-pane .start-button:hover {
+      background-position: 0 -70px; }
+    div.start-pane .start-button:active {
+      background-position: 0 -140px; }

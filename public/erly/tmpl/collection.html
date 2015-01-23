@@ -1,0 +1,326 @@
+<!--
+*** CONTENT
+-->
+
+<script id="tmplShareCommands" type="text/x-jquery-tmpljavascript">
+  <div class="share">
+    Share this Event:
+    <a class="fb" href="javascript:void(0)">
+      &nbsp;
+    </a>
+    <a class="twitter" href="javascript:void(0)">
+      &nbsp;
+    </a>
+    <a class="email" href="javascript:void(0)">
+      &nbsp;
+    </a>
+  </div>
+
+  <div class="bookmark-container">
+    <input type="text" class="bookmark" readonly="readonly" />
+    {{tmpl "#tmplClippy"}}
+  </div>
+</script>
+
+<!--
+*** Tagging
+-->
+
+<script id="tmplTagHover" type="text/x-jquery-tmpljavascript">
+  <div class="vcard">
+    {{wrap({modalClass: 'vcard-inner',
+            modalTitle: 'Add contributors'}) "#tmplModal"}}
+      <div class="content-container">
+        {{if isSuggested}}
+          <div class="suggested">
+            {{if isErlyUser}}
+            <form method="post" action="${erly.urlFor.collection(erly.collection, 'tags')}">
+              <input type="hidden" name="tags" value="{{= JSON.stringify([{userId: erlyUserId, isInvite: false}])}}" />
+              <div class="user-info">
+                <div class="image">
+                  {{tmpl($.extend($data, {type: 'large'})) "#tmplAvatarImage"}}
+                </div>
+              </div>
+              <div class="button-bar">
+                <input type="submit" value="Add" />
+              </div>
+              <div class="clear">&nbsp;</div>
+            </form>
+            {{else}}
+            <form method="post" action="${erly.urlFor.collection(erly.collection, 'tags')}">
+              <input type="hidden" name="tags" value="{{= JSON.stringify([{facebookId: facebookId, name: name, isInvite: true}])}}" />
+              <div class="user-info">
+                <div class="image">
+                  {{tmpl($.extend($data, {type: 'large'})) "#tmplAvatarImage"}}
+                </div>
+                <div class="form">
+                  <h2 class="name title">${name}</h2>
+                  <input type="text" class="email" name="invite" value="${email}" placeholder="Enter ${name.split(" ")[0]}'s email" />
+                </div>
+              </div>
+              <div class="clear">&nbsp;</div>
+              <div class="button-bar">
+                <input type="submit" value="Invite" />
+              </div>
+              <div class="clear">&nbsp;</div>
+            </form>
+            {{/if}}
+          </div>
+        {{elif isInvite}}
+          <div class="invite">
+            <form method="post" action="${erly.urlFor.collection(erly.collection, 'invite', id)}">
+              <input type="hidden" name="_method" value="put" />
+
+              <div class="user-info">
+                <div class="image">
+                  {{tmpl($.extend($data, {type: 'large'})) "#tmplAvatarImage"}}
+                </div>
+
+                <div class="form">
+                  <h2 class="email title">${email}</h2>
+                  <input type="text" class="full-name" name="name" value="${name}" placeholder="Name" />
+                </div>
+
+                <div class="button-bar">
+                  <input type="submit" value="Save" />
+                </div>
+              </div>
+              <div class="clear">&nbsp;</div>
+              <div class="msg">
+                Invited by ${inviter.name} on ${erly.dateFormatters.formatDate(createdAt)}.
+              </div>
+            </form>
+          </div>
+        {{else}}
+          <div class="user {{if taggedByName}}tagged{{else}}untagged{{/if}}">
+            <div class="image">
+              {{tmpl($.extend($data, {type: 'large'})) "#tmplAvatarImage"}}
+            </div>
+
+            <div class="form">
+              <h1 class="full-name title">${name}</h1>
+              <div class="role">
+                ${isOwner ? "Owner" : ""}
+              </div>
+
+              {{if taggedByName}}
+                <span class="msg">
+                  Tagged by ${taggedByName} on ${erly.dateFormatters.formatDate(createdAt)}
+                </span>
+              {{/if}}
+            </div>
+          </div>
+        {{/if}}
+      </div>
+    {{/wrap}}
+  </div>
+</script>
+
+<script id="tmplTagSelectPhoto" type="text/x-jquery-tmpljavascript">
+  <div class="photo-selections close-modal-wrapper">
+    {{each photos}}
+      <a href="javascript:void(0)" class="avatar" id="photo_id_${$value.id}" title="${$value.name} ${$value.email}">
+        {{tmpl($value) "#tmplAvatarImage"}}
+      </a>
+    {{/each}}
+
+    <a href="javascript:void(0)" class="avatar" id="photo_id_null"><img src="/img/face-bg-large.png" alt="photo" /></a>
+
+    {{tmpl "#tmplCloseModal"}}
+  </div>
+</script>
+
+<script id="tmplAutocompleteInput" type="text/x-jquery-tmpljavascript">
+  <div class="contacts-container">
+    <input type="text" name="contacts" autocomplete="off" placeholder="Enter email or name of the person you want to add" />
+  </div>
+  <div class="error-message"></div>
+
+  <div class="autocomplete-container">
+    <div class="contacts">
+    </div>
+  </div>
+</script>
+
+<script id="tmplImportContacts" type="text/x-jquery-tmpljavascript">
+  <div id="import_contacts" class="import-contacts">
+    <span class="prompt">Import Contacts:</span>
+    {{tmpl({name: "Google", icon: "/img/icon-google.png"}) "#tmplImportSource"}}
+    {{tmpl({name: "Yahoo!", icon: "/img/icon-yahoo.png"}) "#tmplImportSource"}}
+  </div>
+</script>
+
+<script id="tmplImportingContacts" type="text/x-jquery-tmpljavascript">
+  <div class="importing-contacts">
+    <img src="${erly.PUB_URL}/img/spinner.gif" alt="spinner"></img>
+    Importing your ${erly.services.services[service].title} contacts.
+  </div>
+</script>
+
+<script id="tmplImportedContacts" type="text/x-jquery-tmpljavascript">
+  <div class="imported-contacts">
+    <img src="${erly.PUB_URL}/img/icon-check.png" alt="icon-check"></img>
+    Your ${erly.services.services[service].title} contacts are imported.
+  </div>
+</script>
+
+<script id="tmplTagModal" type="text/x-jquery-tmpljavascript">
+  <div class="tagging">
+    {{wrap({modalClass: 'tagging-inner',
+            modalTitle: 'enter name or email:'}) "#tmplModal"}}
+
+      <form method="post" action="${erly.urlFor.collection(erly.collection, 'tags')}">
+        {{tmpl "#tmplAutocompleteInput"}}
+
+        <div class="import row">
+          {{tmpl "#tmplImportContacts"}}
+          <input type="submit" name="_submit" class="submit" value="Done">
+        </div>
+
+        <div class="clear"></div>
+
+        <input type="hidden" name="tags" value=""/>
+      </form>
+    {{/wrap}}
+  </div>
+</script>
+
+<script id="tmplEmailPrompt" type="text/x-jquery-tmpljavascript">
+  <div class="tagging">
+    {{wrap({modalClass: 'tagging-inner invite-inner',
+            modalTitle: 'Send Invite'}) "#tmplModal"}}
+
+      {{if facebookId}}
+        <div class="facebook-image">
+          <img src="http://graph.facebook.com/${facebookId}/picture" height="50" width="50" alt="profile picture" />
+          <img class="email-icon" src="${erly.PUB_URL}/img/icon-email.png" width="21" height="21" alt="email" />
+        </div>
+      {{/if}}
+      <div class="description">
+        Please provide us with an email address so we can send ${$data.name} an
+        invite to this event.
+      </div>
+
+      <form method="post" action="${erly.urlFor.collection(erly.collection, 'tags')}">
+        <div class="contacts-container">
+          <input type="text" autocomplete="off" placeholder="Enter ${$data.name}'s email address" name="email" value=""/>
+        </div>
+        <div class="error-message"></div>
+        <div class="autocomplete-container">
+          <div class="contacts">
+          </div>
+        </div>
+        <div class="import row">
+          {{tmpl "#tmplImportContacts"}}
+
+          <input type="submit" name="_submit" class="submit" value="Done">
+        </div>
+
+        <div class="clear"></div>
+
+        <input type="hidden" name="tags" value=""/>
+      </form>
+    {{/wrap}}
+  </div>
+</script>
+
+<script id="tmplImportSource" type="text/x-jquery-tmpljavascript">
+  <div class="source" id="import_source_${name.toLowerCase()}">
+    <a class="import-source" href="javascript:void(0)">
+      <img class="icon" src="${erly.PUB_URL}${icon}" alt="photo" />
+      <span class="name">${name}</span>
+      <span class="status"></span>
+    </a>
+  </div>
+</script>
+
+<script id="tmplContacts" type="text/x-jquery-tmpljavascript">
+  <ul>
+    {{each contacts}}
+      {{tmpl($value) "#tmplContactItem"}}
+    {{/each}}
+  </ul>
+</script>
+
+<script id="tmplContactItem" type="text/x-jquery-tmpljavascript">
+  <a href="javascript:void(0)" data-json="${JSON.stringify($data)}">
+    <li class="contact">
+      {{if $data.facebookId || $data.picture || $data.ident}}
+        {{tmpl($.extend($data, {type: 'square'})) '#tmplAvatarImage'}}
+      {{else}}
+        <img src="${erly.PUB_URL}/img/icon-email-large.png" height="34" width="34" alt="icon-email-large" />
+      {{/if}}
+      <div class="contact-info">
+        {{if name}}
+          <div class="name">
+            ${name}
+          </div>
+        {{else}}
+          {{if primary_name}}
+            <div class="name">
+              ${primary_name}
+            </div>
+          {{/if}}
+        {{/if}}
+        <div class="email">
+        {{if email}}
+          ${email}
+        {{else}}
+          {{if isErlyUser}}
+            Erly user
+          {{elif userId}}
+            Erly user
+          {{else}}
+            {{if facebookId}}
+              Facebook friend
+            {{else}}
+              Invite via email
+            {{/if}}
+          {{/if}}
+        {{/if}}
+        </div>
+      </div>
+    </li>
+  </a>
+</script>
+
+<script id="tmplContactAdded" type="text/x-jquery-tmpljavascript">
+  <div class="added-contact">
+    <span class="name">
+      {{if name}}
+        ${name}
+      {{elif email}}
+        ${email}
+      {{/if}}
+    </span>
+    <a href="javascript:void(0)" class="remove" data-contact-id="${id}">
+      <img src="${erly.PUB_URL}/img/icon-grey-x-sm.png" alt="photo" />
+    </a>
+  </div>
+</script>
+
+<script id="tmplLoginOrSignupHint" type="text/x-jquery-tmpljavascript">
+  <div id="login_or_signup_hint" class="login-or-signup-hint">
+    <p class="public">
+      Welcome to ${name}'s Collection
+      <span class="pointer"></span>
+    </p>
+
+    <p>Log in or sign up to contribute to this collaborative group album</p>
+  </div>
+</script>
+
+<script id="tmplMarkedAsPrivateMessage" type="text/x-jquery-tmpljavascript">
+  <div class="marked-as-private">
+    <p class="login-or-signup">
+      <a href="javascript:void(0)"
+          onclick="erly.session.login(); return false;">Log in or sign up</a>
+      to get started
+    </p>
+
+    <p class="learn-more">
+      <a href="javascript:void(0)" onclick="erly.showProductVideo();">Click here</a> to learn more
+    </p>
+  </div>
+</script>
+

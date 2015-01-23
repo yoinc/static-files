@@ -1,0 +1,409 @@
+<script id="tmplPost" type="text/x-jquery-tmpljavascript">
+  {{if type == "sidebar"}}
+    {{tmpl "#tmplSidebarPost"}}
+  {{elif type == "related"}}
+    {{tmpl "#tmplRelatedPost"}}
+  {{elif type == "blank"}}
+    <div class="blank-marker post card">
+      <div></div>
+    </div>
+  {{else}}
+    <div class="post card {{if erly.userId === fromUserId || erly.userId === erly.viewer.collection.owner.id}}can-edit{{/if}}" data-postId="${id}" id="post_${id}">
+      {{if type === "photo"}}
+        {{tmpl "#tmplPhotoPost"}}
+      {{elif type === "note"}}
+        {{tmpl "#tmplNotePost"}}
+      {{elif type === "link"}}
+        {{tmpl "#tmplLinkPost"}}
+      {{elif type == "video"}}
+        {{tmpl "#tmplVideoPost"}}
+      {{elif type == "request"}}
+        {{tmpl "#tmplRequest"}}
+      {{else}}
+        Unknown: ${type}
+      {{/if}}
+
+      {{if erly.viewer.embedMode}}
+      <div class="metadata">
+        <div class="filler">
+          <img src="/img/spacer.gif" style="height:30px; width:1px" />
+        </div>
+      </div>
+      {{else}}
+      <div class="metadata">
+        <div class="author">
+          {{if from}}
+            {{if type === "note"}}
+               <div class="note-attr">
+                 {{tmpl($data.sourceFrom || from) "#tmplAvatarImage"}}
+                 ${($data.sourceFrom || from).name}
+               </div>
+            {{else}}
+               ${($data.sourceFrom || from).name}
+            {{/if}}
+          {{/if}}
+        </div>
+        {{if type === 'photo' && !erly.viewer.exported}}
+        <div class="download-icon">
+          <a title="Download this image" href="/collection/${erly.viewer.collection.ident}/post/${id}/download"> </a>
+        </div>
+        {{/if}}
+        <div class="comment-count">
+          <span {{if commentCount}}class="has-comments"{{/if}}>{{if commentCount}}${commentCount}{{else}}0{{/if}}</span>
+        </div>
+        <div class="like-count">
+          <span {{if isLiked}}class="is-liked"{{else}}{{if likeCount}}class="has-likes"{{/if}}{{/if}}>{{if likeCount}}${likeCount}{{else}}0{{/if}}</span>
+        </div>
+        <div class="clear">&nbsp;</div>
+      </div>
+      {{/if}}
+      <div class="left-corner-actions fade-in">
+        <div class="left-corner-action drag-handle-container">
+          <div class="drag-handle">
+            <span class="drag-note">Drag to move</span>
+          </div>
+        </div>
+        <div class="left-corner-action expand-container">
+          <div class="expand">
+            <span class="increase">Increase size</span>
+            <span class="decrease">Decrease size</span>
+          </div>
+        </div>
+        {{if $data.type === "photo" }}
+        <div class="left-corner-action photo-filter-container">
+          <div class="photo-filter">
+            <span class="photo-filter-note">Open photo filters</span>
+          </div>
+        </div>
+        {{/if}}
+      </div>
+      {{if erly.userId === fromUserId ||
+        erly.userId === erly.viewer.collection.owner.id}}
+      <div class="corner-actions fade-in">
+        <span class="edit">EDIT</span>
+        <span class="divider"></span>
+        <span class="remove">REMOVE</span>
+      </div>
+      {{/if}}
+      {{if request}}
+        <div class="rerequest fade-in">
+          <span>Requested by ${request.from.name}</span>
+          <a href="javascript:void(0)">(re-request)</a>
+        </div>
+      {{/if}}
+    </div>
+  {{/if}}
+</script>
+
+<script id="tmplPhotoPost" type="text/x-jquery-tmpljavascript">
+  <div class="photo">
+    {{if picture.indexOf('geo') === 0}}
+      <img data-geo-src="${picture}" alt="photo" />
+    {{else}}
+      <img class="lazy-load" data-lazy-src="${picture}" src="${erly.PUB_URL}/img/bg-white-10.png" alt="${caption}" {{if dimensions}}data-height=${dimensions.height} data-width=${dimensions.width}{{/if}} />
+    {{/if}}
+    {{if caption}}
+      {{if erly.util.filterCaption(caption).length > 0}}
+        <div class="caption">
+          <div class="caption-container">
+            ${caption}
+          </div>
+        </div>
+      {{/if}}
+    {{/if}}
+    <div class="enlarge-overlay overlay fade-in" />
+  </div>
+</script>
+
+<script id="tmplVideoPost" type="text/x-jquery-tmpljavascript">
+  <div class="photo video">
+    <img class="lazy-load" data-lazy-src="${image}" src="${erly.PUB_URL}/img/bg-white-10.png" alt="photo" />
+    {{if title}}
+      <div class="caption">
+        <div class="caption-container">
+          ${title}
+        </div>
+      </div>
+    {{/if}}
+    <div class="play-overlay" />
+    <div class="brightness-overlay overlay fade-in" />
+  </div>
+</script>
+
+<script id="tmplNotePost" type="text/x-jquery-tmpljavascript">
+  <div class="note">
+    <div class="content" data-textcacheid="${erly.addToTextCache(text)}">
+      {{each text.split('\n')}}
+        <div>
+          {{if ($value || '').length > 0}}
+            ${$value}
+          {{else}}
+            &nbsp;
+          {{/if}}
+        </div>
+      {{/each}}
+    </div>
+    <div class="enlarge-overlay overlay fade-in" />
+  </div>
+</script>
+
+<script id="tmplLinkTitle" type="text/x-jquery-tmpljavascript">
+  {{if $data.source === 'twitter'}}
+    <div class='twitter-title'>
+      <img class="twitter-profile-icon" src="${$data.image}" />
+      <div class="twitter-handle"><a href="http://twitter.com/${$data.title.substring(1)}">${$data.title}</a></div>
+      <div class="twitter-author"><a href="http://twitter.com/${$data.title.substring(1)}">${$data.author}</a></div>
+      <div class="clear">&nbsp;</div>
+    </div>
+  {{else}}
+    <div class="title"><a href="javascript:void(0)">${title}</a></div>
+  {{/if}}
+  <div class="url-container">Source:
+    <a class="url" href="javascript:void(0)">
+    {{if $data.source === 'twitter'}}
+      Twitter
+    {{else}}
+      ${erly.getLinkSource(link)}
+    {{/if}}
+    </a>
+  </div>
+ </script>
+
+<script id="tmplLinkPost" type="text/x-jquery-tmpljavascript">
+  <div class="link ${$data.linkedChronicleData ? 'linked-collection' : ''}">
+    <div>
+      <div class="portrait-title">
+        {{tmpl '#tmplLinkTitle'}}
+      </div>
+      {{if $data.image && $data.source !== 'twitter'}}
+      <div class="image-link-container">
+        <a class="image-link" href="javascript:void(0)">
+          <div class="image">
+            <img src="${image}" alt="photo" />
+            {{if linkedChronicleData}}
+              <div class="small-title ${linkedChronicleData.metadataStyle || erly.viewer.DEFAULT_METADATA_STYLE}" style="${erly.jsonToCSS(linkedChronicleData.metadataPosition || erly.viewer.DEFAULT_METADATA_POSITION)}">
+                <span>${title}</span>
+              </div>
+            {{/if}}
+          </div>
+          <div class="link-overlay" />
+        </a>
+      </div>
+      {{/if}}
+
+      {{if !$data.linkedChronicleData}}
+        <div class="content">
+          <div class="landscape-title">
+            {{tmpl '#tmplLinkTitle'}}
+          </div>
+          <div class="text" data-textcacheid='${typeof text !== 'undefined' ? erly.addToTextCache(text) : ""}'>${typeof text !== 'undefined' ? text : ''}</div>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</script>
+
+<script id="tmplRequest" type="text/x-jquery-tmpljavascript">
+  <div class="request">
+    <div class="request-border">
+      <div>
+        <div class="title">${from.name} requested a ${requestType}.</div>
+
+        <div class="request-body">
+          <div class="icon">
+            <img src="${PUB_URL}/img/icon-request-${requestType}.png" alt="photo" />
+          </div>
+
+          <div class="text">
+            ${requestMessage}
+          </div>
+
+          <div class="action">
+            <button data-requestType="${requestType}">add ${requestType}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="tmplRelatedPost" type="text/x-jquery-tmpljavascript">
+  <div id="related" class="post related">
+    <div class="related">
+      <div>
+        <div class="group-header">
+          <b>RELATED EVENTS</b>
+          <div class="refresh">&nbsp;</div>
+        </div>
+        <div class="chronicles">
+          {{each related}}
+            {{tmpl($value) "#tmplRelated"}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+
+<script id="tmplRelated" type="text/x-jquery-tmpljavascript">
+  <div class="chronicle">
+    <div class="photo-panel">
+      <div class="image">
+        {{if coverPhoto}}<img src="${coverPhoto.url}" alt="photo" />{{/if}}
+      </div>
+      {{tmpl '#tmplCollectionOverlay'}}
+    </div>
+  </div>
+</script>
+
+<script id="tmplComment" type="text/x-jquery-tmpljavascript">
+<div class="single-comment">
+  <div class="image">
+    {{tmpl({facebookId: $data.fromFacebookId, ident: $data.fromUserIdent})
+      '#tmplAvatarImage'}}
+  </div>
+  <div class="text">
+    <span class="author">
+      {{if typeof(fromLink) !== 'undefined'}}
+        <a href="${fromLink}">${fromName}</a>
+      {{else}}
+        ${fromName}
+      {{/if}}
+    </span><span>${text}</span>
+    <div class="datetime">
+      <span class="prettydate" title="${erly.normalizeDate(createdAt)}"></span>
+    </div>
+  </div>
+
+  {{if fromUserId === erly.userId || erly.viewer.collection.userRole.owner}}
+    <div class="delete">&nbsp;</div>
+  {{/if}}
+</div>
+</script>
+
+<script id="tmplCommentBox" type="text/x-jquery-tmpljavascript">
+  <div id="commentBox">
+    <div class="comments-header">
+      <img src="${erly.PUB_URL}/img/icon-comment-blue.png" alt="photo" />
+      Comments
+      <div class="remove"></div>
+    </div>
+    {{if comments.length > 4}}
+      <div class="comments-more">
+        <a href="javascript:void(0)">See all ${comments.length} comments...</a>
+      </div>
+
+      <div class="comments-rest">
+        {{each comments.slice(0, comments.length - 4)}}
+          {{tmpl($value) '#tmplComment'}}
+        {{/each}}
+      </div>
+
+      <div class="comments-container">
+        {{each comments.slice(comments.length - 4, comments.length)}}
+          {{tmpl($value) '#tmplComment'}}
+        {{/each}}
+      </div>
+    {{else}}
+      <div class="comments-container">
+        {{if comments.length > 0}}
+          {{each comments}}
+            {{tmpl($value) '#tmplComment'}}
+          {{/each}}
+        {{else}}
+          <div class="single-comment">
+            No comments yet.
+          </div>
+        {{/if}}
+      </div>
+    {{/if}}
+
+    <div class="comments-input">
+      <textarea placeholder="Write a comment..."></textarea>
+      <div class="comments-post">
+        <button>Post</button>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="tmplEditModal" type="text/x-jquery-tmpljavascript">
+  {{wrap(
+    { modalClass: 'add-note',
+      modalTitle: 'EDIT ' + ($data.type === 'link' ? 'title and caption' : ($data.type === 'note' ? 'note' : 'caption'))}
+  ) "#tmplModal"}}
+    <form>
+      {{if $data.type === 'photo'}}
+      <div class="photo-filter-link">
+        <div class="photo-filter-link-container">
+          <a href="javascript:void(0)">Open Photo Filters</a>
+        </div>
+      </div>
+      {{/if}}
+      {{if $data.picture || $data.image}}
+      <div class="image">
+        <img src='${$data.picture || $data.image}' />
+        <div class="loader">&nbsp;</div>
+      </div>
+      {{/if}}
+      {{if $data.type === 'link' && $data.title}}
+        <div class="inputbox-container">
+          <input type="text" name="title" value="${$data.title}" />
+        </div>
+      {{/if}}
+      <div class="textarea-container {{if $data.picture || $data.image}}edit-caption{{else}}edit-note{{/if}}">
+        <textarea name="text">${$data.text || $data.title || $data.caption}</textarea>
+      </div>
+
+      <div class="button-bar">
+        <input type="button" class="cancel" value="CANCEL" />
+        <input type="submit" class="save" value="SAVE" />
+      </div>
+    </form>
+  {{/wrap}}
+</script>
+
+<script id="tmplAddItemCard" type="text/x-jquery-tmpljavascript">
+  <div class="add-item-card-wrapper">
+    <div class="add-item-card">
+      <div>
+        <div class="title">
+          <img src="${erly.PUB_URL}/img/icon-plus-large.png" width="12" height="12" alt="photo" />
+          Add posts to this Event
+        </div>
+        <div>
+          <button data-type="photo"><img src="${erly.PUB_URL}/img/icon-flagstone-add-photos.png" alt="photo" /></button>
+          <button data-type="note"><img src="${erly.PUB_URL}/img/icon-flagstone-add-notes.png" alt="photo" /></button>
+          <button data-type="link"><img src="${erly.PUB_URL}/img/icon-flagstone-add-links.png" alt="photo" /></button>
+          <button data-type="video"><img src="${erly.PUB_URL}/img/icon-flagstone-add-videos.png" alt="photo" /></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="tmplEmptyCollection" type="text/x-jquery-tmpljavascript">
+  <div class="add-item-card-wrapper">
+    <div class="add-item-card empty">
+      <div class="title">
+        There are currently no photos, videos, or other posts for this Event
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="tmplRemovePostDialog" type="text/x-jquery-tmpljavascript">
+  {{wrap({title: 'Remove ' + type,
+          extraClasses: 'remove-post warning'}) '#tmplBaseConfirmModal'}}
+    <div class="content">
+      Are you sure you want to remove this ${type}?
+    </div>
+    <div class="buttons">
+      <a href="javascript:void(0)"
+        class="remove-all">Remove all posts from this user</a>
+      <button class="cancel">Cancel</button>
+      <button class="confirm-button">Remove</button>
+    </div>
+  {{/wrap}}
+</script>

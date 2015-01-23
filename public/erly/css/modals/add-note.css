@@ -1,0 +1,238 @@
+/* Mostly taken from http://nicolasgallagher.com/pure-css-speech-bubbles/demo/default.css */
+@-webkit-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-moz-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-o-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-webkit-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-o-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.modal .add-note .modal-title {
+  display: none; }
+.modal .add-note .photo-filter-link {
+  margin: 0 auto;
+  height: 30px; }
+  .modal .add-note .photo-filter-link div.photo-filter-link-container {
+    display: inline-block;
+    background: #eeeeee url(/img/icon-filters.png) no-repeat 0 0;
+    cursor: pointer;
+    height: 30px;
+    padding-left: 30px;
+    line-height: 30px;
+    border: 1px solid #bbb;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 0;
+    margin-left: 5px;
+    padding-right: 10px; }
+    .modal .add-note .photo-filter-link div.photo-filter-link-container a {
+      color: #444;
+      text-transform: uppercase; }
+    .modal .add-note .photo-filter-link div.photo-filter-link-container:hover {
+      background-position: 0 -30px; }
+      .modal .add-note .photo-filter-link div.photo-filter-link-container:hover a {
+        color: #0c9acb; }
+.modal .add-note .photo-filter-button {
+  float: left; }
+.modal .add-note .inputbox-container {
+  margin-bottom: 10px;
+  width: 510px;
+  margin-top: 10px; }
+.modal .add-note .textarea-container {
+  background: white url(/img/bg-rdquo-small-padded.png) bottom right no-repeat;
+  height: 160px;
+  margin-bottom: 20px;
+  width: 510px; }
+  .modal .add-note .textarea-container.edit-note {
+    margin-top: 10px; }
+  .modal .add-note .textarea-container.edit-caption {
+    height: 64px; }
+.modal .add-note input[type="text"], .modal .add-note textarea {
+  border-color: #ccc;
+  margin: 0;
+  width: 500px;
+  overflow-x: hidden;
+  overflow-y: auto; }
+.modal .add-note input[type="text"] {
+  height: 24px; }
+.modal .add-note textarea {
+  background: transparent url(/img/bg-ldquo-small-padded.png) top left no-repeat;
+  height: 150px; }
+.modal .add-note .edit-caption textarea {
+  height: 54px; }
+.modal .add-note .image {
+  margin: 10px 0;
+  margin-top: 0;
+  position: relative;
+  text-align: center; }
+  .modal .add-note .image img,
+  .modal .add-note .image .loader {
+    border-radius: 5px; }
+  .modal .add-note .image .loader {
+    background: rgba(0, 0, 0, 0.5) url(/img/ajax-loader-222222.gif) 50% 50% no-repeat;
+    display: none;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+.modal .add-note div.note-info {
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 4px;
+  color: #666; }
+
+#avpw_controls {
+  opacity: 0; }

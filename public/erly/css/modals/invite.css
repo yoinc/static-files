@@ -1,0 +1,373 @@
+/* Mostly taken from http://nicolasgallagher.com/pure-css-speech-bubbles/demo/default.css */
+@-webkit-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-moz-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-o-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-webkit-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-o-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.modal .invite-modal {
+  text-align: center;
+  width: 580px; }
+  .modal .invite-modal,
+  .modal .invite-modal p,
+  .modal .invite-modal h1 {
+    font-size: 16px; }
+  .modal .invite-modal a {
+    text-decoration: underline; }
+  .modal .invite-modal .erly-header {
+    border-bottom: 1px solid #e7e7e7;
+    width: 80%;
+    margin: 10px auto 40px auto; }
+    .modal .invite-modal .erly-header img {
+      margin-top: -40px;
+      position: relative;
+      z-index: 99910; }
+  .modal .invite-modal .email {
+    font-family: "Helvetica", "Lucida Grande", "Arial", sans-serif; }
+  .modal .invite-modal .fb-id .profile .erly-user {
+    line-height: 50px;
+    vertical-align: top; }
+  .modal .invite-modal .header {
+    margin-bottom: 20px; }
+    .modal .invite-modal .header img,
+    .modal .invite-modal .header h1 {
+      vertical-align: middle; }
+    .modal .invite-modal .header img {
+      margin-right: 10px; }
+    .modal .invite-modal .header h1 {
+      display: inline-block;
+      text-transform: none;
+      line-height: 1.5em;
+      max-width: 400px;
+      margin: 0; }
+      .modal .invite-modal .header h1 .collection-name {
+        font-weight: bold;
+        display: block; }
+  .modal .invite-modal .fb-id .message {
+    width: 90%;
+    font-size: 16px;
+    margin: 0 auto 25px auto; }
+  .modal .invite-modal .fb-id .email {
+    font-weight: bold; }
+  .modal .invite-modal .fb-id .continue.button {
+    font-size: 14px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    display: inline-block;
+    min-height: 20px;
+    cursor: pointer;
+    text-shadow: 0px 1px 0 white;
+    color: #444444;
+    border: 1px solid #c1c1c1;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+    background: -moz-linear-gradient(top, white, #eeeeee);
+    background-color: #f4f4f4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.15s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.15s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2ec4f7), to(#0098cc));
+    background: -moz-linear-gradient(top, #2ec4f7, #0098cc);
+    background-color: #09b5f0;
+    border: 1px solid #0185b2;
+    color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;
+    width: 180px;
+    height: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px; }
+    .modal .invite-modal .fb-id .continue.button:hover {
+      border: 1px solid #959595;
+      background-color: #fcfcfc;
+      color: #000; }
+    .modal .invite-modal .fb-id .continue.button:active {
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      border: 1px solid #6e6e6e;
+      background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+      background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+      background-color: #d8d8d8; }
+    .modal .invite-modal .fb-id .continue.button.disabled {
+      opacity: 0.6; }
+      .modal .invite-modal .fb-id .continue.button.disabled:hover, .modal .invite-modal .fb-id .continue.button.disabled:active {
+        color: #444444;
+        border: 1px solid #c1c1c1;
+        background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+        background: -moz-linear-gradient(top, white, #eeeeee);
+        background-color: #f4f4f4;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        cursor: default; }
+    .modal .invite-modal .fb-id .continue.button:hover {
+      background: -webkit-gradient(linear, left top, left bottom, from(#30d9ff), to(#049cd0));
+      background: -moz-linear-gradient(top, #30d9ff, #049cd0);
+      color: #fff;
+      background-color: #04bdfd;
+      border: 1px solid #0185b2; }
+    .modal .invite-modal .fb-id .continue.button:active {
+      background: -webkit-gradient(linear, left top, left bottom, from(#068ebc), to(#24abd8));
+      background: -moz-linear-gradient(top, #068ebc, #24abd8);
+      background-color: #0089b8;
+      border: 1px solid #005b7c; }
+    .modal .invite-modal .fb-id .continue.button.disabled:hover, .modal .invite-modal .fb-id .continue.button.disabled:active {
+      background: -webkit-gradient(linear, left top, left bottom, from(#2ec4f7), to(#0098cc));
+      background: -moz-linear-gradient(top, #2ec4f7, #0098cc);
+      background-color: #09b5f0;
+      border: 1px solid #0185b2;
+      color: #fff; }
+  .modal .invite-modal .fb-id .logout.disabled {
+    color: inherit;
+    text-decoration: none;
+    cursor: default; }
+  .modal .invite-modal .fb-id .profile {
+    margin-bottom: 26px; }
+    .modal .invite-modal .fb-id .profile .erly-user {
+      padding-left: 8px;
+      font-size: 16px; }
+  .modal .invite-modal .fb-id .login-different {
+    display: block; }
+  .modal .invite-modal .no-fb-id .body .message {
+    background-color: #e7e7e7;
+    margin: 0 20px;
+    padding: 15px 35px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    line-height: 1.5em;
+    font-size: 15px; }
+    .modal .invite-modal .no-fb-id .body .message .collections {
+      font-weight: bold;
+      text-transform: uppercase;
+      border-bottom: 3px solid #F33;
+      display: inline-block;
+      margin-right: 2px; }
+  .modal .invite-modal .no-fb-id .body .call-to-action {
+    margin: 35px 0 5px 0;
+    font-size: 14px; }
+  .modal .invite-modal .no-fb-id .body .maybe-later {
+    font-size: 14px;
+    margin: 0; }
+    .modal .invite-modal .no-fb-id .body .maybe-later a {
+      background: none;
+      position: relative;
+      top: 0;
+      left: 0; }
+  .modal .invite-modal .no-fb-id .body .facebook {
+    display: block;
+    margin-left: -7px;
+    background: url(/img/icon-fb-connect-sprite.png) 0 0;
+    width: 312px;
+    height: 70px;
+    padding: 0;
+    cursor: pointer;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition-property: opacity;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: opacity;
+    -moz-transition-duration: 0.15s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    display: inline-block;
+    margin: 0 0 20px 0; }
+    .modal .invite-modal .no-fb-id .body .facebook:hover {
+      background-position: 0 -70px; }
+    .modal .invite-modal .no-fb-id .body .facebook:active {
+      background-position: 0 -140px; }
+    .modal .invite-modal .no-fb-id .body .facebook.disabled {
+      opacity: 0.5; }
+      .modal .invite-modal .no-fb-id .body .facebook.disabled:active {
+        background-position: 0 0; }
+    .modal .invite-modal .no-fb-id .body .facebook .hidden {
+      text-align: left;
+      font-size: 0;
+      display: block; }

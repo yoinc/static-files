@@ -1,0 +1,268 @@
+/* Mostly taken from http://nicolasgallagher.com/pure-css-speech-bubbles/demo/default.css */
+@-webkit-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-moz-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-o-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-webkit-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-o-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+body.reduced-shadows {
+  /* hover states */
+  /* hide the drag-handle and move up the text style */ }
+  body.reduced-shadows .viewer .posts.panel-layout .scrollbar-container .scrollbar .viewport {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none; }
+  body.reduced-shadows #detailsContainer #details #attendance .rsvp-item .remove,
+  body.reduced-shadows #detailsContainer #details #discussion .comment-feed-item .delete {
+    display: block; }
+  body.reduced-shadows #metadataContainer .drag-handle {
+    display: none; }
+  body.reduced-shadows #metadataContainer .text-style {
+    top: 0; }
+  body.reduced-shadows .modal.add-post {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none; }
+  body.reduced-shadows .tagging .modal {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none; }
+  body.reduced-shadows .modal .share-post-email .autocomplete-container .contacts,
+  body.reduced-shadows .tagging-inner .autocomplete-container .contacts {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none; }
+  body.reduced-shadows .details-modal iframe {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none; }
+  body.reduced-shadows .details-modal .image {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none; }
+  body.reduced-shadows .main .viewer #slider .viewer-tease {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none; }
+  body.reduced-shadows .main .viewer #slider #metadataContainment #metadataContainer .viewer-metadata .edit-bar .drag-handle .hint {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none; }
+  body.reduced-shadows .main .viewer #slider #metadataContainment #metadataContainer .viewer-metadata .text-style .hint {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none; }
+  body.reduced-shadows .main .viewer #slider #metadataContainment .drop-down-container .viewer-drop-down {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none; }
+  body.reduced-shadows .main .viewer .right-toolbar .edit, body.reduced-shadows .main .viewer .right-toolbar .finish-edit, body.reduced-shadows .main .viewer .right-toolbar .user-profile, body.reduced-shadows .main .viewer .right-toolbar .finish-edit-hint {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none; }
+  body.reduced-shadows .main .viewer .viewer-tease {
+    -webkit-animation-name: "";
+    -moz-animation-name: "";
+    -o-animation-name: "";
+    -webkit-animation-duration: 0;
+    -moz-animation-duration: 0;
+    -o-animation-duration: 0;
+    -webkit-animation-iteration-count: "";
+    -moz-animation-iteration-count: "";
+    -o-animation-iteration-count: "";
+    -webkit-animation-timing-function: "";
+    -moz-animation-timing-function: "";
+    -o-animation-timing-function: ""; }
+  body.reduced-shadows .main .viewer .posts .post {
+    transition-property: opacity;
+    transition-duration: 0;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: opacity;
+    -moz-transition-duration: 0;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 0;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s; }
+  body.reduced-shadows .modal .event-form-wrapper .create-event-wrapper input[type=text] {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none; }
+  body.reduced-shadows #cboxContent {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none; }
+  body.reduced-shadows input[type=text], body.reduced-shadows input[type=email], body.reduced-shadows type[type=password], body.reduced-shadows textarea {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none; }
+
+.no-shadow, #cboxContent.no-shadow {
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none; }
+
+/* make sure the following elements sit on top of the modal:
+      * google autocomplete
+      * ui-date picker
+   (maybe we should consider moving the z-index down to 1000 for the modal?) */
+div#ui-datepicker-div,
+.pac-container {
+  z-index: 9999 !important;
+  font-family: "Helvetica", "Lucida Grande", "Arial", sans-serif; }

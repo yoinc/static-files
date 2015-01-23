@@ -1,0 +1,1523 @@
+/* Mostly taken from http://nicolasgallagher.com/pure-css-speech-bubbles/demo/default.css */
+@-webkit-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-moz-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-o-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-webkit-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-o-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+/****************** SHARED MODAL VIEWER STYLES *****************/
+.invite-modal.modal,
+.update-metadata-container.modal,
+.email-message-modal.modal,
+.extra-settings-modal.modal,
+.link-modal.modal {
+  padding: 0; }
+  .invite-modal.modal .header,
+  .update-metadata-container.modal .header,
+  .email-message-modal.modal .header,
+  .extra-settings-modal.modal .header,
+  .link-modal.modal .header {
+    text-align: center;
+    font-size: 18px;
+    -webkit-border-radius: 4px 4px 0px 0px;
+    -moz-border-radius: 4px 4px 0px 0px;
+    border-radius: 4px 4px 0px 0px;
+    background-color: #eee;
+    width: 100%;
+    vertical-align: middle;
+    padding: 15px 0;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2); }
+    .invite-modal.modal .header span,
+    .update-metadata-container.modal .header span,
+    .email-message-modal.modal .header span,
+    .extra-settings-modal.modal .header span,
+    .link-modal.modal .header span {
+      margin-left: 5px; }
+    .invite-modal.modal .header .with-icon .icon,
+    .update-metadata-container.modal .header .with-icon .icon,
+    .email-message-modal.modal .header .with-icon .icon,
+    .extra-settings-modal.modal .header .with-icon .icon,
+    .link-modal.modal .header .with-icon .icon {
+      display: inline-block;
+      width: 50px;
+      height: 40px;
+      vertical-align: middle; }
+  .invite-modal.modal .invite-footer,
+  .update-metadata-container.modal .invite-footer,
+  .email-message-modal.modal .invite-footer,
+  .extra-settings-modal.modal .invite-footer,
+  .link-modal.modal .invite-footer {
+    background-color: #eee;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 15px 0 10px 0;
+    text-align: center;
+    width: 850px;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2); }
+    .invite-modal.modal .invite-footer button.return,
+    .update-metadata-container.modal .invite-footer button.return,
+    .email-message-modal.modal .invite-footer button.return,
+    .extra-settings-modal.modal .invite-footer button.return,
+    .link-modal.modal .invite-footer button.return {
+      font-weight: bold;
+      padding: 0 15px;
+      font-size: 14px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      display: inline-block;
+      min-height: 20px;
+      cursor: pointer;
+      text-shadow: 0px 1px 0 white;
+      color: #444444;
+      border: 1px solid #c1c1c1;
+      background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+      background: -moz-linear-gradient(top, white, #eeeeee);
+      background-color: #f4f4f4;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      transition-property: all;
+      transition-duration: 0.15s;
+      transition-timing-function: linear;
+      transition-delay: 0s;
+      -moz-transition-property: all;
+      -moz-transition-duration: 0.15s;
+      -moz-transition-timing-function: linear;
+      -moz-transition-delay: 0s;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      color: black; }
+      .invite-modal.modal .invite-footer button.return:hover,
+      .update-metadata-container.modal .invite-footer button.return:hover,
+      .email-message-modal.modal .invite-footer button.return:hover,
+      .extra-settings-modal.modal .invite-footer button.return:hover,
+      .link-modal.modal .invite-footer button.return:hover {
+        border: 1px solid #959595;
+        background-color: #fcfcfc;
+        color: #000; }
+      .invite-modal.modal .invite-footer button.return:active,
+      .update-metadata-container.modal .invite-footer button.return:active,
+      .email-message-modal.modal .invite-footer button.return:active,
+      .extra-settings-modal.modal .invite-footer button.return:active,
+      .link-modal.modal .invite-footer button.return:active {
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        border: 1px solid #6e6e6e;
+        background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+        background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+        background-color: #d8d8d8; }
+      .invite-modal.modal .invite-footer button.return.disabled,
+      .update-metadata-container.modal .invite-footer button.return.disabled,
+      .email-message-modal.modal .invite-footer button.return.disabled,
+      .extra-settings-modal.modal .invite-footer button.return.disabled,
+      .link-modal.modal .invite-footer button.return.disabled {
+        opacity: 0.6; }
+        .invite-modal.modal .invite-footer button.return.disabled:hover, .invite-modal.modal .invite-footer button.return.disabled:active,
+        .update-metadata-container.modal .invite-footer button.return.disabled:hover,
+        .update-metadata-container.modal .invite-footer button.return.disabled:active,
+        .email-message-modal.modal .invite-footer button.return.disabled:hover,
+        .email-message-modal.modal .invite-footer button.return.disabled:active,
+        .extra-settings-modal.modal .invite-footer button.return.disabled:hover,
+        .extra-settings-modal.modal .invite-footer button.return.disabled:active,
+        .link-modal.modal .invite-footer button.return.disabled:hover,
+        .link-modal.modal .invite-footer button.return.disabled:active {
+          color: #444444;
+          border: 1px solid #c1c1c1;
+          background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+          background: -moz-linear-gradient(top, white, #eeeeee);
+          background-color: #f4f4f4;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          cursor: default; }
+      .invite-modal.modal .invite-footer button.return .inner,
+      .update-metadata-container.modal .invite-footer button.return .inner,
+      .email-message-modal.modal .invite-footer button.return .inner,
+      .extra-settings-modal.modal .invite-footer button.return .inner,
+      .link-modal.modal .invite-footer button.return .inner {
+        line-height: 30px; }
+    .invite-modal.modal .invite-footer .note,
+    .update-metadata-container.modal .invite-footer .note,
+    .email-message-modal.modal .invite-footer .note,
+    .extra-settings-modal.modal .invite-footer .note,
+    .link-modal.modal .invite-footer .note {
+      color: #aaa; }
+  .invite-modal.modal .close-modal,
+  .update-metadata-container.modal .close-modal,
+  .email-message-modal.modal .close-modal,
+  .extra-settings-modal.modal .close-modal,
+  .link-modal.modal .close-modal {
+    top: -10px;
+    right: -10px;
+    background: url(/erly/img/icon-close.png) 0 0 no-repeat;
+    height: 30px;
+    width: 30px; }
+    .invite-modal.modal .close-modal:hover,
+    .update-metadata-container.modal .close-modal:hover,
+    .email-message-modal.modal .close-modal:hover,
+    .extra-settings-modal.modal .close-modal:hover,
+    .link-modal.modal .close-modal:hover {
+      background-position: 0 -30px; }
+  .invite-modal.modal .content-container,
+  .update-metadata-container.modal .content-container,
+  .email-message-modal.modal .content-container,
+  .extra-settings-modal.modal .content-container,
+  .link-modal.modal .content-container {
+    padding: 30px 35px 15px 35px; }
+
+.invite-modal.modal .header,
+.extra-settings-modal.modal .header {
+  margin-bottom: 0;
+  width: inherit; }
+.invite-modal.modal.extra-settings-modal .header .with-icon .icon,
+.extra-settings-modal.modal.extra-settings-modal .header .with-icon .icon {
+  background-image: url(/erly/img/icon-lock-color.png); }
+
+.link-modal.modal .header .with-icon .icon {
+  background: url(/erly/img/icon-link-l.png) 0 0 no-repeat;
+  width: 35px; }
+
+.invite-modal.modal .header .with-icon .icon,
+.email-message-modal.modal .header .with-icon .icon {
+  background: url(/erly/img/icon-invite-l.png) 0 0 no-repeat; }
+
+.update-metadata-container.modal .header .with-icon .icon,
+.extra-settings-modal.modal .header .with-icon .icon {
+  background: url(/erly/img/icon-edit-l.png) 0 0 no-repeat;
+  width: 40px; }
+.update-metadata-container.modal .header, .update-metadata-container.modal .submit-bottom,
+.extra-settings-modal.modal .header,
+.extra-settings-modal.modal .submit-bottom {
+  margin: 0; }
+.update-metadata-container.modal .submit-bottom,
+.extra-settings-modal.modal .submit-bottom {
+  margin-top: 25px; }
+
+.email-message-modal.modal .email-message-panel .buttons,
+.invite-modal.modal .invite-panel .tagging-form .buttons,
+.link-modal.modal .link-panel .buttons {
+  text-align: right;
+  margin-top: 10px; }
+  .email-message-modal.modal .email-message-panel .buttons .email-preview, .email-message-modal.modal .email-message-panel .buttons .submit,
+  .invite-modal.modal .invite-panel .tagging-form .buttons .email-preview,
+  .invite-modal.modal .invite-panel .tagging-form .buttons .submit,
+  .link-modal.modal .link-panel .buttons .email-preview,
+  .link-modal.modal .link-panel .buttons .submit {
+    margin-right: 0;
+    font-weight: bold;
+    vertical-align: middle;
+    width: 160px;
+    padding: 0 10px; }
+    .email-message-modal.modal .email-message-panel .buttons .email-preview .inner, .email-message-modal.modal .email-message-panel .buttons .submit .inner,
+    .invite-modal.modal .invite-panel .tagging-form .buttons .email-preview .inner,
+    .invite-modal.modal .invite-panel .tagging-form .buttons .submit .inner,
+    .link-modal.modal .link-panel .buttons .email-preview .inner,
+    .link-modal.modal .link-panel .buttons .submit .inner {
+      line-height: 30px; }
+  .email-message-modal.modal .email-message-panel .buttons .submit,
+  .invite-modal.modal .invite-panel .tagging-form .buttons .submit,
+  .link-modal.modal .link-panel .buttons .submit {
+    font-size: 14px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    display: inline-block;
+    min-height: 20px;
+    cursor: pointer;
+    text-shadow: 0px 1px 0 white;
+    color: #444444;
+    border: 1px solid #c1c1c1;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+    background: -moz-linear-gradient(top, white, #eeeeee);
+    background-color: #f4f4f4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.15s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.15s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2ec4f7), to(#0098cc));
+    background: -moz-linear-gradient(top, #2ec4f7, #0098cc);
+    background-color: #09b5f0;
+    border: 1px solid #0185b2;
+    color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0; }
+    .email-message-modal.modal .email-message-panel .buttons .submit:hover,
+    .invite-modal.modal .invite-panel .tagging-form .buttons .submit:hover,
+    .link-modal.modal .link-panel .buttons .submit:hover {
+      border: 1px solid #959595;
+      background-color: #fcfcfc;
+      color: #000; }
+    .email-message-modal.modal .email-message-panel .buttons .submit:active,
+    .invite-modal.modal .invite-panel .tagging-form .buttons .submit:active,
+    .link-modal.modal .link-panel .buttons .submit:active {
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      border: 1px solid #6e6e6e;
+      background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+      background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+      background-color: #d8d8d8; }
+    .email-message-modal.modal .email-message-panel .buttons .submit.disabled,
+    .invite-modal.modal .invite-panel .tagging-form .buttons .submit.disabled,
+    .link-modal.modal .link-panel .buttons .submit.disabled {
+      opacity: 0.6; }
+      .email-message-modal.modal .email-message-panel .buttons .submit.disabled:hover, .email-message-modal.modal .email-message-panel .buttons .submit.disabled:active,
+      .invite-modal.modal .invite-panel .tagging-form .buttons .submit.disabled:hover,
+      .invite-modal.modal .invite-panel .tagging-form .buttons .submit.disabled:active,
+      .link-modal.modal .link-panel .buttons .submit.disabled:hover,
+      .link-modal.modal .link-panel .buttons .submit.disabled:active {
+        color: #444444;
+        border: 1px solid #c1c1c1;
+        background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+        background: -moz-linear-gradient(top, white, #eeeeee);
+        background-color: #f4f4f4;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        cursor: default; }
+    .email-message-modal.modal .email-message-panel .buttons .submit:hover,
+    .invite-modal.modal .invite-panel .tagging-form .buttons .submit:hover,
+    .link-modal.modal .link-panel .buttons .submit:hover {
+      background: -webkit-gradient(linear, left top, left bottom, from(#30d9ff), to(#049cd0));
+      background: -moz-linear-gradient(top, #30d9ff, #049cd0);
+      color: #fff;
+      background-color: #04bdfd;
+      border: 1px solid #0185b2; }
+    .email-message-modal.modal .email-message-panel .buttons .submit:active,
+    .invite-modal.modal .invite-panel .tagging-form .buttons .submit:active,
+    .link-modal.modal .link-panel .buttons .submit:active {
+      background: -webkit-gradient(linear, left top, left bottom, from(#068ebc), to(#24abd8));
+      background: -moz-linear-gradient(top, #068ebc, #24abd8);
+      background-color: #0089b8;
+      border: 1px solid #005b7c; }
+    .email-message-modal.modal .email-message-panel .buttons .submit.disabled:hover, .email-message-modal.modal .email-message-panel .buttons .submit.disabled:active,
+    .invite-modal.modal .invite-panel .tagging-form .buttons .submit.disabled:hover,
+    .invite-modal.modal .invite-panel .tagging-form .buttons .submit.disabled:active,
+    .link-modal.modal .link-panel .buttons .submit.disabled:hover,
+    .link-modal.modal .link-panel .buttons .submit.disabled:active {
+      background: -webkit-gradient(linear, left top, left bottom, from(#2ec4f7), to(#0098cc));
+      background: -moz-linear-gradient(top, #2ec4f7, #0098cc);
+      background-color: #09b5f0;
+      border: 1px solid #0185b2;
+      color: #fff; }
+    .email-message-modal.modal .email-message-panel .buttons .submit .icon,
+    .invite-modal.modal .invite-panel .tagging-form .buttons .submit .icon,
+    .link-modal.modal .link-panel .buttons .submit .icon {
+      margin-left: -2px;
+      vertical-align: middle;
+      margin-right: 2px;
+      background: url("/erly/img/icon-send.png") 0 -2px no-repeat;
+      height: 30px;
+      width: 30px;
+      display: inline-block; }
+  .email-message-modal.modal .email-message-panel .buttons .email-preview,
+  .invite-modal.modal .invite-panel .tagging-form .buttons .email-preview,
+  .link-modal.modal .link-panel .buttons .email-preview {
+    font-size: 14px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    display: inline-block;
+    min-height: 20px;
+    cursor: pointer;
+    text-shadow: 0px 1px 0 white;
+    color: #444444;
+    border: 1px solid #c1c1c1;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+    background: -moz-linear-gradient(top, white, #eeeeee);
+    background-color: #f4f4f4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.15s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    color: black; }
+    .email-message-modal.modal .email-message-panel .buttons .email-preview:hover,
+    .invite-modal.modal .invite-panel .tagging-form .buttons .email-preview:hover,
+    .link-modal.modal .link-panel .buttons .email-preview:hover {
+      border: 1px solid #959595;
+      background-color: #fcfcfc;
+      color: #000; }
+    .email-message-modal.modal .email-message-panel .buttons .email-preview:active,
+    .invite-modal.modal .invite-panel .tagging-form .buttons .email-preview:active,
+    .link-modal.modal .link-panel .buttons .email-preview:active {
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+      border: 1px solid #6e6e6e;
+      background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+      background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+      background-color: #d8d8d8; }
+    .email-message-modal.modal .email-message-panel .buttons .email-preview.disabled,
+    .invite-modal.modal .invite-panel .tagging-form .buttons .email-preview.disabled,
+    .link-modal.modal .link-panel .buttons .email-preview.disabled {
+      opacity: 0.6; }
+      .email-message-modal.modal .email-message-panel .buttons .email-preview.disabled:hover, .email-message-modal.modal .email-message-panel .buttons .email-preview.disabled:active,
+      .invite-modal.modal .invite-panel .tagging-form .buttons .email-preview.disabled:hover,
+      .invite-modal.modal .invite-panel .tagging-form .buttons .email-preview.disabled:active,
+      .link-modal.modal .link-panel .buttons .email-preview.disabled:hover,
+      .link-modal.modal .link-panel .buttons .email-preview.disabled:active {
+        color: #444444;
+        border: 1px solid #c1c1c1;
+        background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+        background: -moz-linear-gradient(top, white, #eeeeee);
+        background-color: #f4f4f4;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+        cursor: default; }
+
+/************* INDIVIDUAL MODAL STYLES ********************/
+.modal .update-metadata input {
+  display: block; }
+.modal .update-metadata input[type=text] {
+  width: 593px; }
+.modal .update-metadata textarea {
+  height: 200px;
+  width: 586px; }
+.modal .update-metadata .event-form-wrapper .submit-bottom {
+  text-align: right; }
+.modal .update-metadata .event-form-wrapper.has-street-address input.street-address[type=text] {
+  width: 484px; }
+.modal .update-metadata .date-wrapper {
+  position: relative; }
+  .modal .update-metadata .date-wrapper .date-picker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none; }
+
+.update-metadata-container.modal {
+  width: 640px; }
+
+.invite-modal.modal .invite-panel,
+.invite-modal.modal .link-panel,
+.link-modal.modal .invite-panel,
+.link-modal.modal .link-panel {
+  width: 850px; }
+  .invite-modal.modal .invite-panel .content-container.split-left, .invite-modal.modal .invite-panel .content-container.split-right,
+  .invite-modal.modal .link-panel .content-container.split-left,
+  .invite-modal.modal .link-panel .content-container.split-right,
+  .link-modal.modal .invite-panel .content-container.split-left,
+  .link-modal.modal .invite-panel .content-container.split-right,
+  .link-modal.modal .link-panel .content-container.split-left,
+  .link-modal.modal .link-panel .content-container.split-right {
+    display: inline-block;
+    vertical-align: top; }
+  .invite-modal.modal .invite-panel .content-container.split-left,
+  .invite-modal.modal .link-panel .content-container.split-left,
+  .link-modal.modal .invite-panel .content-container.split-left,
+  .link-modal.modal .link-panel .content-container.split-left {
+    border-right: solid 1px #ccc;
+    width: 460px; }
+  .invite-modal.modal .invite-panel .content-container.split-right,
+  .invite-modal.modal .link-panel .content-container.split-right,
+  .link-modal.modal .invite-panel .content-container.split-right,
+  .link-modal.modal .link-panel .content-container.split-right {
+    display: inline-block;
+    width: 245px; }
+  .invite-modal.modal .invite-panel .content-container.share-link,
+  .invite-modal.modal .link-panel .content-container.share-link,
+  .link-modal.modal .invite-panel .content-container.share-link,
+  .link-modal.modal .link-panel .content-container.share-link {
+    padding-top: 15px; }
+  .invite-modal.modal .invite-panel .content-container .tagging-form,
+  .invite-modal.modal .link-panel .content-container .tagging-form,
+  .link-modal.modal .invite-panel .content-container .tagging-form,
+  .link-modal.modal .link-panel .content-container .tagging-form {
+    position: relative;
+    margin-top: 10px; }
+    .invite-modal.modal .invite-panel .content-container .tagging-form a.add-message,
+    .invite-modal.modal .link-panel .content-container .tagging-form a.add-message,
+    .link-modal.modal .invite-panel .content-container .tagging-form a.add-message,
+    .link-modal.modal .link-panel .content-container .tagging-form a.add-message {
+      position: absolute;
+      right: -10px;
+      top: -28px;
+      cursor: pointer;
+      text-decoration: underline;
+      color: #444;
+      font-size: 12px; }
+      .invite-modal.modal .invite-panel .content-container .tagging-form a.add-message:hover,
+      .invite-modal.modal .link-panel .content-container .tagging-form a.add-message:hover,
+      .link-modal.modal .invite-panel .content-container .tagging-form a.add-message:hover,
+      .link-modal.modal .link-panel .content-container .tagging-form a.add-message:hover {
+        color: #0c9acb; }
+    .invite-modal.modal .invite-panel .content-container .tagging-form .buttons,
+    .invite-modal.modal .link-panel .content-container .tagging-form .buttons,
+    .link-modal.modal .invite-panel .content-container .tagging-form .buttons,
+    .link-modal.modal .link-panel .content-container .tagging-form .buttons {
+      text-align: center; }
+    .invite-modal.modal .invite-panel .content-container .tagging-form textarea.personal-message,
+    .invite-modal.modal .link-panel .content-container .tagging-form textarea.personal-message,
+    .link-modal.modal .invite-panel .content-container .tagging-form textarea.personal-message,
+    .link-modal.modal .link-panel .content-container .tagging-form textarea.personal-message {
+      margin-bottom: 5px;
+      display: none; }
+    .invite-modal.modal .invite-panel .content-container .tagging-form .tag-count,
+    .invite-modal.modal .link-panel .content-container .tagging-form .tag-count,
+    .link-modal.modal .invite-panel .content-container .tagging-form .tag-count,
+    .link-modal.modal .link-panel .content-container .tagging-form .tag-count {
+      color: #888;
+      font-size: 12px;
+      float: right;
+      display: inline-block;
+      text-align: right; }
+  .invite-modal.modal .invite-panel .content-container #import_contacts,
+  .invite-modal.modal .link-panel .content-container #import_contacts,
+  .link-modal.modal .invite-panel .content-container #import_contacts,
+  .link-modal.modal .link-panel .content-container #import_contacts {
+    float: left;
+    color: #444;
+    font-size: 12px; }
+    .invite-modal.modal .invite-panel .content-container #import_contacts div.source,
+    .invite-modal.modal .link-panel .content-container #import_contacts div.source,
+    .link-modal.modal .invite-panel .content-container #import_contacts div.source,
+    .link-modal.modal .link-panel .content-container #import_contacts div.source {
+      display: inline-block;
+      margin-left: 10px; }
+      .invite-modal.modal .invite-panel .content-container #import_contacts div.source a,
+      .invite-modal.modal .link-panel .content-container #import_contacts div.source a,
+      .link-modal.modal .invite-panel .content-container #import_contacts div.source a,
+      .link-modal.modal .link-panel .content-container #import_contacts div.source a {
+        color: #444; }
+        .invite-modal.modal .invite-panel .content-container #import_contacts div.source a:hover,
+        .invite-modal.modal .link-panel .content-container #import_contacts div.source a:hover,
+        .link-modal.modal .invite-panel .content-container #import_contacts div.source a:hover,
+        .link-modal.modal .link-panel .content-container #import_contacts div.source a:hover {
+          color: #0c9acb; }
+        .invite-modal.modal .invite-panel .content-container #import_contacts div.source a img,
+        .invite-modal.modal .link-panel .content-container #import_contacts div.source a img,
+        .link-modal.modal .invite-panel .content-container #import_contacts div.source a img,
+        .link-modal.modal .link-panel .content-container #import_contacts div.source a img {
+          vertical-align: middle; }
+        .invite-modal.modal .invite-panel .content-container #import_contacts div.source a span,
+        .invite-modal.modal .link-panel .content-container #import_contacts div.source a span,
+        .link-modal.modal .invite-panel .content-container #import_contacts div.source a span,
+        .link-modal.modal .link-panel .content-container #import_contacts div.source a span {
+          text-decoration: unde; }
+    .invite-modal.modal .invite-panel .content-container #import_contacts .import-tip,
+    .invite-modal.modal .link-panel .content-container #import_contacts .import-tip,
+    .link-modal.modal .invite-panel .content-container #import_contacts .import-tip,
+    .link-modal.modal .link-panel .content-container #import_contacts .import-tip {
+      cursor: default; }
+    .invite-modal.modal .invite-panel .content-container #import_contacts .import-tip-container,
+    .invite-modal.modal .link-panel .content-container #import_contacts .import-tip-container,
+    .link-modal.modal .invite-panel .content-container #import_contacts .import-tip-container,
+    .link-modal.modal .link-panel .content-container #import_contacts .import-tip-container {
+      display: none;
+      text-align: center;
+      position: absolute;
+      padding: 8px 13px;
+      font-weight: bold;
+      font-size: 14px;
+      text-shadow: 0 1px 1px #fff;
+      line-height: 20px;
+      color: #976849;
+      border: 1px solid #999;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+      background: #fefce4;
+      background-image: -moz-linear-gradient(90deg, #fbf3ca 0%, #fefce4 100%);
+      background-image: -webkit-gradient(linear, left bottom, left top, from(#fbf3ca), to(#fefce4));
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      position: relative;
+      display: none;
+      position: absolute !important;
+      background-color: white;
+      margin-left: 0px;
+      top: 143px;
+      z-index: 9;
+      text-align: left;
+      right: 158px;
+      width: 360px; }
+      .invite-modal.modal .invite-panel .content-container #import_contacts .import-tip-container:before, .invite-modal.modal .invite-panel .content-container #import_contacts .import-tip-container:after,
+      .invite-modal.modal .link-panel .content-container #import_contacts .import-tip-container:before,
+      .invite-modal.modal .link-panel .content-container #import_contacts .import-tip-container:after,
+      .link-modal.modal .invite-panel .content-container #import_contacts .import-tip-container:before,
+      .link-modal.modal .invite-panel .content-container #import_contacts .import-tip-container:after,
+      .link-modal.modal .link-panel .content-container #import_contacts .import-tip-container:before,
+      .link-modal.modal .link-panel .content-container #import_contacts .import-tip-container:after {
+        content: "";
+        position: absolute;
+        border-style: solid;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        /* reduce the damage in FF3.0 */
+        display: block;
+        width: 0; }
+      .invite-modal.modal .invite-panel .content-container #import_contacts .import-tip-container:before,
+      .invite-modal.modal .link-panel .content-container #import_contacts .import-tip-container:before,
+      .link-modal.modal .invite-panel .content-container #import_contacts .import-tip-container:before,
+      .link-modal.modal .link-panel .content-container #import_contacts .import-tip-container:before {
+        border-width: 0 8px 8px;
+        border-color: #999999 transparent;
+        top: -9px;
+        right: 266px;
+        margin-right: 0; }
+      .invite-modal.modal .invite-panel .content-container #import_contacts .import-tip-container:after,
+      .invite-modal.modal .link-panel .content-container #import_contacts .import-tip-container:after,
+      .link-modal.modal .invite-panel .content-container #import_contacts .import-tip-container:after,
+      .link-modal.modal .link-panel .content-container #import_contacts .import-tip-container:after {
+        border-width: 0 8px 8px;
+        border-color: #fbf3ca transparent;
+        top: -8px;
+        right: 266px;
+        margin-right: 0; }
+  .invite-modal.modal .invite-panel .content-header,
+  .invite-modal.modal .link-panel .content-header,
+  .link-modal.modal .invite-panel .content-header,
+  .link-modal.modal .link-panel .content-header {
+    width: 95%;
+    font-size: 18px;
+    position: relative;
+    color: #db4040; }
+    .invite-modal.modal .invite-panel .content-header span.email-tip,
+    .invite-modal.modal .link-panel .content-header span.email-tip,
+    .link-modal.modal .invite-panel .content-header span.email-tip,
+    .link-modal.modal .link-panel .content-header span.email-tip {
+      color: #555555;
+      font-size: 16px;
+      margin-left: 7px;
+      cursor: default;
+      position: relative; }
+    .invite-modal.modal .invite-panel .content-header div.email-tip-container,
+    .invite-modal.modal .link-panel .content-header div.email-tip-container,
+    .link-modal.modal .invite-panel .content-header div.email-tip-container,
+    .link-modal.modal .link-panel .content-header div.email-tip-container {
+      display: none;
+      text-align: center;
+      position: absolute;
+      padding: 8px 13px;
+      font-weight: bold;
+      font-size: 14px;
+      text-shadow: 0 1px 1px #fff;
+      line-height: 20px;
+      color: #976849;
+      border: 1px solid #999;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+      background: #fefce4;
+      background-image: -moz-linear-gradient(90deg, #fbf3ca 0%, #fefce4 100%);
+      background-image: -webkit-gradient(linear, left bottom, left top, from(#fbf3ca), to(#fefce4));
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      position: relative;
+      display: none;
+      position: absolute !important;
+      background-color: white;
+      margin-left: 0px;
+      top: 26px;
+      z-index: 9;
+      text-align: left;
+      right: -230px;
+      width: 320px; }
+      .invite-modal.modal .invite-panel .content-header div.email-tip-container:before, .invite-modal.modal .invite-panel .content-header div.email-tip-container:after,
+      .invite-modal.modal .link-panel .content-header div.email-tip-container:before,
+      .invite-modal.modal .link-panel .content-header div.email-tip-container:after,
+      .link-modal.modal .invite-panel .content-header div.email-tip-container:before,
+      .link-modal.modal .invite-panel .content-header div.email-tip-container:after,
+      .link-modal.modal .link-panel .content-header div.email-tip-container:before,
+      .link-modal.modal .link-panel .content-header div.email-tip-container:after {
+        content: "";
+        position: absolute;
+        border-style: solid;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        /* reduce the damage in FF3.0 */
+        display: block;
+        width: 0; }
+      .invite-modal.modal .invite-panel .content-header div.email-tip-container:before,
+      .invite-modal.modal .link-panel .content-header div.email-tip-container:before,
+      .link-modal.modal .invite-panel .content-header div.email-tip-container:before,
+      .link-modal.modal .link-panel .content-header div.email-tip-container:before {
+        border-width: 0 8px 8px;
+        border-color: #999999 transparent;
+        top: -9px;
+        right: 230px;
+        margin-right: 0; }
+      .invite-modal.modal .invite-panel .content-header div.email-tip-container:after,
+      .invite-modal.modal .link-panel .content-header div.email-tip-container:after,
+      .link-modal.modal .invite-panel .content-header div.email-tip-container:after,
+      .link-modal.modal .link-panel .content-header div.email-tip-container:after {
+        border-width: 0 8px 8px;
+        border-color: #fbf3ca transparent;
+        top: -8px;
+        right: 230px;
+        margin-right: 0; }
+  .invite-modal.modal .invite-panel .content-sub-header,
+  .invite-modal.modal .link-panel .content-sub-header,
+  .link-modal.modal .invite-panel .content-sub-header,
+  .link-modal.modal .link-panel .content-sub-header {
+    width: 95%;
+    font-size: 13px;
+    color: #999; }
+  .invite-modal.modal .invite-panel .or,
+  .invite-modal.modal .link-panel .or,
+  .link-modal.modal .invite-panel .or,
+  .link-modal.modal .link-panel .or {
+    display: none;
+    height: 1;
+    border-top: solid 1px #ccc;
+    position: relative;
+    margin: 10px 0; }
+    .invite-modal.modal .invite-panel .or div,
+    .invite-modal.modal .link-panel .or div,
+    .link-modal.modal .invite-panel .or div,
+    .link-modal.modal .link-panel .or div {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: -12px;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      border-radius: 100px;
+      text-transform: uppercase;
+      border: solid 1px #ccc;
+      background-color: #eee;
+      text-align: center;
+      color: #333;
+      font-size: 12px;
+      left: 518px;
+      line-height: 24px; }
+  .invite-modal.modal .invite-panel .add-content,
+  .invite-modal.modal .link-panel .add-content,
+  .link-modal.modal .invite-panel .add-content,
+  .link-modal.modal .link-panel .add-content {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px; }
+    .invite-modal.modal .invite-panel .add-content button,
+    .invite-modal.modal .link-panel .add-content button,
+    .link-modal.modal .invite-panel .add-content button,
+    .link-modal.modal .link-panel .add-content button {
+      font-size: 14px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      display: inline-block;
+      min-height: 20px;
+      cursor: pointer;
+      text-shadow: 0px 1px 0 white;
+      color: #444444;
+      border: 1px solid #c1c1c1;
+      background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+      background: -moz-linear-gradient(top, white, #eeeeee);
+      background-color: #f4f4f4;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      transition-property: all;
+      transition-duration: 0.15s;
+      transition-timing-function: linear;
+      transition-delay: 0s;
+      -moz-transition-property: all;
+      -moz-transition-duration: 0.15s;
+      -moz-transition-timing-function: linear;
+      -moz-transition-delay: 0s;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      margin: 1px; }
+      .invite-modal.modal .invite-panel .add-content button:hover,
+      .invite-modal.modal .link-panel .add-content button:hover,
+      .link-modal.modal .invite-panel .add-content button:hover,
+      .link-modal.modal .link-panel .add-content button:hover {
+        border: 1px solid #959595;
+        background-color: #fcfcfc;
+        color: #000; }
+      .invite-modal.modal .invite-panel .add-content button:active,
+      .invite-modal.modal .link-panel .add-content button:active,
+      .link-modal.modal .invite-panel .add-content button:active,
+      .link-modal.modal .link-panel .add-content button:active {
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        border: 1px solid #6e6e6e;
+        background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+        background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+        background-color: #d8d8d8; }
+      .invite-modal.modal .invite-panel .add-content button.disabled,
+      .invite-modal.modal .link-panel .add-content button.disabled,
+      .link-modal.modal .invite-panel .add-content button.disabled,
+      .link-modal.modal .link-panel .add-content button.disabled {
+        opacity: 0.6; }
+        .invite-modal.modal .invite-panel .add-content button.disabled:hover, .invite-modal.modal .invite-panel .add-content button.disabled:active,
+        .invite-modal.modal .link-panel .add-content button.disabled:hover,
+        .invite-modal.modal .link-panel .add-content button.disabled:active,
+        .link-modal.modal .invite-panel .add-content button.disabled:hover,
+        .link-modal.modal .invite-panel .add-content button.disabled:active,
+        .link-modal.modal .link-panel .add-content button.disabled:hover,
+        .link-modal.modal .link-panel .add-content button.disabled:active {
+          color: #444444;
+          border: 1px solid #c1c1c1;
+          background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+          background: -moz-linear-gradient(top, white, #eeeeee);
+          background-color: #f4f4f4;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          cursor: default; }
+  .invite-modal.modal .invite-panel .facebook-button-container,
+  .invite-modal.modal .link-panel .facebook-button-container,
+  .link-modal.modal .invite-panel .facebook-button-container,
+  .link-modal.modal .link-panel .facebook-button-container {
+    padding-top: 20px;
+    text-align: center; }
+    .invite-modal.modal .invite-panel .facebook-button-container button#inviteFacebook,
+    .invite-modal.modal .link-panel .facebook-button-container button#inviteFacebook,
+    .link-modal.modal .invite-panel .facebook-button-container button#inviteFacebook,
+    .link-modal.modal .link-panel .facebook-button-container button#inviteFacebook {
+      font-size: 14px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      display: inline-block;
+      min-height: 20px;
+      cursor: pointer;
+      text-shadow: 0px 1px 0 white;
+      color: #444444;
+      border: 1px solid #c1c1c1;
+      background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+      background: -moz-linear-gradient(top, white, #eeeeee);
+      background-color: #f4f4f4;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      transition-property: all;
+      transition-duration: 0.15s;
+      transition-timing-function: linear;
+      transition-delay: 0s;
+      -moz-transition-property: all;
+      -moz-transition-duration: 0.15s;
+      -moz-transition-timing-function: linear;
+      -moz-transition-delay: 0s;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      transition-property: all;
+      transition-duration: 0.15s;
+      transition-timing-function: linear;
+      transition-delay: 0s;
+      -moz-transition-property: all;
+      -moz-transition-duration: 0.15s;
+      -moz-transition-timing-function: linear;
+      -moz-transition-delay: 0s;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      background: -webkit-gradient(linear, left top, left bottom, from(#2ec4f7), to(#0098cc));
+      background: -moz-linear-gradient(top, #2ec4f7, #0098cc);
+      background-color: #09b5f0;
+      border: 1px solid #0185b2;
+      color: #fff;
+      text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;
+      font-weight: bold;
+      padding: 0 10px;
+      line-height: 30px; }
+      .invite-modal.modal .invite-panel .facebook-button-container button#inviteFacebook:hover,
+      .invite-modal.modal .link-panel .facebook-button-container button#inviteFacebook:hover,
+      .link-modal.modal .invite-panel .facebook-button-container button#inviteFacebook:hover,
+      .link-modal.modal .link-panel .facebook-button-container button#inviteFacebook:hover {
+        border: 1px solid #959595;
+        background-color: #fcfcfc;
+        color: #000; }
+      .invite-modal.modal .invite-panel .facebook-button-container button#inviteFacebook:active,
+      .invite-modal.modal .link-panel .facebook-button-container button#inviteFacebook:active,
+      .link-modal.modal .invite-panel .facebook-button-container button#inviteFacebook:active,
+      .link-modal.modal .link-panel .facebook-button-container button#inviteFacebook:active {
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        border: 1px solid #6e6e6e;
+        background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+        background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+        background-color: #d8d8d8; }
+      .invite-modal.modal .invite-panel .facebook-button-container button#inviteFacebook.disabled,
+      .invite-modal.modal .link-panel .facebook-button-container button#inviteFacebook.disabled,
+      .link-modal.modal .invite-panel .facebook-button-container button#inviteFacebook.disabled,
+      .link-modal.modal .link-panel .facebook-button-container button#inviteFacebook.disabled {
+        opacity: 0.6; }
+        .invite-modal.modal .invite-panel .facebook-button-container button#inviteFacebook.disabled:hover, .invite-modal.modal .invite-panel .facebook-button-container button#inviteFacebook.disabled:active,
+        .invite-modal.modal .link-panel .facebook-button-container button#inviteFacebook.disabled:hover,
+        .invite-modal.modal .link-panel .facebook-button-container button#inviteFacebook.disabled:active,
+        .link-modal.modal .invite-panel .facebook-button-container button#inviteFacebook.disabled:hover,
+        .link-modal.modal .invite-panel .facebook-button-container button#inviteFacebook.disabled:active,
+        .link-modal.modal .link-panel .facebook-button-container button#inviteFacebook.disabled:hover,
+        .link-modal.modal .link-panel .facebook-button-container button#inviteFacebook.disabled:active {
+          color: #444444;
+          border: 1px solid #c1c1c1;
+          background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+          background: -moz-linear-gradient(top, white, #eeeeee);
+          background-color: #f4f4f4;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          cursor: default; }
+      .invite-modal.modal .invite-panel .facebook-button-container button#inviteFacebook:hover,
+      .invite-modal.modal .link-panel .facebook-button-container button#inviteFacebook:hover,
+      .link-modal.modal .invite-panel .facebook-button-container button#inviteFacebook:hover,
+      .link-modal.modal .link-panel .facebook-button-container button#inviteFacebook:hover {
+        background: -webkit-gradient(linear, left top, left bottom, from(#30d9ff), to(#049cd0));
+        background: -moz-linear-gradient(top, #30d9ff, #049cd0);
+        color: #fff;
+        background-color: #04bdfd;
+        border: 1px solid #0185b2; }
+      .invite-modal.modal .invite-panel .facebook-button-container button#inviteFacebook:active,
+      .invite-modal.modal .link-panel .facebook-button-container button#inviteFacebook:active,
+      .link-modal.modal .invite-panel .facebook-button-container button#inviteFacebook:active,
+      .link-modal.modal .link-panel .facebook-button-container button#inviteFacebook:active {
+        background: -webkit-gradient(linear, left top, left bottom, from(#068ebc), to(#24abd8));
+        background: -moz-linear-gradient(top, #068ebc, #24abd8);
+        background-color: #0089b8;
+        border: 1px solid #005b7c; }
+      .invite-modal.modal .invite-panel .facebook-button-container button#inviteFacebook.disabled:hover, .invite-modal.modal .invite-panel .facebook-button-container button#inviteFacebook.disabled:active,
+      .invite-modal.modal .link-panel .facebook-button-container button#inviteFacebook.disabled:hover,
+      .invite-modal.modal .link-panel .facebook-button-container button#inviteFacebook.disabled:active,
+      .link-modal.modal .invite-panel .facebook-button-container button#inviteFacebook.disabled:hover,
+      .link-modal.modal .invite-panel .facebook-button-container button#inviteFacebook.disabled:active,
+      .link-modal.modal .link-panel .facebook-button-container button#inviteFacebook.disabled:hover,
+      .link-modal.modal .link-panel .facebook-button-container button#inviteFacebook.disabled:active {
+        background: -webkit-gradient(linear, left top, left bottom, from(#2ec4f7), to(#0098cc));
+        background: -moz-linear-gradient(top, #2ec4f7, #0098cc);
+        background-color: #09b5f0;
+        border: 1px solid #0185b2;
+        color: #fff; }
+  .invite-modal.modal .invite-panel #inviteFacebookStatus,
+  .invite-modal.modal .link-panel #inviteFacebookStatus,
+  .link-modal.modal .invite-panel #inviteFacebookStatus,
+  .link-modal.modal .link-panel #inviteFacebookStatus {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+    text-align: center; }
+  .invite-modal.modal .invite-panel .share-link-container,
+  .invite-modal.modal .link-panel .share-link-container,
+  .link-modal.modal .invite-panel .share-link-container,
+  .link-modal.modal .link-panel .share-link-container {
+    position: relative; }
+    .invite-modal.modal .invite-panel .share-link-container input.share-link,
+    .invite-modal.modal .link-panel .share-link-container input.share-link,
+    .link-modal.modal .invite-panel .share-link-container input.share-link,
+    .link-modal.modal .link-panel .share-link-container input.share-link {
+      width: 100%;
+      display: inline;
+      height: 23px;
+      padding: 2px 4px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      color: #888;
+      background-color: #f0f0f0;
+      color: #000; }
+    .invite-modal.modal .invite-panel .share-link-container .clippy-container,
+    .invite-modal.modal .link-panel .share-link-container .clippy-container,
+    .link-modal.modal .invite-panel .share-link-container .clippy-container,
+    .link-modal.modal .link-panel .share-link-container .clippy-container {
+      position: absolute;
+      top: 7px;
+      right: -11px;
+      height: 30px; }
+      .invite-modal.modal .invite-panel .share-link-container .clippy-container .hover,
+      .invite-modal.modal .invite-panel .share-link-container .clippy-container .copied,
+      .invite-modal.modal .link-panel .share-link-container .clippy-container .hover,
+      .invite-modal.modal .link-panel .share-link-container .clippy-container .copied,
+      .link-modal.modal .invite-panel .share-link-container .clippy-container .hover,
+      .link-modal.modal .invite-panel .share-link-container .clippy-container .copied,
+      .link-modal.modal .link-panel .share-link-container .clippy-container .hover,
+      .link-modal.modal .link-panel .share-link-container .clippy-container .copied {
+        display: none;
+        position: absolute;
+        z-index: 100;
+        top: -25px;
+        left: -35px;
+        padding: 0 4px;
+        color: white;
+        background-color: black;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        text-transform: lowercase;
+        white-space: nowrap; }
+  .invite-modal.modal .invite-panel .tagging-form .error,
+  .invite-modal.modal .link-panel .tagging-form .error,
+  .link-modal.modal .invite-panel .tagging-form .error,
+  .link-modal.modal .link-panel .tagging-form .error {
+    display: none;
+    color: #f44;
+    margin-top: 25px;
+    text-align: center; }
+  .invite-modal.modal .invite-panel .tagging-form textarea,
+  .invite-modal.modal .link-panel .tagging-form textarea,
+  .link-modal.modal .invite-panel .tagging-form textarea,
+  .link-modal.modal .link-panel .tagging-form textarea {
+    margin: 0;
+    width: 100%; }
+    .invite-modal.modal .invite-panel .tagging-form textarea.empty-text,
+    .invite-modal.modal .link-panel .tagging-form textarea.empty-text,
+    .link-modal.modal .invite-panel .tagging-form textarea.empty-text,
+    .link-modal.modal .link-panel .tagging-form textarea.empty-text {
+      background-color: #F2FAFF;
+      color: #777777; }
+    .invite-modal.modal .invite-panel .tagging-form textarea.normal-text,
+    .invite-modal.modal .link-panel .tagging-form textarea.normal-text,
+    .link-modal.modal .invite-panel .tagging-form textarea.normal-text,
+    .link-modal.modal .link-panel .tagging-form textarea.normal-text {
+      color: #000 !important;
+      background-color: #fff !important; }
+  .invite-modal.modal .invite-panel .tagging-form .autocomplete-container,
+  .invite-modal.modal .link-panel .tagging-form .autocomplete-container,
+  .link-modal.modal .invite-panel .tagging-form .autocomplete-container,
+  .link-modal.modal .link-panel .tagging-form .autocomplete-container {
+    background-color: white;
+    width: 420px;
+    z-index: 999999;
+    border: 1px solid #ccc;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 125px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+    margin: 0;
+    padding: 0;
+    padding-left: 2px; }
+    .invite-modal.modal .invite-panel .tagging-form .autocomplete-container a,
+    .invite-modal.modal .link-panel .tagging-form .autocomplete-container a,
+    .link-modal.modal .invite-panel .tagging-form .autocomplete-container a,
+    .link-modal.modal .link-panel .tagging-form .autocomplete-container a {
+      text-decoration: none; }
+    .invite-modal.modal .invite-panel .tagging-form .autocomplete-container ul,
+    .invite-modal.modal .link-panel .tagging-form .autocomplete-container ul,
+    .link-modal.modal .invite-panel .tagging-form .autocomplete-container ul,
+    .link-modal.modal .link-panel .tagging-form .autocomplete-container ul {
+      margin: 0;
+      padding: 0; }
+      .invite-modal.modal .invite-panel .tagging-form .autocomplete-container ul li,
+      .invite-modal.modal .link-panel .tagging-form .autocomplete-container ul li,
+      .link-modal.modal .invite-panel .tagging-form .autocomplete-container ul li,
+      .link-modal.modal .link-panel .tagging-form .autocomplete-container ul li {
+        list-style: none;
+        margin: 0;
+        border-bottom: 1px solid #fefefe; }
+      .invite-modal.modal .invite-panel .tagging-form .autocomplete-container ul .contact,
+      .invite-modal.modal .link-panel .tagging-form .autocomplete-container ul .contact,
+      .link-modal.modal .invite-panel .tagging-form .autocomplete-container ul .contact,
+      .link-modal.modal .link-panel .tagging-form .autocomplete-container ul .contact {
+        height: 20px; }
+        .invite-modal.modal .invite-panel .tagging-form .autocomplete-container ul .contact.highlight,
+        .invite-modal.modal .link-panel .tagging-form .autocomplete-container ul .contact.highlight,
+        .link-modal.modal .invite-panel .tagging-form .autocomplete-container ul .contact.highlight,
+        .link-modal.modal .link-panel .tagging-form .autocomplete-container ul .contact.highlight {
+          background-color: #e2f2fe; }
+        .invite-modal.modal .invite-panel .tagging-form .autocomplete-container ul .contact:hover,
+        .invite-modal.modal .link-panel .tagging-form .autocomplete-container ul .contact:hover,
+        .link-modal.modal .invite-panel .tagging-form .autocomplete-container ul .contact:hover,
+        .link-modal.modal .link-panel .tagging-form .autocomplete-container ul .contact:hover {
+          background-color: #e2f2fe !important; }
+        .invite-modal.modal .invite-panel .tagging-form .autocomplete-container ul .contact .contact-info,
+        .invite-modal.modal .link-panel .tagging-form .autocomplete-container ul .contact .contact-info,
+        .link-modal.modal .invite-panel .tagging-form .autocomplete-container ul .contact .contact-info,
+        .link-modal.modal .link-panel .tagging-form .autocomplete-container ul .contact .contact-info {
+          display: inline-block;
+          vertical-align: top;
+          color: #888;
+          font-size: 12px;
+          font-family: "Helvetica", "Lucida Grande", "Arial", sans-serif; }
+          .invite-modal.modal .invite-panel .tagging-form .autocomplete-container ul .contact .contact-info .left-sep, .invite-modal.modal .invite-panel .tagging-form .autocomplete-container ul .contact .contact-info .right-sep,
+          .invite-modal.modal .link-panel .tagging-form .autocomplete-container ul .contact .contact-info .left-sep,
+          .invite-modal.modal .link-panel .tagging-form .autocomplete-container ul .contact .contact-info .right-sep,
+          .link-modal.modal .invite-panel .tagging-form .autocomplete-container ul .contact .contact-info .left-sep,
+          .link-modal.modal .invite-panel .tagging-form .autocomplete-container ul .contact .contact-info .right-sep,
+          .link-modal.modal .link-panel .tagging-form .autocomplete-container ul .contact .contact-info .left-sep,
+          .link-modal.modal .link-panel .tagging-form .autocomplete-container ul .contact .contact-info .right-sep {
+            display: inline-block;
+            margin: 0;
+            padding: 0; }
+          .invite-modal.modal .invite-panel .tagging-form .autocomplete-container ul .contact .contact-info .name,
+          .invite-modal.modal .link-panel .tagging-form .autocomplete-container ul .contact .contact-info .name,
+          .link-modal.modal .invite-panel .tagging-form .autocomplete-container ul .contact .contact-info .name,
+          .link-modal.modal .link-panel .tagging-form .autocomplete-container ul .contact .contact-info .name {
+            font-size: 13px;
+            color: #000;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 435px;
+            overflow: hidden;
+            display: inline-block; }
+      .invite-modal.modal .invite-panel .tagging-form .autocomplete-container ul .header,
+      .invite-modal.modal .link-panel .tagging-form .autocomplete-container ul .header,
+      .link-modal.modal .invite-panel .tagging-form .autocomplete-container ul .header,
+      .link-modal.modal .link-panel .tagging-form .autocomplete-container ul .header {
+        padding-left: 5px;
+        height: 20px;
+        background-color: #eee; }
+
+.email-message-modal.modal .header .with-icon .icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url(/erly/img/icon-email-guests-l.png) 0 0 no-repeat;
+  vertical-align: middle; }
+.email-message-modal.modal .email-message-panel {
+  width: 680px; }
+  .email-message-modal.modal .email-message-panel .error {
+    color: #f44;
+    padding-left: 0;
+    margin: -5px 0 10px 103px; }
+  .email-message-modal.modal .email-message-panel .email-list .recipient-callout,
+  .email-message-modal.modal .email-message-panel .email-list .recipient-selectors {
+    display: inline-block; }
+  .email-message-modal.modal .email-message-panel .email-list .recipient-callout {
+    width: 100px;
+    vertical-align: top;
+    text-transform: uppercase;
+    font-size: 14px; }
+  .email-message-modal.modal .email-message-panel .email-list .recipient-selectors {
+    margin-bottom: 10px; }
+    .email-message-modal.modal .email-message-panel .email-list .recipient-selectors input[type=checkbox] {
+      margin-left: 0; }
+    .email-message-modal.modal .email-message-panel .email-list .recipient-selectors label {
+      font-weight: normal; }
+  .email-message-modal.modal .email-message-panel .row label {
+    font-weight: normal;
+    display: inline-block;
+    text-transform: uppercase;
+    width: 100px;
+    vertical-align: top;
+    margin-top: 13px; }
+  .email-message-modal.modal .email-message-panel .row input {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 5px 4px; }
+  .email-message-modal.modal .email-message-panel .row textarea, .email-message-modal.modal .email-message-panel .row input {
+    width: 490px; }
+    .email-message-modal.modal .email-message-panel .row textarea.empty-text, .email-message-modal.modal .email-message-panel .row input.empty-text {
+      background-color: #F2FAFF;
+      color: #777777; }
+    .email-message-modal.modal .email-message-panel .row textarea.normal-text, .email-message-modal.modal .email-message-panel .row input.normal-text {
+      color: #000 !important;
+      background-color: #fff !important; }
+  .email-message-modal.modal .email-message-panel .send-copy {
+    margin-left: 100px; }
+    .email-message-modal.modal .email-message-panel .send-copy a.email-preview {
+      font-size: 12px;
+      margin-right: 7px;
+      float: right;
+      color: #444444;
+      text-decoration: underline;
+      cursor: pointer; }
+  .email-message-modal.modal .email-message-panel .buttons {
+    border-top: 1px solid #CCCCCC;
+    margin-top: 25px;
+    padding-top: 25px;
+    text-align: center; }
+    .email-message-modal.modal .email-message-panel .buttons .cancel-button {
+      padding: 7px 20px 6px 20px; }
+    .email-message-modal.modal .email-message-panel .buttons .email-preview {
+      font-size: 14px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      display: inline-block;
+      min-height: 20px;
+      cursor: pointer;
+      text-shadow: 0px 1px 0 white;
+      color: #444444;
+      border: 1px solid #c1c1c1;
+      background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+      background: -moz-linear-gradient(top, white, #eeeeee);
+      background-color: #f4f4f4;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      transition-property: all;
+      transition-duration: 0.15s;
+      transition-timing-function: linear;
+      transition-delay: 0s;
+      -moz-transition-property: all;
+      -moz-transition-duration: 0.15s;
+      -moz-transition-timing-function: linear;
+      -moz-transition-delay: 0s;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      padding: 7px 20px 6px 20px;
+      margin-top: -1px; }
+      .email-message-modal.modal .email-message-panel .buttons .email-preview:hover {
+        border: 1px solid #959595;
+        background-color: #fcfcfc;
+        color: #000; }
+      .email-message-modal.modal .email-message-panel .buttons .email-preview:active {
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        border: 1px solid #6e6e6e;
+        background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+        background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+        background-color: #d8d8d8; }
+      .email-message-modal.modal .email-message-panel .buttons .email-preview.disabled {
+        opacity: 0.6; }
+        .email-message-modal.modal .email-message-panel .buttons .email-preview.disabled:hover, .email-message-modal.modal .email-message-panel .buttons .email-preview.disabled:active {
+          color: #444444;
+          border: 1px solid #c1c1c1;
+          background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+          background: -moz-linear-gradient(top, white, #eeeeee);
+          background-color: #f4f4f4;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          cursor: default; }
+    .email-message-modal.modal .email-message-panel .buttons .submit {
+      font-size: 14px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      display: inline-block;
+      min-height: 20px;
+      cursor: pointer;
+      text-shadow: 0px 1px 0 white;
+      color: #444444;
+      border: 1px solid #c1c1c1;
+      background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+      background: -moz-linear-gradient(top, white, #eeeeee);
+      background-color: #f4f4f4;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+      transition-property: all;
+      transition-duration: 0.15s;
+      transition-timing-function: linear;
+      transition-delay: 0s;
+      -moz-transition-property: all;
+      -moz-transition-duration: 0.15s;
+      -moz-transition-timing-function: linear;
+      -moz-transition-delay: 0s;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      transition-property: all;
+      transition-duration: 0.15s;
+      transition-timing-function: linear;
+      transition-delay: 0s;
+      -moz-transition-property: all;
+      -moz-transition-duration: 0.15s;
+      -moz-transition-timing-function: linear;
+      -moz-transition-delay: 0s;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      background: -webkit-gradient(linear, left top, left bottom, from(#2ec4f7), to(#0098cc));
+      background: -moz-linear-gradient(top, #2ec4f7, #0098cc);
+      background-color: #09b5f0;
+      border: 1px solid #0185b2;
+      color: #fff;
+      text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;
+      padding: 7px 20px 6px 20px;
+      margin-top: -1px; }
+      .email-message-modal.modal .email-message-panel .buttons .submit:hover {
+        border: 1px solid #959595;
+        background-color: #fcfcfc;
+        color: #000; }
+      .email-message-modal.modal .email-message-panel .buttons .submit:active {
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        border: 1px solid #6e6e6e;
+        background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+        background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+        background-color: #d8d8d8; }
+      .email-message-modal.modal .email-message-panel .buttons .submit.disabled {
+        opacity: 0.6; }
+        .email-message-modal.modal .email-message-panel .buttons .submit.disabled:hover, .email-message-modal.modal .email-message-panel .buttons .submit.disabled:active {
+          color: #444444;
+          border: 1px solid #c1c1c1;
+          background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+          background: -moz-linear-gradient(top, white, #eeeeee);
+          background-color: #f4f4f4;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+          cursor: default; }
+      .email-message-modal.modal .email-message-panel .buttons .submit:hover {
+        background: -webkit-gradient(linear, left top, left bottom, from(#30d9ff), to(#049cd0));
+        background: -moz-linear-gradient(top, #30d9ff, #049cd0);
+        color: #fff;
+        background-color: #04bdfd;
+        border: 1px solid #0185b2; }
+      .email-message-modal.modal .email-message-panel .buttons .submit:active {
+        background: -webkit-gradient(linear, left top, left bottom, from(#068ebc), to(#24abd8));
+        background: -moz-linear-gradient(top, #068ebc, #24abd8);
+        background-color: #0089b8;
+        border: 1px solid #005b7c; }
+      .email-message-modal.modal .email-message-panel .buttons .submit.disabled:hover, .email-message-modal.modal .email-message-panel .buttons .submit.disabled:active {
+        background: -webkit-gradient(linear, left top, left bottom, from(#2ec4f7), to(#0098cc));
+        background: -moz-linear-gradient(top, #2ec4f7, #0098cc);
+        background-color: #09b5f0;
+        border: 1px solid #0185b2;
+        color: #fff; }
+
+.extra-settings-modal.modal {
+  width: 450px; }
+  .extra-settings-modal.modal .extra-settings-drop-down .row, .extra-settings-modal.modal .extra-settings-drop-down .right-col, .extra-settings-modal.modal .extra-settings-drop-down .left-col {
+    margin: 10px 15px; }
+  .extra-settings-modal.modal .extra-settings-drop-down .row {
+    padding-top: 5px; }
+  .extra-settings-modal.modal .extra-settings-drop-down .right-col, .extra-settings-modal.modal .extra-settings-drop-down .left-col {
+    padding-top: 10px;
+    border-top: solid 1px #999; }
+  .extra-settings-modal.modal .extra-settings-drop-down .hint-hover {
+    cursor: pointer;
+    color: #0c9acb; }
+  .extra-settings-modal.modal .extra-settings-drop-down .hint-below {
+    margin-left: 7px;
+    font-weight: normal; }
+    .extra-settings-modal.modal .extra-settings-drop-down .hint-below.password {
+      margin-top: 7px; }
+  .extra-settings-modal.modal .extra-settings-drop-down .event-form-wrapper .extra-settings {
+    padding: 25px 0 10px 50px;
+    font-family: "Helvetica", "Lucida Grande", "Arial", sans-serif;
+    color: #555; }
+    .extra-settings-modal.modal .extra-settings-drop-down .event-form-wrapper .extra-settings div {
+      margin: 15px 0; }
+      .extra-settings-modal.modal .extra-settings-drop-down .event-form-wrapper .extra-settings div .hint-below {
+        top: 15px; }
+      .extra-settings-modal.modal .extra-settings-drop-down .event-form-wrapper .extra-settings div .pwd-field {
+        margin-left: 29px;
+        padding: 4px 5px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        font-size: 14px; }
+    .extra-settings-modal.modal .extra-settings-drop-down .event-form-wrapper .extra-settings .pwd-field {
+      display: block;
+      margin-left: 25px;
+      width: 170px; }
+    .extra-settings-modal.modal .extra-settings-drop-down .event-form-wrapper .extra-settings .available {
+      text-align: right; }
+    .extra-settings-modal.modal .extra-settings-drop-down .event-form-wrapper .extra-settings label {
+      font-weight: normal;
+      text-transform: uppercase; }
+
+.invite-modal.modal.no-facebook-panel {
+  width: 650px; }
+  .invite-modal.modal.no-facebook-panel .link-panel,
+  .invite-modal.modal.no-facebook-panel .invite-panel {
+    width: 650px; }
+    .invite-modal.modal.no-facebook-panel .link-panel .or div,
+    .invite-modal.modal.no-facebook-panel .invite-panel .or div {
+      left: 300px; }
+  .invite-modal.modal.no-facebook-panel .invite-footer {
+    width: 650px; }

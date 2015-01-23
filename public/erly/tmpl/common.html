@@ -1,0 +1,230 @@
+<script id="tmplLoginHeader" type="text/x-jquery-tmpljavascript">
+  {{if !authenticated }}
+  <div class="login-or-signup" onclick="return erly.session.login()">
+    Already have an Erly account? Log in
+  </div>
+  {{else}}
+  <img class="icon" src="/img/icon-user.png" />
+  <a class="name" href="javascript:void(0)">${name}</a>
+  <div class="menu-expand">
+    <a class="more">
+      <span>More</span>
+    </a>
+  </div>
+  <div class="login-opened">
+    <div class="inner-name">
+      <img class="icon" src="/img/icon-user.png" />
+      <a class="name" href="javascript:void(0)">${name}</a>
+      <div class="menu-expand">
+        <a class="more">
+          <span>More</span>
+        </a>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="events"><a href="javascript:void(0)">Events</a></li>
+      <li class="activityfeed"><a href="javascript:void(0)">Updates</a></li>
+      <li><a href="${erly.BASE_URL}/settings">Settings</a></li>
+      <li><a href="${erly.BASE_URL}/faq">FAQ</a></li>
+      <li><a href="javascript:erly.session.logout()">Log out</a></li>
+    </ul>
+  </div>
+  {{/if}}
+</script>
+
+<script id="tmplProductVideo" type="text/x-jquery-tmpljavascript">
+  <div class="product-video-container">
+    <iframe src="http://player.vimeo.com/video/28919521?autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitAllowFullScreen="1" allowFullScreen="1"></iframe>
+    <div class="remove"></div>
+  </div>
+</script>
+
+<script id="tmplLoginModal" type="text/x-jquery-tmpljavascript">
+  {{wrap({outerClass: 'login-modal'}) "#tmplModal"}}
+  <form id="login" action="javascript:void(0)" onsubmit="return false;">
+    <div class="header">
+      <div class="with-icon">
+        <div class="icon"></div>
+        <span>Log into your Erly account</span>
+      </div>
+    </div>
+    <span class="facebook-login"></span>
+    <div class="facebook-message">We will not post to your Facebook Wall</div>
+    <div class="or-button-bar">
+      <div>OR</div>
+    </div>
+    <input type="text" name="email" placeholder="Email address" class="empty-text" />
+    <input type="password" name="password" placeholder="Password" class="empty-text" />
+    <div class="forgot-password-container">
+      <a href="/forgot_password">Forgot password?</a>
+    </div>
+    <div class="login-button-bar">
+      <input type="submit" value=" " />
+    </div>
+    {{tmpl "#tmplFormErrorContainer"}}
+    <div class="signup-blurb">
+      Don't have an Erly account?
+      <a id="sign-up-hover-link" href="javascript:void(0)" onclick="erly.signup.showModal()">Sign up</a>
+    </div>
+  </form>
+  {{/wrap}}
+</script>
+
+<script id="tmplFormErrorContainer" type="text/x-jquery-tmpljavascript">
+  <div class="error-container">
+    <ul class="errors"></ul>
+  </div>
+</script>
+
+<script id="tmplCheckbox" type="text/x-jquery-tmpljavascript">
+  <input type="hidden" name="${key}" value="0">
+  <input type="checkbox" name="${key}" value="1" {{if value}}checked="checked"{{/if}} />
+</script>
+
+<script id="tmplRadioButton" type="text/x-jquery-tmpljavascript">
+  <input type="radio" name="${key}" value="${value}" {{if currentValue === value}}checked="checked"{{/if}} />
+</script>
+
+<script id="tmplServices" type="text/x-jquery-tmpl">
+  <div class="services">
+    {{each services}}
+    {{tmpl({user: user, service: $value, connected: erly.services.isConnected(user, $value.name)}) "#tmplService"}}
+    {{/each}}
+    <div class="clear"></div>
+  </div>
+</script>
+
+<script id="tmplService" type="text/x-jquery-tmpl">
+  <div class="service-wrapper">
+    <div class="service-${service.name}">
+      <div class="button-wrapper">
+        <div class="service-toggle" id="${service.name}">
+          <img style="width:100px; height: 100px;" alt="photo" src="${erly.PUB_URL}/img/icon-services/${service.name}-xl.png" />
+          <div class="service-title">${service.title}</div>
+          <div class="checkbox{{if connected}} connected{{/if}}"></div>
+          {{if connected}}
+          <form class="disconnect" method="POST" action="/unauth" id="form_${service.name}">
+            <input type="hidden" name="service" value="${service.name}" />
+            <input type="hidden" name="title" value="${service.title}" />
+          </form>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="tmplServiceProfilePhoto" type="text/x-jquery-tmpl">
+  {{if service.name === 'facebook'}}
+    <span class="avatar-image">
+      {{tmpl(user) "#tmplAvatarImage"}}
+    </span>
+  {{else}}
+    <span class="avatar-image fetch-image"></span>
+  {{/if}}
+</script>
+
+<script id="tmplCollectionOverlay" type="text/x-jquery-tmpljavascript">
+  {{if typeof(owner) !== 'undefined' && owner.id === erly.userId}}
+  <div class="collection-overlay col-owner">
+  {{else}}
+  <div class="collection-overlay">
+  {{/if}}
+    {{if wirTitleData}}
+    <div class="title">${erly.formatTitle(title, wirTitleData)}</div>
+    {{else}}
+    <div class="title">${title}</div>
+    {{/if}}
+    <div class="date-location">
+      ${erly.dateFormatters.formatDateShort(startDate)},
+      ${owner.name}
+      {{if typeof memberCount === 'number' && memberCount - 1 > 0 }}
+        with
+        ${erly.util.pluralize(memberCount - 1, 'person', 'people')}
+      {{/if}}
+    </div>
+  </div>
+</script>
+
+<script id="tmplEmailVerificationError" type="text/x-jquery-tmpljavascript">
+  {{wrap({title: 'Please verify your email address'}) "#tmplBaseConfirmModal"}}
+  <div class="content email-verification">
+    Please verify the email address you used to sign up for an Erly account.
+    You can verify your email address by clicking on the link in your welcome
+    email.
+    <a href="javascript:void(0)" class="resend-verify">Click here to resend.</a>
+  </div>
+  <div class="buttons">
+    <button class="cancel">OK</button>
+  </div>
+  {{/wrap}}
+</script>
+
+<script id="tmplVanityNameWidget" type="text/x-jquery-tmpljavascript">
+  <div class="custom-url{{if $data.editable === false}} not-editable{{/if}}">
+    {{if $data.editable === false}}
+    <div class="custom-url-container not-editable">
+      <a href="http://erly.com/user/${vanityName}">http://erly.com/user/${vanityName}</a>
+    </div>
+    {{else}}
+    ${text}
+    {{if text}}
+    <br />
+    {{/if}}
+    <div class="custom-url-container">
+      http://erly.com/user/
+      <input type="text" name="vanityName" placeholder="name" value="${vanityName}" maxlength="20" />
+    </div>
+    <span class="availability"></span>
+    {{/if}}
+  </div>
+</script>
+
+<script id="tmplUploadProfilePictureWidget" type="text/x-jquery-tmpljavascript">
+  <div class="add-pic">
+    {{if facebookId}}
+    <img class="default" width="40" height="40" src="http://graph.facebook.com/${facebookId}/picture" />
+    {{/if}}
+    {{if erly.session.hasAvatar() && $data.picture}}
+    <img class="picture" width="40" height="40" src="${$data.picture}" />
+    {{/if}}
+    <input type="file" name="files[]" size="9" />
+  </div>
+</script>
+
+<script id="tmplReplaceableAvatar" type="text/x-jquery-tmpljavascript">
+  <form class="profile-picture" onsubmit="return false;">
+    <input type="hidden" name="picture" value="" />
+    {{tmpl($data) '#tmplUploadProfilePictureWidget'}}
+  </form>
+  <div class="error-container"></div>
+</script>
+
+<script id="tmplSignupModal" type="text/x-jquery-tmpljavascript">
+  {{wrap({outerClass: "signup-modal"}) "#tmplModal"}}
+  <form id="signup1" onsubmit="return false;">
+    <div class="header">
+      <div class="with-icon">
+        <div class="icon"></div>
+        <span>Sign up for a new Erly account</span>
+      </div>
+    </div>
+    <span class="facebook-signup"></span>
+    <div class="facebook-message">We will not post to your Facebook Wall</div>
+    <div class="or-button-bar">
+      <div>OR</div>
+    </div>
+    <input type="text" name="name" placeholder="Name" class="empty-text" value="{{if $data.name}}${name}{{/if}}" />
+    <input type="text" name="email" placeholder="Email address" class="empty-text" value="{{if $data.email}}${email}{{/if}}" />
+    <input name="password" type="password" placeholder="Password" class="empty-text" />
+    <div class="signup-button-bar">
+      <input type="submit" value=" " />
+    </div>
+    {{tmpl "#tmplFormErrorContainer"}}
+    <div class="login-blurb">
+      Already have an Erly account?
+      <a href="javascript:erly.session.login()" id="sign-up-hover-link">Log in</a>
+    </div>
+  </form>
+  {{/wrap}}
+</script>

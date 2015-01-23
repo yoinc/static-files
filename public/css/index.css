@@ -1,0 +1,384 @@
+body div {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body .modal {
+  position: fixed;
+}
+body div.header {
+  background-color: #fff;
+  border-bottom: solid 1px #eee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 74px;
+  padding: 5px;
+  height: 74px;
+  z-index: 100;
+}
+body div.header div.logo {
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+  background: url(/img/logo-clear.png) no-repeat;
+  background-size: 64px 64px;
+  vertical-align: middle;
+}
+body div.header div.tagline {
+  font-size: 10px;
+  display: inline-block;
+  color: #888;
+  line-height: 64px;
+  vertical-align: middle;
+}
+body div.header div.profile {
+  float: right;
+  line-height: 64px;
+  font-size: 12px;
+  vertical-align: middle;
+}
+body div.header div.profile div.login-message {
+  display: inline-block;
+}
+body div.update-warning {
+  background-color: rgba(200, 200, 200, 0.5);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  display: none;
+  font-size: 10px;
+  left: 50%;
+  overflow-y: auto;
+  margin-left: -110px;
+  padding-bottom: 3px;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 250px;
+  z-index: 1500;
+}
+body div.left-bar {
+  position: fixed;
+  min-width: 200px;
+  max-width: 300px;
+  width: 15%;
+  left: 0px;
+  top: 74px;
+  bottom: 0;
+  padding: 0 10px;
+  overflow-y: auto;
+  z-index: 1042;
+}
+body div.left-bar div.create-room-container {
+  position: relative;
+  padding: 10px;
+  text-align: center;
+}
+body div.left-bar div.rooms div.empty {
+  font-color: #888;
+  font-size: 12px;
+  padding: 10px 10px 30px 10px;
+}
+body div.left-bar div.rooms h3 {
+  margin: 0;
+}
+body div.left-bar div.room-list {
+  border: solid 1px #aaa;
+  border-bottom: none;
+}
+body div.left-bar div.room-list div.room {
+  cursor: pointer;
+  background-color: #eee;
+}
+body div.left-bar div.room-list div.room.active {
+  background-color: #eef;
+}
+body div.left-bar div.room-list div.room div.heading {
+  border-bottom: solid 1px #aaa;
+  padding: 5px 20px 5px 10px;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body div.left-bar div.room-list div.room div.heading span.title {
+  white-space: nowrap;
+}
+body div.left-bar div.room-list div.room div.heading span.member-toggle,
+body div.left-bar div.room-list div.room div.heading span.close-room {
+  font-size: 20px;
+  position: absolute;
+  right: 3px;
+  top: 4px;
+  width: 15px;
+  text-align: center;
+}
+body div.left-bar div.room-list div.room div.members {
+  background-color: white;
+  padding: 10px;
+  font-size: 12px;
+  border-bottom: solid 1px #aaa;
+}
+body div.left-bar div.room-list div.room div.members div.user {
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+body div.left-bar div.room-list div.room div.members button.update-nick-link {
+  background: none;
+  border: none;
+  font-size: 12px;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+}
+body div.left-bar div.room-list div.room div.members button.update-nick-link:focus {
+  outline: 0;
+}
+body div.left-bar div.room-list div.room div.members div.update-nick input {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 30px;
+  width: 100%;
+}
+body div.left-bar div.room-list div.room div.members div.invite {
+  text-align: right;
+}
+body div.left-bar div.room-list div.room div.members div.invite button {
+  background: none;
+  border: none;
+  font-size: 12px;
+}
+body div.left-bar div.room-list div.room div.members div.invite button:focus {
+  outline: 0;
+}
+body div.left-bar div.inviter {
+  display: none;
+}
+body div.right-panel {
+  background: #eee;
+  position: fixed;
+  left: 15%;
+  right: 0px;
+  top: 74px;
+  bottom: 0px;
+}
+body div.right-panel div.room-canvas {
+  border: solid 1px #aaa;
+}
+body div.right-panel div.room-canvas .room-title {
+  background-color: #ccc;
+  border-bottom: solid 1px #aaa;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  font-size: 16px;
+  height: 32px;
+  left: 0px;
+  line-height: 32px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  top: 0px;
+  vertical-align: middle;
+  z-index: 1;
+}
+body div.right-panel div.room-canvas button.invite-button {
+  z-index: 1;
+  position: absolute;
+  right: 0px;
+}
+body div.right-panel div.room-canvas button.leave-button {
+  z-index: 1;
+  position: absolute;
+  right: 100px;
+}
+body div.right-panel div.room-canvas button.push-video {
+  z-index: 1;
+  position: absolute;
+  left: 0px;
+}
+body div.right-panel div.room-canvas div.room-title-edit-form {
+  position: absolute;
+  z-index: 1;
+}
+body div.right-panel div.room-canvas div.room-title-edit-form input.title {
+  height: 8px;
+  height: 9px;
+  font-size: 14px;
+  line-height: 9px;
+}
+body div.right-panel div.room-canvas div.room-title-edit-form button.change-title {
+  height: 18px;
+  position: relative;
+  top: -4px;
+  padding: 0px 2px 0px 2px;
+  font-size: 13px;
+}
+body div.right-panel div.room-canvas .room-chrome {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 32px;
+  bottom: 55px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: 20px 20px 20px 20px;
+}
+body div.right-panel div.room-canvas div.message div.timestamp {
+  color: #999;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 1px 0 #ffffff;
+}
+body div.right-panel div.room-canvas div.message div.mention {
+  background: #5e8fde;
+  color: white;
+  padding: 3px;
+  display: inline-block;
+  text-shadow: 0 1px 0 #000000;
+}
+body div.right-panel div.room-canvas div.message div.sender {
+  color: #666;
+  font-size: 12px;
+  padding: 0 10px;
+}
+body div.right-panel div.room-canvas div.message div.body {
+  background: #f5f5f5;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 0 -2px 5px rgba(255, 255, 255, 0.4);
+  display: inline-block;
+  max-width: 80%;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  word-wrap: break-word;
+}
+body div.right-panel div.room-canvas div.message div.body pre {
+  background: transparent;
+  border: none;
+  font-family: Courier;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+body div.right-panel div.room-canvas div.message div.body div.progress {
+  background-color: #fff;
+  box-sizing: border-box;
+  border: solid 1px #888;
+  height: 20px;
+  margin: 10px 0;
+  min-width: 200px;
+  text-align: left;
+  width: 100%;
+}
+body div.right-panel div.room-canvas div.message div.body div.progress div.bar {
+  display: inline-block;
+  height: 100%;
+  width: 0%;
+}
+body div.right-panel div.room-canvas div.message div.body div.user-image {
+  text-align: center;
+  padding: 10px;
+}
+body div.right-panel div.room-canvas div.message div.body div.user-image img {
+  max-width: 300px;
+  max-height: 500px;
+}
+body div.right-panel div.room-canvas div.message div.body div.user-video {
+  text-align: center;
+  padding: 10px;
+}
+body div.right-panel div.room-canvas div.message div.body div.user-video div.thumbnail {
+  background-position: 50% 50%;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  position: relative;
+}
+body div.right-panel div.room-canvas div.message div.body div.user-video div.thumbnail div.play-overlay {
+  background: url(/img/play-overlay.png);
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  margin-top: -35px;
+  margin-right: -35px;
+  height: 70px;
+  width: 70px;
+}
+body div.right-panel div.room-canvas div.message div.body div.user-video video {
+  display: none;
+}
+body div.right-panel div.room-canvas div.message.self {
+  text-align: right;
+}
+body div.right-panel div.room-canvas div.message.self div.body {
+  background: #d4e7c8;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+body div.right-panel div.room-canvas div.composer {
+  position: absolute;
+  height: 55px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+body div.right-panel div.room-canvas div.composer div.chat-message-container {
+  position: absolute;
+  width: auto;
+  left: 0;
+  right: 155px;
+  height: 30px;
+}
+body div.right-panel div.room-canvas div.composer div.chat-message-container textarea.chat-message {
+  width: 100%;
+}
+body div.right-panel div.room-canvas div.composer div.buttons {
+  position: absolute;
+  right: 0;
+}
+body div.right-panel div.room-canvas div.composer div.buttons span.upload-wrapper {
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+body div.right-panel div.room-canvas div.composer div.buttons span.upload-wrapper input {
+  cursor: pointer;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 100px;
+  opacity: 0;
+}
+body div.login button.fb-login {
+  margin-left: 100px;
+}
+body div.login div.heading {
+  font-size: 18px;
+  margin: 24px;
+  font-weight: bold;
+}
+body .typeahead {
+  z-index: 1051;
+}
+body div.ptv-overlay {
+  left: 206px;
+  position: fixed;
+  right: 0px;
+  top: -10000px;
+}
+body div.ptv-overlay div.publisher object {
+  position: relative;
+}
+body div.ptv-overlay div.subscribers div.subscriber {
+  width: 320px;
+  height: 180px;
+  display: inline-block;
+}
+body div.ptv-overlay div.subscribers div.subscriber object {
+  position: relative;
+}

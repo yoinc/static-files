@@ -1,0 +1,262 @@
+<script id="tmplInvitePanelModal" type="text/x-jquery-tmpljavascript">
+  <div id="modal" class="modal invite-modal{{if $item.isNewCollection}} new-event{{/if}} {{if !$item.isInFuture}}no-facebook-panel{{/if}}">
+    <div class="close-modal">
+    </div>
+
+    <div class="header">
+      <div class="with-icon">
+        <div class="icon"> </div>
+        {{if $item.isNewCollection}}
+          <span>Congratulations on creating your Erly ${$item.data.isAlbum ? 'album' : 'invitation'}</span>
+        {{else}}
+          <span>Invite people to join this Erly Event</span>
+        {{/if}}
+      </div>
+    </div>
+
+    <div class="invite-panel">
+      {{if $item.isInFuture}}
+        {{if !$item.ownerOnly && erly.getUserData().facebookId}}
+        <div class="content-container split-left">
+        {{else}}
+        <div class="content-container">
+        {{/if}}
+          <div class="content-header">Have Erly send email invites to each guest
+          </div>
+          <div class="content-sub-header">Your friends can RSVP with one click</div>
+          <div class="tagging-form">
+            <a class="add-message" href="javascript:void(0);">Add a personal message</a>
+            <textarea class="personal-message empty-text" placeholder="Add a personal message to send with the invitation"></textarea>
+            <textarea class="tagging-input empty-text" placeholder="Enter email addresses separated by commas"></textarea>
+            <div id="import_contacts" class="import-contacts">
+              {{if !$item.userIsInvite}}
+                <span class="prompt">Import Contacts </span><span class="import-tip">(?)</span>
+                {{tmpl({name: "Google", icon: "/img/icon-google.png"})
+                  "#tmplImportSource"}}
+                {{tmpl({name: "Yahoo!", icon: "/img/icon-yahoo.png"})
+                  "#tmplImportSource"}}
+                <div class="import-tip-container">Import your contacts to auto complete email addresses.</div>
+              {{else}}
+                <span class="prompt"></span>
+              {{/if}}
+            </div>
+            <div class="tag-count"></div>
+            <div class="clear">&nbsp;</div>
+            <div class="buttons">
+              <button type="button" class="email-preview">
+                <span class="inner">Preview Invite</span>
+              </button>
+              &nbsp;
+              <button class="submit">
+                <div class="icon"></div>
+                <span class="inner">Send Invites</span>
+              </button>
+            </div>
+
+            <div class="error"></div>
+          </div>
+        </div>
+        {{if !$item.ownerOnly}}
+          {{if erly.getUserData().facebookId}}
+            <div class="content-container split-right">
+              <div class="error-container"></div>
+              <div class="content-header">Invite your Facebook friends</div>
+              <div class="content-sub-header">Your friends will receive a Facebook notification from you</div>
+              <div class="facebook-button-container">
+                <button id="inviteFacebook">Invite Facebook Friends</button>
+              </div>
+              <div id="inviteFacebookStatus"></div>
+            </div>
+          {{/if}}
+          <div class="or"><div>or</div></div>
+          <div class="content-container share-link">
+            <div class="error-container"></div>
+            <div class="content-header">Share the invitation link</div>
+            <div class="content-sub-header">Your friends can RSVP with their name and email address</div>
+            <div class="share-link-container">
+              <input class="share-link" type="text" value="${$item.collectionLink}" readonly="readonly"></input>
+              {{tmpl "#tmplClippy"}}
+            </div>
+          </div>
+      {{/if}}
+      {{else}}
+        {{if !$item.hideAddContent}}
+          <div class="content-container">
+            <div class="error-container"></div>
+            <div class="content-header">
+              Add your favorite photos and stories from this Event
+            </div>
+            <div class="content-sub-header">Share content from your own computer, Facebook, Picasa, and other websites</div>
+            <div class="add-content">
+              <button data-type="photo"><img src="${erly.PUB_URL}/img/icon-flagstone-add-photos-w.png" alt="photo" /></button>
+              <button data-type="note"><img src="${erly.PUB_URL}/img/icon-flagstone-add-notes-w.png" alt="photo" /></button>
+              <button data-type="link"><img src="${erly.PUB_URL}/img/icon-flagstone-add-links-w.png" alt="photo" /></button>
+              <button data-type="video"><img src="${erly.PUB_URL}/img/icon-flagstone-add-videos-w.png" alt="photo" /></button>
+            </div>
+          </div>
+          <div class="or"><div>or</div></div>
+        {{/if}}
+        <div class="content-container">
+          <div class="content-header">Invite others to contribute to the event album</div>
+          <div class="content-sub-header">Your friends can add their photos and stories from this event</div>
+          <div class="tagging-form">
+            <a class="add-message" href="javascript:void(0);">Add a personal message</a>
+            <textarea class="personal-message empty-text" placeholder="Add a personal message to send with the invitation"></textarea>
+            <textarea class="tagging-input empty-text" placeholder="Enter email addresses separated by commas"></textarea>
+            <div id="import_contacts" class="import-contacts">
+              <span class="prompt">Import Contacts </span><span class="import-tip">(?)</span>
+              {{tmpl({name: "Google", icon: "/img/icon-google.png"})
+                "#tmplImportSource"}}
+              {{tmpl({name: "Yahoo!", icon: "/img/icon-yahoo.png"})
+                "#tmplImportSource"}}
+              <div class="import-tip-container">Import your contacts to auto complete email addresses.</div>
+            </div>
+            <span class="tag-count"></span>
+            <div class="clear">&nbsp;</div>
+            <div class="buttons">
+              <button type="button" class="email-preview">
+                <span class="inner">Preview Invite</span>
+              </button>
+              &nbsp;
+              <button class="submit">
+                <div class="icon"></div>
+                <span class="inner">Send Invites</span>
+              </button>
+            </div>
+
+            <div class="error"></div>
+          </div>
+        </div>
+      {{/if}}
+    </div>
+    <div class="invite-footer">
+      <div>
+        <button class="return">
+          <span class="inner">
+            Return to {{if $item.data.userRole.owner}}my{{/if}} ${$item.data.isAlbum ? 'album' : 'invitation'}
+          </span>
+        </button>
+      </div>
+      <div class="note">
+        {{if $item.data.isAlbum}}
+        You can always update your album later
+        {{else}}
+        You can always send more invitations later
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="tmplEmailPanelModal" type="text/x-jquery-tmpljavascript">
+  <div id="modal" class="modal email-message-modal">
+    <div class="close-modal">
+    </div>
+
+    <div class="header">
+      <div class="with-icon">
+        <div class="icon"> </div>
+        <span>Send your guests an email</span>
+      </div>
+    </div>
+
+    <div class="email-message-panel">
+      <div class="content-container">
+        <form id="email_message_panel_form" method="post" action="${formUrl}">
+          <div class="email-list">
+            <h2 class="recipient-callout">To:</h2>
+            <div class="recipient-selectors">
+              {{if rsvps.yes.length > 0}}
+                <div class="checkbox">
+                  <input id="yesCheckbox" type="checkbox" name="yes" value="1" checked="checked" />
+                  <label for="yesCheckbox">Attending (${rsvps.yes.length})</label>
+                </div>
+              {{/if}}
+
+              {{if rsvps.maybe.length > 0}}
+                <div class="checkbox">
+                  <input id="maybeCheckbox" type="checkbox" name="maybe" value="1" checked="checked" />
+                  <label for="maybeCheckbox">Maybe Attending (${rsvps.maybe.length})</label>
+                </div>
+              {{/if}}
+
+              {{if rsvps.pending.length > 0}}
+                <div class="checkbox">
+                  <input id="pendingCheckbox" type="checkbox" name="pending" value="1" checked="checked" />
+                  <label for="pendingCheckbox">Awaiting Reply (${rsvps.pending.length})</label>
+                </div>
+              {{/if}}
+
+              {{if rsvps.no.length > 0}}
+                <div class="checkbox">
+                  <input id="noCheckbox" type="checkbox" name="no" value="1" />
+                  <label for="noCheckbox">Not Attending (${rsvps.no.length})</label>
+                </div>
+              {{/if}}
+            </div>
+            <div class="error receivers"></div>
+          </div>
+
+          <div class="row">
+            <label for="subject">Subject:</label>
+            <input type="text" name="subject" value="Update - ${collection.title}" />
+            <div class="error subject"></div>
+          </div>
+
+          <div class="row">
+            <label for="message">Message:</label>
+            <textarea name="message" class="empty-text" placeholder="Write a message to your guests..."></textarea>
+            <div class="error message"></div>
+          </div>
+
+          <div class="send-copy">
+            <input type="checkbox" name="send_self_copy" value="1" checked="checked" />
+            Also send me a copy of this email
+
+            <a href="javascript:void(0);" class="email-preview">Preview Email</a>
+          </div>
+
+          <div class="buttons">
+            <input type="button" name="cancel" value="Cancel" class="cancel-button"/>
+            <button class="submit">
+              <div class="icon"> </div>
+              <span class="inner">Send Emails</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="tmplShareLinkModal" type="text/x-jquery-tmpljavascript">
+  <div id="modal" class="modal link-modal">
+    <div class="close-modal">
+    </div>
+
+    <div class="header">
+      <div class="with-icon">
+        <div class="icon"> </div>
+          <span>Event Link</span>
+      </div>
+    </div>
+
+    <div class="link-panel">
+      <div class="content-container">
+        <div class="content-header">Paste a link to this Event into an email or IM</div>
+        <div class="share-link-container">
+          <input class="share-link" type="text" value="${$item.collectionLink}" readonly="readonly"></input>
+          {{tmpl "#tmplClippy"}}
+        </div>
+        <!--
+        <div class="buttons">
+          <button class="submit">
+            <div class="icon"> </div>
+            <span class="inner">Copy Link</span>
+          </button>
+        </div>
+        -->
+      </div>
+    </div>
+  </div>
+</script>

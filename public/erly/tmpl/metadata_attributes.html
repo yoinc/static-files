@@ -1,0 +1,75 @@
+<script id="tmplMetadataAttributes" type="text/x-jquery-tmpljavascript">
+  <div class="metadata-attributes">
+    <div class="title">
+      ${title}
+    </div>
+    <div class="location-date">
+      <div class="datetime {{if !$data.locationName || $data.locationName.length > 25}}no-border{{/if}}">
+        ${erly.dateFormatters.formatDateShortDayShortMonth($data.displayStartDate)}{{if hasTime}}, ${erly.dateFormatters.formatAlarmClock($data.displayStartDate)}{{/if}}
+      </div>
+      <div class="time-tooltip">
+
+      </div>
+      {{if $data.locationName && $.trim($data.locationName.toLowerCase()) !== 'around you and your friends'}}
+        <div class="location">
+          ${$data.locationName}
+        </div>
+      {{/if}}
+    </div>
+    {{if !$data.excludeDescription}}
+    <div class="description">
+      {{if $data.description}}
+        {{html erly.linebreaks($data.description)}}
+      {{/if}}
+    </div>
+    {{/if}}
+  </div>
+</script>
+
+<script id="tmplCollectionMetadata" type="text/x-jquery-tmpljavascript">
+  <div class="bottom">
+    <div class="user">
+      {{tmpl($data.owner) '#tmplAvatarImage'}}
+      <span>
+        ${$data.owner.name}
+        {{if $data.isMember && !$data.guestListHidden && $data.attendeeCount > 1 }}
+          &#43; ${$data.attendeeCount - 1}
+        {{/if}}
+      </span>
+      {{if $data.isMember  && !$data.guestListHidden && $data.attendeeCount > 1 }}
+        <div class="contributors">
+          <div class="friends-wrapper">
+              <h3>
+                {{if erly.normalizeDate($data.startDate) < erly.now}}
+                WHO WAS THERE
+                {{else}}
+                WHO'S GOING
+                {{/if}}
+              </h3>
+            <div class="friends">
+              <div class="loader">
+                <img src="${PUB_URL}/img/ajax-loader.gif" alt="ajax spinner" />
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/if}}
+    </div>
+    <div class="meta-icons">
+      {{if erly.gallery && erly.gallery.user && erly.userId === $data.owner.id}}
+        {{tmpl({icon: 'views', value: $data.viewCount}) '#tmplMetaIcon'}}
+      {{/if}}
+      {{tmpl({icon: 'likes', value: $data.totalLikeCount}) '#tmplMetaIcon'}}
+      {{tmpl({icon: 'comments', value: $data.totalCommentCount}) '#tmplMetaIcon'}}
+    </div>
+  </div>
+</script>
+
+<script id="tmplMetaIcon" type="text/x-jquery-tmpljavascript">
+  {{if value > 0}}
+  <div class="meta-icon">
+    <img src="${erly.PUB_URL}/img/icon-gallery-${icon}.png" title="${value} ${icon}"/>
+    <span>${value}</span>
+  </div>
+  {{/if}}
+</script>

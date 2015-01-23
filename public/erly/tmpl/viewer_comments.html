@@ -1,0 +1,69 @@
+<script id="tmplComment" type="text/x-jquery-tmpljavascript">
+<div class="single-comment">
+  <div class="image">
+    {{tmpl({facebookId: $data.fromFacebookId, ident: $data.fromUserIdent})
+      '#tmplAvatarImage'}}
+  </div>
+  <div class="text">
+    <span class="author">
+      {{if typeof(fromLink) !== 'undefined' && !$data.isInvite}}
+        <a href="${fromLink}">${fromName}</a>
+      {{else}}
+        ${fromName}
+      {{/if}}
+    </span><span class="message-text">${text}</span>
+    <div class="datetime">
+      <span class="prettydate" title="${erly.normalizeDate($data.createdAt)}"></span>
+    </div>
+  </div>
+
+  {{if $data.fromUserId === erly.userId || erly.viewer.collection.userRole.owner}}
+    <div class="delete">&nbsp;</div>
+  {{/if}}
+</div>
+</script>
+
+<script id="tmplCommentBox" type="text/x-jquery-tmpljavascript">
+  <div id="commentBox">
+    <div class="comments-header">
+      <img src="${erly.PUB_URL}/img/icon-comment-blue.png" alt="photo" />
+      Comments
+      <div class="remove"></div>
+    </div>
+    {{if comments.length > 4}}
+      <div class="comments-more">
+        <a href="javascript:void(0)">See all ${comments.length} comments...</a>
+      </div>
+
+      <div class="comments-rest">
+        {{each comments.slice(0, comments.length - 4)}}
+          {{tmpl($value) '#tmplComment'}}
+        {{/each}}
+      </div>
+
+      <div class="comments-container">
+        {{each comments.slice(comments.length - 4, comments.length)}}
+          {{tmpl($value) '#tmplComment'}}
+        {{/each}}
+      </div>
+    {{else}}
+      <div class="comments-container">
+        {{if comments.length > 0}}
+          {{each comments}}
+            {{tmpl($value) '#tmplComment'}}
+          {{/each}}
+        {{else}}
+          <div class="single-comment">
+            No comments yet.
+          </div>
+        {{/if}}
+      </div>
+    {{/if}}
+    <div class="comments-input">
+      <textarea placeholder="Write a comment..."></textarea>
+      <div class="comments-post">
+        <button>Post</button>
+      </div>
+    </div>
+  </div>
+</script>

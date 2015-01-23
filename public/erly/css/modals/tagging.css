@@ -1,0 +1,384 @@
+/* Mostly taken from http://nicolasgallagher.com/pure-css-speech-bubbles/demo/default.css */
+@-webkit-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-moz-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-o-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-webkit-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-o-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.modal .share-post-email,
+.tagging-inner {
+  filter: alpha(opacity=100); }
+  .modal .share-post-email .contacts-container,
+  .tagging-inner .contacts-container {
+    padding: 1px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    min-height: 26px;
+    width: 450px;
+    background-color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px; }
+  .modal .share-post-email .added-contact,
+  .tagging-inner .added-contact {
+    background-color: #E2F2FE;
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 4px;
+    padding: 2px 4px;
+    max-width: 440px;
+    word-wrap: break-word;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-shadow: none;
+    font-family: "Helvetica", "Lucida Grande", "Arial", sans-serif; }
+  .modal .share-post-email .added-contact .name,
+  .tagging-inner .added-contact .name {
+    font-weight: 600; }
+  .modal .share-post-email .added-contact .remove,
+  .tagging-inner .added-contact .remove {
+    margin-right: 2px; }
+  .modal .share-post-email .contacts-container,
+  .modal .share-post-email .contacts-container .added-contacts .added-contact,
+  .tagging-inner .contacts-container,
+  .tagging-inner .contacts-container .added-contacts .added-contact {
+    border: 1px solid #9D9D9D; }
+  .modal .share-post-email .contacts-container input,
+  .tagging-inner .contacts-container input {
+    border: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -webkit-appearance: none;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Helvetica", "Lucida Grande", "Arial", sans-serif;
+    color: #888; }
+  .modal .share-post-email .contacts-container.error,
+  .tagging-inner .contacts-container.error {
+    border: solid 1px #f99; }
+  .modal .share-post-email .error-message,
+  .tagging-inner .error-message {
+    font-size: 12px;
+    color: #f55;
+    padding-left: 5px; }
+  .modal .share-post-email .errors,
+  .tagging-inner .errors {
+    width: 450px; }
+  .modal .share-post-email .prompt,
+  .tagging-inner .prompt {
+    font-size: 12px; }
+  .modal .share-post-email .autocomplete-container .contacts,
+  .tagging-inner .autocomplete-container .contacts {
+    background-color: white;
+    width: 452px;
+    z-index: 999999;
+    border: 1px solid #aaa;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 400px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+    margin: 0;
+    padding: 0; }
+    .modal .share-post-email .autocomplete-container .contacts ul,
+    .tagging-inner .autocomplete-container .contacts ul {
+      margin: 0;
+      padding: 0; }
+      .modal .share-post-email .autocomplete-container .contacts ul li,
+      .tagging-inner .autocomplete-container .contacts ul li {
+        list-style: none;
+        margin: 0;
+        border-bottom: 1px solid #ddd; }
+      .modal .share-post-email .autocomplete-container .contacts ul .contact,
+      .tagging-inner .autocomplete-container .contacts ul .contact {
+        height: 40px; }
+        .modal .share-post-email .autocomplete-container .contacts ul .contact:hover,
+        .tagging-inner .autocomplete-container .contacts ul .contact:hover {
+          background-color: #E2F2FE !important; }
+        .modal .share-post-email .autocomplete-container .contacts ul .contact img,
+        .tagging-inner .autocomplete-container .contacts ul .contact img {
+          width: 34px;
+          height: 34px; }
+      .modal .share-post-email .autocomplete-container .contacts ul .header,
+      .tagging-inner .autocomplete-container .contacts ul .header {
+        padding-left: 5px;
+        height: 20px;
+        background-color: #eee; }
+  .modal .share-post-email .contact img,
+  .tagging-inner .contact img {
+    padding: 4px; }
+  .modal .share-post-email .contact-info,
+  .tagging-inner .contact-info {
+    display: inline-block;
+    vertical-align: top; }
+  .modal .share-post-email .contact-info .email,
+  .tagging-inner .contact-info .email {
+    color: #888;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 350px;
+    vertical-align: middle; }
+  .modal .share-post-email .contacts a,
+  .tagging-inner .contacts a {
+    text-decoration: none; }
+  .modal .share-post-email .contact-info .name,
+  .tagging-inner .contact-info .name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #000; }
+  .modal .share-post-email .contact-info .email,
+  .tagging-inner .contact-info .email {
+    font-size: 12px; }
+  .modal .share-post-email .import,
+  .tagging-inner .import {
+    position: relative;
+    margin-top: 15px; }
+    .modal .share-post-email .import .import-contacts,
+    .tagging-inner .import .import-contacts {
+      filter: alpha(opacity=100);
+      line-height: 1;
+      margin-top: 12px;
+      font-size: 14px; }
+      .modal .share-post-email .import .import-contacts a,
+      .tagging-inner .import .import-contacts a {
+        text-decoration: none; }
+      .modal .share-post-email .import .import-contacts .source,
+      .tagging-inner .import .import-contacts .source {
+        display: inline-block;
+        margin-left: 10px; }
+      .modal .share-post-email .import .import-contacts .icon,
+      .tagging-inner .import .import-contacts .icon {
+        vertical-align: middle;
+        margin-top: -2px;
+        margin-right: 2px; }
+    .modal .share-post-email .import input,
+    .tagging-inner .import input {
+      display: none; }
+    .modal .share-post-email .import .importing-contacts,
+    .modal .share-post-email .import .imported-contacts,
+    .tagging-inner .import .importing-contacts,
+    .tagging-inner .import .imported-contacts {
+      margin-top: 8px; }
+      .modal .share-post-email .import .importing-contacts img,
+      .modal .share-post-email .import .imported-contacts img,
+      .tagging-inner .import .importing-contacts img,
+      .tagging-inner .import .imported-contacts img {
+        vertical-align: middle;
+        margin-right: 8px; }
+    .modal .share-post-email .import .import-contacts,
+    .modal .share-post-email .import .importing-contacts,
+    .modal .share-post-email .import .imported-contacts,
+    .tagging-inner .import .import-contacts,
+    .tagging-inner .import .importing-contacts,
+    .tagging-inner .import .imported-contacts {
+      display: inline-block; }
+    .modal .share-post-email .import .submit,
+    .tagging-inner .import .submit {
+      float: right; }
+
+.tagging .bordered-triangle {
+  top: 25px; }
+.tagging .modal {
+  border: solid 1px #aaa;
+  background-color: #f6f6f6;
+  padding: 14px 19px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4); }
+  .tagging .modal .tagging-inner .modal-title {
+    background-image: url(/img/icon-plus-large.png);
+    background-repeat: no-repeat;
+    padding-left: 26px;
+    height: 20px; }
+  .tagging .modal .tagging-inner .contacts-container {
+    margin: 14px 0 8px 0; }
+  .tagging .modal .tagging-inner input[type=text], .tagging .modal .tagging-inner input[type=email] {
+    width: 447px;
+    margin-left: 3px;
+    height: 24px; }
+  .tagging .modal .tagging-inner.invite-inner {
+    width: 450px; }
+    .tagging .modal .tagging-inner.invite-inner .import {
+      display: inherit; }
+    .tagging .modal .tagging-inner.invite-inner .contacts-container {
+      margin: 18px 0 8px 0;
+      width: 445px; }
+    .tagging .modal .tagging-inner.invite-inner input[type=text], .tagging .modal .tagging-inner.invite-inner input[type=email] {
+      width: 440px; }
+    .tagging .modal .tagging-inner.invite-inner .modal-title {
+      background-image: none;
+      height: 20px; }
+    .tagging .modal .tagging-inner.invite-inner .modal-title, .tagging .modal .tagging-inner.invite-inner .description {
+      padding-left: 65px; }
+    .tagging .modal .tagging-inner.invite-inner .facebook-image {
+      position: absolute;
+      left: 15px;
+      top: 20px; }
+      .tagging .modal .tagging-inner.invite-inner .facebook-image .email-icon {
+        position: absolute;
+        right: -5px;
+        bottom: -3px; }

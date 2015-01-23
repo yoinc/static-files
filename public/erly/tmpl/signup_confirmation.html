@@ -1,0 +1,28 @@
+<script id="tmplSignupConfirmation" type="text/x-jquery-tmpl">
+  <div class="conf-header">
+    <span>Thanks for joining, let&apos;s get started!</span>
+  </div>
+
+  <div class="services-wrapper">
+
+    <div class="services">
+      <h3>Link up any photo services you use to make it easy to pull pictures
+      into your Events.</h3>
+      <div class="services-wrapper">
+        {{tmpl({user: user, services: erly.services.getPhotoServices()}) "#tmplServices"}}
+      </div>
+    </div>
+
+    <div class="services" style="margin-top: 30px;">
+      <h3>Connect your address books to make it easier to invite friends to your Events.</h3>
+      <div class="services-wrapper">
+        {{tmpl({user: user, services: addressBookServices}) "#tmplServices"}}
+      </div>
+    </div>
+
+    <h3 class="separator">&nbsp;</h3>
+    <div class="gallery">
+      <a href="${erly.urlFor.gallery()}">&nbsp;</a>
+    </div>
+  </div>
+</script>

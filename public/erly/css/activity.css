@@ -1,0 +1,685 @@
+/* Mostly taken from http://nicolasgallagher.com/pure-css-speech-bubbles/demo/default.css */
+@-webkit-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-moz-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-o-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-webkit-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-o-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.activity-header {
+  height: 45px;
+  padding: 8px 0;
+  position: relative;
+  width: 60%;
+  margin: 10px 20px; }
+  .activity-header h2 {
+    margin-left: 0;
+    border: 0;
+    background: none;
+    padding: 2px 0 0 0; }
+    .activity-header h2 span {
+      margin: 0 6px;
+      text-shadow: 0px 1px 1px white;
+      vertical-align: middle;
+      text-transform: none;
+      font-size: 18px;
+      position: absolute;
+      top: 18px;
+      cursor: default; }
+    .activity-header h2 img, .activity-header h2 img.fb-avatar {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      height: 40px;
+      width: 40px;
+      margin-right: 12px;
+      vertical-align: middle;
+      border: 1px solid #888;
+      cursor: pointer; }
+
+.collection #discussion .comments .story .text {
+  color: #555; }
+
+.featured-collections {
+  position: relative; }
+  .featured-collections h2 {
+    cursor: pointer; }
+    .featured-collections h2 img {
+      margin-left: 5px;
+      padding-top: 5px;
+      vertical-align: top; }
+
+.friend-collections .header h2 {
+  margin: 10px 0;
+  padding: 8px 0;
+  text-transform: uppercase;
+  font-size: 16px; }
+  .friend-collections .header h2 a {
+    font-size: 14px;
+    text-transform: lowercase;
+    margin-left: 5px; }
+
+.activity-wrapper {
+  position: relative; }
+
+.activity-body {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
+  color: #444;
+  padding: 7px 25px 20px;
+  margin-bottom: 40px; }
+
+.activity-feed-items .loader {
+  margin-top: 70px; }
+
+.activity-feed-items.no-activities {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 18px; }
+
+div.empty-line {
+  background-color: rgba(150, 150, 150, 0.3);
+  bottom: 0;
+  display: none;
+  height: 50px;
+  left: 50%;
+  margin-left: -2px;
+  position: absolute;
+  top: 300px;
+  width: 2px;
+  z-index: -1; }
+
+div.empty-activities-pane {
+  display: none;
+  margin: 20px 0;
+  position: relative;
+  height: 370px;
+  text-align: center; }
+  div.empty-activities-pane .text {
+    color: #555;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 20px 25px;
+    text-shadow: 0 1px 1px 255, 255, 255, 0.3; }
+  div.empty-activities-pane .start-button {
+    background: url(/erly/img/button-start-collection.png) no-repeat 0 0;
+    display: inline-block;
+    height: 70px;
+    width: 335px;
+    cursor: pointer; }
+    div.empty-activities-pane .start-button:hover {
+      background-position: 0 -70px; }
+    div.empty-activities-pane .start-button:active {
+      background-position: 0 -140px; }
+  div.empty-activities-pane .or {
+    width: 280px;
+    margin: 10px auto 0;
+    padding: 10px 0 0;
+    border-top: 1px solid #aaa;
+    font-size: 16px; }
+    div.empty-activities-pane .or span {
+      display: block;
+      background: #eee;
+      width: 40px;
+      margin: -20px auto 0; }
+
+.activity-feed-item {
+  padding: 15px 20px 15px 0;
+  border-bottom: 1px solid #ddd;
+  position: relative; }
+  .activity-feed-item.last-left-off {
+    border-color: #ddd;
+    border-width: 2px;
+    margin-left: -20px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+    margin-bottom: 10px; }
+    .activity-feed-item.last-left-off .last-left-off-text {
+      background: url(/erly/img/bg-gray.png);
+      color: #888;
+      padding: 0 5px;
+      position: absolute;
+      bottom: -8px;
+      left: 74px;
+      font-size: 13px;
+      line-height: 13px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .activity-feed-item div.story {
+    margin-left: 60px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .activity-feed-item div.story a {
+      color: #0698CA; }
+      .activity-feed-item div.story a:hover {
+        text-decoration: underline;
+        color: #0c9acb; }
+    .activity-feed-item div.story .text {
+      font-size: 14px; }
+  .activity-feed-item div.avatar-photo {
+    position: absolute;
+    top: 15px;
+    margin-right: 15px; }
+    .activity-feed-item div.avatar-photo img {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      height: 40px;
+      width: 40px;
+      margin-right: 5px;
+      vertical-align: middle;
+      border: 1px solid #888; }
+  .activity-feed-item div.time-ago {
+    color: gray; }
+  .activity-feed-item div.chronicle-content,
+  .activity-feed-item div.post-content {
+    clear: both;
+    margin: 5px 0; }
+    .activity-feed-item div.chronicle-content .primary,
+    .activity-feed-item div.chronicle-content .secondary,
+    .activity-feed-item div.chronicle-content .two-column,
+    .activity-feed-item div.post-content .primary,
+    .activity-feed-item div.post-content .secondary,
+    .activity-feed-item div.post-content .two-column {
+      float: left;
+      width: 400px;
+      overflow: hidden; }
+      .activity-feed-item div.chronicle-content .primary.activity-photo,
+      .activity-feed-item div.chronicle-content .secondary.activity-photo,
+      .activity-feed-item div.chronicle-content .two-column.activity-photo,
+      .activity-feed-item div.post-content .primary.activity-photo,
+      .activity-feed-item div.post-content .secondary.activity-photo,
+      .activity-feed-item div.post-content .two-column.activity-photo {
+        border: 1px solid #ccc;
+        margin: 6px;
+        width: 97%;
+        height: 250px;
+        position: relative;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+        border: 5px solid #FFF; }
+    .activity-feed-item div.chronicle-content .primary.activity-photo,
+    .activity-feed-item div.post-content .primary.activity-photo {
+      margin: 6px 0;
+      width: 570px;
+      height: 250px; }
+    .activity-feed-item div.chronicle-content a:first-child .secondary,
+    .activity-feed-item div.post-content a:first-child .secondary {
+      margin-left: 0;
+      width: 362px;
+      height: 250px; }
+    .activity-feed-item div.chronicle-content .secondary.activity-photo,
+    .activity-feed-item div.post-content .secondary.activity-photo {
+      margin: 6px 0 6px 12px;
+      width: 186px;
+      height: 114px; }
+    .activity-feed-item div.chronicle-content .secondary.two-column,
+    .activity-feed-item div.post-content .secondary.two-column {
+      height: 250px; }
+    .activity-feed-item div.chronicle-content a:hover,
+    .activity-feed-item div.post-content a:hover {
+      text-decoration: none; }
+    .activity-feed-item div.chronicle-content div.collection-cover,
+    .activity-feed-item div.post-content div.collection-cover {
+      width: 100%;
+      height: 270px;
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4); }
+      .activity-feed-item div.chronicle-content div.collection-cover canvas,
+      .activity-feed-item div.post-content div.collection-cover canvas {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px; }
+      .activity-feed-item div.chronicle-content div.collection-cover div.title,
+      .activity-feed-item div.post-content div.collection-cover div.title {
+        color: white;
+        font-size: 28px;
+        line-height: 28px;
+        max-width: 400px;
+        text-align: left;
+        text-transform: uppercase;
+        position: absolute;
+        padding: 8px 12px;
+        font-family: DIN_light;
+        overflow: hidden; }
+        .activity-feed-item div.chronicle-content div.collection-cover div.title span,
+        .activity-feed-item div.post-content div.collection-cover div.title span {
+          display: block; }
+        .activity-feed-item div.chronicle-content div.collection-cover div.title.white,
+        .activity-feed-item div.post-content div.collection-cover div.title.white {
+          color: #fff;
+          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); }
+        .activity-feed-item div.chronicle-content div.collection-cover div.title.black,
+        .activity-feed-item div.post-content div.collection-cover div.title.black {
+          color: #000; }
+        .activity-feed-item div.chronicle-content div.collection-cover div.title.grey,
+        .activity-feed-item div.post-content div.collection-cover div.title.grey {
+          color: #333; }
+        .activity-feed-item div.chronicle-content div.collection-cover div.title.black-bg,
+        .activity-feed-item div.post-content div.collection-cover div.title.black-bg {
+          background: url(/erly/img/bg-black-70.png);
+          text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px; }
+        .activity-feed-item div.chronicle-content div.collection-cover div.title.white-bg,
+        .activity-feed-item div.post-content div.collection-cover div.title.white-bg {
+          background: url(/erly/img/bg-white-90.png);
+          text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.3);
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px; }
+    .activity-feed-item div.chronicle-content .activity-comment,
+    .activity-feed-item div.post-content .activity-comment {
+      background: url(/erly/img/bg-ldquo-med.png) no-repeat top left;
+      font-family: Georgia, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+      font-size: 32px;
+      font-weight: normal;
+      text-align: center;
+      margin: 8px;
+      color: #444;
+      width: 100%; }
+      .activity-feed-item div.chronicle-content .activity-comment > div,
+      .activity-feed-item div.post-content .activity-comment > div {
+        padding: 20px;
+        background: url(/erly/img/bg-rdquo-med.png) no-repeat bottom right; }
+      .activity-feed-item div.chronicle-content .activity-comment.large,
+      .activity-feed-item div.post-content .activity-comment.large {
+        font-size: 26px; }
+      .activity-feed-item div.chronicle-content .activity-comment.medium,
+      .activity-feed-item div.post-content .activity-comment.medium {
+        font-size: 20px;
+        line-height: 28px; }
+      .activity-feed-item div.chronicle-content .activity-comment.small,
+      .activity-feed-item div.post-content .activity-comment.small {
+        text-align: left;
+        font-size: 14px;
+        line-height: 21px; }
+    .activity-feed-item div.chronicle-content.comment .activity-photo,
+    .activity-feed-item div.chronicle-content.comment .activity-comment,
+    .activity-feed-item div.post-content.comment .activity-photo,
+    .activity-feed-item div.post-content.comment .activity-comment {
+      float: left; }
+    .activity-feed-item div.chronicle-content.comment .activity-photo,
+    .activity-feed-item div.post-content.comment .activity-photo {
+      margin: 6px 6px 6px 0;
+      width: 240px;
+      height: 180px;
+      border: 1px solid #ccc;
+      overflow: hidden;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+      border: 5px solid #FFF; }
+    .activity-feed-item div.chronicle-content.comment .activity-comment,
+    .activity-feed-item div.post-content.comment .activity-comment {
+      width: 300px; }
+  .activity-feed-item div.chronicle-content.comment .activity-comment {
+    width: 557px; }
+
+.activity-body {
+  position: relative;
+  background: url(/erly/img/bg-gray.png) repeat;
+  padding: 0; }
+  .activity-body .activity-feed {
+    float: left;
+    width: 660px;
+    padding: 5px 0 5px 20px;
+    margin: 0 0 20px 0;
+    border-right: solid 1px #ddd; }
+  .activity-body .friend-collections {
+    float: left;
+    width: 279px;
+    margin: 0; }
+    .activity-body .friend-collections .header, .activity-body .friend-collections .collections, .activity-body .friend-collections .find-more-friends {
+      padding: 0;
+      padding-left: 20px; }
+    .activity-body .friend-collections .find-more-friends {
+      padding: 20px;
+      border-top: solid 1px #ddd;
+      font-size: 14px; }
+      .activity-body .friend-collections .find-more-friends .facebook-connect {
+        background: url(/erly/img/button-facebook-connect.png) 0 0 no-repeat;
+        overflow: hidden;
+        display: block;
+        margin-top: 5px;
+        width: 210px;
+        height: 40px; }
+        .activity-body .friend-collections .find-more-friends .facebook-connect:hover {
+          background-position: 0 -40px; }
+        .activity-body .friend-collections .find-more-friends .facebook-connect:active {
+          background-position: 0 -80px; }
+        .activity-body .friend-collections .find-more-friends .facebook-connect span {
+          display: none; }
+    .activity-body .friend-collections .featured-collections {
+      border-top: solid 1px #ddd; }
+    .activity-body .friend-collections .collections .collection {
+      margin-bottom: 25px;
+      cursor: pointer; }
+      .activity-body .friend-collections .collections .collection .cover {
+        position: relative;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+        height: 120px;
+        width: 260px;
+        overflow: hidden; }
+        .activity-body .friend-collections .collections .collection .cover img, .activity-body .friend-collections .collections .collection .cover canvas {
+          height: 120px;
+          width: 260px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px; }
+        .activity-body .friend-collections .collections .collection .cover .title {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background: url(/erly/img/bg-black-50.png);
+          text-transform: uppercase;
+          color: white;
+          width: 250px;
+          height: 20px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          border-top-right-radius: 0;
+          border-top-left-radius: 0;
+          -moz-border-top-right-radius: 0;
+          -moz-border-top-left-radius: 0;
+          -webkit-border-top-right-radius: 0;
+          -webkit-border-top-left-radius: 0;
+          padding: 5px;
+          font-size: 15px; }
+        .activity-body .friend-collections .collections .collection .cover .overlay {
+          display: none;
+          background: url(/erly/img/bg-black-50.png);
+          position: absolute;
+          text-align: center;
+          top: 0;
+          left: 0;
+          height: 120px;
+          padding-top: 10px;
+          width: 260px;
+          font-size: 13px;
+          z-index: 10;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px; }
+          .activity-body .friend-collections .collections .collection .cover .overlay .reason {
+            padding: 16px 20px;
+            color: #fff; }
+          .activity-body .friend-collections .collections .collection .cover .overlay .location {
+            color: #fff; }
+          .activity-body .friend-collections .collections .collection .cover .overlay .button-container {
+            text-align: center;
+            margin: 30px 0 10px 0; }
+            .activity-body .friend-collections .collections .collection .cover .overlay .button-container .button {
+              font-size: 14px;
+              border-radius: 5px;
+              -webkit-border-radius: 5px;
+              -moz-border-radius: 5px;
+              display: inline-block;
+              min-height: 20px;
+              cursor: pointer;
+              text-shadow: 0px 1px 0 white;
+              color: #444444;
+              border: 1px solid #c1c1c1;
+              background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+              background: -moz-linear-gradient(top, white, #eeeeee);
+              background-color: #f4f4f4;
+              box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+              -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+              -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+              transition-property: all;
+              transition-duration: 0.15s;
+              transition-timing-function: linear;
+              transition-delay: 0s;
+              -moz-transition-property: all;
+              -moz-transition-duration: 0.15s;
+              -moz-transition-timing-function: linear;
+              -moz-transition-delay: 0s;
+              -webkit-transition-property: all;
+              -webkit-transition-duration: 0.15s;
+              -webkit-transition-timing-function: linear;
+              -webkit-transition-delay: 0s;
+              -webkit-border-radius: 100px;
+              -moz-border-radius: 100px;
+              border-radius: 100px;
+              transition: none;
+              -webkit-transition: none;
+              -moz-transition: none;
+              color: #0082bf;
+              width: 140px;
+              height: 25px;
+              line-height: 25px;
+              display: inline-block; }
+              .activity-body .friend-collections .collections .collection .cover .overlay .button-container .button:hover {
+                border: 1px solid #959595;
+                background-color: #fcfcfc;
+                color: #000; }
+              .activity-body .friend-collections .collections .collection .cover .overlay .button-container .button:active {
+                box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+                -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+                -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+                border: 1px solid #6e6e6e;
+                background: -webkit-gradient(linear, left top, left bottom, from(#aaaaaa), to(#dddddd));
+                background: -moz-linear-gradient(top, #aaaaaa, #dddddd);
+                background-color: #d8d8d8; }
+              .activity-body .friend-collections .collections .collection .cover .overlay .button-container .button.disabled {
+                opacity: 0.6; }
+                .activity-body .friend-collections .collections .collection .cover .overlay .button-container .button.disabled:hover, .activity-body .friend-collections .collections .collection .cover .overlay .button-container .button.disabled:active {
+                  color: #444444;
+                  border: 1px solid #c1c1c1;
+                  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+                  background: -moz-linear-gradient(top, white, #eeeeee);
+                  background-color: #f4f4f4;
+                  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+                  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+                  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 1px white;
+                  cursor: default; }
+              .activity-body .friend-collections .collections .collection .cover .overlay .button-container .button:hover {
+                color: #0c9acb; }
+      .activity-body .friend-collections .collections .collection .tagline .bottom {
+        margin-top: 9px;
+        position: relative;
+        width: 260px; }
+        .activity-body .friend-collections .collections .collection .tagline .bottom .meta-icons {
+          position: absolute;
+          top: -1px;
+          right: 0; }
+          .activity-body .friend-collections .collections .collection .tagline .bottom .meta-icons .meta-icon {
+            margin: 0 0 0 10px;
+            display: inline-block;
+            height: 24px; }
+            .activity-body .friend-collections .collections .collection .tagline .bottom .meta-icons .meta-icon span, .activity-body .friend-collections .collections .collection .tagline .bottom .meta-icons .meta-icon img {
+              vertical-align: middle; }
+        .activity-body .friend-collections .collections .collection .tagline .bottom .user {
+          display: inline-block; }
+          .activity-body .friend-collections .collections .collection .tagline .bottom .user img.avatar {
+            height: 25px;
+            width: 25px;
+            vertical-align: middle;
+            margin-right: 5px;
+            margin-top: -3px;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+            -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px; }
+          .activity-body .friend-collections .collections .collection .tagline .bottom .user > span {
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            vertical-align: middle;
+            white-space: nowrap;
+            max-width: 150px; }
+            .activity-body .friend-collections .collections .collection .tagline .bottom .user > span:hover {
+              color: #0c9acb; }

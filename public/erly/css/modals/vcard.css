@@ -1,0 +1,227 @@
+/* Mostly taken from http://nicolasgallagher.com/pure-css-speech-bubbles/demo/default.css */
+@-webkit-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-moz-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-o-keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@keyframes background-black-to-gray {
+  0% {
+    background: rgba(0, 0, 0, 0.7); }
+
+  50% {
+    background: rgba(60, 60, 60, 0.85); }
+
+  100% {
+    background: rgba(0, 0, 0, 0.7); } }
+
+@-webkit-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-o-keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@keyframes box-shadow-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-3 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes pulse-opacity-0 {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.vcard .modal {
+  border: solid 1px #ccc;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4); }
+  .vcard .modal input[type=text] {
+    display: block;
+    width: 220px; }
+  .vcard .modal .image,
+  .vcard .modal .form {
+    float: left; }
+  .vcard .modal .button-bar input[type=submit] {
+    float: right; }
+  .vcard .modal .button-container {
+    text-align: right; }
+  .vcard .modal .image img {
+    min-height: 50px;
+    width: 100px;
+    margin: 0;
+    vertical-align: middle;
+    margin-right: 10px; }
+  .vcard .modal .title {
+    font-family: DIN, sans-serif;
+    font-size: 20px; }
+  .vcard .modal .msg {
+    font-size: small; }
+  .vcard .modal .suggested .title,
+  .vcard .modal .user .title {
+    text-transform: uppercase; }
+  .vcard .modal .suggested .name {
+    margin-bottom: 8px;
+    font-size: 16px; }
+  .vcard .modal .suggested .email {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: "Helvetica", "Lucida Grande", "Arial", sans-serif; }
+  .vcard .modal .invite .email {
+    font-size: 20px;
+    margin: 0;
+    font-family: "Helvetica", "Lucida Grande", "Arial", sans-serif; }
+  .vcard .modal .invite .full-name {
+    margin: 2px 0 7px 0;
+    padding: 0; }
+  .vcard .modal .invite .msg {
+    margin-top: 8px; }
+  .vcard .modal .user h1.full-name {
+    margin-bottom: 0; }
+  .vcard .modal .user.tagged .msg {
+    max-width: 135px;
+    display: inline-block; }
+  .vcard .modal .user.tagged .role {
+    padding-bottom: 4px; }
+  .vcard .modal .user.untagged .image,
+  .vcard .modal .user.untagged .form {
+    float: none; }
+  .vcard .modal .user.untagged .image img {
+    margin-right: 0; }
+  .vcard .modal .user.untagged .full-name {
+    font-size: 14px; }
+  .vcard .modal .user.untagged .role {
+    font-size: 12px; }
+  .vcard .modal .user.untagged .msg {
+    word-wrap: break; }

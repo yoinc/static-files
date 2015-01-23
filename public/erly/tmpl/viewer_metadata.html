@@ -1,0 +1,517 @@
+<script id="tmplViewerMetadata" type="text/x-jquery-tmpljavascript">
+  <div class="viewer-metadata ${$data.metadataStyle || erly.viewer.DEFAULT_METADATA_STYLE}"{{if $data.metadataWidth || $data.metadataHeight}}
+      style="{{if $data.metadataWidth}}width: ${$data.metadataWidth}px;{{/if}} {{if $data.metadataHeight}}height: ${$data.metadataHeight}px{{/if}}"
+      {{/if}}>
+    <div class="edit-bar">
+      <div class="edit-panel move drag-handle">
+        <div class="hint">
+          Move the title box to the optimal place
+        </div>
+        <div class="move-icon">&nbsp;</div>
+      </div>
+    </div>
+
+    <div class="padding">
+      {{tmpl '#tmplViewerMetadataAttributes'}}
+
+      <div id="metadataOverlay">
+        <div class="content-wrapper">
+          <div class="content">
+            <div class="click-to-edit top">
+              <img src="/img/icon-edit-large.png"></img>
+              <span>Edit Event Details and Privacy Options</span>
+            </div>
+
+            <div class="click-to-change-colors">
+              <img src="/img/icon-color-large.png"></img>
+              <span>Customize Colors and Fonts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="metadata-edit-details">Edit Event Details</div>
+  </div>
+</script>
+
+<script id="tmplColorPicker" type="text/x-jquery-tmpljavascript">
+  <div id="colorPicker" style="display:none;">
+     <div class="remove">
+     </div>
+     <div class="container">
+     <div class="picker" style="display:none;">
+     </div>
+     <div class="title-draggable">
+       <div class="label">
+       Colors and Fonts:
+       </div>
+     </div>
+     <div class="setting text-style">
+     <div class="label">
+     Presets
+     </div>
+        <div class="value">
+        <div class="option one" data-style="white black-bg">&nbsp;</div>
+        <div class="option two" data-style="grey white-bg">&nbsp;</div>
+        <div class="option three" data-style="white">&nbsp;</div>
+        <div class="option four" data-style="black">&nbsp;</div>
+        </div>
+        </div>
+    <div class="setting background-color">
+    <div class="label">Background Color</div> <div class='value' style="background-color:#${$data.backgroundColor}"></div>
+    </div>
+    <div class="setting opacity">
+    <div class="label">Opacity</div> <div class='value'></div>
+    </div>
+    <div class="setting text-color">
+    <div class="label">Text Color</div> <div class='value' style="background-color:#${$data.textColor}"></div>
+    </div>
+
+    <div class="setting font">
+    <div class="label">Title Font</div>
+      <select class="value">
+        {{each $item.fonts}}
+        <option value="${$value}" {{if $value == $data.fontFamily}}selected{{/if}}>${$value.split(',')[0]}</option>
+        {{/each}}
+      </select>
+    </div>
+
+    <div class="setting title-font-size">
+    <div class="label">Title Font Size</div>
+      <div class="value">
+        <button class="decrease">-</button>
+        <button class="increase">+</button>
+      </div>
+    </div>
+    </div>
+  </div>
+</script>
+
+<script id="tmplViewerDetailsTease" type="text/x-jquery-tmpljavascript">
+  <div class="details-tease {{if $data.pastEvent}}past-event{{/if}}">
+    <div class="inner-tease">
+      <img class="arrow-left" src="${erly.PUB_URL}/img/scroll-down-animation.gif"/ >
+      <span>
+        {{if ($data.isAlbum)}}
+          View album details
+        {{else}}
+          View invitation details {{if (!($data.pastEvent) && !(erly.viewer.collection.userRole.owner))}}&amp; RSVP{{/if}}
+        {{/if}}
+      </span>
+      <img class="arrow-right" src="${erly.PUB_URL}/img/scroll-down-animation.gif"/ >
+    </div>
+    <div class="count"></div>
+  </div>
+</script>
+
+<script id="tmplViewerMetadataAttributes" type="text/x-jquery-tmpljavascript">
+  <div class="metadata-attributes">
+    <div class="tooltip"></div>
+    <div class="title-wrapper">
+      <div class="title" {{if $data.metadataWidth}}style="max-width: ${$data.metadataWidth - 10}px; width: ${$data.metadataWidth - 10}"{{/if}} data-tooltip="View Event Details">
+        ${title}
+      </div>
+    </div>
+    {{if $data.isAlbum}}
+    {{tmpl '#tmplAlbumAttributes'}}
+    {{else}}
+    {{tmpl '#tmplInvitationAttributes'}}
+    {{/if}}
+  </div>
+</script>
+
+<script id="tmplAlbumAttributes" type="text/x-jquery-tmpljavascript">
+  <div class="album">
+    <div class="detail separated creator">
+      <span class="creator-name" data-tooltip="See more events from ${$data.owner.name}">by ${$data.owner.name}</span>
+      {{if $data.locationName}}
+      <span>&nbsp;&nbsp;</span>
+      <span class="separator">|</span>
+      <span>&nbsp;&nbsp;${$data.locationName}</span>
+      {{/if}}
+    </div>
+    <div class="description">
+      {{html erly.linebreaks($data.description)}}
+    </div>
+    <div class="detail likes">
+      <div class="icon-wrapper">
+        <div class="likes icon-element">
+          <span class="metadata-count" data-field="totalLikeCount"></span>
+          <span class="metadata-label plural">Likes</span>
+          <span class="metadata-label singular">Like</span>
+        </div>
+      </div>
+      <div class="icon-element-likes-disabled">
+        <span class="metadata-count"></span>
+        <span class="metadata-label">Be the first to like this</span>
+      </div>
+      {{if !erly.viewer.exported}}
+        <span class="like-button">Like</span>
+      {{/if}}
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</script>
+
+<script id="tmplInvitationAttributes" type="text/x-jquery-tmpljavascript">
+  <div>
+    <div class="detail creator">
+      <div class="creator-name" data-tooltip="See more events from ${$data.owner.name}">by ${$data.owner.name}</div>
+      {{if $data.pastEvent}}
+        <div class="add-photos trigger-button">Add Photos and More &gt;</div>
+        <div class="view-photos trigger-button">View Photos and More &gt;</div>
+      {{else}}
+        <div class="add-photos">Add Photos and More &gt;</div>
+        <div class="view-photos">View Photos and More &gt;</div>
+      {{/if}}
+    </div>
+
+    <div>
+      <div class="detail date" data-tooltip="Add to Calendar">
+        <div class="inner">
+          <div class="icon">
+            <div class="icon-date">${$data.displayStartDate.getDate()}</div>
+          </div>
+          ${erly.viewer.formatDateRangeForEvent($data)}
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+  {{if erly.canShowLocation($data)}}
+      {{if $data.locationName || erly.canShowAddress($data)}}
+      <div>
+        <div class="detail location" data-tooltip="{{if streetAddress}}View with Google Maps{{else}}View Event Details{{/if}}">
+          <div class="inner">
+            <div class="icon"> </div>
+            <span>${$data.locationName}</span>
+            {{if erly.canShowAddress($data)}}
+              ${erly.getFormattedStreetAddress($data, true)}
+            {{/if}}
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      {{/if}}
+    {{/if}}
+
+    <div>
+      {{if !($data.pastEvent && $data.guestListHidden && !(erly.viewer.collection.userRole.owner))}}
+      <div class="detail attendance" data-tooltip="View Event Details">
+        <div class="icon"> </div>
+        {{if !$data.guestListHidden}}
+          {{if $data.pastEvent}}
+            ${erly.viewer.attendeeCount}
+            guest{{if erly.viewer.attendeeCount !== 1}}s{{/if}}
+            attended
+          {{else}}
+            {{if erly.viewer.attendeeCount}}
+              ${erly.viewer.attendeeCount}
+              guest{{if erly.viewer.attendeeCount !== 1}}s{{/if}}
+              attending
+            {{else}}
+              ${$data.tagCount}
+              guest{{if $data.tagCount !== 1}}s{{/if}}
+              invited
+            {{/if}}
+          {{/if}}
+      {{else}}
+        {{if erly.viewer.collection.userRole.owner}}
+          ${erly.viewer.attendeeCount}
+          guest{{if erly.viewer.attendeeCount !== 1}}s{{/if}}
+          {{if $data.pastEvent}}attended{{else}}attending{{/if}}
+        {{else}}
+          Guest list private
+        {{/if}}
+      {{/if}}
+      </div>
+
+      <div class="rsvp-action">
+        {{if erly.viewer.collection.userRole.member && (!$data.ownerOnly || erly.viewer.collection.userRole.owner)}}
+          <span>
+          {{if $data.pastEvent}}
+            {{if erly.viewer.collection.userRole.attendee}}
+              Add Guests
+            {{else}}
+              I Was There
+            {{/if}}
+          {{else}}
+            Invite Guests
+          {{/if}}
+          </span>
+        {{elif !$data.pastEvent && !erly.viewer.rsvpd && !$data.ownerOnly}}
+          <span>
+          Please RSVP
+          </span>
+        {{else}}
+          <span>
+          View Details
+          </span>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      {{if $data.pastEvent}}
+        <div class="detail likes">
+          <div class="icon-wrapper">
+            <div class="likes icon-element">
+              <span class="metadata-count" data-field="totalLikeCount"></span>
+              <span class="metadata-label plural">Likes</span>
+              <span class="metadata-label singular">Like</span>
+            </div>
+          </div>
+          <div class="icon-element-likes-disabled">
+            <span class="metadata-count"></span>
+            <span class="metadata-label">Be the first to like this</span>
+          </div>
+          {{if !erly.viewer.exported}}
+            <span class="like-button">Like</span>
+          {{/if}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</script>
+
+<script id="tmplEditBackgroundOption" type="text/x-jquery-tmpljavascript">
+  <div class="background-option ${$data.category}">
+    <div class="image-container">
+      <img class="lazy" data-src="${$data.thumb || $data.src}" />
+    </div>
+    <div class="mask">&nbsp;</div>
+    <div class="check">&nbsp;</div>
+  </div>
+</script>
+
+<script id="tmplEditBackground" type="text/x-jquery-tmpljavascript">
+  <div id='backgroundPicker'>
+    <div class="categories">
+      <div class="label">
+        Cover Photos:
+      </div>
+      <div class="category selected">
+        {{if hasPostImages > 0}}
+        Your Photos
+        {{else}}
+        Upload
+        {{/if}}
+      </div>
+      {{each categories}}
+      <div class="category" data-category="${$value.name}">
+        ${$value.name}
+      </div>
+      {{/each}}
+      <div class="category-separator">&nbsp;</div>
+      <div class="search">
+        <input type="text" name="search" placeholder="Search for an image..." />
+        <div class="button">
+          &nbsp;
+        </div>
+      </div>
+    </div>
+    <div id="searchCarousel" class="carousel">
+    </div>
+    <div id="emptySearchResults">Sorry, no results were found</div>
+    <div id="categoryCarousel" class="carousel">
+      <div class="upload">
+        <div class="icon">
+          <img src="${erly.PUB_URL}/img/icon-upload-white.png" />
+        </div>
+        <div class="choose">
+          Choose file
+        </div>
+        <input type="file" name="files[]" />
+      </div>
+      <div class="indented-border">&nbsp;</div>
+      {{each images}}
+        {{tmpl($value) "#tmplEditBackgroundOption"}}
+      {{/each}}
+    </div>
+
+    <div class="carousel-button cb-left">&nbsp;</div>
+    <div class="carousel-button cb-right">&nbsp;</div>
+    <div class="close"> </div>
+  </div>
+</script>
+
+<script id="tmplDropDown" type="text/x-jquery-tmpljavascript">
+  <div class="viewer-drop-down ${cssClass} ${style || 'white black-bg'}">
+    <div class="padding">
+      <div class="close-viewer-drop-down"></div>
+      {{html $item.html}}
+    </div>
+  </div>
+</script>
+
+<script id="tmplCommentFeed" type="text/x-jquery-tmpljavascript">
+  {{wrap({cssClass: 'comments', style: $data.metadataStyle}) '#tmplDropDown'}}
+    <h2>COMMENTS</h2>
+    <div class="comment-rows">
+      {{each comments}}
+        {{tmpl($value) "#tmplCommentFeedItem"}}
+      {{/each}}
+    </div>
+    <div class="comment-input comment-feed-item" {{if !erly.session.isAuthenticated()}}style="display:none;"{{/if}}>
+      <div class="avatar-photo">
+        {{tmpl(erly.getUserData()) '#tmplAvatarImage'}}
+      </div>
+      <textarea placeholder="Write a comment..."></textarea>
+    </div>
+    {{if !erly.session.isAuthenticated()}}
+    <div class="comment-login" onclick="erly.session.login(); return false;">
+      Please log in or sign up to comment
+    </div>
+    {{/if}}
+  {{/wrap}}
+</script>
+
+<script id="tmplCommentFeedItem" type="text/x-jquery-tmpljavascript">
+  {{if $data.loaderObject}}
+    <div id="activityLoaderObject"></div>
+  {{elif $data.dateAddedAt}}
+    {{tmpl($data, $item) '#tmplActivityFeedItem'}}
+  {{else}}
+  <div class="comment-feed-item" data-id="${$data.id}">
+    <div class="avatar-photo">
+      {{if !$data.isInvite}}
+        {{if erly.viewer.exported}}
+          {{tmpl({facebookId: $data.fromUserFacebookId, ident: $data.fromUserIdent})
+            '#tmplAvatarImage'}}
+        {{else}}
+          <a href="${erly.BASE_URL}/timeline/${fromUserIdent}">
+            {{tmpl({facebookId: $data.fromUserFacebookId, ident: $data.fromUserIdent})
+            '#tmplAvatarImage'}}
+        {{/if}}
+      </a>
+      {{else}}
+        {{tmpl({facebookId: $data.fromUserFacebookId, ident: $data.fromUserIdent})
+        '#tmplAvatarImage'}}
+      {{/if}}
+    </div>
+    <div class="comment-feed-content">
+      <span class="comment-from-user">
+        {{if !$data.isInvite}}
+          {{if erly.viewer.exported}}
+            ${fromName}
+          {{else}}
+            <a href="${erly.BASE_URL}/timeline/${fromUserIdent}">${fromName}</a>
+          {{/if}}
+        {{else}}
+          ${fromName}
+        {{/if}}
+        {{if postId}}
+          on a <a class="post-comment-link" data-post-id="${postId}" href="javascript:void(0);">${$data.postType || 'post'}</a>
+        {{/if}}
+      </span>
+      <span class="comment-text">
+        - ${text}
+      </span>
+      <br />
+      <span class="time-ago">${erly.dateFormatters.prettyDate(erly.normalizeDate(createdAt), erly.normalizeDate($data.serverNow || erly.now))}</span>
+    </div>
+    {{if fromUserId === erly.userId || erly.viewer.collection.userRole.owner}}
+      <div class="delete">&nbsp;</div>
+    {{/if}}
+    <div class="comment-break"></div>
+  </div>
+  {{/if}}
+</script>
+
+<script id="tmplGuest"  type="text/x-jquery-tmpljavascript">
+  <div class="comment-feed-item guest">
+    {{if $data.isInvite}}
+      <span class="guest-invite"">
+    {{else}}
+      <a href="${erly.urlFor.gallery($data)}">
+    {{/if}}
+    {{tmpl({facebookId: $data.facebookId, picture: $data.picture,
+              ident: $data.ident})
+        '#tmplAvatarImage'}}
+    {{if $data.isInvite}}
+      </span>
+    {{else}}
+      </a>
+    {{/if}}
+    {{if $data.isInvite}}
+      <span class="guest-invite"">
+    {{else}}
+      <a href="${erly.urlFor.gallery($data)}">
+    {{/if}}
+      ${$data.name}
+      {{if $data.isOwner}}
+        (owner)
+      {{/if}}
+    {{if $data.isInvite}}
+      </span>
+    {{else}}
+      </a>
+    {{/if}}
+    {{if erly.userId === erly.viewer.collection.owner.id ||
+      ($data.isInvite && $data.inviter.id === erly.userId) ||
+      (!$data.isInvite && $data.id === erly.userId)}}
+    <div class="delete">&nbsp;</div>
+    {{/if}}
+  </div>
+</script>
+
+<script id="tmplGuestList" type="text/x-jquery-tmpljavascript">
+  {{wrap({cssClass: 'guests', style: $data.metadataStyle}) '#tmplDropDown'}}
+    <h2>WHO WAS THERE</h2>
+    <div class="comment-rows guests">
+      {{each guests}}
+        {{tmpl($value) "#tmplGuest"}}
+      {{/each}}
+    </div>
+    <div class="tagging"></div>
+  {{/wrap}}
+</script>
+
+<script id="tmplLikeFeed" type="text/x-jquery-tmpljavascript">
+  {{wrap({cssClass: 'likes', style: $data.metadataStyle}) '#tmplDropDown'}}
+    <h2>LIKES</h2>
+    <div class="comment-rows">
+      {{each likes}}
+        {{tmpl($value) "#tmplLikeFeedItem"}}
+      {{/each}}
+    </div>
+  {{/wrap}}
+</script>
+
+<script id="tmplLikeFeedItem" type="text/x-jquery-tmpljavascript">
+  <div class="comment-feed-item">
+    <div class="avatar-photo">
+      {{if erly.viewer.exported}}
+        {{tmpl({facebookId: $data.fromUserFacebookId, ident: $data.fromUserIdent})
+          '#tmplAvatarImage'}}
+      {{else}}
+        <a href="${erly.BASE_URL}/timeline/${fromUserIdent}">
+        {{tmpl({facebookId: $data.fromUserFacebookId, ident: $data.fromUserIdent})
+          '#tmplAvatarImage'}}
+        </a>
+      {{/if}}
+    </div>
+    <div class="like-feed-content">
+      <span class="comment-from-user">
+        {{if erly.viewer.exported}}
+          ${fromName}
+        {{else}}
+          <a href="${erly.BASE_URL}/timeline/${fromUserIdent}">${fromName}</a>
+        {{/if}}
+
+        likes
+
+        {{if $data.postId && $data.post }}
+          a <a class="post-like-link" data-post-id="${postId}" href="javascript:void(0);">${post.type}</a> in this Event.
+        {{else}}
+          this Event.
+        {{/if}}
+      </span>
+      <br />
+      <span class="time-ago">${erly.dateFormatters.prettyDate(erly.normalizeDate(createdAt), erly.normalizeDate($data.serverNow || erly.now))}</span>
+    </div>
+    {{if fromUserId === erly.userId}}
+      <div class="delete">&nbsp;</div>
+    {{/if}}
+  </div>
+  <div class="comment-break"></div>
+</script>

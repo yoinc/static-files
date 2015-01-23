@@ -1,0 +1,62 @@
+#toolbar {
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  clear: both;
+  text-align: center; }
+
+#toolbar * {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 10pt; }
+
+#hint {
+  margin-left: auto;
+  margin-right: auto;
+  height: 35px;
+  text-align: center;
+  font-size: 10pt;
+  font-family: courier; }
+
+#explorer {
+  margin: 0 auto;
+  width: 80%;
+  height: 600px;
+  overflow: auto;
+  font-family: courier;
+  background-color: #F2F2F2;
+  border: 1px solid #CCCCCC;
+  color: green; }
+
+#explorer ul {
+  list-style-type: none; }
+
+#explorer .value {
+  color: green; }
+
+.collapser {
+  color: blue;
+  cursor: pointer; }
+
+#photoSnap {
+  position: absolute;
+  z-index: 1; }
+
+.event-stats h1 {
+  font-size: 22px; }
+.event-stats h2 {
+  font-size: 14px;
+  padding: 0;
+  margin: 0 0 10px 0; }
+.event-stats .filters dl {
+  margin-top: 0; }
+.event-stats .filters dd {
+  margin-left: 0;
+  padding-right: 10px; }
+.event-stats .filters dd,
+.event-stats .filters dt {
+  display: inline-block; }
+.event-stats .events thead td {
+  border-bottom: 1px dotted grey; }
+.event-stats .events td {
+  padding: 1px 5px; }
